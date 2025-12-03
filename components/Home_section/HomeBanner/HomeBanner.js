@@ -11,11 +11,11 @@ const HomeBanner = ({ onExploreClick, onJoinEarlyAccess }) => {
   ];
 
   return (
-    <div className="min-h-auto md:min-h-screen py-16 pt-20 md:pt-0 md:py-0 flex items-center bg-cover bg-center bg-black/90 text-white bg-[url('/images/HomeBg-00.webp')] lg:bg-[url('/images/HomeBg-axodian.webp')]">
+    <div className="min-h-screen py-16 pt-20 md:pt-0 md:py-0 flex items-center bg-cover bg-center bg-black/90 text-white bg-[url('/images/HomeBg-00.webp')] lg:bg-[url('/images/HomeBg-axodian.webp')]">
       <div className="container mx-auto">
         {/* Heading */}
-        <h1 className="text-2xl sm:text-4xl md:text-4xl font-bold max-w-7xl text-center md:text-left leading-tight">Documentation, Compliance, Payments & Financing</h1>
-        <h1 className="text-2xl sm:text-4xl md:text-6xl font-bold max-w-7xl pt-2 text-center md:text-left leading-tight">all in one Trade-Verse.</h1>
+        <h1 className="text-3xl sm:text-4xl md:text-4xl font-bold max-w-7xl text-center md:text-left leading-tight">Documentation, Compliance, Payments & Financing</h1>
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold max-w-7xl pt-2 text-center md:text-left leading-tight">all in one Trade-Verse.</h1>
 
         {/* Subtext */}
         <p className="text-base sm:text-lg md:text-2xl max-w-4xl text-center md:text-left mt-4 sm:mt-6 text-white/90">
@@ -34,7 +34,7 @@ const HomeBanner = ({ onExploreClick, onJoinEarlyAccess }) => {
             </div>
           ))}
         </div>
-
+ 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 mt-10">
           <Button onClick={onJoinEarlyAccess} className="relative overflow-hidden group bg-[#663399] text-md lg:text-md px-8 py-2 h-12 flex items-center justify-center rounded-lg text-white transition-all duration-500">

@@ -9,10 +9,10 @@ const Investors = () => {
                     <span className="md:block mt-4">the Trade Ecosystem.</span>
                 </h2>
             </div>
-            <div className="flex justify-center items-center gap-10 mt-16 md:mt-20">
-                <Image src="/images/IBDICLogo.webp" alt="IBDIC Logo" width={180} height={80} className="object-contain rounded-lg" />
-                <Image src="/images/Axilor.webp" alt="Axilor Logo" width={180} height={80} className="object-contain rounded-lg" />
-                <Image src="/images/Capital.webp" alt="Capital Logo" width={180} height={80} className="object-contain rounded-lg" />
+            <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10 mt-16 md:mt-20">
+                <Image src="/images/IBDICLogo.webp" alt="IBDIC Logo" width={180} height={80} className="object-contain rounded-lg my-2 md:my-0" />
+                <Image src="/images/Axilor.webp" alt="Axilor Logo" width={180} height={80} className="object-contain rounded-lg my-2 md:my-0" />
+                <Image src="/images/Capital.webp" alt="Capital Logo" width={180} height={80} className="object-contain rounded-lg my-2 md:my-0" />
             </div>
         </div>
     );

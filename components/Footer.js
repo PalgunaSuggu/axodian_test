@@ -16,13 +16,13 @@ const FooterGroup = ({ title }) => {
 
   return (
     <div>
-      <p className="text-lg font-semibold mb-3">{title}</p>
+      <p className="text-xl font-semibold mb-3">{title}</p>
       <ul className="space-y-2">
         {links.map((link) => (
           <li key={link.text || link.name}>
             <CustomLink
               href={link.href}
-              className="hover:text-blue-600 text-sm transition block"
+              className="hover:text-blue-600 text-lg transition block"
               {...(title === "Contact Us" && {
                 target: "_blank",
                 rel: "noopener noreferrer",
@@ -54,12 +54,10 @@ const Footer = () => {
 
         <div className="col-span-12 md:col-span-2 text-center md:text-left flex flex-col items-center md:items-start">
           <Image src="/images/axodian-logo-footer.webp" alt="Axodian Logo" width={180} height={70} />
-          <p className="text-sm">
-            Backed by <span className="font-semibold">Axilor | Capital A</span>
-          </p>
+          <p className="text-md py-3">Backed by <span className="font-semibold">Axilor | Capital A</span></p>
           <div className="flex items-center gap-3">
             <Image src="/images/iso-certified.webp" alt="ISO 27001" width={55} height={55} />
-            <p className="text-sm font-semibold">ISO 27001 Certified</p>
+            <p className="text-md font-semibold">ISO 27001 Certified</p>
           </div>
         </div>
 
@@ -89,21 +87,21 @@ const Footer = () => {
         <Separator className="bg-gray-300" />
       </div>
 
-      <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-6 text-gray-500 text-sm">
+      <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-6 text-gray-500 text-md">
         <p>© 2025 Axodian. All rights reserved.</p>
 
         <div className="flex gap-6">
-          <CustomLink href="/Documents/6Point3_TermsandConditions.pdf" target="_blank" className="hover:text-blue-600">
+          <CustomLink href="/Documents/6Point3_TermsandConditions.pdf" target="_blank" className="hover:text-blue-600 text-md">
             Terms of Use
           </CustomLink>
-          <CustomLink href="/Documents/6Point3_PrivacyPolicy.pdf" target="_blank" className="hover:text-blue-600">
+          <CustomLink href="/Documents/6Point3_PrivacyPolicy.pdf" target="_blank" className="hover:text-blue-600 text-md">
             Privacy Policy
           </CustomLink>
         </div>
 
         <div className="flex gap-4">
           {socialLinks.map(({ icon: Icon, href }) => (
-            <CustomLink key={href} href={href} target="_blank" className="hover:text-blue-600">
+            <CustomLink key={href} href={href} target="_blank" className="hover:text-blue-600 text-md">
               <Icon size={20} />
             </CustomLink>
           ))}

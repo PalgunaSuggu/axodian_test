@@ -63,7 +63,7 @@ const HomeBanner = ({ onExploreClick, }) => {
   ];
 
   return (
-    <div className="min-h-screen bg-cover bg-center bg-black/90 text-white bg-[url('/images/HomeBg-00.webp')] lg:bg-[url('/images/AxodianBg.webp')] flex items-center">
+    <div className="min-h-screen bg-cover bg-center bg-black/90 text-white bg-[url('/images/HomeBg-00.webp')] lg:bg-[url('/images/axodianBg.webp')] flex items-center">
       <div className="container mx-auto text-center py-20">
 
         <h2 className="max-w-3xl mx-auto leading-tight">

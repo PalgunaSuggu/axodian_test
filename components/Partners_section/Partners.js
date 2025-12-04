@@ -7,13 +7,13 @@ import PartnersCta from './partnersCta'
 
 const Partners = () => {
   return (
-    <div>
+    <>
         <PartnerBanner />
         <PartnersBenefits />
         <WhoShouldPartner />
         <PartnerForm />
         <PartnersCta />
-    </div>
+    </>
   )   
 }
 

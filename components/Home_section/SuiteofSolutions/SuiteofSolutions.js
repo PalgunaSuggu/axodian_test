@@ -237,15 +237,10 @@ const SuiteofSolutions = () => {
         <div className="bg-gray-50 py-16 md:py-24">
             <div className="container mx-auto">
                 <div className="text-center mb-32">
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl mb-6 font-bold text-gray-900">
-                        Our Suite of Solutions
-                    </h2>
+                    <h1 className="text-gray-900">Our Suite of Solutions</h1>
                 </div>
 
-                <div
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
-                >
+                <div onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
                     <Tabs value={currentTab} onValueChange={handleTabChange} className="w-full">
                         <TabsList className="w-full bg-transparent p-0 my-20">
                             <div className="grid md:grid-cols-3 gap-4 md:gap-6">
@@ -263,7 +258,7 @@ const SuiteofSolutions = () => {
                                                         }`} />
                                                 </div>
                                                 <div className="p-4 text-left">
-                                                    <h3 className="font-bold text-lg mb-2">{benefit.heading}</h3>
+                                                    <h5 className="font-bold mb-2">{benefit.heading}</h5>
                                                     <p className="text-lg font-normal">{benefit.subheading}</p>
                                                 </div>
                                             </Card>
@@ -278,10 +273,8 @@ const SuiteofSolutions = () => {
                                 <Card className={`flex flex-col md:flex-row bg-white rounded-lg shadow-none ${benefit.reverse ? 'md:flex-row-reverse' : ''}`}>
                                     <Image src={benefit.image} alt={benefit.heading} width={500} height={300} className="w-full md:w-1/2 h-auto object-cover" loading="lazy" />
                                     <CardContent className="md:w-1/2 py-8 pl-8">
-                                        <h2 className="text-3xl font-bold text-[#663399] mb-2">{benefit.heading}</h2>
-                                        <p className="text-lg mb-6 text-black">
-                                            {benefit.subheading}
-                                        </p>
+                                        <h3 className="text-primary-color mb-2">{benefit.heading}</h3>
+                                        <p className="text-lg mb-6 text-black">{benefit.subheading}</p>
                                         <ul className="space-y-4">
                                             {Array.isArray(benefit.cardContent[0]) ? (
                                                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-4">
@@ -320,10 +313,7 @@ const SuiteofSolutions = () => {
                                                 ))
                                             )}
                                         </ul>
-                                        <Button
-                                            onClick={() => router.push(benefit.link)}
-                                            className="h-10 px-4 rounded-lg text-white font-medium mt-6 flex items-center gap-2 bg-primary-color hover:bg-primary-color/80 transition-all duration-500"
-                                        >
+                                        <Button onClick={() => router.push(benefit.link)} className="h-10 px-4 rounded-lg text-white font-medium mt-6 flex items-center gap-2 bg-primary-color hover:bg-primary-color/80 transition-all duration-500">
                                             <span className="flex items-center gap-2">
                                                 Learn More
                                                 <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />

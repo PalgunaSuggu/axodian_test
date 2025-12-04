@@ -94,7 +94,7 @@ const WhyLeRemitt = () => {
         <div className="py-20 md:py-32 bg-cover bg-center bg-black/90 bg-[url('/images/LeDocBenefitsAxodian.webp')]">
             <div className="container mx-auto">
                 <div>
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-12 max-w-3xl mx-auto text-center text-balance">Built for Exporters Who Need <span className="text-secondary-light-color">Clarity</span>, Speed & Control</h1>
+                    <h1 className="text-white leading-tight mb-12 max-w-3xl mx-auto text-center">Built for Exporters Who Need <span className="text-secondary-light-color">Clarity</span>, Speed & Control</h1>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {benefits.map((benefit) => (
@@ -105,7 +105,7 @@ const WhyLeRemitt = () => {
                                             <benefit.icon className="w-8 h-8 text-secondary-light-color" />
                                         </div>
                                         <div>
-                                            <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                                            <h5 className="text-white mb-2">{benefit.title}</h5>
                                             <p className="text-gray-300 text-md leading-relaxed">{benefit.description}</p>
                                         </div>
                                     </div>

@@ -34,7 +34,7 @@ const DocLandingWhyLeDoc = ({ formType }) => {
     return (
         <section className="py-16 md:py-24">
             <div className="container mx-auto px-4">
-                <h1 className="text-3xl md:text-4xl font-bold text-center">
+                <h1 className="leading-tight text-center">
                     <span className="md:block mb-2"> LeDoc Automates, Secures & Simplifies</span>
                     <span className="md:block">Your Trade Documents!</span>
                 </h1>
@@ -49,7 +49,7 @@ const DocLandingWhyLeDoc = ({ formType }) => {
                                 <feature.icon className="w-6 h-6" />
                             </div>
                             <div>
-                                <h4 className="text-lg md:text-xl font-semibold mb-1">{feature.title}</h4>
+                                <h5 className="leading-tight mb-1">{feature.title}</h5>
                                 <p className="text-md md:text-lg text-gray-600">{feature.description}</p>
                             </div>
                         </div>

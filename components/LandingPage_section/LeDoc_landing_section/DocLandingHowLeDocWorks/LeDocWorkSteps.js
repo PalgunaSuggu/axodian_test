@@ -34,16 +34,12 @@ const DocLeDocStepper = ({ formType }) => {
     return (
         <section className="py-16 md:py-24 px-4 bg-white">
             <div className="text-center max-w-4xl mx-auto mb-12">
-                {/* <div className="inline-block uppercase text-[#0461F0] bg-[#F5F9FF] px-4 py-1 rounded-lg text-md font-semibold mb-4">
-                    How it works
-                </div> */}
-                <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
+                <h1 className="leading-tight text-black mb-6">
                     Smart, Simple & Scalable - Here’s How LeDoc Works
-                </h2>
+                </h1>
             </div>
 
             <div className="relative flex flex-col md:flex-row items-start md:items-center justify-between gap-10 md:gap-0">
-                {/* Connector Line - vertical on mobile, horizontal on desktop */}
                 <div className="absolute md:top-7 md:left-0 md:right-0 md:h-1 md:bg-gray-200 md:z-0 left-1/2 -translate-x-1/2 top-0 bottom-0 w-1 bg-gray-200 z-0 md:w-auto md:translate-x-0" />
 
                 {steps.map((step, index) => {
@@ -56,7 +52,7 @@ const DocLeDocStepper = ({ formType }) => {
                             <div className="inline-block uppercase text-[#0461F0] bg-[#F5F9FF] px-4 py-1 rounded-lg text-md font-semibold mt-4">
                                 Step {index + 1}
                             </div>
-                            <span className="mt-4 text-lg font-medium bg-white sm:px-0 md:px-2 text-gray-800">{step.title}</span>
+                            <h5 className="mt-4 leading-tight bg-white sm:px-0 md:px-2 text-gray-800">{step.title}</h5>
                         </div>
                     );
                 })}

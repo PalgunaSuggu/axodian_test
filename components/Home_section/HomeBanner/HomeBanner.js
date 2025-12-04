@@ -63,13 +63,13 @@ const HomeBanner = ({ onExploreClick, }) => {
   ];
 
   return (
-    <div className="min-h-screen bg-cover bg-center bg-black/90 text-white bg-[url('/images/HomeBg-00.webp')] lg:bg-[url('/images/Thumbnail.webp')] flex items-center">
+    <div className="min-h-screen bg-cover bg-center bg-black/90 text-white bg-[url('/images/HomeBg-00.webp')] lg:bg-[url('/images/AxodianBg.webp')] flex items-center">
       <div className="container mx-auto text-center py-20">
 
-        <h1 className="text-2xl md:text-4xl font-bold max-w-3xl mx-auto leading-tight">
+        <h2 className="max-w-3xl mx-auto leading-tight">
           Documentation, Compliance, <p className="pt-2">Payments & Financing</p>
-        </h1>
-        <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold max-w-4xl mx-auto leading-tight pt-2">
+        </h2>
+        <h1 className="bannerText font-bold max-w-4xl mx-auto leading-tight pt-2">
           all in one Trade-Verse.
         </h1>
 

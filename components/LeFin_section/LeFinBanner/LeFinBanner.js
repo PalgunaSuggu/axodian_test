@@ -7,9 +7,9 @@ const LeFinBanner = ({ onApplyClick }) => {
     return (
         <div className="h-[58vh] lg:h-screen flex flex-col justify-center items-center text-center bg-cover bg-center bg-no-repeat bg-black bg-[url('/images/LeFinBanner.webp')]">
             {/* Main Heading */}
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-wider leading-snug text-white mt-6">
+            <h1 className="bannerText leading-snug text-white mt-6">
                 <span className="md:block">Flexible Financing for Exporters</span>
-                <span className="mt-2 md:block">Tailored to Your Business Needs</span>
+                <span className="md:block">Tailored to Your Business Needs</span>
             </h1>
 
             {/* Subheading */}

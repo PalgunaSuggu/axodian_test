@@ -9,10 +9,7 @@ const GetStarted = ({ tag, heading, subtitleOne, subtitleTwo, buttonText, button
         <div className="bg-[#22277A] text-white py-16 md:py-24">
             <div className="flex flex-col items-center justify-center text-center">
                 <div className="text-center">
-                    {/* <div className="inline-block uppercase text-white bg-[#0049BA] px-4 py-2 rounded-lg text-md font-semibold mb-4">
-                        {tag}
-                    </div> */}
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white">{heading}</h2>
+                    <h1 className="text-white leading-tight">{heading}</h1>
                 </div>
                 <p className="text-lg md:text-2xl mt-6">
                     <span className="block mb-2">{subtitleOne}</span>

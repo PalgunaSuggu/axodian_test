@@ -10,7 +10,7 @@ const DocLandingRegister = ({ formType }) => {
             {/* Content Area */}
             <div className="flex-grow flex flex-col justify-center items-center text-center px-4">
                 <div>
-                    <h1 className="text-3xl md:text-5xl font-bold text-white mt-4">
+                    <h1 className="leading-tight text-white mt-4">
                         <span className="md:block mb-4">Trade Documentation Simplified & Automated.</span>
                         <span className="md:block mb-4">Try LeDoc Today!</span>
                     </h1>
@@ -20,10 +20,7 @@ const DocLandingRegister = ({ formType }) => {
 
                     {/* Buttons */}
                     <div className="flex justify-center gap-4 mt-6 flex-wrap">
-                        <CustomLink
-                            href="mailto:connect@axodian.com"
-                            className="flex items-center gap-2 text-md md:text-lg bg-white text-black font-semibold px-6 rounded-full hover:bg-gray-200 transition"
-                        >
+                        <CustomLink href="mailto:connect@axodian.com" className="flex items-center gap-2 text-md md:text-lg bg-white text-black font-semibold px-6 rounded-full hover:bg-gray-200 transition">
                             <Mail size={18} />
                             Email Us
                         </CustomLink>

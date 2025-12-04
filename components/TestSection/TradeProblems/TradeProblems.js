@@ -14,10 +14,10 @@ export default function TradeProblems() {
             <div className="max-w-7xl mx-auto px-6 md:px-12">
                 {/* Heading */}
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+                    <h1 className="leading-tight text-gray-900">
                         Global trade is hard — <br />
                         <span className="text-[#0a268a]">paperwork makes it harder</span>
-                    </h2>
+                    </h1>
                     <p className="mt-4 text-lg text-gray-600">
                         Exporters & importers lose countless hours (and money) due to:
                     </p>
@@ -26,10 +26,7 @@ export default function TradeProblems() {
                 {/* Problem Grid */}
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
                     {problems.map((item, idx) => (
-                        <div
-                            key={idx}
-                            className="bg-gray-50 border border-gray-200 rounded-lg p-6 hover:shadow-lg transition"
-                        >
+                        <div key={idx} className="bg-gray-50 border border-gray-200 rounded-lg p-6 hover:shadow-lg transition">
                             <AlertTriangle className="w-8 h-8 text-red-500 mb-4" />
                             <p className="text-gray-700 text-lg">{item}</p>
                         </div>
@@ -38,9 +35,9 @@ export default function TradeProblems() {
 
                 {/* Solution */}
                 <div className="text-center bg-gradient-to-r from-[#0a268a] to-[#0092a5] text-white py-16 px-8 rounded-lg shadow-xl">
-                    <h3 className="text-3xl md:text-4xl font-bold mb-4">
+                    <h2 className="leading-tight mb-4">
                         We built <span className="">LeDoc</span> to fix this
-                    </h3>
+                    </h2>
                     <p className="text-lg md:text-xl max-w-2xl mx-auto mb-6">
                         No more chasing banks, lost documents, or compliance delays.
                         Just seamless trade operations so you can focus on growth.

@@ -1,8 +1,8 @@
 import Link from "next/link";
 import LandingPage from "../../components/LandingPage_section/LeDoc_landing_section/DocLandingPage";
 import SEO from "../../components/SEO";
-import { Button } from "@/components/ui/button"; // ShadCN button
-import { MessageCircle } from "lucide-react"; // Lucide WhatsApp-style icon
+import { Button } from "@/components/ui/button";
+import { MessageCircle } from "lucide-react";
 
 export default function LeDocLp() {
     return (
@@ -17,12 +17,7 @@ export default function LeDocLp() {
             <LandingPage formType="LeDocFormLp" />
 
             {/* WhatsApp Floating Button */}
-            <Link
-                href="https://wa.me/918050087594"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="fixed bottom-4 right-4 z-50 block md:hidden"
-            >
+            <Link href="https://wa.me/918050087594" target="_blank" rel="noopener noreferrer" className="fixed bottom-4 right-4 z-50 block md:hidden">
                 <Button className="bg-green-500 hover:bg-green-600 text-white shadow-lg gap-2 px-4 py-2 rounded-sm">
                     <MessageCircle className="w-5 h-5" />
                     WhatsApp

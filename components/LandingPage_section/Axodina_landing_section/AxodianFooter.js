@@ -11,10 +11,9 @@ const AxodianFooter = () => {
             {/* Background Gradient */}
             <div className="absolute inset-0 z-0" style={{ background: "radial-gradient(125% 125% at 50% 10%, #000000 20%, #22277A 100%)", }} />
 
-            {/* Content */}
             <div className="container mx-auto px-4 sm:px-6 relative z-10 py-16 lg:py-28">
                 <div className="flex flex-col items-center justify-center">
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold leading-tight mb-4 md:mb-6">
+                    <h1 className="leading-tight text-center font-bold mb-4 md:mb-6">
                         <span className="bg-gradient-to-r from-purple-200 via-secondary-light-color to-secondary-color bg-clip-text text-transparent">Ready to simplify your next shipment?</span>
                     </h1>
 
@@ -49,13 +48,9 @@ const AxodianFooter = () => {
 
                         <div className="md:text-right space-y-4 md:space-y-5 mt-6 md:mt-0">
                             <div>
-                                <Link href="mailto:connect@axodian.com" className="text-lg text-slate-500 hover:text-secondary-light-color transition-colors">
-                                    connect@axodian.com
-                                </Link>
+                                <Link href="mailto:connect@axodian.com" className="text-lg text-slate-500 hover:text-secondary-light-color transition-colors">connect@axodian.com</Link>
                             </div>
-                            <div className="text-lg text-slate-500">
-                                1185, 5th Main Road, 7th Sector, HSR Layout Bengaluru, 560102
-                            </div>
+                            <div className="text-lg text-slate-500">1185, 5th Main Road, 7th Sector, HSR Layout Bengaluru, 560102</div>
                         </div>
                     </div>
 
@@ -64,12 +59,8 @@ const AxodianFooter = () => {
                             &copy; {new Date().getFullYear()} Axodian. All rights reserved.
                         </div>
                         <div className="flex gap-6 md:gap-8 mt-4 sm:mt-0">
-                            <Link href="#" className="text-lg hover:text-secondary-light-color transition-colors">
-                                Privacy
-                            </Link>
-                            <Link href="#" className="text-lg hover:text-secondary-light-color transition-colors">
-                                Terms
-                            </Link>
+                            <Link href="#" className="text-lg hover:text-secondary-light-color transition-colors">Privacy</Link>
+                            <Link href="#" className="text-lg hover:text-secondary-light-color transition-colors">Terms</Link>
                         </div>
                     </div>
                 </div>

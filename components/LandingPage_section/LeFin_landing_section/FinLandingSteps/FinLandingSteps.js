@@ -32,11 +32,8 @@ const FinLandingSteps = () => {
         <section className="bg-white py-20 px-4">
             <div className='container mx-auto'>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                    {/* Left: Steps */}
                     <div>
-                        <h2 className="text-3xl md:text-4xl text-center md:text-start font-bold text-gray-900 mb-12">
-                            Easy Application, Faster Disbursal
-                        </h2>
+                        <h2 className="leading-tight text-center md:text-start text-gray-900 mb-12">Easy Application, Faster Disbursal</h2>
                         <div className="space-y-10">
                             {steps.map((step, index) => {
                                 const Icon = step.icon;
@@ -57,7 +54,7 @@ const FinLandingSteps = () => {
                                                 <Icon className="w-6 h-6" />
                                             </div>
                                             <div>
-                                                <h3 className="text-xl font-semibold text-gray-800">{step.title}</h3>
+                                                <h5 className="leading-tight text-gray-800">{step.title}</h5>
                                                 <p className="text-gray-600 text-lg">{step.description}</p>
                                             </div>
                                         </div>

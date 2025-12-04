@@ -26,10 +26,7 @@ const Team = () => {
         <section className="py-16 md:py-24 bg-white text-center">
             <div className="container mx-auto">
                 <div className="mb-8">
-                    {/* <span className="text-[#0461F0] font-semibold uppercase text-sm bg-[#F5F9FF] px-4 py-1 rounded-lg">Our Team</span> */}
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
-                        Meet the Brains Behind Axodian
-                    </h2>
+                    <h1 className="leading-tight text-black mb-4">Meet the Brains Behind Axodian</h1>
                 </div>
                 <div className=" px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-16">
@@ -49,9 +46,9 @@ const Team = () => {
                                     {/* Content */}
                                     <div className="md:w-3/5 p-4 md:p-8 flex flex-col justify-between">
                                         <div>
-                                            <h3 className="text-2xl font-bold text-gray-900 mb-2">{member.fullName}</h3>
-                                            <span className="inline-block text-sm font-medium text-[#663399] mb-4">{member.role}</span>
-                                            <div className="h-1 w-20 bg-[#663399] my-4 rounded-full"></div>
+                                            <h4 className="leading-tight text-gray-900 mb-2">{member.fullName}</h4>
+                                            <span className="inline-block text-sm font-medium text-primary-color mb-4">{member.role}</span>
+                                            <div className="h-1 w-20 bg-primary-color my-4 rounded-full"></div>
                                             <TooltipProvider>
                                                 <Tooltip>
                                                     <TooltipTrigger asChild>
@@ -71,7 +68,7 @@ const Team = () => {
                                                 href={member.inlink}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#663399]/10 text-[#663399] hover:bg-blue-100 transition-colors duration-200 group-hover:bg-[#663399] group-hover:text-white"
+                                                className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary-color/10 text-primary-color hover:bg-blue-100 transition-colors duration-200 group-hover:bg-[#663399] group-hover:text-white"
                                                 aria-label={`Connect with ${member.fullName} on LinkedIn`}
                                             >
                                                 <Linkedin className="w-5 h-5" />
@@ -88,18 +85,13 @@ const Team = () => {
                 </div>
 
                 <div className="relative mt-8 md:mt-20">
-                    <button
-                        className="hidden md:block absolute left-[-2rem] lg:left-[-6rem] top-1/2 -translate-y-1/2 z-10 bg-primary-color/10 border-2 border-solid border-primary-color/25 h-full p-2 rounded-lg"
-                        id="custom-prev"
-                    >
+                    <button className="hidden md:block absolute left-[-2rem] lg:left-[-6rem] top-1/2 -translate-y-1/2 z-10 bg-primary-color/10 border-2 border-solid border-primary-color/25 h-full p-2 rounded-lg" id="custom-prev">
                         <ChevronLeft className="w-6 h-6 text-primary-color" />
                     </button>
-                    <button
-                        className="hidden md:block absolute right-[-2rem] lg:right-[-6rem] top-1/2 -translate-y-1/2 z-10 bg-primary-color/10 border-2 border-solid border-primary-color/25 h-full p-2 rounded-lg"
-                        id="custom-next"
-                    >
+                    <button className="hidden md:block absolute right-[-2rem] lg:right-[-6rem] top-1/2 -translate-y-1/2 z-10 bg-primary-color/10 border-2 border-solid border-primary-color/25 h-full p-2 rounded-lg" id="custom-next">
                         <ChevronRight className="w-6 h-6 text-primary-color" />
                     </button>
+                    
                     <Swiper
                         modules={[Autoplay, Navigation]}
                         spaceBetween={20}

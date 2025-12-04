@@ -29,9 +29,7 @@ const AxodianFAQs = () => {
       <div className="flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="w-full container mx-auto">
           <div className="text-center mb-14">
-            <h2 className="mb-6 text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900">
-              Frequently asked questions
-            </h2>
+            <h1 className="mb-6 leading-tight text-slate-900">Frequently asked questions</h1>
           </div>
 
           <Accordion type="single" collapsible defaultValue="item-0">

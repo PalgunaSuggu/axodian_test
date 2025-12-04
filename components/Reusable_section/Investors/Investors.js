@@ -1,13 +1,13 @@
 import Image from "next/image";
 
-const Investors = () => {
+const   Investors = () => {
     return (
         <div className="text-center py-16 md:py-24 bg-cover bg-center bg-white  bg-[url('/images/InvestorsBg.webp')]">
             <div className="text-center mb-12">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black">
+                <h1 className="text-black leading-tight">
                     <span className="md:block">Powered by Strong Backers and </span>
-                    <span className="md:block mt-4">the Trade Ecosystem.</span>
-                </h2>
+                    <span className="md:block">the Trade Ecosystem.</span>
+                </h1>
             </div>
             <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10 mt-16 md:mt-20">
                 <Image src="/images/IBDICLogo.webp" alt="IBDIC Logo" width={180} height={80} className="object-contain rounded-lg my-2 md:my-0" />

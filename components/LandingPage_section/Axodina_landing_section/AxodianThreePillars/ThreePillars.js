@@ -36,30 +36,19 @@ export function ThreePillars() {
     <section className="py-24 lg:py-40 bg-gray-50 relative overflow-hidden">
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800">
-            One ecosystem. Three powerful solutions.
-          </h2>
+          <h1 className="leading-tight text-gray-800">One ecosystem. Three powerful solutions.</h1>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {pillars.map((pillar, index) => {
             const image = pillar.image;
             return (
-              <div
-                key={index}
-                className="relative bg-primary-color/5 backdrop-blur-sm rounded-2xl hover:ring-1 hover:ring-primary-color/50 transition-all group overflow-hidden"
-              >
+              <div key={index}className="relative bg-primary-color/5 backdrop-blur-sm rounded-2xl hover:ring-1 hover:ring-primary-color/50 transition-all group overflow-hidden">
                 <div className="mb-6 w-full h-auto rounded-xl overflow-hidden">
-                  <Image 
-                    src={image} 
-                    alt={pillar.title} 
-                    width={400} 
-                    height={300} 
-                    className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
+                  <Image src={image} alt={pillar.title} width={400} height={300} className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300" />
                 </div>
                 
-                <h3 className="mb-6 px-8 text-gray-600 font-medium text-lg">{pillar.title}</h3>
+                <h5 className="mb-6 px-8 text-gray-600 leading-tight">{pillar.title}</h5>
                 
                 <ul className="space-y-4 px-8 pb-8">
                   {pillar.benefits.map((benefit, idx) => (

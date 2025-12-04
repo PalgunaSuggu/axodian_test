@@ -168,7 +168,7 @@ const LefinSolutions = ({ onApplyClick }) => {
         <div className="bg-cover bg-center bg-blue-50 bg-[url('/images/newbg02.webp')] py-16 md:py-24">
             {/* Main Heading with Improved Styling */}
             <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-5xl font-bold text-black mb-6">Our Financing Solutions</h2>
+                <h1 className="leading-tight text-black mb-6">Our Financing Solutions</h1>
                 <p className="text-black text-md md:text-lg max-w-4xl mx-auto">Flexible export financing solutions tailored for every stage—pre-shipment, secured, or post-shipment—with fast approvals, low rates, and minimal documentation.</p>
             </div>
             <div className="w-full container mx-auto px-4">
@@ -185,8 +185,8 @@ const LefinSolutions = ({ onApplyClick }) => {
                                         <loan.categoryIcon className="w-6 h-6" />
                                     </span>
                                     <div>
-                                        <p className="text-lg font-semibold">{loan.category}</p>
-                                        <p className="text-xl font-bold text-gray-500 mt-1">{loan.title}</p>
+                                        <p className="text-lg">{loan.category}</p>
+                                        <h5 className="text-gray-500 mt-1">{loan.title}</h5>
                                     </div>
                                 </div>
                             </TabsTrigger>
@@ -197,7 +197,7 @@ const LefinSolutions = ({ onApplyClick }) => {
                         <TabsContent key={loan.id} value={loan.id} className="mt-6">
                             <div className="bg-white rounded-lg shadow-sm border p-6">
                                 <div className="mb-6">
-                                    <h2 className="text-xl font-semibold text-gray-900">{loan.description}</h2>
+                                    <h4 className="leading-tight text-gray-900">{loan.description}</h4>
                                 </div>
                                 <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
                                     {loan.benefits.map((benefit, index) => (
@@ -206,7 +206,7 @@ const LefinSolutions = ({ onApplyClick }) => {
                                                 <benefit.icon className="w-5 h-5 text-blue-600" />
                                             </span>
                                             <div>
-                                                <h3 className="font-medium text-lg md:text-xl text-gray-900">{benefit.text}</h3>
+                                                <h5 className="leading-tight text-gray-900">{benefit.text}</h5>
                                                 <p className="text-md md:text-lg text-gray-500 mt-1">{benefit.details}</p>
                                             </div>
                                         </div>

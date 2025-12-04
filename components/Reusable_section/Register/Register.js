@@ -3,11 +3,8 @@ import { MoveRight } from "lucide-react";
 
 const Register = ({ formType, formTitle, subtitleOne, subtitleTwo, subtitleThree, description, buttonText, defaultSelected, dialogComponent: DialogComponent, backgroundImage }) => {
     return (
-        <div
-            className="relative h-[58vh] lg:h-screen flex flex-col items-center justify-center text-center bg-[#663399]"
-            style={{ backgroundImage: `url('${backgroundImage}')`, backgroundSize: "cover", backgroundPosition: "center" }}
-        >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-4">
+        <div className="relative h-[58vh] lg:h-screen flex flex-col items-center justify-center text-center bg-[#663399]" style={{ backgroundImage: `url('${backgroundImage}')`, backgroundSize: "cover", backgroundPosition: "center" }}>
+            <h1 className="leading-tight text-white mt-4">
                 <span className="md:block mb-2">{subtitleOne}</span>
                 <span className="md:block mb-2">{subtitleTwo}</span>
                 <span className="md:block mb-2">{subtitleThree}</span>

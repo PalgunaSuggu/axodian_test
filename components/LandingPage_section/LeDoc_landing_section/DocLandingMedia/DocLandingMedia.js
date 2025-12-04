@@ -22,7 +22,7 @@ const DocLandingMedia = () => {
     return (
         <div className="py-16 md:py-24 bg-slate-50">
             <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-black">In The News</h2>
+                <h1 className="leading-tight text-black">In The News</h1>
                 <p className="text-lg md:text-2xl max-w-2xl lg:max-w-4xl mb-6 mx-auto text-gray-600 mt-2">Discover the tools and advantages that drive secure, scalable, and compliant trade documentation.</p>
             </div>
 
@@ -55,7 +55,7 @@ const DocLandingMedia = () => {
                                         <TooltipProvider>
                                             <Tooltip>
                                                 <TooltipTrigger asChild>
-                                                    <h1 className="text-lg font-medium line-clamp-2 cursor-pointer">{feature.title}</h1>
+                                                    <h5 className="leading-tight line-clamp-2 cursor-pointer">{feature.title}</h5>
                                                 </TooltipTrigger>
                                                 <TooltipContent className="max-w-sm bg-blue-50 text-black p-4 shadow-lg rounded-lg">
                                                     <p>{feature.title}</p>

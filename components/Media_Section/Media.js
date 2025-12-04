@@ -51,7 +51,7 @@ const Media = () => {
         <div className="container mx-auto">
             {/* Header Section */}
             <div className="mb-6 mt-8 md:my-10">
-                <h1 className="text-3xl sm:text-5xl font-bold tracking-wider leading-snug text-blue-600 mt-6">Media Mentions, Stories & Announcements</h1>
+                <h1 className="leading-snug text-blue-600 mt-6">Media Mentions, Stories & Announcements</h1>
                 <p className="text-gray-600 text-md md:text-lg mt-6 w-1/1">
                     From product innovations to partnerships and thought leadership, explore how LeRemitt is making headlines. This is your go-to space for press coverage, company updates, and the conversations we’re part of in the global trade and fintech ecosystem.
                 </p>
@@ -74,7 +74,7 @@ const Media = () => {
             {/* Data Sections */}
             <div className="mt-6">
                 <div className="flex justify-between items-center">
-                    <h2 className="text-xl font-semibold">{activeCategory}</h2>
+                    <h5 className="leading-snug">{activeCategory}</h5>
 
                     {/* Show "Show more" button if there are more than 3 Data */}
                     {filteredData.length > 3 && (
@@ -94,7 +94,7 @@ const Media = () => {
                                 <TooltipProvider>
                                     <Tooltip>
                                         <TooltipTrigger asChild>
-                                            <h1 className="text-md md:text-xl truncate cursor-pointer">{data.title}</h1>
+                                            <h5 className="truncate cursor-pointer">{data.title}</h5>
                                         </TooltipTrigger>
                                         <TooltipContent className="max-w-sm bg-blue-50 text-black p-4 shadow-lg rounded-lg">
                                             <p>{data.title}</p>

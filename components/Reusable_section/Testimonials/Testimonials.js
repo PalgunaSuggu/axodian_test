@@ -27,11 +27,11 @@ export function Testimonials({ reviews = [],  duration="", titleOne, titleTwo, s
             <div className="bg-white py-16 md:py-24">
                 <div className="text-center mb-12">
                     {/* <div className="inline-block text-[#0461F0] bg-[#F5F9FF] px-4 py-1 rounded-lg text-md font-semibold mb-4">{tag}</div> */}
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
-                        <span className="md:block mb-2">{titleOne}</span>
-                        <span className="md:block mb-2">{titleTwo}</span>
-                    </h2>
-                    <p className="text-lg md:text-2xl max-w-2xl lg:max-w-4xl mb-6 mx-auto text-black">{subHeading}</p>
+                    <h1 className="text-gray-900 leading-tight">
+                        <span className="md:block">{titleOne}</span>
+                        <span className="md:block">{titleTwo}</span>
+                    </h1>
+                    <p className="text-lg md:text-2xl max-w-2xl lg:max-w-4xl my-6 mx-auto text-black">{subHeading}</p>
                 </div>
 
                 {/* Conditionally render this section only on the Img Reviews */}
@@ -112,7 +112,7 @@ export function Testimonials({ reviews = [],  duration="", titleOne, titleTwo, s
                 <div className="py-24 bg-cover bg-center bg-black/90 bg-[url('/images/LeDocBenefitsAxodian.webp')]">
                     <div className="text-center mb-12">
                         {/* <div className="inline-block text-white bg-white/10 px-6 py-1 rounded-lg text-md font-semibold mb-4">Resources</div> */}
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">In The News</h2>
+                        <h1 className="text-white leading-tight">In The News</h1>
                         <p className="text-lg md:text-2xl max-w-2xl lg:max-w-4xl mb-6 mx-auto text-gray-100 mt-2">Latest updates on our products, capabilities, and industry impact.</p>
                     </div>
 

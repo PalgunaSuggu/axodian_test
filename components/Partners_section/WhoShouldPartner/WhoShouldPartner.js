@@ -71,7 +71,7 @@ const WhoShouldPartner = () => {
         {/* Who Should Partner Section */}
         <div className="max-w-6xl mx-auto mb-20">
           <div className="mb-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Who Should Partner?</h2>
+            <h1 className="text-gray-800 mb-4">Who Should Partner?</h1>
             <div className="w-36 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto mb-10 rounded-full"></div>
           </div>
           
@@ -79,7 +79,7 @@ const WhoShouldPartner = () => {
             {partnerTypes.map((type, index) => (
               <div key={index} className={`${type.bgColor} rounded-lg p-8 hover:shadow-lg transition-all duration-300 border ${type.borderColor} relative overflow-hidden group`}>
                 <div className={`absolute inset-0 opacity-0 bg-gradient-to-br ${type.color} group-hover:opacity-5 transition-opacity duration-300`}></div>
-                <h3 className={`text-xl font-semibold ${type.textColor} mb-4 border-b ${type.borderColor} pb-3`}>{type.title}</h3>
+                <h5 className={`${type.textColor} mb-4 border-b ${type.borderColor} pb-3`}>{type.title}</h5>
                 <p className="text-gray-700">{type.description}</p>
               </div>
             ))}
@@ -89,7 +89,7 @@ const WhoShouldPartner = () => {
         {/* Types of Partnerships Section */}
         <div className="max-w-6xl mx-auto mb-16">
           <div className="mb-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Types of Partnerships</h2>
+            <h1 className="text-gray-800 mb-4">Types of Partnerships</h1>
             <div className="w-40 h-1 bg-gradient-to-r from-indigo-500 to-blue-600 mx-auto mb-10 rounded-full"></div>
           </div>
           
@@ -100,7 +100,7 @@ const WhoShouldPartner = () => {
                   <div className={`${model.bgColor} p-3 rounded-lg w-14 h-14 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300`}>
                     <model.icon className={`h-7 w-7 ${model.iconColor}`} />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-3">{model.title}</h3>
+                  <h5 className="text-gray-800 mb-3">{model.title}</h5>
                   <p className="text-gray-600">{model.description}</p>
                 </div>
                 <div className={`h-1.5 w-full bg-gradient-to-r ${model.color}`}></div>
@@ -125,7 +125,7 @@ const WhoShouldPartner = () => {
                 <div className="inline-flex items-center justify-center bg-blue-700 p-3 rounded-full mb-5 border border-blue-400 shadow-md mx-auto">
                   <Award className="h-6 w-6 text-cyan-100" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Immediate Commercial Potential</h3>
+                <h4 className="text-white mb-4">Immediate Commercial Potential</h4>
                 <p className="text-blue-100">Earn commissions from your introductions while helping clients solve critical documentation gaps</p>
               </div>
             </div>
@@ -133,7 +133,7 @@ const WhoShouldPartner = () => {
             {/* Partner Program */}
             <div className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg p-8 md:p-10 h-full border border-blue-200 shadow-md">
               <div className="relative text-center h-full flex flex-col justify-center">
-                <h3 className="text-2xl font-semibold text-blue-800 mb-5">Join Our Partner Program</h3>
+                <h4 className="text-blue-800 mb-5">Join Our Partner Program</h4>
                 <p className="text-blue-700 mb-8">Start a conversation with us. We&apos;ll help you explore the right model based on your audience, bandwidth, and business goals.</p>
                 
                 <div className="mt-auto">

@@ -22,9 +22,9 @@ const WhatLeDocOffers = ({ formType }) => {
     return (
         <section className="py-16 md:py-24 bg-cover bg-center bg-black/90 bg-[url('/images/LeDocBenefitsAxodian.webp')]">
             <div className="container mx-auto">
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
+                <h1 className="tleading-tight text-center mb-12 text-white">
                     A Smarter Way to Manage Export Documentation
-                </h2>
+                </h1>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                     {features.map(({ icon: Icon, text }, idx) => (
@@ -32,7 +32,7 @@ const WhatLeDocOffers = ({ formType }) => {
                             <div className="w-16 h-16 min-w-[4rem] min-h-[4rem] rounded-lg bg-white flex items-center justify-center shadow-md">
                                 <Icon className="w-8 h-8 text-[#1E77FF]" />
                             </div>
-                            <p className="text-base md:text-lg max-w-xs">{text}</p>
+                            <h6 className="leading-tight">{text}</h6>
                         </Card>
                     ))}
                 </div>

@@ -24,16 +24,11 @@ const WhyHowAxodian = () => {
             {/* Soft Vignette */}
             <div className="absolute inset-0 z-0 pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 50% 50%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.55) 100%)", opacity: 0.95, }} />
 
-            {/* CONTENT */}
             <div className="relative z-10 py-16 lg:py-40">
-
-                {/* HOW IT WORKS */}
                 <section className="pb-16 lg:pb-24">
                     <div className="container mx-auto">
                         <div className="text-center mb-20">
-                            <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-                                How it works
-                            </h2>
+                            <h1 className="mb-4 leading-tight  text-white">How it works</h1>
                             <p className="text-slate-400 text-lg">Simple onboarding. Immediate impact.</p>
                         </div>
 
@@ -44,7 +39,7 @@ const WhyHowAxodian = () => {
                                         <span className="text-white text-2xl font-medium">{step.number}</span>
                                     </div>
 
-                                    <h3 className="text-xl font-semibold text-slate-300 mb-3">{step.title}</h3>
+                                    <h5 className="leading-tight text-slate-300 mb-3">{step.title}</h5>
                                     <p className="text-slate-400 text-lg">{step.description}</p>
                                 </div>
                             ))}
@@ -56,9 +51,7 @@ const WhyHowAxodian = () => {
                 <section>
                     <div className="container mx-auto">
                         <div className="text-center mb-20">
-                            <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-                                Why teams choose <span className="text-tertiary-color">Axodian</span>
-                            </h2>
+                            <h1 className="mb-4 leading-tight text-white">Why teams choose <span className="text-tertiary-color">Axodian</span></h1>
                         </div>
 
                         {/* BENEFITS GRID */}
@@ -70,7 +63,7 @@ const WhyHowAxodian = () => {
                                             <div className="mb-4 h-16 w-16 rounded-xl bg-primary-color/10 flex items-center justify-center transition-colors border border-solid border-white/10">
                                                 <Icon className="h-12 w-12 text-primary-color" />
                                             </div>
-                                            <h4 className="mb-3 text-xl font-semibold text-slate-300">{benefit.title}</h4>
+                                            <h5 className="mb-3 leading-tight text-slate-300">{benefit.title}</h5>
                                             <p className="text-slate-400 text-lg flex-1">{benefit.description}</p>
                                         </div>
                                     </div>

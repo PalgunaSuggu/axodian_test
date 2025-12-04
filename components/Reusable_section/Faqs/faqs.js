@@ -21,11 +21,11 @@ export default function FAQs({ titleOne, titleTwo, subtitle, faqsData, productKe
             <div className="container mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8">
                 {/* LEFT SIDE: Heading */}
                 <div className="lg:col-span-5 col-span-12 text-center lg:text-left">
-                    <h2 className="text-3xl md:text-5xl font-bold text-black mb-4">
-                        <span className="md:block mb-2">{titleOne}</span>
-                        <span className="md:block mb-2">{titleTwo}</span>
-                    </h2>
-                    <p className="text-gray-600 text-md md:text-lg">{subtitle} </p>
+                    <h1 className="leading-tight mb-4">
+                        <span className="md:block">{titleOne}</span>
+                        <span className="md:block">{titleTwo}</span>
+                    </h1>
+                    <p className="text-gray-600 text-md md:text-lg">{subtitle}</p>
                 </div>
 
                 {/* RIGHT SIDE: FAQ Accordion */}
@@ -33,9 +33,7 @@ export default function FAQs({ titleOne, titleTwo, subtitle, faqsData, productKe
                     <Accordion type="single" collapsible defaultValue="0">
                         {faqsData.slice(0, visibleFaqs).map((faq, index) => (
                             <AccordionItem key={index} value={index.toString()} className="border border-gray-200 bg-white rounded-lg shadow-none mb-4">
-                                <AccordionTrigger className="text-md md:text-xl text-start font-semibold px-4 py-3 hover:no-underline" triggerBg={triggerBg} triggerTextColor={triggerTextColor}>
-                                    {faq.question}
-                                </AccordionTrigger>
+                                <AccordionTrigger className="text-md md:text-xl text-start font-semibold px-4 py-3 hover:no-underline" triggerBg={triggerBg} triggerTextColor={triggerTextColor}>{faq.question}</AccordionTrigger>
                                 <AccordionContent className="px-4 pb-3 text-gray-600">
                                     <div className={faq.answer.split('\n').length > 1 ? "h-36 overflow-y-auto pr-2" : ""}>
                                         {faq.answer.split('\n').map((paragraph, i) => {
@@ -64,9 +62,7 @@ export default function FAQs({ titleOne, titleTwo, subtitle, faqsData, productKe
 
                     {!showAllFaqs && (
                         <div className="text-center flex justify-end mt-6">
-                            <Button onClick={navigateToFaqPage} className={`${bgColor} ${hoverBgColor} rounded-lg text-lg ${textColor} p-6`}>
-                                See More Questions
-                            </Button>
+                            <Button onClick={navigateToFaqPage} className={`${bgColor} ${hoverBgColor} rounded-lg text-lg ${textColor} p-6`}>See More Questions</Button>
                         </div>
                     )}
                 </div>

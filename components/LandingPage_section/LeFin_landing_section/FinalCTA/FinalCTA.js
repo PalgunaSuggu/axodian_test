@@ -7,13 +7,10 @@ import LeFinDailogFrom from '../../../Reusable_section/ScheduleForm/LeFinDailogF
 const FinalCTA = () => {
     return (
         <section className="first:bg-gradient-to-br from-blue-50 via-white to-sky-100 pt-16 md:pt-24">
-            <div
-                className="max-w-7xl px-6 md:px-16 py-16 md:py-24 rounded-lg mx-auto text-start bg-cover bg-center text-white bg-secondary-light-color"
-                style={{ backgroundImage: "url('/images/FinCtaBg.webp')" }}
-            >
-                <h2 className="text-3xl md:text-5xl font-bold mb-4">
+            <div className="max-w-7xl px-6 md:px-16 py-16 md:py-24 rounded-lg mx-auto text-start bg-cover bg-center text-white bg-secondary-light-color" style={{ backgroundImage: "url('/images/FinCtaBg.webp')" }}>
+                <h1 className="leading-tight mb-4">
                     Ready to Grow Your Export Business?
-                </h2>
+                </h1>
                 <p className="text-lg md:text-xl text-white/90 mb-8">
                     Apply for a quick, flexible loan — designed only for exporters.
                 </p>
@@ -75,6 +72,6 @@ export default FinalCTA
 const socialLinks = [
     { icon: Linkedin, href: "https://www.linkedin.com/company/leremit/" },
     { icon: Facebook, href: "https://www.facebook.com/LeRemitt" },
-    { icon: Instagram, href: "https://www.instagram.com/leremitt_com/" },
-    { icon: Youtube, href: "https://www.youtube.com/@LeRemitt" },
+    // { icon: Instagram, href: "https://www.instagram.com/leremitt_com/" },
+    // { icon: Youtube, href: "https://www.youtube.com/@LeRemitt" },
 ];

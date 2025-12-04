@@ -10,14 +10,11 @@ const partnerBenefits = [
 const PartnerBanner = () => {
   return (
     <section className="min-h-screen flex items-center justify-start bg-cover bg-center py-24 relative bg-[url('/images/PartnerBanner.webp')]">
-      {/* Gradient overlay that's less opaque in the center */}
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/50"></div>
 
       <div className="container mx-auto relative z-10">
         <div className="max-w-6xl">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-            Grow Your Business with <span className="text-blue-400">LeRemitt</span>
-          </h1>
+          <h1 className="text-white mb-8 leading-tight">Grow Your Business with <span className="text-blue-400">LeRemitt</span></h1>
 
           <div className="w-72 h-1 bg-secondary-light-color mb-8 rounded-full"></div>
 
@@ -30,7 +27,7 @@ const PartnerBanner = () => {
           </button>
 
           <div className="bg-white/10 p-8 rounded-lg backdrop-blur-sm border border-white/10 shadow-xl mt-4">
-            <h3 className="text-2xl font-semibold text-white mb-6">How We Empower Partners</h3>
+            <h3 className="text-white mb-6">How We Empower Partners</h3>
 
             <div className="md:flex gap-4 items-center">
               {partnerBenefits.map((item, index) => (

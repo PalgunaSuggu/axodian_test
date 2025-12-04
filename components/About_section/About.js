@@ -20,7 +20,7 @@ const About = () => {
     <div>
       <AboutBanner onExploreClick={scrollToBenefits} />
       <Definition
-        tag="STORY" 
+        tag="STORY"
         title="The Axodian Journey"
         image='/images/AboutDefinition.webp'
         subtitle="From Local Frustrations to Global Solutions"
@@ -28,7 +28,7 @@ const About = () => {
         description2="That's why we built Axodian. What began as an idea to simplify payments quickly expanded into a full-fledged trade management platform, empowering exporters and businesses to transact, finance, and comply—seamlessly. Today, we work with numerous businesses, financial institutions, and global partners to make cross-border transactions as easy as domestic ones. And we're just getting started."
         description3="Our mission is to reshape global trade for the digital era, one transaction at a time."
       />
-      <div ref={aboutRef}>  <Solutions title='What we Do?' tag="Our Solutions" featuresData={aboutFeatures} /></div>
+      <div ref={aboutRef}><Solutions title='What we Do?' tag="Our Solutions" featuresData={aboutFeatures} /></div>
       <Values />
       <Team />
       <JoinUs />

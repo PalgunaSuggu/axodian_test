@@ -83,18 +83,17 @@ const AxodianProducts = () => {
                         {carouselData.map((item) => (
                             <SwiperSlide key={item.id} className="relative">
                                 <div className="h-full bg-primary-color rounded-xl p-10 text-center border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 mx-auto relative group">
-                                    {/* Navigation Buttons - Positioned inside the card */}
                                     <button className="custom-prev absolute left-6 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-white/80 hover:bg-white transition-colors shadow-md" disabled={isBeginning && !swiperRef.current?.params.loop}>
                                         <ChevronLeft className="w-6 h-6 text-gray-700" />
                                     </button>
 
-                                    <div className="px-10"> {/* Add padding to prevent content from overlapping with buttons */}
+                                    <div className="px-10">
                                         <div className="flex justify-center mb-6">
                                             <div className="bg-primary-color/70 backdrop-blur-md shadow-2xl rounded-full p-4 w-24 h-24 flex items-center justify-center">
                                                 {item.icon}
                                             </div>
                                         </div>
-                                        <h3 className="text-2xl font-semibold text-white my-3">
+                                        <h3 className="leading-tight text-white my-3">
                                             {item.title}
                                         </h3>
                                         <p className="text-white/90 text-lg">{item.description}</p>

@@ -1,4 +1,3 @@
-import React from 'react'
 import Axodian from '../../components/LandingPage_section/Axodina_landing_section/Axodian'
 import SEO from '../../components/SEO'
 

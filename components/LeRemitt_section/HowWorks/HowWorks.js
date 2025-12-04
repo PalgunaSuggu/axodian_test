@@ -32,11 +32,10 @@ const HowWorks = () => {
     return (
         <div className="container mx-auto py-16 md:py-24">
             <div className="text-center max-w-4xl mx-auto mb-4 md:mb-16">
-                {/* <div className="inline-block text-[#0461F0] uppercase bg-[#F5F9FF] px-4 py-1 rounded-full text-md font-semibold mb-4">How LeRemitt Works</div> */}
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-8">
-                    <span className="md:block pb-3">Transparent, Simple, and Secure</span>
+                <h1 className="leading-tight text-black mb-8">
+                    <span className="md:block">Transparent, Simple, and Secure</span>
                     <span className="md:block">Get Paid in Just 4 Steps</span>
-                </h2>
+                </h1>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -45,8 +44,7 @@ const HowWorks = () => {
                         <Image src={step.image} alt={step.title} width={400} height={250} className="w-full h-auto rounded-lg" />
                         <CardContent className="p-4">
                             <div className="flex items-center gap-3 mb-3">
-                                {/* <Image src={step.icon} alt={step.title} width={38} height={38} /> */}
-                                <h3 className="text-lg font-semibold">{step.title}</h3>
+                                <h5 className="leading-tight">{step.title}</h5>
                             </div>
                             <p className="text-md md:text-lg opacity-90">{step.description}</p>
                         </CardContent>

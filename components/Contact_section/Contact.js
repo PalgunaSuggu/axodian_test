@@ -50,7 +50,7 @@ export default function Contact() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white py-16 md:py-24">
       <div className="container mx-auto">
         <div className="text-center my-12">
-          <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Get In Touch</h1>
+          <h1 className="leading-tight text-gray-900 mb-4">Get In Touch</h1>
           <p className="text-md md:text-2xl text-gray-600 max-w-4xl mx-auto">
             Have a question, idea, or need support? We’re here to help.
             Reach out and our team will get back to you shortly.
@@ -60,22 +60,17 @@ export default function Contact() {
         <div className="bg-white rounded-lg overflow-hidden grid md:grid-cols-2">
           {/* Contact Information */}
           <div className="bg-tertiary-color text-white p-8">
-            <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
+            <h4 className="leading-tight mb-6">Contact Information</h4>
 
             <div className="space-y-6">
-              <ContactInfo
-                icon={MapPin}
-                label="Our Office"
-                value="Axodian, 1st Floor, Obeya Tranquil, Next to Sapna Book House, 1185, 5th Main Road, 7th Sector, HSR Layout Bengaluru, 560102"
-                href="https://maps.app.goo.gl/zC1fd9SiQDfTZo1g8" />
-
+              <ContactInfo icon={MapPin} label="Our Office" value="Axodian, 1st Floor, Obeya Tranquil, Next to Sapna Book House, 1185, 5th Main Road, 7th Sector, HSR Layout Bengaluru, 560102" href="https://maps.app.goo.gl/zC1fd9SiQDfTZo1g8" />
               <ContactInfo icon={Mail} label="Email Us" value="connect@axodian.com" href="mailto:connect@axodian.com" />
               <ContactInfo icon={Phone} label="Call Us" value="+91 8050087593" href="tel:+918050087593" />
               <ContactInfo icon={Clock} label="Working Hours" value="Monday - Friday: 10:30 AM – 7:00 PM" />
             </div>
 
             <div className="mt-10">
-              <h3 className="font-semibold mb-3">Follow Us</h3>
+              <h4 className="mb-3">Follow Us</h4>
               <div className="flex space-x-4">
                 <SocialIcon href="https://www.facebook.com/LeRemitt" icon={Facebook} />
                 {/* <SocialIcon href="https://www.youtube.com/@LeRemitt" icon={Youtube} /> */}
@@ -87,7 +82,7 @@ export default function Contact() {
 
           {/* Contact Form */}
           <div className="p-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
+            <h4 className="leading-tight mb-6">Send Us a Message</h4>
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
@@ -137,11 +132,7 @@ export default function Contact() {
                 </Label>
               </div>
 
-              <Button
-                type="submit"
-                className="w-full bg-tertiary-color hover:bg-tertiary-color/90 text-white py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center"
-                disabled={loading}
-              >
+              <Button type="submit" className="w-full bg-tertiary-color hover:bg-tertiary-color/90 text-white py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center" disabled={loading}>
                 {loading ? (
                   <span className="flex items-center">
                     <Loader2 className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" />
@@ -171,10 +162,7 @@ export default function Contact() {
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
-            <button
-              onClick={() => setDialogOpen(false)}
-              className={`bg-${dialogMessage.type === 'success' ? 'green' : 'red'}-600 hover:bg-${dialogMessage.type === 'success' ? 'green' : 'red'}-700`}
-            >
+            <button onClick={() => setDialogOpen(false)} className={`bg-${dialogMessage.type === 'success' ? 'green' : 'red'}-600 hover:bg-${dialogMessage.type === 'success' ? 'green' : 'red'}-700`}>
               Close
             </button>
           </DialogFooter>
@@ -206,10 +194,7 @@ function ContactInfo({ icon: Icon, label, value, href }) {
 
 function SocialIcon({ href, icon: Icon }) {
   return (
-    <CustomLink
-      href={href} target="_blank" rel="noopener noreferrer"
-      className="p-2 bg-primary-light-color rounded-full text-white hover:bg-primary-light-color/90 transition-colors duration-300"
-    >
+    <CustomLink href={href} target="_blank" rel="noopener noreferrer"className="p-2 bg-primary-light-color rounded-full text-white hover:bg-primary-light-color/90 transition-colors duration-300">
       <Icon className="w-5 h-5" />
     </CustomLink>
   )

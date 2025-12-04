@@ -29,7 +29,7 @@ const PartnersBenefits = () => {
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto mb-16 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Why Partner With LeRemitt?</h2>
+          <h1 className="text-gray-800 mb-4">Why Partner With LeRemitt?</h1>
           <div className="w-56 h-1 bg-secondary-light-color mx-auto mb-6"></div>
         </div>
         
@@ -41,9 +41,7 @@ const PartnersBenefits = () => {
                   <benefit.icon className="h-7 w-7 text-blue-600" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-3 flex items-center">
-                    {benefit.title}
-                  </h3>
+                  <h5 className="text-gray-800 mb-3 flex items-center">{benefit.title}</h5>
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
                 </div>
               </div>

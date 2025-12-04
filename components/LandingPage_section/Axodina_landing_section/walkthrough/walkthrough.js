@@ -29,14 +29,9 @@ const Walkthrough = () => {
             />
             <div className="container mx-auto z-10 px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    {/* Left Column - Content */}
                     <div className="space-y-6">
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-primary-color to-tertiary-light-color bg-clip-text text-transparent">
-                            Get your 20-minute walkthrough
-                        </h2>
-                        <p className="text-lg md:text-xl text-slate-600">
-                            {`We'll map your current flow and show how Axodian reduces time to ship and time to cash.`}
-                        </p>
+                        <h1 className="leading-tight  bg-gradient-to-r from-primary-color to-tertiary-light-color bg-clip-text text-transparent">Get your 20-minute walkthrough</h1>
+     <p className="text-lg md:text-xl text-slate-600">{`We'll map your current flow and show how Axodian reduces time to ship and time to cash.`}</p>
 
                         <div className="space-y-4 pt-4">
                             {features.map((feature, index) => (
@@ -47,7 +42,7 @@ const Walkthrough = () => {
                                         </div>
                                     </div>
                                     <div>
-                                        <h3 className="font-medium text-slate-900 text-lg">{feature.title}</h3>
+                                        <h5 className="leading-tight text-slate-900">{feature.title}</h5>
                                         <p className="text-slate-600 text-base">{feature.description}</p>
                                     </div>
                                 </div>
@@ -58,9 +53,7 @@ const Walkthrough = () => {
                     {/* Right Column - Form */}
                     <div className="bg-white/30 backdrop-blur-sm rounded-xl overflow-hidden border border-solid border-primary-color/20 w-full">
                         <div className="p-8">
-                            <h3 className="text-xl font-semibold text-slate-900 mb-6 text-center">
-                                Book your session
-                            </h3>
+                            <h4 className="leading-tight text-slate-900 mb-6 text-center">Book your session</h4>
                             <AxodianForm buttonText="Schedule my walkthrough" defaultSelected={['axodina']} />
                         </div>
                     </div>

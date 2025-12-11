@@ -1,9 +1,12 @@
+// Page Title: 404 Not Found
+// Page URL: https://www.axodian.com/404
+// Local URL: http://localhost:3000/404
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { Button } from '@/components/ui/button';
 import CustomLink from '../../components/Reusable_section/CustomLink/CustomLink';
 
-export default function Custom404() {
+const Custom404 = () => {
     const router = useRouter();
 
     useEffect(() => {
@@ -29,3 +32,6 @@ export default function Custom404() {
         </div>
     );
 }
+
+export default Custom404
+

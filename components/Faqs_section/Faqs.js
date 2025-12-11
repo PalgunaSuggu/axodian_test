@@ -1,22 +1,23 @@
 "use client";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
-import { leremittFaqs, leDocFaqs, leFinFaqs, leFinSubcategories } from "../Data";
+import { leremittFaqs, leDocFaqs, leFinFaqs, leFinSubcategories, oneComplianceFaqs } from "../Data";
 import getUtmParams from "../getUtmParams";
 import { app_url } from "../../config/config";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 const faqCategories = [
-    { 
-        key: "all", 
-        label: "All Questions", 
+    {
+        key: "all",
+        label: "All Questions",
         // Don't combine faqs here, we'll handle them separately
-        faqs: [] 
+        faqs: []
     },
     { key: "leremitt", label: "LeRemitt", faqs: leremittFaqs },
     { key: "ledoc", label: "LeDoc", faqs: leDocFaqs },
     { key: "lefin", label: "LeFin", faqs: leFinFaqs },
+    { key: "onecompliance", label: "One Compliance", faqs: oneComplianceFaqs },
 ];
 
 // Group the questions by category for the "All Questions" tab
@@ -24,6 +25,7 @@ const categorizedFaqs = [
     { key: "leremitt", label: "LeRemitt", faqs: leremittFaqs },
     { key: "ledoc", label: "LeDoc", faqs: leDocFaqs },
     { key: "lefin", label: "LeFin", faqs: leFinFaqs },
+    { key: "onecompliance", label: "One Compliance", faqs: oneComplianceFaqs },
 ];
 
 export default function FAQComponent({ showAll = false, defaultTab = "all", showLoginLink = false }) {
@@ -33,12 +35,12 @@ export default function FAQComponent({ showAll = false, defaultTab = "all", show
     useEffect(() => {
         // First check localStorage for a selected tab
         const storedTab = typeof window !== 'undefined' ? localStorage.getItem('selectedFaqTab') : null;
-        
+
         if (storedTab && faqCategories.some(cat => cat.key === storedTab)) {
             setActiveTab(storedTab);
             // Clear localStorage after setting the tab
             localStorage.removeItem('selectedFaqTab');
-        } 
+        }
         // If no localStorage value, check URL query params
         else if (router.query.tab && faqCategories.some(cat => cat.key === router.query.tab)) {
             setActiveTab(router.query.tab);
@@ -93,11 +95,15 @@ export default function FAQComponent({ showAll = false, defaultTab = "all", show
                                                         <AccordionItem key={faqIndex} value={`${category.key}-${faqIndex}`} className="border border-gray-200 bg-white rounded-lg shadow-sm mb-4">
                                                             <AccordionTrigger className="text-lg md:text-xl text-start font-semibold px-4 py-3 hover:no-underline">{faq.question}</AccordionTrigger>
                                                             <AccordionContent className="px-4 pb-3 text-gray-600">
-                                                                <div className={faq.answer.split("\n").length > 1 ? "h-36 overflow-y-auto pr-2" : ""}>
-                                                                    {faq.answer.split("\n").map((paragraph, i) => (
-                                                                        <p key={i} className="mb-2 text-md md:text-lg">{paragraph}</p>
-                                                                    ))}
-                                                                </div>
+                                                                {typeof faq.answer === 'string' ? (
+                                                                    <div className={faq.answer.split("\n").length > 1 ? "h-36 overflow-y-auto pr-2" : ""}>
+                                                                        {faq.answer.split("\n").map((paragraph, i) => (
+                                                                            <p key={i} className="mb-2 text-md md:text-lg">{paragraph}</p>
+                                                                        ))}
+                                                                    </div>
+                                                                ) : (
+                                                                    <div className="text-md md:text-lg">{faq.answer}</div>
+                                                                )}
                                                             </AccordionContent>
                                                         </AccordionItem>
                                                     ))}
@@ -111,7 +117,7 @@ export default function FAQComponent({ showAll = false, defaultTab = "all", show
                                         {leFinSubcategories.map((subcategory, subIndex) => {
                                             // Filter FAQs by subcategory
                                             const subcategoryFaqs = leFinFaqs.filter(faq => faq.subcategory === subcategory.key);
-                                            
+
                                             return subcategoryFaqs.length > 0 ? (
                                                 <div key={subIndex} className="mb-8">
                                                     <h3 className="text-xl font-semibold mb-4 text-blue-600 border-b pb-2">{subcategory.label}</h3>
@@ -120,11 +126,15 @@ export default function FAQComponent({ showAll = false, defaultTab = "all", show
                                                             <AccordionItem key={faqIndex} value={`${subcategory.key}-${faqIndex}`} className="border border-gray-200 bg-white rounded-lg shadow-sm mb-4">
                                                                 <AccordionTrigger className="text-lg md:text-xl text-start font-semibold px-4 py-3 hover:no-underline">{faq.question}</AccordionTrigger>
                                                                 <AccordionContent className="px-4 pb-3 text-gray-600">
-                                                                    <div className={faq.answer.split("\n").length > 1 ? "h-36 overflow-y-auto pr-2" : ""}>
-                                                                        {faq.answer.split("\n").map((paragraph, i) => (
-                                                                            <p key={i} className="mb-2 text-md md:text-lg">{paragraph}</p>
-                                                                        ))}
-                                                                    </div>
+                                                                    {typeof faq.answer === 'string' ? (
+                                                                        <div className={faq.answer.split("\n").length > 1 ? "h-36 overflow-y-auto pr-2" : ""}>
+                                                                            {faq.answer.split("\n").map((paragraph, i) => (
+                                                                                <p key={i} className="mb-2 text-md md:text-lg">{paragraph}</p>
+                                                                            ))}
+                                                                        </div>
+                                                                    ) : (
+                                                                        <div className="text-md md:text-lg">{faq.answer}</div>
+                                                                    )}
                                                                 </AccordionContent>
                                                             </AccordionItem>
                                                         ))}
@@ -140,11 +150,15 @@ export default function FAQComponent({ showAll = false, defaultTab = "all", show
                                             <AccordionItem key={index} value={index.toString()} className="border border-gray-200 bg-white rounded-lg shadow-sm mb-4">
                                                 <AccordionTrigger className="text-lg md:text-xl text-start font-semibold px-4 py-3 hover:no-underline">{faq.question}</AccordionTrigger>
                                                 <AccordionContent className="px-4 pb-3 text-gray-600">
-                                                    <div className={faq.answer.split("\n").length > 1 ? "h-36 overflow-y-auto pr-2" : ""}>
-                                                        {faq.answer.split("\n").map((paragraph, i) => (
-                                                            <p key={i} className="mb-2 text-md md:text-lg">{paragraph}</p>
-                                                        ))}
-                                                    </div>
+                                                    {typeof faq.answer === 'string' ? (
+                                                        <div className={faq.answer.split("\n").length > 1 ? "h-36 overflow-y-auto pr-2" : ""}>
+                                                            {faq.answer.split("\n").map((paragraph, i) => (
+                                                                <p key={i} className="mb-2 text-md md:text-lg">{paragraph}</p>
+                                                            ))}
+                                                        </div>
+                                                    ) : (
+                                                        <div className="text-md md:text-lg">{faq.answer}</div>
+                                                    )}
                                                 </AccordionContent>
                                             </AccordionItem>
                                         ))}
@@ -161,9 +175,13 @@ export default function FAQComponent({ showAll = false, defaultTab = "all", show
                                 <AccordionItem key={index} value={index.toString()} className="border border-gray-200 bg-white rounded-lg shadow-sm mb-4">
                                     <AccordionTrigger className="text-lg md:text-xl text-start font-semibold px-4 py-3 hover:no-underline">{faq.question}</AccordionTrigger>
                                     <AccordionContent className="px-4 pb-3 text-gray-600">
-                                        {faq.answer.split("\n").map((paragraph, i) => (
-                                            <p key={i} className="mb-2 text-md md:text-lg">{paragraph}</p>
-                                        ))}
+                                        {typeof faq.answer === 'string' ? (
+                                            faq.answer.split("\n").map((paragraph, i) => (
+                                                <p key={i} className="mb-2 text-md md:text-lg">{paragraph}</p>
+                                            ))
+                                        ) : (
+                                            <div className="text-md md:text-lg">{faq.answer}</div>
+                                        )}
                                     </AccordionContent>
                                 </AccordionItem>
                             ))}

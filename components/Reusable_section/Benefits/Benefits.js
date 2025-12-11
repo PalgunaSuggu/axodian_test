@@ -1,23 +1,18 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 
-const Benefits = ({ tag, subtitleOne, subtitleTwo, benefits }) => {
+const Benefits = ({ subtitleOne, subtitleTwo, description, benefits }) => {
     return (
         <div className="text-white py-16 md:py-24 bg-cover bg-center bg-black/90 bg-[url('/images/LeDocBenefitsAxodian.webp')]">
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
                 {/* LEFT: Heading */}
                 <div className="md:col-span-5 flex items-center text-center md:text-left">
                     <div>
-                        {/* <div className="inline-block uppercase bg-[#1E77FF] px-4 py-1 rounded-lg text-md font-semibold mb-6">
-                            {tag}
-                        </div> */}
                         <h1 className="leading-tight text-white max-w-3xl">
                             <span className="md:block">{subtitleOne}</span>
                             <span className="md:block">{subtitleTwo}</span>
                         </h1>
-                        <p className="mt-2 text-md md:text-lg">
-                            Discover the tools and advantages that drive secure,<br /> scalable, and compliant trade documentation.
-                        </p>
+                        <p className="mt-2 text-md md:text-lg">{description}</p>
                     </div>
                 </div>
 

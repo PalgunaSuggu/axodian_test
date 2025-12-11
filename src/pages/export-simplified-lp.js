@@ -1,10 +1,13 @@
+// Page Title: Export Simplified LP
+// Page URL: https://www.axodian.com/export-simplified-lp
+// Local URL: http://localhost:3000/export-simplified-lp
 import Link from "next/link";
 import LandingPage from "../../components/LandingPage_section/LeDoc_landing_section/DocLandingPage";
 import SEO from "../../components/SEO";
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
 
-export default function LeDocLp() {
+const exportSimplifiedLp = () => {
     return (
         <>
             <SEO
@@ -26,3 +29,5 @@ export default function LeDocLp() {
         </>
     );
 }
+
+export default exportSimplifiedLp

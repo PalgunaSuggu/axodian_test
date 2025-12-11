@@ -1,7 +1,10 @@
+// Page Title: Blogs
+// Page URL: https://www.axodian.com/blogs
+// Local URL: http://localhost:3000/blogs
 import Blog from "../../components/Blog_section/Blog";
 import SEO from "../../components/SEO";
 
-export default function BlogPage() {
+const blogs = () => {
     return (
         <>
             <SEO
@@ -15,3 +18,5 @@ export default function BlogPage() {
         </>
     );
 }
+
+export default blogs

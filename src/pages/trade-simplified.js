@@ -1,3 +1,6 @@
+// Page Title: Trade Simplified
+// Page URL: https://www.axodian.com/trade-simplified
+// Local URL: http://localhost:3000/trade-simplified
 import Axodian from '../../components/LandingPage_section/Axodina_landing_section/Axodian'
 import SEO from '../../components/SEO'
 

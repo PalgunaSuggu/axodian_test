@@ -1,7 +1,10 @@
+// Page Title: Export Simplified
+// Page URL: https://www.axodian.com/export-simplified
+// Local URL: http://localhost:3000/export-simplified
 import LandingPage from "../../components/LandingPage_section/LeDoc_landing_section/DocLandingPage";
 import SEO from "../../components/SEO";
 
-export default function LeDocLandingPage() {
+const exportSimplified = () => {
     return (
         <>
             <SEO
@@ -11,7 +14,9 @@ export default function LeDocLandingPage() {
                 image="https://www.axodian.com/images/LeDocLogo.webp"
                 imageAlt="LeDocLanding"
             />
-            <LandingPage formType="LeDocForm"/>
+            <LandingPage formType="LeDocForm" />
         </>
     );
 }
+
+export default exportSimplified

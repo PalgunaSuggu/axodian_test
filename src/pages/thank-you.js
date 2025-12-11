@@ -1,3 +1,6 @@
+// Page Title: Thank You
+// Page URL: https://www.axodian.com/thank-you
+// Local URL: http://localhost:3000/thank-you
 import { CheckCircle } from 'lucide-react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'

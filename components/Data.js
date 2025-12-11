@@ -1,4 +1,4 @@
-import { ArrowDownUp, Banknote, BarChart4, Briefcase, Building2, Calendar, CalendarClock, CheckCircle, CircleDollarSign, ClipboardList, Coins, FileCheck, FileText, Globe, GlobeIcon, Handshake, IndianRupee, Landmark, Layers, LocateFixed, Lock, Mail, MapPin, Percent, Phone, Receipt, RefreshCcw, RotateCcw, Search, Shield, ShieldCheck, ShieldOff, Timer, TrendingUp, Truck, User, UserCheck, Wallet, Warehouse, Zap } from "lucide-react";
+import { AlertTriangle, ArrowDownUp, Banknote, BarChart3, BarChart4, Briefcase, Building2, Calendar, CalendarClock, CheckCircle, CircleDollarSign, ClipboardList, Coins, Database, Download, EyeOff, FileCheck, FileSearch, FileText, FileUp, FileUpIcon, Globe, GlobeIcon, Handshake, IndianRupee, Landmark, Layers, LayoutDashboard, LocateFixed, Lock, Mail, MapPin, Percent, Phone, Receipt, RefreshCcw, RotateCcw, Search, Settings, Share2, Shield, ShieldCheck, ShieldOff, Split, Timer, TrendingUp, Truck, User, UserCheck, Users, Wallet, Warehouse, Workflow, Zap } from "lucide-react";
 
 export const navItems = [
     { name: "LeDoc", href: "/ledoc" },
@@ -100,11 +100,11 @@ export const aboutFeatures = [
 ];
 
 export const leRemittChoose = [
-    { id: 1, description: "No negotiations with bank relationship managers", icon: <Handshake /> },
-    { id: 2, description: "Conversions at interbank rate", icon: <CircleDollarSign /> },
-    { id: 3, description: "50% cheaper than your banking partner", icon: <ArrowDownUp /> },
-    { id: 4, description: "Global coverage – receive payments from 180+ countries", icon: <GlobeIcon /> },
-    { id: 5, description: "Real-time payment tracking – know exactly where your money is", icon: <LocateFixed /> },
+    { id: 1, description: "No negotiations with bank relationship managers", icon: Handshake },
+    { id: 2, description: "Conversions at interbank rate", icon: CircleDollarSign },
+    { id: 3, description: "50% cheaper than your banking partner", icon: ArrowDownUp },
+    { id: 4, description: "Global coverage – receive payments from 180+ countries", icon: GlobeIcon },
+    { id: 5, description: "Real-time payment tracking – know exactly where your money is", icon: LocateFixed },
 ];
 
 export const allReviews = [
@@ -117,7 +117,7 @@ export const allReviews = [
     { id: 6, name: "Krishna Kumar, Co-founder", company: "@PepperTree.AI Pvt Ltd", body: "We were stuck with conventional banking process of collecting trade receivables from our cross-border customers. Though Banks have dependable systems, there is a lot of uncertainty with FOREX charges and even processes that required manual intervention many a times. Forex documentation management was another issue. We adopted LeRemitt with a belief that it'll reduce manual processes, improve documentation process, better customer relationship, and bring transparency with forex charges. LeRemitt has delivered on every aspect we wished for and in fact more with quick processing, and dependable and responsive support team. It's now my go-to platform for remittances!", image: "/images/Krishna.webp" },
     { id: 7, name: "Bharath Bade, Director", company: "@ITGS", body: "LeRemitt has made international payments seamless for my small business. The process is fast, secure, and incredibly easy to use. Also, the transparency in forex rates and fees is unmatched, saving me both time and money. I truly appreciate their dedication to customer satisfaction. Highly recommend their services!", image: "/images/Bharath.webp" },
     { id: 8, name: "", company: "@An MSME Service Exporter", body: "As an MSME, every penny counts. We don't always have the time to keep negotiating for better rates with our relationship managers. LeRemitt has been a huge revelation for us, and we've been able to save so much more." },
-    { id: 9, name:'Arbaz Khan', company: '@Exporter', body: 'We export leather saddles and accessories to buyers in the Middle East, Europe, Australia, and the U.S. — managing so many locations and international transactions used to be challenging. Leremitt changed that completely. Their remittance system is fast, clear, and reliable. I can now track every export payment without worrying about delays or confusion related to speed, hidden charges and conversion. The Leremitt team truly understands exporters’ requirements and provides complete peace of mind by covering all required aspects in their dashboard. I always recommend Leremitt to other exporters who want smooth and secure global payments.' },
+    { id: 9, name: 'Arbaz Khan', company: '@Exporter', body: 'We export leather saddles and accessories to buyers in the Middle East, Europe, Australia, and the U.S. — managing so many locations and international transactions used to be challenging. Leremitt changed that completely. Their remittance system is fast, clear, and reliable. I can now track every export payment without worrying about delays or confusion related to speed, hidden charges and conversion. The Leremitt team truly understands exporters’ requirements and provides complete peace of mind by covering all required aspects in their dashboard. I always recommend Leremitt to other exporters who want smooth and secure global payments.' },
 
     // ledocReviews
     { id: 10, name: "Uday Kumar, CEO", company: "@Deprocon Controls", body: "It is indeed a privilege to have been associated in the development of the product. The initiative is novel and an excellent one and meets the requirements of the export fraternity which has to handle multitude of documents with several stakeholders. We wish LeDoc unbound success in their venture." },
@@ -146,28 +146,24 @@ export const teamFounders = [
 ];
 
 export const teamMembers = [
-    { id: 4, fullName: "Bhargav Chandra Mutyala", role: "Backend Lead", image: "/images/Bhargav.webp", link: "https://www.linkedin.com/in/bhargav-m-94784014b/" },
-    { id: 5, fullName: "Nagesh Pannati", role: "Frontend Lead", image: "/images/Nagesh.webp", link: "https://www.linkedin.com/in/nagesh-pannati-904503145/" },
-    { id: 6, fullName: "Sai Rahul Kommineni", role: "Software Developer", image: "/images/SaiRahul.webp", link: "https://www.linkedin.com/in/sai-rahul-kommineni-514a54123/" },
-    { id: 7, fullName: "Mohan Chandra Mutyala", role: "Software Engineer", image: "/images/Mohan.webp", link: "https://www.linkedin.com/in/mohan-mutyala-9201911b7/" },
-    { id: 8, fullName: "Sultana Tabassum K", role: "Lead - Customer Success", image: "/images/SultanaT.webp", link: "https://www.linkedin.com/in/sultana-tabassum-k-b37aa1153/" },
-    { id: 9, fullName: "Palguna Suggu", role: "Software Engineer", image: "/images/Palguna.webp", link: "https://www.linkedin.com/in/palgunasuggu/" },
-    { id: 10, fullName: "Irfan Khan", role: "Frontend Developer", image: "/images/Irfan.webp", link: "https://www.linkedin.com/in/irfan-khan-b63a66107/" },
-    // { id: 11, fullName: "Hareesh Tadiparti", role: "Junior Software Engineer", image: "/images/Hareesh.webp", link: "https://www.linkedin.com/in/hareesh-tadiparti/" },
-    // { id: 12, fullName: "Mukesh Kumar Orusu", role: "Junior Software Engineer", image: "/images/Mukesh.webp", link: "https://www.linkedin.com/in/mukesh-kumar-orusu-1314381a2/" },
-    // { id: 13, fullName: "Revati Jawale", role: "Junior Software Engineer", image: "/images/Revati.webp", link: "https://www.linkedin.com/in/jawale-revati-13a327246/" },
-    { id: 14, fullName: "Anusha Pothureddypalli", role: "Junior Software Engineer", image: "/images/Anusha.webp", link: "https://www.linkedin.com/in/anusha-pothureddypalli-0a16771b0/" },
-    { id: 15, fullName: "Sudhir Singh", role: "Business Development Manager", image: "/images/SudhirSingh.webp", link: "https://www.linkedin.com/in/realsudhirsingh/" },
-    // { id: 16, fullName: "Siddharth Singh", role: "Customer Success Manager", image: "/images/Siddharth.webp", link: "https://www.linkedin.com/in/siddharth-s-a296881a9/" },
-    { id: 17, fullName: "Gowtham Vegi", role: "Junior Software Engineer", image: "/images/Gowtham.webp", link: "https://www.linkedin.com/in/gowthamvegi/" },
-    { id: 18, fullName: "Lakshay Kumar", role: "Business Development Executive", image: "/images/Kumar.webp", link: "www.linkedin.com/in/lakshay-kumar-7443bb259" }
+    { id: 1, fullName: "Bhargav Chandra Mutyala", role: "Backend Lead", image: "/images/Bhargav.webp", link: "https://www.linkedin.com/in/bhargav-m-94784014b/" },
+    { id: 2, fullName: "Nagesh Pannati", role: "Frontend Lead", image: "/images/Nagesh.webp", link: "https://www.linkedin.com/in/nagesh-pannati-904503145/" },
+    { id: 3, fullName: "Sai Rahul Kommineni", role: "Software Developer", image: "/images/SaiRahul.webp", link: "https://www.linkedin.com/in/sai-rahul-kommineni-514a54123/" },
+    { id: 4, fullName: "Mohan Chandra Mutyala", role: "Software Engineer", image: "/images/Mohan.webp", link: "https://www.linkedin.com/in/mohan-mutyala-9201911b7/" },
+    { id: 5, fullName: "Sultana Tabassum K", role: "Lead - Customer Success", image: "/images/SultanaT.webp", link: "https://www.linkedin.com/in/sultana-tabassum-k-b37aa1153/" },
+    { id: 6, fullName: "Palguna Suggu", role: "Software Engineer", image: "/images/Palguna.webp", link: "https://www.linkedin.com/in/palgunasuggu/" },
+    { id: 7, fullName: "Irfan Khan", role: "Frontend Developer", image: "/images/Irfan.webp", link: "https://www.linkedin.com/in/irfan-khan-b63a66107/" },
+    { id: 8, fullName: "Anusha Pothureddypalli", role: "Junior Software Engineer", image: "/images/Anusha.webp", link: "https://www.linkedin.com/in/anusha-pothureddypalli-0a16771b0/" },
+    { id: 9, fullName: "Sudhir Singh", role: "Business Development Manager", image: "/images/SudhirSingh.webp", link: "https://www.linkedin.com/in/realsudhirsingh/" },
+    { id: 10, fullName: "Gowtham Vegi", role: "Junior Software Engineer", image: "/images/Gowtham.webp", link: "https://www.linkedin.com/in/gowthamvegi/" },
+    { id: 11, fullName: "Lakshay Kumar", role: "Business Development Executive", image: "/images/Kumar.webp", link: "www.linkedin.com/in/lakshay-kumar-7443bb259" }
 ];
 
 export const leremittFaqs = [
     { id: 1, question: "What is LeRemitt?", answer: "LeRemitt is an innovative B2B cross-border platform that simplifies international trade. Our flagship product, 'Receive Money,' enables businesses to collect payments from over 180 countries in USD, CAD, GBP, and EUR. Additionally, LeRemitt provides FCY accounts in these currencies to support seamless local transfers." },
     { id: 2, question: "How does LeRemitt work?", answer: "LeRemitt streamlines cross-border transactions with a user-friendly platform. Users can register effortlessly and start receiving payments in USD, GBP, EUR, and CAD. Acting as a trusted intermediary, we ensure secure, efficient, and hassle-free remittances between you and your customers." },
     { id: 3, question: "What countries does LeRemitt serve?", answer: "LeRemitt enables Indian customers to receive funds in USD, GBP, EUR, and CAD from over 180 countries. We are constantly expanding our reach to include more regions, ensuring greater global access to our services." },
-     { id: 4, question: "How do I create an account on LeRemitt?", answer: "Creating an account on LeRemitt is a straightforward process. Please click [here](https://app.leremitt.com/#/registrationscreen/defaultregistrationscreen) and follow the registration prompts. We'll ask for some basic information and email verification to get you started. Please reach out to our customer support for further assistance." },
+    { id: 4, question: "How do I create an account on LeRemitt?", answer: "Creating an account on LeRemitt is a straightforward process. Please click [here](https://app.leremitt.com/#/registrationscreen/defaultregistrationscreen) and follow the registration prompts. We'll ask for some basic information and email verification to get you started. Please reach out to our customer support for further assistance." },
     { id: 5, question: "How are transactions conducted on LeRemitt?", answer: "LeRemitt partners with leading banks and payment providers worldwide to ensure a seamless transaction experience for our customers. Upon completing registration and KYC, users instantly receive an FCY account in their preferred currencies. They can then collect funds from designated countries at a low cost, benefiting both the remitter and the beneficiary." },
     { id: 6, question: "Are there fees associated with using LeRemitt?", answer: "LeRemitt ensures transparency in transaction fees by clearly communicating all applicable charges, fostering trust and clarity in financial transactions on the platform." },
     { id: 7, question: "How does LeRemitt handle currency conversion for international transactions?", answer: "LeRemitt offers mid-market exchange rates for international transactions in your chosen currency pair. Our platform provides real-time price displays and conversions based on current exchange rates, ensuring users have a clear understanding of market rates." },
@@ -195,16 +191,6 @@ export const leDocFaqs = [
     { id: 16, question: "How can I get started with LeDoc?", answer: "You can reach out to our team for a demo and onboarding process. We provide training and support to ensure a smooth transition to LeDoc." },
     { id: 17, question: "How does LeDoc handle bulk document management?", answer: "LeDoc provides a bulk upload and bulk download feature, allowing businesses to process multiple documents efficiently, reducing manual effort." }
 ];
-
-// export const leFinFaqs = [
-//     { id: 1, question: "What are the eligibility criteria for the exporters and buyers (for import)?", answer: "The exporters (and buyers in case of importers) need to meet certain criteria to be eligible for Trade Financing:\n\n• The Seller Volume needs to be $10Mn of exports as recorded in the previous year\n• The buyer volume needs to be $25Mn of imports as recorded in the previous year\n• The Seller needs to have completed at least one trade with the said buyer." },
-//     { id: 2, question: "What countries you can export to?", answer: "Seller Countries:\n\n1. India\n2. Pakistan\n3. Bangladesh\n4. Singapore\n5. United Kingdom\n6. China\n7. Hong Kong\n8. USA\n9. UAE\n10. Germany\n11. Netherlands\n12. Canada\n13. EU\n14. Thailand\n15. Vietnam\n16. Spain\n17. Mexico\n\nBuyer Countries:\n\n1. USA\n2. UK\n3. Germany\n4. Netherlands\n5. Mexico\n6. Hong Kong\n7. China\n8. Peru\n9. Brazil\n10. India\n11. Australia\n12. OCED Countries\n13. Singapore\n14. Taiwan\n15. Uruguay\n16. Malaysia\n17. Qatar\n18. Vietnam\n19. Kuwait\n20. Saudi Arabia\n21. South Africa\n22. Costa Rica\n23. Thailand\n24. Colombia\n25. Austria\n26. Belgium\n27. Canada\n28. Chile\n29. Czech Republic\n30. Denmark\n31. Estonia\n32. Finland\n33. France\n34. Greece\n35. Hungary\n36. Iceland\n37. Ireland\n38. Israel\n39. Italy\n40. Japan\n41. Korea\n42. Latvia\n43. Lithuania\n44. Luxembourg\n45. Netherlands\n46. New Zealand\n47. Norway\n48. Poland\n49. Portugal\n50. Slovak Republic\n51. Slovenia\n52. Spain\n53. Sweden\n54. Switzerland\n55. Turkey." },
-//     { id: 3, question: "What industry players cannot avail Trade Finance from LeRemitt?", answer: "Gems & Jewellery and Petroleum sectors are negatively earmarked." },
-//     { id: 4, question: "What are the documentation requirements?", answer: "China/Hong Kong:\n\n• Latest Audited Financials for last 3 years\n• KYC details of Directors\n• Bank Details\n• Company Documents - Unified Social Credit Code, Association Documents, Business License, Shareholding Certificate\n\nBangladesh (BD):\n\n• Vendors/Sellers last 2 years audited financials\n• Bank Details and last 6 months bank statements\n• Registration Number - Business Identification Number, Tax Identification Number\n• EKYC - Passport and National ID of the Directors\n• Certificate of Incorporation, MOA/AOA, Business License (Import Export License), Trade Register Extract, Share Holder List/Pattern, VAT Certificate (TAX), Board Resolution, RJSC List of Directors: Form XII, DCCI Certificate of Membership\n\nSingapore/UK:\n\n• Latest Audited Financials for last 3 years\n• KYC details of Directors\n• Company Documents - Certificate of Incorporation, Association Documents, Certificate of Registration, Trade Register Extract, Tax Number Certificate, Shareholding Certificate and organizational chart\n• Bank Details\n\nUAE:\n\n• Latest Audited Financials for last 3 years\n• KYC details of Directors\n• Company Documents - Association Documents, Business License, Certificate of Registration, Shareholding Certificate and organizational chart\n• Bank Details." },
-//     { id: 5, question: "What is the interest rate being charged by the Partner?", answer: "11%-14% (annualized). T&C Applied." },
-//     { id: 6, question: "What if the buyer defaults?", answer: "Since it’s a non-recourse product, the buyer’s line is being covered by an insurance company." },
-//     { id: 7, question: "Will it reflect on exporters’ balance sheet?", answer: "It’s an off-balance sheet solution." }
-// ];
 
 // Define subcategories for LeFin FAQs
 
@@ -410,6 +396,145 @@ export const leFinFaqs = [
         answer: "Factoring is mostly unsecured, but collateral or personal guarantees may be required based on the lender’s risk assessment."
     }
 ];
+
+// OneCompliance Faqs
+
+export const oneComplianceFaqs = [
+    {
+        id: 1,
+        question: "What is OneCompliance?",
+        answer: "OneCompliance is a unified workspace module to manage EBRC tracking, EDPMS reconciliation, invoice–payment matching, and compliance visibility in one place.",
+    },
+    {
+        id: 2,
+        question: "What does the beta include?",
+        answer: (
+            <div className="space-y-2">
+                <p>The Beta currently includes:</p>
+                <ul className="list-disc pl-5 space-y-1">
+                    <li>Invoice–Shipping Bill–Payment reconciliation engine</li>
+                    <li>EDPMS rule-based matching</li>
+                    <li>DGFT API integration for EBRC data fetch</li>
+                    <li>Centralised compliance dashboard</li>
+                    <li>Status tracking & exception handling</li>
+                    <li>Document uploads & audit trail</li>
+                </ul>
+                <p className="italic text-sm text-gray-500 mt-2">
+                    Note: Automated bank submission is not live yet. You will continue
+                    to submit reconciliation to your bank manually.
+                </p>
+            </div>
+        ),
+    },
+    {
+        id: 3,
+        question: "Is it free during beta?",
+        answer:
+            "Yes. One Compliance is completely FREE during the Beta phase. There are no charges during Beta usage. Commercial pricing will be introduced only after Beta ends, with prior notice.",
+    },
+    {
+        id: 4,
+        question: "Will it integrate with banks?",
+        answer: (
+            <div className="space-y-2">
+                <p>Direct bank integrations will be introduced in phases. During Beta:</p>
+                <ul className="list-disc pl-5 space-y-1">
+                    <li>You can generate and export reconciliation</li>
+                    <li>You submit this to your bank via email or portal</li>
+                </ul>
+                <p>Future versions will support automated bank-side EDPMS updates.</p>
+            </div>
+        ),
+    },
+    {
+        id: 5,
+        question: "How secure is my data?",
+        answer: "All data is encrypted, stored securely, and accessible only to authorised users.",
+    },
+    {
+        id: 6,
+        question: "Can I use it for multiple entities?",
+        answer: "In the beta phase, single entity setup is supported. However, in next versions multiple entity setups will be supported.",
+    },
+    {
+        id: 7,
+        question: "Do I need training?",
+        answer: "Yes. The product is designed with guided workflows, but support will be provided.",
+    },
+    {
+        id: 8,
+        question: "Does One Compliance replace my CA or bank?",
+        answer: "No. One Compliance does not replace your CA, banker, or compliance advisor. It organises your data, improves accuracy, and speeds up reconciliation, so your submissions are cleaner and faster.",
+    },
+    {
+        id: 9,
+        question: "Can One Compliance file EBRC or EDPMS on my behalf?",
+        answer: (
+            <div className="space-y-2">
+                <p>During Beta:</p>
+                <ul className="list-disc pl-5 space-y-1">
+                    <li>EBRC data is fetched via DGFT APIs</li>
+                    <li>EDPMS submission to the bank is manual</li>
+                </ul>
+                <p>Automated submission will be introduced in future phases.</p>
+            </div>
+        ),
+    },
+    {
+        id: 10,
+        question: "What types of exporters can use One Compliance?",
+        answer: (
+            <div className="space-y-2">
+                <p>One Compliance works best for:</p>
+                <ul className="list-disc pl-5 space-y-1">
+                    <li>Goods exporters</li>
+                    <li>Service exporters</li>
+                    <li>D2C sellers</li>
+                    <li>Marketplace exporters</li>
+                    <li>Agencies, consultants, and export houses</li>
+                </ul>
+            </div>
+        ),
+    },
+    {
+        id: 11,
+        question: "Can I download reports for audit or bank submission?",
+        answer: (
+            <div className="space-y-2">
+                <p>Yes. You can export:</p>
+                <ul className="list-disc pl-5 space-y-1">
+                    <li>Reconciliation reports</li>
+                    <li>EBRC status reports</li>
+                    <li>Exception & mismatch reports</li>
+                    <li>Transaction summaries</li>
+                </ul>
+                <p className="mt-2">These can be shared with:</p>
+                <ul className="list-disc pl-5 space-y-1">
+                    <li>Banks</li>
+                    <li>Auditors</li>
+                    <li>Finance teams</li>
+                </ul>
+            </div>
+        ),
+    },
+    {
+        id: 12,
+        question: "What happens to my data after Beta ends?",
+        answer: (
+            <div className="space-y-2">
+                <p>You will have the option to:</p>
+                <ul className="list-disc pl-5 space-y-1">
+                    <li>Continue on a paid plan</li>
+                    <li>Export your full data</li>
+                    <li>Or discontinue usage</li>
+                </ul>
+                <p>
+                    You will be informed well in advance before any pricing is activated.
+                </p>
+            </div>
+        ),
+    },
+]
 
 export const pressReleaseData = [
     {
@@ -1214,3 +1339,131 @@ export const shipmentLoanTypes = [
     }
 ];
 
+export const LeDocHomeSteps = [
+    { title: "Set up Users and Partners", description: " Effortlessly onboard internal teams and external partners, providing them with user-controlled access tailored to your needs", icon: Users, color: "from-blue-600 to-blue-300" },
+    { title: "Set up your document and Shipment Workflow", description: "Customize your document types and workflow to fit your needs, ensuring the system adapts to you, not the other way around", icon: Workflow, color: "from-purple-600 to-purple-300" },
+    { title: "Upload or sync Documents", description: "Seamlessly upload or sync documents from your ERP, emails, or  opt for manual upload, ensuring indexed storage of all your documents", icon: FileUp, color: "from-teal-600 to-teal-300" },
+    { title: "Ready to share amongst users and Partners", description: "Ready to share seamlessly and collborate real time among internal users and external partners, ensuring everyone has a single view to the shipment documents", icon: Share2, color: "from-red-600 to-red-300" },
+    { title: "Automated Compliance Management", description: "Automate Shipping bill validations, Advance Authorisation Tracking, EPCG Obligation tracking, EBRC generation ", icon: ShieldCheck, color: "from-yellow-600 to-yellow-300" },
+    { title: "Reports and Analytics", description: "Reports and Analytics provide comprehensive insights and data-driven decision-making tools to monitor, evaluate, and optimize business performance", icon: BarChart3, color: "from-cyan-600 to-cyan-300" },
+];
+
+
+export const OneComplianceSteps = [
+    {
+        title: "EDPMS Reconciliation Workspace",
+        points: [
+            "Invoices, shipping bills and bank inward remittance data at one place",
+            "Map and match transactions",
+            "Set up rules for auto reconciliations"
+        ],
+        icon: LayoutDashboard,
+    },
+    {
+        title: "EBRC Tracking & Management",
+        points: [
+            "Track which invoices are EBRC-ready, pending, or complete",
+            "Pull IRM data via DGFT APIs",
+            "Link invoices and shipping bills to payments"
+        ],
+        icon: FileCheck,
+    },
+    {
+        title: "Central Compliance Data Hub",
+        points: [
+            "View DGFT, ICEGATE and bank-level data in one interface",
+            "Search across invoices, SBs, buyers or currencies"
+        ],
+        icon: Database,
+    },
+    {
+        title: "Rule Engine Dashboard",
+        points: [
+            "Configure rules for allocations & mismatches",
+            "View pending EBRCs & unmatched entries",
+            "Focus only on exceptions—not scanning everything manually"
+        ],
+        icon: Settings,
+    },
+    {
+        title: "Workflows, Roles & Audit Trail",
+        points: [
+            "Maker–checker approval flows",
+            "Full activity logs with timestamps"
+        ],
+        icon: ShieldCheck,
+    }
+];
+
+export const oneComplianceSolves = [
+    {
+        title: "Broken, manual reconciliation",
+        description: "No more juggling spreadsheets, PDFs and mails to figure out which invoices are closed, which payments are pending, and what’s ageing.",
+        icon: Split,
+    },
+    {
+        title: "Zero visibility on EBRC status",
+        description: "Know exactly which invoices have EBRCs, what’s pending, and what’s stuck – without chasing different portals and branches.",
+        icon: EyeOff,
+    },
+    {
+        title: "Fragmented data across systems",
+        description: "Bring data from DGFT, ICEGATE and banks into a single view for better control, internal reviews and audits.",
+        icon: Layers,
+    },
+    {
+        title: "Last-minute compliance fire-fighting",
+        description: "Review your unmatched entries and missing documentation instead of discovering issues during audits or bank reviews.",
+        icon: AlertTriangle,
+    },
+];
+
+export const LeRemittHowItWorks = [
+    { id: 1, title: "Register, Complete your KYC", description: "KYC verification & onboarding", image: "/images/HowLeRemWorks-01.webp" },
+    { id: 2, title: "Get FCY Account", description: "Get Accounts in 4 Currencies- USD, EUR, GBP, CAD", image: "/images/HowLeRemWorks-02.webp" },
+    { id: 3, title: "Upload Invoice & Receive Money", description: "Funds are credited directly to your Indian account ", image: "/images/HowLeRemWorks-03.webp" },
+    { id: 4, title: "Download e-FIRA", description: "Automated regulatory reporting for hassle-free compliance ", image: "/images/HowLeRemWorks-04.webp" },
+];
+
+export const OneComplianceHowItWorks = [
+    {
+        title: "Onboard your data",
+        points: [
+            "Connect DGFT and ICEGATE",
+            "Import or upload bank inward remittance data",
+        ],
+        icon: FileUp,
+    },
+    {
+        title: "Reconcile with smart matching",
+        points: [
+            "AI suggests matches between invoices, SBs and payments",
+            "Review, confirm or correct with exception flags",
+        ],
+        icon: Split,
+    },
+    {
+        title: "Prepare bank-ready reconciliation packs",
+        points: [
+            "Generate clean bank-wise reconciliation summaries",
+            "Share packs for EDPMS closure",
+        ],
+        icon: FileCheck,
+    },
+    {
+        title: "Track EBRCs and closures",
+        points: [
+            "Track EBRC-ready and completed records",
+            "Link EBRCs to underlying transactions",
+        ],
+        icon: Timer,
+    },
+    {
+        title: "Monitor, review and export",
+        points: [
+            "Dashboards for closures, delays and risks",
+            "Export reports for management and auditors",
+        ],
+        icon: BarChart3,
+    },
+];

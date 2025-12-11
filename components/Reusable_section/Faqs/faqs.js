@@ -25,7 +25,7 @@ export default function FAQs({ titleOne, titleTwo, subtitle, faqsData, productKe
                         <span className="md:block">{titleOne}</span>
                         <span className="md:block">{titleTwo}</span>
                     </h1>
-                    <p className="text-gray-600 text-md md:text-lg">{subtitle}</p>
+                    <p className="text-gray-600 text-lg md:text-2xl">{subtitle}</p>
                 </div>
 
                 {/* RIGHT SIDE: FAQ Accordion */}
@@ -35,26 +35,30 @@ export default function FAQs({ titleOne, titleTwo, subtitle, faqsData, productKe
                             <AccordionItem key={index} value={index.toString()} className="border border-gray-200 bg-white rounded-lg shadow-none mb-4">
                                 <AccordionTrigger className="text-md md:text-xl text-start font-semibold px-4 py-3 hover:no-underline" triggerBg={triggerBg} triggerTextColor={triggerTextColor}>{faq.question}</AccordionTrigger>
                                 <AccordionContent className="px-4 pb-3 text-gray-600">
-                                    <div className={faq.answer.split('\n').length > 1 ? "h-36 overflow-y-auto pr-2" : ""}>
-                                        {faq.answer.split('\n').map((paragraph, i) => {
-                                            // Check if paragraph contains markdown style link
-                                            const linkMatch = paragraph.match(/\[(.*?)\]\((.*?)\)/);
-                                            if (linkMatch) {
-                                                const [fullMatch, linkText, linkUrl] = linkMatch;
-                                                const parts = paragraph.split(fullMatch);
-                                                return (
-                                                    <p key={i} className="mb-2 text-md md:text-lg">
-                                                        {parts[0]}
-                                                        <CustomLink href={linkUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                                                            {linkText}
-                                                        </CustomLink>
-                                                        {parts[1]}
-                                                    </p>
-                                                );
-                                            }
-                                            return <p key={i} className="mb-2 text-md md:text-lg">{paragraph}</p>;
-                                        })}
-                                    </div>
+                                    {typeof faq.answer === 'string' ? (
+                                        <div className={faq.answer.split('\n').length > 1 ? "h-36 overflow-y-auto pr-2" : ""}>
+                                            {faq.answer.split('\n').map((paragraph, i) => {
+                                                // Check if paragraph contains markdown style link
+                                                const linkMatch = paragraph.match(/\[(.*?)\]\((.*?)\)/);
+                                                if (linkMatch) {
+                                                    const [fullMatch, linkText, linkUrl] = linkMatch;
+                                                    const parts = paragraph.split(fullMatch);
+                                                    return (
+                                                        <p key={i} className="mb-2 text-md md:text-lg">
+                                                            {parts[0]}
+                                                            <CustomLink href={linkUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                                                                {linkText}
+                                                            </CustomLink>
+                                                            {parts[1]}
+                                                        </p>
+                                                    );
+                                                }
+                                                return <p key={i} className="mb-2 text-md md:text-lg">{paragraph}</p>;
+                                            })}
+                                        </div>
+                                    ) : (
+                                        <div className="text-md md:text-lg">{faq.answer}</div>
+                                    )}
                                 </AccordionContent>
                             </AccordionItem>
                         ))}

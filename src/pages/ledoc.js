@@ -1,7 +1,10 @@
+// Page Title: LeDoc
+// Page URL: https://www.axodian.com/ledoc
+// Local URL: http://localhost:3000/ledoc
 import LeDoc from "../../components/LeDoc_section/LeDoc";
 import SEO from "../../components/SEO";
 
-export default function LeDocPage() {
+const leDoc = () => {
   return (
     <>
       <SEO
@@ -15,3 +18,5 @@ export default function LeDocPage() {
     </>
   );
 }
+
+export default leDoc

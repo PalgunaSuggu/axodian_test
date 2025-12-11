@@ -1,7 +1,10 @@
-import OneCompliance from '../../components/LandingPage_section/Onecompliance_landing_section/OneCompliance'
+// Page Title: Export Compliance (Beta)
+// Page URL: https://www.axodian.com/export-compliance-edpms-ebrc-beta
+// Local URL: http://localhost:3000/export-compliance-edpms-ebrc-beta
+import OneCompliance from '../../components/LandingPage_section/OneCompliance_landing_section/OneCompliance'
 import SEO from '../../components/SEO'
 
-const oneCompla = () => {
+const exportComplianceEdpmsEbrcBeta = () => {
   return (
     <>
       <SEO
@@ -16,4 +19,5 @@ const oneCompla = () => {
   )
 }
 
-export default oneCompla
+export default exportComplianceEdpmsEbrcBeta
+

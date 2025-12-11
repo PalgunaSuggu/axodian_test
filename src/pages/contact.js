@@ -1,7 +1,10 @@
+// Page Title: Contact Us
+// Page URL: https://www.axodian.com/contact
+// Local URL: http://localhost:3000/contact
 import Contact from "../../components/Contact_section/Contact";
 import SEO from "../../components/SEO";
 
-export default function ContactPage() {
+const contact = () => {
     return (
         <>
             <SEO
@@ -15,3 +18,5 @@ export default function ContactPage() {
         </>
     );
 }
+
+export default contact

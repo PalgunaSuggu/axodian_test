@@ -1,7 +1,10 @@
-import { Home } from "../../components/Home_section/Home";
+// Page Title: Home
+// Page URL: https://www.axodian.com/
+// Local URL: http://localhost:3000/
+import Home from "../../components/Home_section/Home";
 import SEO from "../../components/SEO";
 
-export default function HomePage() {
+const HomePage = () => {
   return (
     <>
       <SEO
@@ -15,3 +18,5 @@ export default function HomePage() {
     </>
   );
 }
+
+export default HomePage

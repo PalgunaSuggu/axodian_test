@@ -1,7 +1,10 @@
-import { LeRemitt } from "../../components/LeRemitt_section/LeRemitt";
+// Page Title: LeRemitt
+// Page URL: https://www.axodian.com/leremitt
+// Local URL: http://localhost:3000/leremitt
+import LeRemitt from "../../components/LeRemitt_section/LeRemitt";
 import SEO from "../../components/SEO";
 
-export default function LeRemittPage() {
+const leRemitt = () => {
   return (
     <>
       <SEO
@@ -15,3 +18,5 @@ export default function LeRemittPage() {
     </>
   );
 }
+
+export default leRemitt

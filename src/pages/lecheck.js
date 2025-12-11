@@ -1,7 +1,10 @@
+// Page Title: LeCheck
+// Page URL: https://www.axodian.com/lecheck
+// Local URL: http://localhost:3000/lecheck
 import LeCheck from "../../components/LeCheck_Section/LeCheck";
 import SEO from "../../components/SEO";
 
-export default function LeCheckPage() {
+const leCheck = () => {
     return (
         <>
             <SEO
@@ -16,3 +19,5 @@ export default function LeCheckPage() {
         </>
     );
 }
+
+export default leCheck

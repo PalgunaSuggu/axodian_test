@@ -1,3 +1,6 @@
+// Page Title: Blog Post
+// Page URL: https://www.axodian.com/blogs/[slug]
+// Local URL: http://localhost:3000/blogs/[slug]
 // import { useRouter } from "next/router";
 // import { useEffect, useState } from "react";
 // import { Skeleton } from "@/components/ui/skeleton";

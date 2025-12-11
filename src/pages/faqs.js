@@ -1,7 +1,10 @@
+// Page Title: FAQs
+// Page URL: https://www.axodian.com/faqs
+// Local URL: http://localhost:3000/faqs
 import FAQs from "../../components/Faqs_section/Faqs";
 import SEO from "../../components/SEO";
 
-export default function FaqsPage() {
+const faqs = () => {
     return (
         <>
             <SEO
@@ -15,3 +18,5 @@ export default function FaqsPage() {
         </>
     );
 }
+
+export default faqs

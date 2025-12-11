@@ -1,7 +1,10 @@
+// Page Title: Media
+// Page URL: https://www.axodian.com/media
+// Local URL: http://localhost:3000/media
 import Media from "../../components/Media_Section/Media";
 import SEO from "../../components/SEO";
 
-export default function MediaPage() {
+const media = () => {
     return (
         <>
             <SEO
@@ -15,3 +18,5 @@ export default function MediaPage() {
         </>
     );
 }
+
+export default media

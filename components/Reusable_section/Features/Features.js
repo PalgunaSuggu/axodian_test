@@ -15,9 +15,10 @@ const Features = ({ title, description, features }) => {
                             <CardContent className='p-0'>
                                 {feature.icon ? (
                                     <div className="flex items-center justify-center">
-                                        {React.cloneElement(feature.icon, {
-                                            className: "w-12 h-12 bg-secondary-light-color p-2 rounded-lg text-white",
-                                        })}
+                                        {(() => {
+                                            const Icon = feature.icon;
+                                            return <Icon className="w-12 h-12 bg-secondary-light-color p-2 rounded-lg text-white" />;
+                                        })()}
                                     </div>
                                 ) : (
                                     <h2 className="text-primary-color">{feature.percentage}</h2>

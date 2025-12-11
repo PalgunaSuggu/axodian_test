@@ -1,7 +1,10 @@
-import LeFin from "../../components/LeFin_section/LeFin";
-import SEO from "../../components/SEO";
+// Page Title: Trade Finance Solution
+// Page URL: https://www.axodian.com/trade-finance-solution
+// Local URL: http://localhost:3000/trade-finance-solution
+import LeFin from '../../components/LeFin_section/LeFin'
+import SEO from '../../components/SEO'
 
-export default function LeFinPage() {
+const tradeFinanceSolution = () => {
   return (
     <>
       <SEO
@@ -13,5 +16,7 @@ export default function LeFinPage() {
       />
       <LeFin />
     </>
-  );
+  )
 }
+
+export default tradeFinanceSolution

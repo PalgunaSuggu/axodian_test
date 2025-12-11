@@ -78,6 +78,32 @@ We welcome contributions! Please follow these steps:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## Project Pages
+
+Here is a list of all the pages available in the project:
+
+- **Home**: [`https://www.axodian.com/`](src/pages/index.js)
+- **About Us**: [`https://www.axodian.com/about`](src/pages/about.js)
+- **Blogs**: [`https://www.axodian.com/blogs`](src/pages/blogs.js)
+  - Blog Post: `https://www.axodian.com/blogs/[slug]`
+- **Contact Us**: [`https://www.axodian.com/contact`](src/pages/contact.js)
+- **Export Compliance (Beta)**: [`https://www.axodian.com/export-compliance-edpms-ebrc-beta`](src/pages/export-compliance-edpms-ebrc-beta.js)
+- **Export Finance Loan India**: [`https://www.axodian.com/export-finance-loan-india`](src/pages/export-finance-loan-india.js)
+- **Export Simplified**: [`https://www.axodian.com/export-simplified`](src/pages/export-simplified.js)
+- **Export Simplified LP**: [`https://www.axodian.com/export-simplified-lp`](src/pages/export-simplified-lp.js)
+- **FAQs**: [`https://www.axodian.com/faqs`](src/pages/faqs.js)
+- **LeCheck**: [`https://www.axodian.com/lecheck`](src/pages/lecheck.js)
+- **LeDoc**: [`https://www.axodian.com/ledoc`](src/pages/ledoc.js)
+- **LeRemitt**: [`https://www.axodian.com/leremitt`](src/pages/leremitt.js)
+- **Media**: [`https://www.axodian.com/media`](src/pages/media.js)
+- **Partners**: [`https://www.axodian.com/partners`](src/pages/partners.js)
+- **Test Page**: [`https://www.axodian.com/test`](src/pages/test.js)
+- **Thank You**: [`https://www.axodian.com/thank-you`](src/pages/thank-you.js)
+- **Trade Finance Solution**: [`https://www.axodian.com/trade-finance-solution`](src/pages/trade-finance-solution.js)
+- **Trade Simplified**: [`https://www.axodian.com/trade-simplified`](src/pages/trade-simplified.js)
+
 ---
 
 © 2025 LeRemit. All rights reserved.
+
+

@@ -1,7 +1,11 @@
-import About from "../../components/About_section/About";
-import SEO from "../../components/SEO";
+// Page Title: About Us
+// Page URL: https://www.axodian.com/about
+// Local URL: http://localhost:3000/about
+import React from 'react'
+import SEO from '../../components/SEO'
+import About from '../../components/About_section/About'
 
-export default function AboutPage() {
+const about = () => {
   return (
     <>
       <SEO
@@ -13,5 +17,8 @@ export default function AboutPage() {
       />
       <About />
     </>
-  );
+  )
 }
+
+export default about
+

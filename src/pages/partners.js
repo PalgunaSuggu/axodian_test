@@ -1,9 +1,12 @@
-import Partners from "../../components/Partners_section/Partners";
-import SEO from "../../components/SEO";
+// Page Title: Partners
+// Page URL: https://www.axodian.com/partners
+// Local URL: http://localhost:3000/partners
+import Partners from '../../components/Partners_section/Partners'
+import SEO from '../../components/SEO'
 
-export default function PartnersPage() {
+const partners = () => {
   return (
-    <>
+    <div>
       <SEO
         title="Partner With LeRemitt"
         description="Join LeRemitt's partner program. Grow together as we simplify international trade for Indian exporters through our AI-powered document management platform, LeDoc."
@@ -12,6 +15,8 @@ export default function PartnersPage() {
         imageAlt="Partner With LeRemitt"
       />
       <Partners />
-    </>
-  );
+    </div>
+  )
 }
+
+export default partners

@@ -31,7 +31,7 @@ const Walkthrough = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div className="space-y-6">
                         <h1 className="leading-tight  bg-gradient-to-r from-primary-color to-tertiary-light-color bg-clip-text text-transparent">Get your 20-minute walkthrough</h1>
-     <p className="text-lg md:text-xl text-slate-600">{`We'll map your current flow and show how Axodian reduces time to ship and time to cash.`}</p>
+                        <p className="text-lg md:text-xl text-slate-600">{`We'll map your current flow and show how Axodian reduces time to ship and time to cash.`}</p>
 
                         <div className="space-y-4 pt-4">
                             {features.map((feature, index) => (

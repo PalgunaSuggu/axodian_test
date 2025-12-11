@@ -8,7 +8,7 @@ import HomeBanner from './HomeBanner/HomeBanner'
 import WhyLeRemitt from './HowWorks/WhyLeRemitt'
 import SuiteofSolutions from './SuiteofSolutions/SuiteofSolutions'
 
-export const Home = () => {
+const Home = () => {
   const benefitsRef = useRef(null);
 
   const scrollToBenefits = () => {
@@ -27,3 +27,5 @@ export const Home = () => {
     </div>
   )
 }
+
+export default Home

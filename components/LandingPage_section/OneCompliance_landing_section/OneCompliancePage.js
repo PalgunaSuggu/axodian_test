@@ -12,7 +12,7 @@ import OneComplianceSolves from './OneComplianceSolves/OneComplianceSolves'
 import TargetAudience from './TargetAudience/TargetAudience'
 import WhyOneCompliance from './WhyOneCompliance/WhyOneCompliance'
 
-const OneCompliance = () => {
+const OneCompliancePage = () => {
   return (
     <div>
       <OneComplianceBanner />
@@ -28,4 +28,4 @@ const OneCompliance = () => {
   )
 }
 
-export default OneCompliance
+export default OneCompliancePage

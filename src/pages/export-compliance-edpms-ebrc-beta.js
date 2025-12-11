@@ -1,7 +1,7 @@
 // Page Title: Export Compliance (Beta)
 // Page URL: https://www.axodian.com/export-compliance-edpms-ebrc-beta
 // Local URL: http://localhost:3000/export-compliance-edpms-ebrc-beta
-import OneCompliance from '../../components/LandingPage_section/OneCompliance_landing_section/OneCompliance.js'
+import OneCompliancePage from '../../components/LandingPage_section/OneCompliance_landing_section/OneCompliancePage'
 import SEO from '../../components/SEO'
 
 const exportComplianceEdpmsEbrcBeta = () => {
@@ -14,7 +14,7 @@ const exportComplianceEdpmsEbrcBeta = () => {
         image="https://www.axodian.com/images/axodian-logo-footer.webp"
         imageAlt="One Compliance Export EBRC EDPMS Beta"
       />
-      <OneCompliance />
+      <OneCompliancePage />
     </>
   )
 }

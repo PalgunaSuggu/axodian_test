@@ -6,7 +6,7 @@ import Register from '../../Reusable_section/Register/Register'
 import LeDocDailogForm from '../../Reusable_section/ScheduleForm/LeDocDailogForm'
 import CoreCapabilities from './CoreCapabilities/CoreCapabilities'
 import HowOneComplianceWork from './HowOneComplianceWork/HowOneComplianceWork'
-import OneComplianceBanner from './OneComplianceBanner/OneComplianceBanner.js'
+import OneComplianceBannerSection from './OneComplianceBanner/OneComplianceBannerSection'
 import OneComplianceForm from '../../Reusable_section/ScheduleForm/OneComplianceForm'
 import OneComplianceSolves from './OneComplianceSolves/OneComplianceSolves'
 import TargetAudience from './TargetAudience/TargetAudience'
@@ -15,7 +15,7 @@ import WhyOneCompliance from './WhyOneCompliance/WhyOneCompliance'
 const OneCompliancePage = () => {
   return (
     <div>
-      <OneComplianceBanner />
+      <OneComplianceBannerSection />
       <WhyOneCompliance />
       <OneComplianceSolves />
       <CoreCapabilities />

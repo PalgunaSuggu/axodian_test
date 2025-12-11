@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import React from 'react';
 
-const OneComplianceBanner = () => {
+const OneComplianceBannerSection = () => {
   return (
     <div className="min-h-screen w-full bg-[#020617] relative overflow-hidden flex flex-col justify-center items-center">
       {/* Dynamic Background Effects */}
@@ -47,4 +47,4 @@ const OneComplianceBanner = () => {
   );
 };
 
-export default OneComplianceBanner;
+export default OneComplianceBannerSection;

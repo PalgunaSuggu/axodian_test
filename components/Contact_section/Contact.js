@@ -72,7 +72,7 @@ export default function Contact() {
             <div className="mt-10">
               <h4 className="mb-3">Follow Us</h4>
               <div className="flex space-x-4">
-                <SocialIcon href="https://www.facebook.com/LeRemitt" icon={Facebook} />
+                <SocialIcon href="https://www.facebook.com/Axodian.leremitt/" icon={Facebook} />
                 {/* <SocialIcon href="https://www.youtube.com/@LeRemitt" icon={Youtube} /> */}
                 <SocialIcon href="https://www.linkedin.com/company/axodian/" icon={Linkedin} />
                 {/* <SocialIcon href="https://www.instagram.com/leremitt_com/" icon={Instagram} /> */}

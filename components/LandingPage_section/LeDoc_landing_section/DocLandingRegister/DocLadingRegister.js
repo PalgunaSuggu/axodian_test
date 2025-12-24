@@ -74,7 +74,7 @@ export default DocLandingRegister;
 
 const socialLinks = [
     { icon: Linkedin, href: "https://www.linkedin.com/company/leremit/" },
-    { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61553149285914" },
+    { icon: Facebook, href: "https://www.facebook.com/Axodian.leremitt/" },
     { icon: Instagram, href: "https://www.instagram.com/leremitt_com/" },
     { icon: Youtube, href: "https://www.youtube.com/@LeRemitt" },
 ];

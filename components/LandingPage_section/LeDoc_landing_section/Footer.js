@@ -4,7 +4,7 @@ import CustomLink from '../../Reusable_section/CustomLink/CustomLink';
 
 const socialLinks = [
     { icon: Linkedin, href: "https://www.linkedin.com/company/leremit/" },
-    { icon: Facebook, href: "https://www.facebook.com/LeRemitt" },
+    { icon: Facebook, href: "https://www.facebook.com/Axodian.leremitt/" },
     { icon: Instagram, href: "https://www.instagram.com/leremitt_com/" },
     { icon: Youtube, href: "https://www.youtube.com/@LeRemitt" },
 ];

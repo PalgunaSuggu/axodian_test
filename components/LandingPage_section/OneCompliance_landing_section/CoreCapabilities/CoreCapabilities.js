@@ -22,7 +22,7 @@ const CoreCapabilities = () => {
 
                 {/* Header */}
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <h1 className="tracking-tight mb-4">Core Capabilities (Beta)</h1>
+                    <h1 className="tracking-tight mb-4">Core Capabilities</h1>
                     <p className="text-lg md:text-2xl text-gray-600">Everything you need to manage export compliance with confidence.</p>
                 </div>
 

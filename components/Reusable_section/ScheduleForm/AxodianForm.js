@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import OtpInput from 'react-otp-input';
+import { toast } from 'react-toastify';
 
 const LEFIN_CONSTANTS = {
     turnover: [{ id: 1, value: '30L-1CR', label: '₹30L – ₹1CR' }, { id: 2, value: '1CR-25CR', label: '₹1CR – ₹25CR' }, { id: 3, value: '25CR-50CR', label: '₹25CR – ₹50CR' }, { id: 4, value: '50CR-100CR', label: '₹50CR – ₹100CR' }, { id: 5, value: '100CR', label: 'Above ₹100CR' },],
@@ -76,11 +77,16 @@ const AxodianForm = ({ onSuccess, buttonText = "Request a Demo", defaultSelected
                     setShowPhoneOtp(true);
                     setSendOtpToken(response.data.token);
                     setError(null);
+                    toast.success(`OTP sent successfully to ${formData.phone}`);
                 } else {
-                    setError(response.data.message || 'Failed to send OTP');
+                    const msg = response.data.message || 'Failed to send OTP';
+                    setError(msg);
+                    toast.error(msg);
                 }
             } catch (err) {
-                setError(err.response?.data?.message || 'Error sending OTP');
+                const msg = err.response?.data?.message || 'Error sending OTP';
+                setError(msg);
+                toast.error(msg);
             }
         };
         const delay = setTimeout(() => {
@@ -100,11 +106,15 @@ const AxodianForm = ({ onSuccess, buttonText = "Request a Demo", defaultSelected
                         setPhoneVerified(true);
                         setShowPhoneOtp(false);
                         setVerifyOtpToken(res.data.token || '');
+                        toast.success('Phone number successfully verified!');
                     } else {
                         setError('Invalid OTP');
+                        toast.error('Invalid OTP');
                     }
                 } catch (err) {
-                    setError(err.response?.data?.message || 'OTP verification failed');
+                    const msg = err.response?.data?.message || 'OTP verification failed';
+                    setError(msg);
+                    toast.error(msg);
                 }
             }
         };
@@ -117,11 +127,13 @@ const AxodianForm = ({ onSuccess, buttonText = "Request a Demo", defaultSelected
 
         if (!phoneVerified || !verifyOtpToken) {
             setError('Please verify your phone number.');
+            toast.error('Please verify your phone number.');
             return;
         }
 
         if (!formData.turnover || !formData.shipments_completed || !formData.vintage) {
             setError('Please select Annual Turnover, Business Vintage, and Shipments Completed.');
+            toast.error('Please select Annual Turnover, Business Vintage, and Shipments Completed.');
             return;
         }
 
@@ -141,6 +153,7 @@ const AxodianForm = ({ onSuccess, buttonText = "Request a Demo", defaultSelected
                 setPhoneOtp('');
                 setShowPhoneOtp(false);
                 onSuccess?.();
+                toast.success('Form submitted successfully!');
                 router.push({
                     pathname: '/thank-you',
                     query: {
@@ -152,13 +165,16 @@ const AxodianForm = ({ onSuccess, buttonText = "Request a Demo", defaultSelected
                     },
                 });
             } else {
-                setError(res.data.message || 'Submission failed');
+                const msg = res.data.message || 'Submission failed';
+                setError(msg);
+                toast.error(msg);
             }
         } catch (err) {
-            setError(err.response?.data?.message || 'Form submission error');
-        } finally {
-            setLoading(false);
+            const msg = err.response?.data?.message || 'Form submission error';
+            setError(msg);
+            toast.error(msg);
         }
+        setLoading(false);
     };
 
     return (

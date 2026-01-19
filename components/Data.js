@@ -23,19 +23,47 @@ export const navItems = [
     },
 ];
 
+export const newNavItems = [
+    { name: "About Axodian", href: "/about" },
+    {
+        name: "Offerings",
+        subItems: [
+            { name: "Compliance & Document Management", href: "/ledoc" },
+            { name: "Export Payments", href: "/leremitt" },
+            { name: "Trade Financing", href: "/trade-finance-solution" },
+        ],
+    },
+    {
+        name: "Resources",
+        subItems: [
+            { name: "Blogs", href: "/blogs" },
+            { name: "Media", href: "/media" },
+            { name: "FAQs", href: "/faqs" },
+        ],
+    },
+    { name: "Contact Us", href: "/contact" },
+    {
+        name: "Sign In",
+        subItems: [
+            { name: "LeRemitt", },
+            { name: "LeDoc", },
+        ],
+    },
+];
+
 export const footerLinks = [
     {
         title: "Quick Links", links: [
-            { name: "Resources", href: "/blogs" },
+            { name: "FAQs", href: "/faqs" },
             { name: "Connect with Us", href: "/contact" },
             { name: "LeCheck", href: "/lecheck" }
         ]
     },
     {
         title: "Products", links: [
-            { name: "LeDoc", href: "/ledoc" },
-            { name: "LeRemitt", href: "/leremitt" },
-            { name: "LeFin", href: "/trade-finance-solution" }
+            { name: "Document Management", href: "/ledoc" },
+            { name: "Export Payments", href: "/leremitt" },
+            { name: "Trade Financing", href: "/trade-finance-solution" }
         ]
     },
     {
@@ -117,7 +145,7 @@ export const allReviews = [
     { id: 6, name: "Krishna Kumar, Co-founder", company: "@PepperTree.AI Pvt Ltd", body: "We were stuck with conventional banking process of collecting trade receivables from our cross-border customers. Though Banks have dependable systems, there is a lot of uncertainty with FOREX charges and even processes that required manual intervention many a times. Forex documentation management was another issue. We adopted LeRemitt with a belief that it'll reduce manual processes, improve documentation process, better customer relationship, and bring transparency with forex charges. LeRemitt has delivered on every aspect we wished for and in fact more with quick processing, and dependable and responsive support team. It's now my go-to platform for remittances!", image: "/images/Krishna.webp" },
     { id: 7, name: "Bharath Bade, Director", company: "@ITGS", body: "LeRemitt has made international payments seamless for my small business. The process is fast, secure, and incredibly easy to use. Also, the transparency in forex rates and fees is unmatched, saving me both time and money. I truly appreciate their dedication to customer satisfaction. Highly recommend their services!", image: "/images/Bharath.webp" },
     { id: 8, name: "", company: "@An MSME Service Exporter", body: "As an MSME, every penny counts. We don't always have the time to keep negotiating for better rates with our relationship managers. LeRemitt has been a huge revelation for us, and we've been able to save so much more." },
-    { id: 9, name: 'Arbaz Khan', company: '@Exporter', body: 'We export leather saddles and accessories to buyers in the Middle East, Europe, Australia, and the U.S. — managing so many locations and international transactions used to be challenging. Leremitt changed that completely. Their remittance system is fast, clear, and reliable. I can now track every export payment without worrying about delays or confusion related to speed, hidden charges and conversion. The Leremitt team truly understands exporters’ requirements and provides complete peace of mind by covering all required aspects in their dashboard. I always recommend Leremitt to other exporters who want smooth and secure global payments.' },
+    { id: 9, name:'Arbaz Khan', company: '@Exporter', body: 'We export leather saddles and accessories to buyers in the Middle East, Europe, Australia, and the U.S. — managing so many locations and international transactions used to be challenging. Leremitt changed that completely. Their remittance system is fast, clear, and reliable. I can now track every export payment without worrying about delays or confusion related to speed, hidden charges and conversion. The Leremitt team truly understands exporters’ requirements and provides complete peace of mind by covering all required aspects in their dashboard. I always recommend Leremitt to other exporters who want smooth and secure global payments.',image:"/images/arbaaz.webp" },
 
     // ledocReviews
     { id: 10, name: "Uday Kumar, CEO", company: "@Deprocon Controls", body: "It is indeed a privilege to have been associated in the development of the product. The initiative is novel and an excellent one and meets the requirements of the export fraternity which has to handle multitude of documents with several stakeholders. We wish LeDoc unbound success in their venture." },
@@ -403,137 +431,56 @@ export const oneComplianceFaqs = [
     {
         id: 1,
         question: "What is OneCompliance?",
-        answer: "OneCompliance is a unified workspace module to manage EBRC tracking, EDPMS reconciliation, invoice–payment matching, and compliance visibility in one place.",
+        answer: "OneCompliance is a live compliance management workspace for exporters to manage EBRC tracking, EDPMS reconciliation, invoice–payment matching, and compliance visibility in one place. It helps exporters move from shipment to closure with clarity, control, and confidence.",
     },
     {
         id: 2,
-        question: "What does the beta include?",
+        question: "What does OneCompliance include today?",
         answer: (
             <div className="space-y-2">
-                <p>The Beta currently includes:</p>
+                <p>OneCompliance currently supports core export compliance workflows, including:</p>
                 <ul className="list-disc pl-5 space-y-1">
-                    <li>Invoice–Shipping Bill–Payment reconciliation engine</li>
-                    <li>EDPMS rule-based matching</li>
-                    <li>DGFT API integration for EBRC data fetch</li>
-                    <li>Centralised compliance dashboard</li>
-                    <li>Status tracking & exception handling</li>
-                    <li>Document uploads & audit trail</li>
+                    <li>Invoice, shipping bill, and remittance tracking</li>
+                    <li>Intelligent reconciliation, including partial payments and value mismatches</li>
+                    <li>EBRC-ready data preparation</li>
+                    <li>EDPMS tracking with bank-ready reconciliation outputs</li>
+                    <li>A live dashboard with shipment-wise compliance status</li>
                 </ul>
-                <p className="italic text-sm text-gray-500 mt-2">
-                    Note: Automated bank submission is not live yet. You will continue
-                    to submit reconciliation to your bank manually.
+                <p className="text-sm text-gray-500 mt-2">
+                    New capabilities are added progressively as the platform evolves.
                 </p>
             </div>
         ),
     },
     {
         id: 3,
-        question: "Is it free during beta?",
-        answer:
-            "Yes. One Compliance is completely FREE during the Beta phase. There are no charges during Beta usage. Commercial pricing will be introduced only after Beta ends, with prior notice.",
+        question: "Is OneCompliance available for use now?",
+        answer: "Yes. OneCompliance is live and being used by exporters today. Access is enabled through a guided onboarding process to ensure accurate setup and smooth adoption.",
     },
     {
         id: 4,
-        question: "Will it integrate with banks?",
+        question: "Will OneCompliance integrate with banks?",
         answer: (
             <div className="space-y-2">
-                <p>Direct bank integrations will be introduced in phases. During Beta:</p>
-                <ul className="list-disc pl-5 space-y-1">
-                    <li>You can generate and export reconciliation</li>
-                    <li>You submit this to your bank via email or portal</li>
-                </ul>
-                <p>Future versions will support automated bank-side EDPMS updates.</p>
+                <p>Yes. OneCompliance is designed to align with bank compliance processes. It produces structured, reconciliation-ready outputs that exporters can submit to banks for EBRC issuance and EDPMS closure. Bank integrations are enabled in phases, depending on bank systems and regulatory workflows.</p>
             </div>
         ),
     },
     {
         id: 5,
         question: "How secure is my data?",
-        answer: "All data is encrypted, stored securely, and accessible only to authorised users.",
+        answer: "Data security is a core principle of OneCompliance. The platform uses secure, consent-based data handling, maintains complete audit trails, and supports maker–checker controls. Your data remains protected and is used only for authorised compliance workflows.",
     },
     {
         id: 6,
-        question: "Can I use it for multiple entities?",
-        answer: "In the beta phase, single entity setup is supported. However, in next versions multiple entity setups will be supported.",
+        question: "Who is OneCompliance built for?",
+        answer: "OneCompliance is built for Indian exporters and finance teams managing export compliance across shipments and banks. It is especially valuable for businesses seeking faster closures, reduced follow-ups, and lower compliance risk.",
     },
     {
         id: 7,
-        question: "Do I need training?",
-        answer: "Yes. The product is designed with guided workflows, but support will be provided.",
-    },
-    {
-        id: 8,
-        question: "Does One Compliance replace my CA or bank?",
-        answer: "No. One Compliance does not replace your CA, banker, or compliance advisor. It organises your data, improves accuracy, and speeds up reconciliation, so your submissions are cleaner and faster.",
-    },
-    {
-        id: 9,
-        question: "Can One Compliance file EBRC or EDPMS on my behalf?",
-        answer: (
-            <div className="space-y-2">
-                <p>During Beta:</p>
-                <ul className="list-disc pl-5 space-y-1">
-                    <li>EBRC data is fetched via DGFT APIs</li>
-                    <li>EDPMS submission to the bank is manual</li>
-                </ul>
-                <p>Automated submission will be introduced in future phases.</p>
-            </div>
-        ),
-    },
-    {
-        id: 10,
-        question: "What types of exporters can use One Compliance?",
-        answer: (
-            <div className="space-y-2">
-                <p>One Compliance works best for:</p>
-                <ul className="list-disc pl-5 space-y-1">
-                    <li>Goods exporters</li>
-                    <li>Service exporters</li>
-                    <li>D2C sellers</li>
-                    <li>Marketplace exporters</li>
-                    <li>Agencies, consultants, and export houses</li>
-                </ul>
-            </div>
-        ),
-    },
-    {
-        id: 11,
-        question: "Can I download reports for audit or bank submission?",
-        answer: (
-            <div className="space-y-2">
-                <p>Yes. You can export:</p>
-                <ul className="list-disc pl-5 space-y-1">
-                    <li>Reconciliation reports</li>
-                    <li>EBRC status reports</li>
-                    <li>Exception & mismatch reports</li>
-                    <li>Transaction summaries</li>
-                </ul>
-                <p className="mt-2">These can be shared with:</p>
-                <ul className="list-disc pl-5 space-y-1">
-                    <li>Banks</li>
-                    <li>Auditors</li>
-                    <li>Finance teams</li>
-                </ul>
-            </div>
-        ),
-    },
-    {
-        id: 12,
-        question: "What happens to my data after Beta ends?",
-        answer: (
-            <div className="space-y-2">
-                <p>You will have the option to:</p>
-                <ul className="list-disc pl-5 space-y-1">
-                    <li>Continue on a paid plan</li>
-                    <li>Export your full data</li>
-                    <li>Or discontinue usage</li>
-                </ul>
-                <p>
-                    You will be informed well in advance before any pricing is activated.
-                </p>
-            </div>
-        ),
-    },
+        question: "How do I get started?",
+        answer: "You can book a demo to see OneCompliance in action. Our team will help you get onboarded and start managing compliance with clarity from day one.",
+    }
 ]
 
 export const pressReleaseData = [
@@ -543,7 +490,7 @@ export const pressReleaseData = [
         description: "Through this partnership with IBDIC’s OneTrade platform, 6Point3 Technologies will help simplify and digitize key trade compliances, strengthening India’s shift toward a fully digital trade ecosystem.",
         source: "LinkedIn",
         date: "Oct 13, 2025",
-        image: "/images/articaldata-14.webp",
+        image: "/images/articalimg-14.webp",
         link: "https://www.linkedin.com/feed/update/urn:li:activity:7383515419254587392 ",
     },
     {
@@ -552,7 +499,7 @@ export const pressReleaseData = [
         description: "Dr. Jacob Crasta, the Founder & Chairman of CM Envirosystems Pvt. Ltd, ex-president KASSIA, FKCCI and ASSOCHAM-South, launched AI-powered LeDoc - a Next-Gen Document Management Solution to ease out compliance handling and tracking for International Trade.",
         source: "Deccan Herald",
         date: "Feb 11, 2025",
-        image: "/images/articaldata-01.webp",
+        image: "/images/articalimg-01.webp",
         link: "https://www.deccanherald.com/dhbrandspot-pr/leremitt-launches-ledoc-a-next-gen-document-management-solution-for-international-trade-3400258",
     },
     {
@@ -570,7 +517,7 @@ export const pressReleaseData = [
         description: "LeRemitt, a fintech platform focused on facilitating cross-border payments for MSME goods and services exporters has announced the launch of LeDoc, an Al-powered platform designed to streamline trade documentation and compliance management.",
         source: "The Hindu Bureau",
         date: "Feb 11, 2025",
-        image: "/images/articaldata-02.webp",
+        image: "/images/articalimg-02.webp",
         link: "https://www.thehindu.com/business/leremitt-releases-ledoc-a-document-management-solution-for-foreign-trade/article69206073.ece",
     },
     {
@@ -579,7 +526,7 @@ export const pressReleaseData = [
         description: "LeDoc is the latest addition to LeRemitt’s Global Trade Verse, an integrated cross-border platform that leverages technology and industry expertise to simplify global trade.",
         source: "FPJ News Service",
         date: "Feb 15, 2025",
-        image: "/images/articaldata-03.webp",
+        image: "/images/articalimg-03.webp",
         link: "https://www.freepressjournal.in/business/leremitt-unveils-document-management-solution-for-foreign-trade",
     },
     {
@@ -588,7 +535,7 @@ export const pressReleaseData = [
         description: "LeDoc is an AI-powered platform developed by LeRemitt, designed to streamline trade documentation and compliance management for exporters. It offers intelligent storage and enhanced security.",
         source: "CIOL Bureau",
         date: "Feb 14, 2025",
-        image: "/images/articaldata-04.webp",
+        image: "/images/articalimg-04.webp",
         link: "https://www.ciol.com/news/leremitt-launches-ledoc-a-next-gen-document-management-solution-for-international-trade-8719508",
     },
     {
@@ -597,7 +544,7 @@ export const pressReleaseData = [
         description: "LeRemitt, in partnership with YES BANK, has developed a user-friendly platform that enables MSME players to easily conduct international transactions in key currencies such as USD, EURO, GBP, and CAD. This innovative solution simplifies cross-border payments.",
         source: "Cxotoday",
         date: "Feb 19, 2024",
-        image: "/images/articaldata-05.webp",
+        image: "/images/articalimg-05.webp",
         link: "https://cxotoday.com/press-release/leremitt-launches-its-cross-border-platform-for-msmes-in-partnership-with-yes-bank/",
     },
     {
@@ -606,7 +553,7 @@ export const pressReleaseData = [
         description: "Fintech startup LeRemitt and Yes Bank have partnered to introduce a cross-border platform that enables micro, small and medium enterprises (MSMEs) to conduct international transactions in key currencies.",
         source: "The Economic Times",
         date: "July 9, 2022",
-        image: "/images/articaldata-06.webp",
+        image: "/images/articalimg-06.webp",
         link: "https://economictimes.indiatimes.com/tech/technology/yes-bank-leremmitt-in-pact-to-enable-smooth-cross-border-transactions-for-msmes/articleshow/107480167.cms?from=mdr",
     },
     {
@@ -615,7 +562,7 @@ export const pressReleaseData = [
         description: "Fintech startup LeRemitt on Friday announced that it has raised $1.25 million in a funding round led by early-stage investor Axilor Ventures. The round also saw participation from Capital A along with other founders and angel investors.",
         source: "The Economic Times Tech",
         date: "July 29, 2023",
-        image: "/images/articaldata-07.webp",
+        image: "/images/articalimg-07.webp",
         link: "https://economictimes.indiatimes.com/tech/funding/fintech-startup-leremitt-raises-1-25-million-in-funding-from-axilor-ventures-others/articleshow/102222902.cms",
     },
     {
@@ -624,7 +571,7 @@ export const pressReleaseData = [
         description: "Founded in 2022 by Sheetal Jain, Mahesh Kumar Barate, and Hari Ambati, LeRemitt helps businesses, especially MSMEs, to streamline overseas transactions. The freshly raised funds will be used for hiring, global expansion, product development, and exploring strategic partnerships.",
         source: "Inc42",
         date: "July 27, 2023",
-        image: "/images/articaldata-08.webp",
+        image: "/images/articalimg-08.webp",
         link: "https://inc42.com/buzz/fintech-startup-leremitt-secures-funding-to-simplify-cross-border-transactions-for-msmes/",
     },
 ];
@@ -645,7 +592,7 @@ export const articleData = [
         description: "LeRemitt, a cross-border trade platform for MSMEs, has announced the launch of LeDoc, an Al-powered platform designed to streamline trade documentation and compliance management through intelligent storage, enhanced security, seamless sharing and real-time collaboration.",
         source: "IBSintelligence",
         date: "Feb 18, 2025",
-        image: "/images/articaldata-09.webp",
+        image: "/images/articalimg-09.webp",
         link: "https://ibsintelligence.com/ibsi-news/leremitt-unveils-ledoc-to-simplify-trade-documentation-for-msmes/",
     },
     {
@@ -654,7 +601,7 @@ export const articleData = [
         description: "Our Co-Founder & CEO, Sheetal Jain has been awarded by the ET conclave as the ET Inspiring Women Leader amongst the many woman leaders who have made significant strides in the ecosystem. The event honoured women leaders from diverse industries and backgrounds, and addressed pressing issues ...",
         source: "The Economic Times",
         date: "July 13, 2024",
-        image: "/images/articaldata-10.webp",
+        image: "/images/articalimg-10.webp",
         link: "https://economictimes.indiatimes.com/news/company/corporate-trends/unleashing-potential-embracing-diversity-a-symphony-of-womens-voices/articleshow/108821524.cms"
     },
     {
@@ -663,7 +610,7 @@ export const articleData = [
         description: "LeRemitt platform is an international payments platform meant for MSMEs. An MSME can bring payments in 4 major currencies through Virtual accounts provided through a digital, RBI complaint and AI-driven secure platform. Targets to expand services across geographies connecting MSMEs across the globe",
         source: "CXOToday",
         date: "Jun 27, 2024",
-        image: "/images/articaldata-11.webp",
+        image: "/images/articalimg-11.webp",
         link: "https://cxotoday.com/press-release/leremitt-a-cross-border-platform-wishes-to-empower-msmes-in-india-with-their-platform-for-enhancing-the-global-trade-experience/",
     },
     {
@@ -672,7 +619,7 @@ export const articleData = [
         description: "In the last one month, RBI has made the following two announcements back-to-back which have sent shockwaves through the entire fintech industry leaving stakeholders on both sides of the debate pondering the implications and the path forward",
         source: "ETEdgeINSIGHTS",
         date: "Mar 05, 2024",
-        image: "/images/articaldata-12.webp",
+        image: "/images/articalimg-12.webp",
         link: "https://etedge-insights.com/technology/fintech/fintech-at-the-crossroads-disruption-and-regulation/",
     },
     {
@@ -680,7 +627,7 @@ export const articleData = [
         title: "LeRemitt Honored with Fintech Start-up of the Year (Payments) Award by MSME India Business Awards 2024",
         description: "We are thrilled to announce that LeRemitt has been named Fintech Start-up of the Year (Payments) at the MSME India Business Awards 2024. This award honors our commitment to innovation and excellence in fintech. Thank you to our dedicated team, partners, and customers for their unwavering support.",
         source: "ETEdgeINSIGHTS",
-        image: "/images/articaldata-13.webp",
+        image: "/images/articalimg-13.webp",
         link: ""
     },
 ];
@@ -719,7 +666,7 @@ export const podcastData = [
         description: "As she shares her inspiring journey from corporate lending to pioneering fintech solutions. Discover how Sheetal's expertise and vision are reshaping the landscape for MSMEs in international trade, tackling age-old challenges with innovative strategies. Gain valuable insights into the pivotal role of data analytics and technology..",
         source: "Eli podcast",
         date: "Jun 26, 2024",
-        image: "/images/articaldata-09.webp",
+        image: "/images/articalimg-09.webp",
         link: "https://www.themohuashow.com/podcast/revolutionizing-international-trade-for-msmes-a-conversation-with-sheetal-jain-ceo-of-le-remitt/",
     },
     {
@@ -735,12 +682,12 @@ export const podcastData = [
 
 export const mediaFeatures = [
     {
-        id: 1,
+        id: 0,
         title: "6Point3 Technologies Partners with IBDIC to Power India’s Digital Trade Evolution",
         description: "Through this partnership with IBDIC’s OneTrade platform, 6Point3 Technologies will help simplify and digitize key trade compliances, strengthening India’s shift toward a fully digital trade ecosystem.",
         source: "LinkedIn",
         date: "Oct 13, 2025",
-        image: "/images/articaldata-14.webp",
+        image: "/images/articalimg-14.webp",
         link: "https://www.linkedin.com/feed/update/urn:li:activity:7383515419254587392 ",
     },
     {
@@ -749,7 +696,7 @@ export const mediaFeatures = [
         description: "Dr. Jacob Crasta, the Founder & Chairman of CM Envirosystems Pvt. Ltd, ex-president KASSIA, FKCCI and ASSOCHAM-South, launched AI-powered LeDoc - a Next-Gen Document Management Solution to ease out compliance handling and tracking for International Trade.",
         source: "Deccan Herald",
         date: "Feb 11, 2025",
-        image: "/images/articaldata-01.webp",
+        image: "/images/articalimg-01.webp",
         link: "https://www.deccanherald.com/dhbrandspot-pr/leremitt-launches-ledoc-a-next-gen-document-management-solution-for-international-trade-3400258",
     },
     {
@@ -758,7 +705,7 @@ export const mediaFeatures = [
         description: "LeRemitt, a fintech platform focused on facilitating cross-border payments for MSME goods and services exporters has announced the launch of LeDoc, an Al-powered platform designed to streamline trade documentation and compliance management.",
         source: "The Hindu Bureau",
         date: "Feb 11, 2025",
-        image: "/images/articaldata-02.webp",
+        image: "/images/articalimg-02.webp",
         link: "https://www.thehindu.com/business/leremitt-releases-ledoc-a-document-management-solution-for-foreign-trade/article69206073.ece",
     },
     {
@@ -767,7 +714,7 @@ export const mediaFeatures = [
         description: "LeDoc is the latest addition to LeRemitt’s Global Trade Verse, an integrated cross-border platform that leverages technology and industry expertise to simplify global trade.",
         source: "FPJ News Service",
         date: "Feb 15, 2025",
-        image: "/images/articaldata-03.webp",
+        image: "/images/articalimg-03.webp",
         link: "https://www.freepressjournal.in/business/leremitt-unveils-document-management-solution-for-foreign-trade",
     },
     {
@@ -776,7 +723,7 @@ export const mediaFeatures = [
         description: "LeDoc is an AI-powered platform developed by LeRemitt, designed to streamline trade documentation and compliance management for exporters. It offers intelligent storage and enhanced security.",
         source: "CIOL Bureau",
         date: "Feb 14, 2025",
-        image: "/images/articaldata-04.webp",
+        image: "/images/articalimg-04.webp",
         link: "https://www.ciol.com/news/leremitt-launches-ledoc-a-next-gen-document-management-solution-for-international-trade-8719508",
     },
     {
@@ -785,7 +732,7 @@ export const mediaFeatures = [
         description: "LeRemitt, in partnership with YES BANK, has developed a user-friendly platform that enables MSME players to easily conduct international transactions in key currencies such as USD, EURO, GBP, and CAD. This innovative solution simplifies cross-border payments.",
         source: "CXOToday",
         date: "Feb 19, 2024",
-        image: "/images/articaldata-05.webp",
+        image: "/images/articalimg-05.webp",
         link: "https://cxotoday.com/press-release/leremitt-launches-its-cross-border-platform-for-msmes-in-partnership-with-yes-bank/",
     },
     {
@@ -794,7 +741,7 @@ export const mediaFeatures = [
         description: "Fintech startup LeRemitt and Yes Bank have partnered to introduce a cross-border platform that enables micro, small and medium enterprises (MSMEs) to conduct international transactions in key currencies.",
         source: "The Economic Times",
         date: "July 9, 2022",
-        image: "/images/articaldata-06.webp",
+        image: "/images/articalimg-06.webp",
         link: "https://economictimes.indiatimes.com/tech/technology/yes-bank-leremmitt-in-pact-to-enable-smooth-cross-border-transactions-for-msmes/articleshow/107480167.cms?from=mdr",
     },
     {
@@ -804,7 +751,7 @@ export const mediaFeatures = [
         source: "The Economic Times Tech",
         date: "July 29, 2023",
         author: "— By Jessica Rajan",
-        image: "/images/articaldata-07.webp",
+        image: "/images/articalimg-07.webp",
         link: "https://economictimes.indiatimes.com/tech/funding/fintech-startup-leremitt-raises-1-25-million-in-funding-from-axilor-ventures-others/articleshow/102222902.cms",
     },
     {
@@ -813,7 +760,7 @@ export const mediaFeatures = [
         description: "Founded in 2022 by Sheetal Jain, Mahesh Kumar Barate, and Hari Ambati, LeRemitt helps businesses, especially MSMEs, to streamline overseas transactions. The freshly raised funds will be used for hiring, global expansion, product development, and exploring strategic partnerships.",
         source: "Inc42",
         date: "July 27, 2023",
-        image: "/images/articaldata-08.webp",
+        image: "/images/articalimg-08.webp",
         link: "https://inc42.com/buzz/fintech-startup-leremitt-secures-funding-to-simplify-cross-border-transactions-for-msmes/",
     },
     {
@@ -822,7 +769,7 @@ export const mediaFeatures = [
         description: "LeRemitt, a cross-border trade platform for MSMEs, has announced the launch of LeDoc, an Al-powered platform designed to streamline trade documentation and compliance management through intelligent storage, enhanced security, seamless sharing and real-time collaboration.",
         source: "IBSintelligence",
         date: "Feb 18, 2025",
-        image: "/images/articaldata-09.webp",
+        image: "/images/articalimg-09.webp",
         link: "https://ibsintelligence.com/ibsi-news/leremitt-unveils-ledoc-to-simplify-trade-documentation-for-msmes/",
     },
     {
@@ -831,7 +778,7 @@ export const mediaFeatures = [
         description: "Our Co-Founder & CEO, Sheetal Jain has been awarded by the ET conclave as the ET Inspiring Women Leader amongst the many woman leaders who have made significant strides in the ecosystem. The event honoured women leaders from diverse industries and backgrounds, and addressed pressing issues ...",
         source: "The Economic Times",
         date: "July 13, 2024",
-        image: "/images/articaldata-10.webp",
+        image: "/images/articalimg-10.webp",
         link: "https://economictimes.indiatimes.com/news/company/corporate-trends/unleashing-potential-embracing-diversity-a-symphony-of-womens-voices/articleshow/108821524.cms"
     },
     {
@@ -840,7 +787,7 @@ export const mediaFeatures = [
         description: "LeRemitt platform is an international payments platform meant for MSMEs. An MSME can bring payments in 4 major currencies through Virtual accounts provided through a digital, RBI complaint and AI-driven secure platform. Targets to expand services across geographies connecting MSMEs across the globe",
         source: "CXOToday",
         date: "Jun 27, 2024",
-        image: "/images/articaldata-11.webp",
+        image: "/images/articalimg-11.webp",
         link: "https://cxotoday.com/press-release/leremitt-a-cross-border-platform-wishes-to-empower-msmes-in-india-with-their-platform-for-enhancing-the-global-trade-experience/",
     },
     {
@@ -849,7 +796,7 @@ export const mediaFeatures = [
         description: "In the last one month, RBI has made the following two announcements back-to-back which have sent shockwaves through the entire fintech industry leaving stakeholders on both sides of the debate pondering the implications and the path forward",
         source: "ETEdgeINSIGHTS",
         date: "Mar 05, 2024",
-        image: "/images/articaldata-12.webp",
+        image: "/images/articalimg-12.webp",
         link: "https://etedge-insights.com/technology/fintech/fintech-at-the-crossroads-disruption-and-regulation/",
     },
     {
@@ -858,7 +805,7 @@ export const mediaFeatures = [
         description: "We are thrilled to announce that LeRemitt has been named Fintech Start-up of the Year (Payments) at the MSME India Business Awards 2024. This award honors our commitment to innovation and excellence in fintech. Thank you to our dedicated team, partners, and customers for their unwavering support.",
         source: "ETEdgeINSIGHTS",
         date: "2024",
-        image: "/images/articaldata-13.webp",
+        image: "/images/articalimg-13.webp",
     },
 ];
 

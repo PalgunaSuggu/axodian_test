@@ -10,9 +10,9 @@ export default function Document() {
         <meta name="theme-color" content="#000000" />
 
         {/* Favicon */}
-        <link rel="icon" type="image/webp" sizes="32x32" href="/images/axodian-logo-A.webp" />
-        <link rel="icon" type="image/webp" sizes="192x192" href="/images/axodian-logo-A.webp" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/images/axodian-logo-A.webp" />
+        <link rel="icon" type="image/webp" sizes="32x32" href="/images/axodian-fav-icon.webp" />
+        <link rel="icon" type="image/webp" sizes="192x192" href="/images/axodian-fav-icon.webp" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/axodian-fav-icon.webp" />
 
         {/* Google Tag Manager */}
         <Script

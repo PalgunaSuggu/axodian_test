@@ -23,7 +23,10 @@ const Home = () => {
       <WhyLeRemitt />
       <Testimonials reviews={allReviews} duration='40s' mediaFeatures={mediaFeatures} isHomePage={true} withoutImgReviews={true} withImgReviews={false} titleOne="How We're Making Global Trade Effortless" titleTwo="Hear From Our Clients" />
       <Investors />
-      <GetStarted tag="TRANSFORM YOUR EXPORT BUSINESS" heading="Global Trade. Simplified." subtitleOne="Join 500+ businesses powering cross-border trade with Axodian." subtitleTwo="a portfolio of solutions simplifying documentation, compliance, payments, and financing." buttonText="See How It Works" buttonLink="/" />
+      <GetStarted tag="TRANSFORM YOUR EXPORT BUSINESS"
+      //  heading="Global Trade. Simplified." 
+      heading="Trusted. Unified. Global."
+      subtitleOne="Join 500+ businesses powering cross-border trade with Axodian." subtitleTwo="a portfolio of solutions simplifying documentation, compliance, payments, and financing." buttonText="See How It Works" buttonLink="/" />
     </div>
   )
 }

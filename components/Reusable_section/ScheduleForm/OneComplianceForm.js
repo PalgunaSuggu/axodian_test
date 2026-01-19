@@ -94,7 +94,7 @@ const OneComplianceForm = () => {
 
                         <div className="pt-4">
                             <Button className="w-full bg-white hover:bg-gray-100 text-secondary-color font-bold py-6 text-lg rounded-xl transition-all duration-200 hover:scale-[1.02]">
-                                Request Beta Access
+                                Book a 15-min Demo
                             </Button>
                             <p className="text-center text-gray-400 text-sm mt-4">
                                 By submitting this form, you agree to our Terms & Conditions and

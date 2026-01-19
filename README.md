@@ -87,7 +87,7 @@ Here is a list of all the pages available in the project:
 - **Blogs**: [`https://www.axodian.com/blogs`](src/pages/blogs.js)
   - Blog Post: `https://www.axodian.com/blogs/[slug]`
 - **Contact Us**: [`https://www.axodian.com/contact`](src/pages/contact.js)
-- **Export Compliance (Beta)**: [`https://www.axodian.com/export-compliance-edpms-ebrc-beta`](src/pages/export-compliance-edpms-ebrc-beta.js)
+- **Export Compliance**: [`https://www.axodian.com/export-compliance-edpms-ebrc](src/pages/export-compliance-edpms-ebrc.js)
 - **Export Finance Loan India**: [`https://www.axodian.com/export-finance-loan-india`](src/pages/export-finance-loan-india.js)
 - **Export Simplified**: [`https://www.axodian.com/export-simplified`](src/pages/export-simplified.js)
 - **Export Simplified LP**: [`https://www.axodian.com/export-simplified-lp`](src/pages/export-simplified-lp.js)

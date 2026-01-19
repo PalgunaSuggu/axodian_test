@@ -108,9 +108,9 @@ const TargetAudience = () => {
                                     <span>Beta Program</span>
                                 </div>
 
-                                <h3 className="text-gray-900">Why Early Access Matters</h3>
+                                <h3 className="text-gray-900">{`Why It's the Best Time to Join`}</h3>
 
-                                <p className="text-gray-600">Join a select group shaping the future of export compliance.</p>
+                                <p className="text-gray-600">Be part of our growing community of export compliance professionals.</p>
                             </div>
 
                             <div className="space-y-8">

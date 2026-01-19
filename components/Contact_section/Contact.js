@@ -162,9 +162,9 @@ export default function Contact() {
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
-            <button onClick={() => setDialogOpen(false)} className={`bg-${dialogMessage.type === 'success' ? 'green' : 'red'}-600 hover:bg-${dialogMessage.type === 'success' ? 'green' : 'red'}-700`}>
+            <Button onClick={() => setDialogOpen(false)} className={`bg-${dialogMessage.type === 'success' ? 'green' : 'red'}-600 hover:bg-${dialogMessage.type === 'success' ? 'green' : 'red'}-700`}>
               Close
-            </button>
+            </Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>

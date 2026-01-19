@@ -136,8 +136,8 @@ import { useEffect, useRef, useState } from 'react';
 
 const benefitsData = [
     {
-        id: "ledoc",
-        heading: "LeDoc",
+        id: "document-management",
+        heading: "Document Management",
         subheading: (
             <>
                 Document & Compliance Management <br /> for Exporters
@@ -162,11 +162,11 @@ const benefitsData = [
         ],
         image: "/images/LeDocSuiteofSolutions.webp",
         link: "/ledoc",
-        reverse: true,
+        isFirstCard: true,
     },
     {
-        id: "leremitt",
-        heading: "LeRemitt",
+        id: "export-payments",
+        heading: "Export Payments",
         subheading: (
             <>
                 Effortless & Transparent cross-border payments
@@ -181,11 +181,11 @@ const benefitsData = [
         ],
         image: "/images/LeRemittSuiteofSolutions.webp",
         link: "/leremitt",
-        reverse: false,
+        isFirstCard: false,
     },
     {
-        id: "lefin",
-        heading: "LeFin",
+        id: "trade-financing",
+        heading: "Trade Financing",
         subheading: (
             <>
                 Financial solutions to support global trade
@@ -200,13 +200,13 @@ const benefitsData = [
         ],
         image: "/images/LeFinSuiteofSolutions.webp",
         link: "/trade-finance-solution",
-        reverse: false,
+        isFirstCard: false,
     },
 ];
 
 const SuiteofSolutions = () => {
     const router = useRouter();
-    const [currentTab, setCurrentTab] = useState("leremitt");
+    const [currentTab, setCurrentTab] = useState("document-management");
     const [isHovered, setIsHovered] = useState(false);
     const autoPlayTimeoutRef = useRef(null);
 
@@ -236,7 +236,7 @@ const SuiteofSolutions = () => {
     return (
         <div className="bg-gray-50 py-16 md:py-24">
             <div className="container mx-auto">
-                <div className="text-center mb-32">
+                <div className="text-center mb-14 md:mb-32">
                     <h1 className="text-gray-900">Our Suite of Solutions</h1>
                 </div>
 
@@ -268,61 +268,67 @@ const SuiteofSolutions = () => {
                             </div>
                         </TabsList>
 
-                        {benefitsData.map((benefit) => (
-                            <TabsContent key={benefit.id} value={benefit.id} className='mt-20'>
-                                <Card className={`flex flex-col md:flex-row bg-white rounded-lg shadow-none ${benefit.reverse ? 'md:flex-row-reverse' : ''}`}>
-                                    <Image src={benefit.image} alt={benefit.heading} width={500} height={300} className="w-full md:w-1/2 h-auto object-cover" loading="lazy" />
-                                    <CardContent className="md:w-1/2 py-8 pl-8">
-                                        <h3 className="text-primary-color mb-2">{benefit.heading}</h3>
-                                        <p className="text-lg mb-6 text-black">{benefit.subheading}</p>
-                                        <ul className="space-y-4">
-                                            {Array.isArray(benefit.cardContent[0]) ? (
-                                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-4">
-                                                    <div>
-                                                        {benefit.cardContent[0].map((item, idx) => (
-                                                            <li key={idx} className="flex items-start gap-4 mb-4">
-                                                                <item.icon className="w-9 h-9 p-2 rounded-full text-primary-color bg-primary-color/10" />
-                                                                <div>
-                                                                    <p className="font-semibold text-lg text-gray-700 mb-1">{item.title}</p>
-                                                                    <p className="text-gray-600 text-md">{item.description}</p>
-                                                                </div>
-                                                            </li>
-                                                        ))}
-                                                    </div>
-                                                    <div>
-                                                        {benefit.cardContent[1].map((item, idx) => (
-                                                            <li key={idx} className="flex items-start gap-4 mb-4">
-                                                                <item.icon className="w-9 h-9 p-2 rounded-full text-primary-color bg-primary-color/10" />
-                                                                <div>
-                                                                    <p className="font-semibold text-lg text-gray-700 mb-1">{item.title}</p>
-                                                                    <p className="text-gray-600 text-md">{item.description}</p>
-                                                                </div>
-                                                            </li>
-                                                        ))}
-                                                    </div>
-                                                </div>
-                                            ) : (
-                                                benefit.cardContent.map((item, idx) => (
-                                                    <li key={idx} className="flex items-start gap-4">
-                                                        <item.icon className="w-10 h-10 p-2 rounded-full text-primary-color bg-primary-color/10" />
-                                                        <div>
-                                                            <p className="font-semibold text-lg text-gray-700 mb-1">{item.title}</p>
-                                                            <p className="text-gray-600 text-md">{item.description}</p>
+                        {benefitsData.map((benefit) => {
+                            const isFirstCard = benefit.isFirstCard;
+
+                            return (
+                                <TabsContent key={benefit.id} value={benefit.id} className="mt-20">
+                                    <Card className="bg-white rounded-lg shadow-none md:h-[520px]">
+                                        <div className="grid grid-cols-1 md:grid-cols-12 h-full">
+                                            <div className={`h-full ${isFirstCard ? "md:col-span-4" : "md:col-span-6"}`}>
+                                                <Image src={benefit.image} alt={benefit.heading} width={600} height={400} className="w-full h-full object-cover rounded-lg" loading="lazy" />
+                                            </div>
+
+                                            <CardContent className={`h-full flex flex-col p-4 ${isFirstCard ? "md:col-span-8" : "md:col-span-6"}`}>
+                                                <div>
+                                                    <h3 className="text-primary-color mb-2">{benefit.heading}</h3>
+                                                    <p className="text-lg mb-6 text-black">{benefit.subheading}</p>
+
+                                                    {isFirstCard ? (
+                                                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                                                            {benefit.cardContent.map((column, colIdx) => (
+                                                                <ul key={colIdx} className="space-y-4">
+                                                                    {column.map((item, idx) => (
+                                                                        <li key={idx} className="flex gap-4">
+                                                                            <item.icon className="w-10 h-10 p-2 rounded-full text-primary-color bg-primary-color/10" />
+                                                                            <div>
+                                                                                <p className="font-semibold text-lg text-gray-700 mb-1">{item.title}</p>
+                                                                                <p className="text-gray-600 text-md">
+                                                                                    {item.description}
+                                                                                </p>
+                                                                            </div>
+                                                                        </li>
+                                                                    ))}
+                                                                </ul>
+                                                            ))}
                                                         </div>
-                                                    </li>
-                                                ))
-                                            )}
-                                        </ul>
-                                        <Button onClick={() => router.push(benefit.link)} className="h-10 px-4 rounded-lg text-white font-medium mt-6 flex items-center gap-2 bg-primary-color hover:bg-primary-color/80 transition-all duration-500">
-                                            <span className="flex items-center gap-2">
-                                                Learn More
-                                                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                                            </span>
-                                        </Button>
-                                    </CardContent>
-                                </Card>
-                            </TabsContent>
-                        ))}
+                                                    ) : (
+                                                        <ul className="space-y-4">
+                                                            {benefit.cardContent.map((item, idx) => (
+                                                                <li key={idx} className="flex gap-4">
+                                                                    <item.icon className="w-10 h-10 p-2 rounded-full text-primary-color bg-primary-color/10" />
+                                                                    <div>
+                                                                        <p className="font-semibold text-lg text-gray-700 mb-1">{item.title}</p>
+                                                                        <p className="text-gray-600 text-md">{item.description}</p>
+                                                                    </div>
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    )}
+                                                </div>
+
+                                                <Button onClick={() => router.push(benefit.link)} className="md:mt-auto mt-12 px-4 md:w-56 rounded-lg text-white font-medium flex items-center gap-2 bg-primary-color hover:bg-primary-color/80">
+                                                    Learn More
+                                                    <ArrowRight className="w-4 h-4" />
+                                                </Button>
+                                            </CardContent>
+                                        </div>
+                                    </Card>
+                                </TabsContent>
+                            );
+                        })}
+
+
                     </Tabs>
                 </div>
             </div>

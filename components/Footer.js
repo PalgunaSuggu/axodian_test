@@ -122,7 +122,7 @@ export default Footer;
 
 // const socialLinks = [
 //   { icon: Linkedin, href: "https://www.linkedin.com/company/axodian/" },
-//   { icon: Facebook, href: "https://www.facebook.com/LeRemitt" },
+//   { icon: Facebook, href: "https://www.facebook.com/Axodian.leremitt/" },
 //   { icon: Instagram, href: "https://www.instagram.com/leremitt_com/" },
 //   { icon: Youtube, href: "https://www.youtube.com/@LeRemitt" },
 // ];

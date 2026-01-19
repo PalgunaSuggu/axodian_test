@@ -8,7 +8,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import OtpInput from 'react-otp-input';
-import { toast } from 'react-toastify';
 
 const LEDOC_CONSTANTS = {
     turnover: [
@@ -91,16 +90,11 @@ const LeDocForm = ({
                     setShowPhoneOtp(true);
                     setSendOtpToken(response.data.token);
                     setError(null);
-                    toast.success(`OTP sent successfully to ${formData.phone}`);
                 } else {
-                    const msg = response.data.message || 'Failed to send OTP';
-                    setError(msg);
-                    toast.error(msg);
+                    setError(response.data.message || 'Failed to send OTP');
                 }
             } catch (err) {
-                const msg = err.response?.data?.message || 'Error sending OTP';
-                setError(msg);
-                toast.error(msg);
+                setError(err.response?.data?.message || 'Error sending OTP');
             }
         };
         const delay = setTimeout(() => {
@@ -120,15 +114,11 @@ const LeDocForm = ({
                         setPhoneVerified(true);
                         setShowPhoneOtp(false);
                         setVerifyOtpToken(res.data.token || '');
-                        toast.success('Phone number successfully verified!');
                     } else {
                         setError('Invalid OTP');
-                        toast.error('Invalid OTP');
                     }
                 } catch (err) {
-                    const msg = err.response?.data?.message || 'OTP verification failed';
-                    setError(msg);
-                    toast.error(msg);
+                    setError(err.response?.data?.message || 'OTP verification failed');
                 }
             }
         };
@@ -141,13 +131,11 @@ const LeDocForm = ({
 
         if (!phoneVerified || !verifyOtpToken) {
             setError('Please verify your phone number.');
-            toast.error('Please verify your phone number.');
             return;
         }
 
         if (!formData.turnover || !formData.export_documents) {
             setError('Please select Annual Turnover and Export Documents Per Month.');
-            toast.error('Please select Annual Turnover and Export Documents Per Month.');
             return;
         }
 
@@ -167,7 +155,6 @@ const LeDocForm = ({
                 setPhoneOtp('');
                 setShowPhoneOtp(false);
                 onSuccess?.();
-                toast.success('Form submitted successfully!');
                 router.push({
                     pathname: '/thank-you',
                     query: {
@@ -179,15 +166,11 @@ const LeDocForm = ({
                     },
                 });
             } else {
-                const msg = res.data.message || 'Submission failed';
-                setError(msg);
-                toast.error(msg);
+                setError(res.data.message || 'Submission failed');
             }
         } catch (err) {
-            const msg = err.response?.data?.message || 'Form submission error';
-            setError(msg);
-            toast.error(msg);
-        }
+            setError(err.response?.data?.message || 'Form submission error');
+        } 
         setLoading(false)
     };
 

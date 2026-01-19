@@ -4,8 +4,6 @@ import Layout from '../../components/Layout';
 import { useRouter } from 'next/router';
 import ReactGA from "react-ga4";
 import { useEffect, useState } from 'react';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 const GA_TRACKING_ID = "G-VD04WS1MZE";
 
@@ -51,7 +49,6 @@ const App = ({ Component, pageProps }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Layout>
-        <ToastContainer position="top-right" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover style={{ marginTop: '80px' }} />
         <Component {...pageProps} />
       </Layout>
     </>

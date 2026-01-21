@@ -6,8 +6,8 @@ const HomeBanner = ({ onExploreClick, }) => {
   const features = [
     "OneCompliance for EDPMS & EBRC workflows",
     "OneDoc for organised, audit-ready documentation",
-    "Export Payments for transparent cross-border payouts",
-    "Trade Financing for timely trade financing",
+    "LeRemitt for transparent cross-border payouts",
+    "LeFin for timely trade financing",
   ];
 
   return (

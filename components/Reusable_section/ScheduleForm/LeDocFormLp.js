@@ -147,9 +147,8 @@ const LeDocFormLp = ({ onSuccess, buttonText = "Request a Demo", defaultSelected
             }
         } catch (err) {
             setError(err.response?.data?.message || 'Form submission error');
-        } finally {
-            setLoading(false);
-        }
+        } 
+        setLoading(false)
     };
 
     return (
@@ -239,7 +238,7 @@ const LeDocFormLp = ({ onSuccess, buttonText = "Request a Demo", defaultSelected
                 </div>
 
                 <div className="flex items-start gap-2">
-                    <input type="checkbox" id="agree" checked={agree} onChange={() => setAgree(!agree)} required className="mt-1" />
+                    <input type="checkbox" id="agree" checked={agree} onChange={() => setAgree(!agree)} className="mt-1" />
                     <Label htmlFor="agree" className="text-sm text-gray-600">
                         {`By submitting this form, I agree to Axodian's`} <Link href="https://www.axodian.com/Documents/6Point3_PrivacyPolicy.pdf" className="underline text-indigo-600">Privacy Policy</Link> <span className="text-red-500">*</span>
                     </Label>
@@ -248,7 +247,7 @@ const LeDocFormLp = ({ onSuccess, buttonText = "Request a Demo", defaultSelected
                 <div className="flex flex-col md:flex-row justify-between gap-4 w-full">
                     <Button
                         type="submit"
-                        disabled={loading || !agree || !phoneVerified || !formData.is_exporter_lp || !formData.to_email || !formData.first_name}
+                        disabled={loading || !agree || !phoneVerified}
                         className="text-white bg-gradient-to-b from-indigo-600 to-indigo-700 rounded-lg hover:opacity-90 px-6 py-3"
                     >
                         {loading ? 'Submitting...' : buttonText}
@@ -258,13 +257,13 @@ const LeDocFormLp = ({ onSuccess, buttonText = "Request a Demo", defaultSelected
                     <Button
                         type="button"
                         onClick={() => {
-                            if (!(loading || !agree || !phoneVerified || !formData.is_exporter_lp || !formData.to_email || !formData.first_name)) {
+                            if (!(loading || !agree || !phoneVerified)) {
                                 const phoneWithCountryCode = `+91${formData.phone}`;
                                 const calendlyUrl = `https://calendly.com/leremitt_/ledoc-introduction?name=${encodeURIComponent(formData.first_name)}&email=${encodeURIComponent(formData.to_email)}&a1=${encodeURIComponent(formData.Company)}&a2=${encodeURIComponent(phoneWithCountryCode)}`;
                                 window.open(calendlyUrl, '_blank');
                             }
                         }}
-                        disabled={loading || !agree || !phoneVerified || !formData.is_exporter_lp || !formData.to_email || !formData.first_name}
+                        disabled={loading || !agree || !phoneVerified}
                         className="text-white bg-gradient-to-b from-indigo-600 to-indigo-700 rounded-lg hover:opacity-90 px-6 py-3"
                     >
                         {loading ? 'Submitting...' : "Schedule a demo"}
@@ -276,7 +275,7 @@ const LeDocFormLp = ({ onSuccess, buttonText = "Request a Demo", defaultSelected
                         rel="noopener noreferrer"
                     >
                         <Button
-                            disabled={loading || !agree || !phoneVerified || !formData.is_exporter_lp || !formData.to_email || !formData.first_name}
+                            disabled={loading || !agree || !phoneVerified}
                             type="button"
                             className="text-white bg-gradient-to-b from-indigo-600 to-indigo-700 rounded-lg hover:opacity-90 px-6 py-3"
                         >

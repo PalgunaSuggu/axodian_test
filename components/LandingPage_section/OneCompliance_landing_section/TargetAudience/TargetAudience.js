@@ -1,12 +1,4 @@
-import {
-    CheckCircle2,
-    Clock,
-    FileText,
-    ShieldCheck,
-    Target,
-    TrendingUp,
-    Users,
-} from "lucide-react";
+import { CheckCircle2, Clock, FileText, ShieldCheck, Target, TrendingUp, Users, } from "lucide-react";
 
 const TargetAudience = () => {
     const audience = [
@@ -105,7 +97,7 @@ const TargetAudience = () => {
                             <div className="space-y-2 mb-10">
                                 <div className="inline-flex items-center gap-2 text-secondary-color font-semibold">
                                     <Target className="w-5 h-5" />
-                                    <span>Beta Program</span>
+                                    <span>Export Compliance</span>
                                 </div>
 
                                 <h3 className="text-gray-900">{`Why It's the Best Time to Join`}</h3>

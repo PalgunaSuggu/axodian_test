@@ -1,15 +1,15 @@
 'use client'
 
-import { useState } from 'react'
-import axios from 'axios'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
-import { Mail, Phone, Clock, MapPin, Send, Facebook, Twitter, Linkedin, Instagram, Loader2, Youtube } from 'lucide-react'
-import CustomLink from '../Reusable_section/CustomLink/CustomLink'
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog'
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog'
+import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import { Textarea } from '@/components/ui/textarea'
+import axios from 'axios'
+import { Clock, Facebook, Linkedin, Loader2, Mail, MapPin, Phone, Send } from 'lucide-react'
 import Link from 'next/link'
+import { useState } from 'react'
+import CustomLink from '../Reusable_section/CustomLink/CustomLink'
 
 export default function Contact() {
   const [formData, setFormData] = useState({ first_name: '', last_name: '', to_email: '', phone: '', description: '' })
@@ -28,7 +28,7 @@ export default function Contact() {
     setLoading(true)
 
     try {
-      const response = await axios.post('/api/contact-us', formData)
+      const response = await axios.post('/api/contact-us', { ...formData, isContact: true })
       if (response.data.success) {
         setDialogMessage({ type: 'success', text: response.data.message })
         setFormData({ first_name: '', last_name: '', to_email: '', phone: '', description: '' })
@@ -151,7 +151,7 @@ export default function Contact() {
       </div>
 
       {/* Feedback Dialog */}
-      <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
+      <Dialog open={dialogOpen} onOpenChange={setDialogOpen} onInteractOutside={(e) => { e.preventDefault(); }}>
         <DialogContent className="max-w-md">
           <DialogHeader>
             <DialogTitle className={`text-${dialogMessage.type === 'success' ? 'green' : 'red'}-600`}>
@@ -162,7 +162,7 @@ export default function Contact() {
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
-            <Button onClick={() => setDialogOpen(false)} className={`bg-${dialogMessage.type === 'success' ? 'green' : 'red'}-600 hover:bg-${dialogMessage.type === 'success' ? 'green' : 'red'}-700`}>
+            <Button onClick={() => setDialogOpen(false)} className={dialogMessage.type === 'success' ? 'bg-green-600 hover:bg-green-700' : 'bg-red-600 hover:bg-red-700'}>
               Close
             </Button>
           </DialogFooter>
@@ -194,7 +194,7 @@ function ContactInfo({ icon: Icon, label, value, href }) {
 
 function SocialIcon({ href, icon: Icon }) {
   return (
-    <CustomLink href={href} target="_blank" rel="noopener noreferrer"className="p-2 bg-primary-light-color rounded-full text-white hover:bg-primary-light-color/90 transition-colors duration-300">
+    <CustomLink href={href} target="_blank" rel="noopener noreferrer" className="p-2 bg-primary-light-color rounded-full text-white hover:bg-primary-light-color/90 transition-colors duration-300">
       <Icon className="w-5 h-5" />
     </CustomLink>
   )

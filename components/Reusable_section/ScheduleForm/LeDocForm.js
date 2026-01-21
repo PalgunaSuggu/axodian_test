@@ -25,8 +25,7 @@ const LEDOC_CONSTANTS = {
     ],
 };
 
-const LeDocForm = ({
-    onSuccess, buttonText = "Request a Demo", defaultSelected = ['remittance', 'document_management', 'trade_finance', 'secured_loans', 'unsecured_loans', 'bill_of_discounting', 'factoring_loans'] }) => {
+const LeDocForm = ({ onSuccess, buttonText = "Request a Demo", defaultSelected = ['remittance', 'document_management', 'trade_finance', 'secured_loans', 'unsecured_loans', 'bill_of_discounting', 'factoring_loans'] }) => {
     const [formData, setFormData] = useState({
         first_name: '',
         last_name: '',
@@ -74,12 +73,11 @@ const LeDocForm = ({
 
     const handleSelectChange = (name, value) => {
         if (name === 'is_exporter') {
-            setFormData(prev => ({ ...prev, [name]: value === 'yes' }));
+            setFormData(prev => ({ ...prev, [name]: value === 'yes' ? true : false }));
         } else {
             setFormData(prev => ({ ...prev, [name]: value }));
         }
     };
-
 
     useEffect(() => {
         const sendOtp = async () => {
@@ -170,7 +168,7 @@ const LeDocForm = ({
             }
         } catch (err) {
             setError(err.response?.data?.message || 'Form submission error');
-        } 
+        }
         setLoading(false)
     };
 
@@ -294,7 +292,7 @@ const LeDocForm = ({
                 </div>
 
                 <div className="flex items-start gap-2">
-                    <input type="checkbox" id="agree" checked={agree} onChange={() => setAgree(!agree)} required className="mt-1" />
+                    <input type="checkbox" id="agree" checked={agree} onChange={() => setAgree(!agree)} className="mt-1" />
                     <Label htmlFor="agree" className="text-sm text-gray-600">
                         {`By submitting this form, I agree to Axodian's`} <Link href="https://www.axodian.com/Documents/6Point3_PrivacyPolicy.pdf" className="underline text-indigo-600">Privacy Policy</Link> <span className="text-red-500">*</span>
                     </Label>
@@ -302,7 +300,7 @@ const LeDocForm = ({
 
                 <Button
                     type="submit"
-                    disabled={loading || !agree || !phoneVerified || !formData.turnover || !formData.export_documents || !formData.is_exporter || !formData.Company || !formData.to_email || !formData.first_name}
+                    disabled={loading || !agree || !phoneVerified}
                     className="text-white bg-gradient-to-b from-indigo-600 to-indigo-700 rounded-lg hover:opacity-90 px-6 py-3"
                 >
                     {loading ? 'Submitting...' : buttonText}

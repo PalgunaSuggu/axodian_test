@@ -157,7 +157,7 @@ const AxodianForm = ({ onSuccess, buttonText = "Request a Demo", defaultSelected
         } catch (err) {
             setError(err.response?.data?.message || 'Form submission error');
         }
-        setLoading(false)
+        setLoading(false);
     };
 
     return (
@@ -271,7 +271,7 @@ const AxodianForm = ({ onSuccess, buttonText = "Request a Demo", defaultSelected
 
                     {/* CONSENT */}
                     <div className="flex items-start gap-2">
-                        <input type="checkbox" id="agree" checked={agree} onChange={(e) => setAgree(e.target.checked)} required className="mt-1" />
+                        <input type="checkbox" id="agree" checked={agree} onChange={(e) => setAgree(e.target.checked)} className="mt-1" />
                         <Label htmlFor="agree" className="text-sm text-gray-600">
                             {`By submitting this form, I agree to LeRemitt's`} <Link href="https://www.axodian.com/Documents/6Point3_PrivacyPolicy.pdf" className="underline text-indigo-600">Privacy Policy</Link><span className="text-red-500">*</span>
                         </Label>
@@ -280,7 +280,7 @@ const AxodianForm = ({ onSuccess, buttonText = "Request a Demo", defaultSelected
                     {/* SUBMIT */}
                     <Button
                         type="submit"
-                        disabled={loading || !agree || !phoneVerified || !formData.turnover || !formData.vintage || !formData.Company || !formData.to_email || !formData.first_name}
+                        disabled={loading || !agree || !phoneVerified}
                         className="text-white bg-gradient-to-b from-indigo-600 to-indigo-700 rounded-lg hover:opacity-90 px-6 py-3"
                     >
                         {loading ? 'Submitting...' : buttonText}

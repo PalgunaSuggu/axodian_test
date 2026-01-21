@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import React from 'react';
+import OneComplianceDailogForm from '../../../Reusable_section/ScheduleForm/OneComplianceDailogForm';
 
 const OneComplianceBanner = () => {
   return (
@@ -35,9 +36,11 @@ const OneComplianceBanner = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
-          <Button className="bg-white text-primary-color hover:bg-gray-100 font-bold py-7 px-10 rounded-full text-lg shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-all duration-300 transform hover:-translate-y-1 w-full sm:w-auto">
-            Book a 15-min Demo
-          </Button>
+          <OneComplianceDailogForm>
+            <Button className="bg-white text-primary-color hover:bg-gray-100 font-bold py-7 px-10 rounded-full text-lg shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-all duration-300 transform hover:-translate-y-1 w-full sm:w-auto">
+              Book a 15-min Demo
+            </Button>
+          </OneComplianceDailogForm>
           <Button className="bg-white/5 border-2 border-solid border-white/20 text-white hover:bg-white/10 backdrop-blur-sm font-semibold py-7 px-10 rounded-full text-lg transition-all duration-300 w-full sm:w-auto">
             See How It Works
           </Button>

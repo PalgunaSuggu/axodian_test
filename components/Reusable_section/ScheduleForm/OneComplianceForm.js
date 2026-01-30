@@ -39,6 +39,7 @@ const OneComplianceForm = ({ onSuccess, defaultSelected = ['remittance', 'docume
         unsecured_loans: defaultSelected.includes('unsecured_loans') || undefined,
         bill_of_discounting: defaultSelected.includes('bill_of_discounting') || undefined,
         factoring_loans: defaultSelected.includes('factoring_loans') || undefined,
+        one_compliance: defaultSelected.includes('one_compliance') || undefined,
         from: "",
         medium: "",
         campaign: "",

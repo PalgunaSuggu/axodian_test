@@ -97,7 +97,6 @@ Here is a list of all the pages available in the project:
 - **LeRemitt**: [`https://www.axodian.com/leremitt`](src/pages/leremitt.js)
 - **Media**: [`https://www.axodian.com/media`](src/pages/media.js)
 - **Partners**: [`https://www.axodian.com/partners`](src/pages/partners.js)
-- **Test Page**: [`https://www.axodian.com/test`](src/pages/test.js)
 - **Thank You**: [`https://www.axodian.com/thank-you`](src/pages/thank-you.js)
 - **Trade Finance Solution**: [`https://www.axodian.com/trade-finance-solution`](src/pages/trade-finance-solution.js)
 - **Trade Simplified**: [`https://www.axodian.com/trade-simplified`](src/pages/trade-simplified.js)

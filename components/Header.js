@@ -63,13 +63,13 @@ const Header = () => {
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end" className="min-w-48 w-auto mt-4 bg-white shadow-lg rounded-lg p-2">
                       {item.subItems.map((subItem, subIndex) => (
-                        <DropdownMenuItem key={subIndex} asChild>
+                        <DropdownMenuItem key={subIndex} asChild className='cursor-pointer'>
                           {item.name === "Sign In" ? (
                             <button onClick={() => handleSignInClick(subItem.name)} className="w-full text-left px-4 py-2 hover:bg-gray-100 hover:text-primary-color rounded-md">
                               {subItem.name}
                             </button>
                           ) : (
-                            <CustomLink href={subItem.href} className={`block w-full px-4 py-2 hover:bg-gray-100 hover:text-primary-color rounded-md ${pathname === subItem.href ? "text-primary-color bg-gray-50" : ""}`}>{subItem.name}</CustomLink>
+                            <CustomLink href={subItem.href} className={`block w-full px-4 py-2 hover:bg-gray-100 hover:text-primary-color rounded-md font-semibold ${pathname === subItem.href ? "text-primary-color bg-gray-50" : ""}`}>{subItem.name}</CustomLink>
                           )}
                         </DropdownMenuItem>
                       ))}

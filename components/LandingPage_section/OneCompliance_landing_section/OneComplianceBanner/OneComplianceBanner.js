@@ -36,7 +36,7 @@ const OneComplianceBanner = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
-          <OneComplianceDailogForm>
+          <OneComplianceDailogForm defaultSelected={['one_compliance']} showProductOptions={true}>
             <Button className="bg-white text-primary-color hover:bg-gray-100 font-bold py-7 px-10 rounded-full text-lg shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-all duration-300 transform hover:-translate-y-1 w-full sm:w-auto">
               Book a 15-min Demo
             </Button>

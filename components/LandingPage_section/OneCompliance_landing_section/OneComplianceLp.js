@@ -14,7 +14,7 @@ import OneComplianceDailogForm from '../../Reusable_section/ScheduleForm/OneComp
 import OneCompNavbar from './OneCompNavbar'
 import OneCompFooter from './OneCompFooter'
 
-const OneComplianceLp = ({ redirectTo = 'https://calendly.com/leremitt_/ledoc-introduction' }) => {
+const OneComplianceLp = ({ redirectTo = 'https://calendly.com/axodian/ledoc-introduction' }) => {
   return (
     <div>
       <OneCompNavbar redirectTo={redirectTo}/>

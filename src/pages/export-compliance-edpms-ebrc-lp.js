@@ -14,7 +14,7 @@ const ExportCompliancePageLp = () => {
         image="https://www.axodian.com/images/axodian-logo-footer.webp"
         imageAlt="Export Compliance EBRC EDPMS"
       />
-      <OneComplianceLp redirectTo="https://calendly.com/leremitt_/ledoc-introduction" />
+      <OneComplianceLp redirectTo="https://calendly.com/axodian/ledoc-introduction" />
     </>
   )
 }

@@ -130,18 +130,18 @@ const BookCall = ({ defaultSelected = ['remittance', 'document_management', 'tra
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
             <Head>
-                <title>Book a 10-Minute Call</title>
-                <meta name="description" content="Book a quick 10-minute call with our team." />
+                <title>Book a 15-Minute Call</title>
+                <meta name="description" content="Book a quick 15-minute call with our team." />
                 <meta name="robots" content="noindex" />
             </Head>
 
             <div className="max-w-md w-full space-y-8 bg-white p-10 rounded-xl shadow-lg">
                 <div>
                     <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-                        Book a 10-Minute Call
+                        Book a 15-Minute Call
                     </h2>
                     <p className="mt-2 text-center text-sm text-gray-600">
-                        Share your name and phone number below, and our team will connect with you for a quick 10-minute call.
+                        Share your name and phone number below, and our team will connect with you for a quick 15-minute call.
                     </p>
                 </div>
 

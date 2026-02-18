@@ -101,7 +101,7 @@ Here is a list of all the pages available in the project:
 - **Thank You**: [`https://www.axodian.com/thank-you`](src/pages/thank-you.js)
 - **Trade Finance Solution**: [`https://www.axodian.com/trade-finance-solution`](src/pages/trade-finance-solution.js)
 - **Trade Simplified**: [`https://www.axodian.com/trade-simplified`](src/pages/trade-simplified.js)
-- **Book 10 Min Call**: [`https://www.axodian.com/book-10-min-call`](src/pages/book-10-min-call.js)
+- **Book 10 Min Call**: [`https://www.axodian.com/book-15-min-call`](src/pages/book-10-min-call.js)
 ---
 
 © 2025 LeRemit. All rights reserved.

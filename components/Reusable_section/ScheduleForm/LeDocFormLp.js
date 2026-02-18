@@ -259,7 +259,7 @@ const LeDocFormLp = ({ onSuccess, buttonText = "Request a Demo", defaultSelected
                         onClick={() => {
                             if (!(loading || !agree || !phoneVerified)) {
                                 const phoneWithCountryCode = `+91${formData.phone}`;
-                                const calendlyUrl = `https://calendly.com/axodian/ledoc-introduction?name=${encodeURIComponent(formData.first_name)}&email=${encodeURIComponent(formData.to_email)}&a1=${encodeURIComponent(formData.Company)}&a2=${encodeURIComponent(phoneWithCountryCode)}`;
+                                const calendlyUrl = `https://calendly.com/axodian/axodian-introduction?name=${encodeURIComponent(formData.first_name)}&email=${encodeURIComponent(formData.to_email)}&a1=${encodeURIComponent(formData.Company)}&a2=${encodeURIComponent(phoneWithCountryCode)}`;
                                 window.open(calendlyUrl, '_blank');
                             }
                         }}
@@ -270,7 +270,7 @@ const LeDocFormLp = ({ onSuccess, buttonText = "Request a Demo", defaultSelected
                     </Button>
 
                     {/* <Link
-                        href={`https://calendly.com/axodian/ledoc-introduction?name=${encodeURIComponent(formData.first_name)}&email=${encodeURIComponent(formData.to_email)}&a1=${encodeURIComponent(formData.Company)}&a2=${encodeURIComponent(formData.phone)}`}
+                        href={`https://calendly.com/axodian/axodian-introduction?name=${encodeURIComponent(formData.first_name)}&email=${encodeURIComponent(formData.to_email)}&a1=${encodeURIComponent(formData.Company)}&a2=${encodeURIComponent(formData.phone)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                     >

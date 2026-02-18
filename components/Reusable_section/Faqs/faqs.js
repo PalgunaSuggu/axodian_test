@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import CustomLink from "../CustomLink/CustomLink";
 
-export default function FAQs({ titleOne, titleTwo, subtitle, faqsData, productKey = "all", bgColor = "bg-secondary-light-color", hoverBgColor = "hover:bg-blue-700", textColor = "text-white", triggerBg = 'bg-[#F5F9FF]', triggerTextColor = 'text-[#3681F3]' }) {
+export default function FAQs({ titleOne, titleTwo, subtitle, faqsData, productKey = "all", bgColor = "bg-secondary-light-color", hoverBgColor = "hover:bg-blue-700", textColor = "text-white", triggerBg = 'bg-[#F5F9FF]', triggerTextColor = 'text-[#3681F3]', showSeeMore = true }) {
     const [visibleFaqs, setVisibleFaqs] = useState(5);
     const showAllFaqs = visibleFaqs >= faqsData.length;
     const router = useRouter();
@@ -64,7 +64,7 @@ export default function FAQs({ titleOne, titleTwo, subtitle, faqsData, productKe
                         ))}
                     </Accordion>
 
-                    {!showAllFaqs && (
+                    {!showAllFaqs && showSeeMore && (
                         <div className="text-center flex justify-end mt-6">
                             <Button onClick={navigateToFaqPage} className={`${bgColor} ${hoverBgColor} rounded-lg text-lg ${textColor} p-6`}>See More Questions</Button>
                         </div>

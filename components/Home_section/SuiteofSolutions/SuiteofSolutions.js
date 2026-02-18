@@ -136,8 +136,8 @@ import { useEffect, useRef, useState } from 'react';
 
 const benefitsData = [
     {
-        id: "document-management",
-        heading: "Document Management",
+        id: "compliance-management",
+        heading: "Compliance Management",
         subheading: (
             <>
                 Document & Compliance Management <br /> for Exporters
@@ -206,7 +206,7 @@ const benefitsData = [
 
 const SuiteofSolutions = () => {
     const router = useRouter();
-    const [currentTab, setCurrentTab] = useState("document-management");
+    const [currentTab, setCurrentTab] = useState("compliance-management");
     const [isHovered, setIsHovered] = useState(false);
     const autoPlayTimeoutRef = useRef(null);
 

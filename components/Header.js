@@ -45,8 +45,13 @@ const Header = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex flex-1 justify-between items-center">
           {/* Logo on the left */}
+          {/* <CustomLink href="/" className="flex-shrink-0">
+            <Image src="/images/axodian-Logo-nav.webp" alt="axodian logo" height={45} width={180} priority /> 
+          </CustomLink> */}
           <CustomLink href="/" className="flex-shrink-0">
-            <Image src="/images/axodian-Logo-nav.webp" alt="axodian logo" height={45} width={180} priority />
+            <div className="relative h-10 w-32">
+              <Image src="/images/axodian-Logo-nav.webp" alt="Axodian OneCompliance" fill className="object-contain" priority />
+            </div>
           </CustomLink>
 
           {/* Navigation items on the right */}
@@ -98,7 +103,11 @@ const Header = () => {
 
           <SheetContent side="right" className="w-72 p-0 bg-white">
             <div className="flex justify-between items-center gap-4 p-4 border-b">
-              <Image src="/images/axodian-Logo-nav.webp" alt="axodian logo" height={45} width={180} priority />
+              <CustomLink href="/" className="flex-shrink-0">
+                <div className="relative h-14 w-44">
+                  <Image src="/images/axodian-Logo-nav.webp" alt="Axodian OneCompliance" fill className="object-contain" priority />
+                </div>
+              </CustomLink>
               <SheetTrigger asChild>
                 <button><X size={24} /></button>
               </SheetTrigger>

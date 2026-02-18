@@ -56,12 +56,12 @@ export const footerLinks = [
         title: "Quick Links", links: [
             { name: "FAQs", href: "/faqs" },
             { name: "Connect with Us", href: "/contact" },
-            { name: "LeCheck", href: "/lecheck" }
+            { name: "Currency Converter", href: "/lecheck" }
         ]
     },
     {
         title: "Products", links: [
-            { name: "Document Management", href: "/ledoc" },
+            { name: "Compliance Management", href: "/ledoc" },
             { name: "Export Payments", href: "/leremitt" },
             { name: "Trade Financing", href: "/trade-finance-solution" }
         ]

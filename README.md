@@ -88,6 +88,7 @@ Here is a list of all the pages available in the project:
   - Blog Post: `https://www.axodian.com/blogs/[slug]`
 - **Contact Us**: [`https://www.axodian.com/contact`](src/pages/contact.js)
 - **Export Compliance**: [`https://www.axodian.com/export-compliance-edpms-ebrc](src/pages/export-compliance-edpms-ebrc.js)
+- **Export Compliance LP**: [`https://www.axodian.com/export-compliance-edpms-ebrc-lp](src/pages/export-compliance-edpms-ebrc-lp.js)
 - **Export Finance Loan India**: [`https://www.axodian.com/export-finance-loan-india`](src/pages/export-finance-loan-india.js)
 - **Export Simplified**: [`https://www.axodian.com/export-simplified`](src/pages/export-simplified.js)
 - **Export Simplified LP**: [`https://www.axodian.com/export-simplified-lp`](src/pages/export-simplified-lp.js)
@@ -100,9 +101,10 @@ Here is a list of all the pages available in the project:
 - **Thank You**: [`https://www.axodian.com/thank-you`](src/pages/thank-you.js)
 - **Trade Finance Solution**: [`https://www.axodian.com/trade-finance-solution`](src/pages/trade-finance-solution.js)
 - **Trade Simplified**: [`https://www.axodian.com/trade-simplified`](src/pages/trade-simplified.js)
-
+- **Book 10 Min Call**: [`https://www.axodian.com/book-10-min-call`](src/pages/book-10-min-call.js)
 ---
 
 © 2025 LeRemit. All rights reserved.
+
 
 

@@ -14,7 +14,7 @@ import OneComplianceDailogForm from '../../Reusable_section/ScheduleForm/OneComp
 import OneCompNavbar from './OneCompNavbar'
 import OneCompFooter from './OneCompFooter'
 
-const OneCompliance = ({ redirectTo = '/thank-you' }) => {
+const OneComplianceLp = ({ redirectTo = 'https://calendly.com/leremitt_/ledoc-introduction' }) => {
   return (
     <div>
       <OneCompNavbar redirectTo={redirectTo}/>
@@ -34,14 +34,14 @@ const OneCompliance = ({ redirectTo = '/thank-you' }) => {
         <HowOneComplianceWork />
       </div>
       <TargetAudience />
-      <BookDemo redirectTo="/thank-you" />
+      <BookDemo redirectTo={redirectTo}/>
       <div id="faqs">
         <Faqs faqsData={oneComplianceFaqs} productKey="onecompliance" titleOne="Frequently Asked" titleTwo="Questions" subtitle="Everything you need to know about the One Compliance Beta." bgColor="bg-secondary-light-color" hoverBgColor="hover:bg-secondary-light-color/90" textColor="text-white" triggerBg="bg-secondary-light-color/15" triggerTextColor="text-secondary-light-color" showSeeMore={false} />
       </div>
-      <Register redirectTo="/thank-you" subtitleOne="Make EBRC generation" subtitleTwo="and EDPMS reconciliation effortless." subtitleThree="" description="Be among the first to try One Compliance and simplify your workflow from day one." buttonText="Book a 15-min Demo" defaultSelected={['one_compliance']} dialogComponent={OneComplianceDailogForm} formType="OneComplianceForm" backgroundImage="/images/GetStarted4.webp" />
+      <Register redirectTo={redirectTo} subtitleOne="Make EBRC generation" subtitleTwo="and EDPMS reconciliation effortless." subtitleThree="" description="Be among the first to try One Compliance and simplify your workflow from day one." buttonText="Book a 15-min Demo" defaultSelected={['one_compliance']} dialogComponent={OneComplianceDailogForm} formType="OneComplianceForm" backgroundImage="/images/GetStarted4.webp" />
       <OneCompFooter />
     </div>
   )
 }
 
-export default OneCompliance
+export default OneComplianceLp

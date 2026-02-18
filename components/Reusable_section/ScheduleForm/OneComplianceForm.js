@@ -24,7 +24,7 @@ const ONECOMPLIANCE_CONSTANTS = {
     ]
 };
 
-const OneComplianceForm = ({ onSuccess, defaultSelected = ['remittance', 'document_management', 'trade_finance', 'secured_loans', 'unsecured_loans', 'bill_of_discounting', 'factoring_loans'] }) => {
+const OneComplianceForm = ({ onSuccess, redirectTo = '/thank-you', defaultSelected = ['remittance', 'document_management', 'trade_finance', 'secured_loans', 'unsecured_loans', 'bill_of_discounting', 'factoring_loans'] }) => {
     const [formData, setFormData] = useState({
         first_name: '',
         last_name: '',
@@ -154,16 +154,26 @@ const OneComplianceForm = ({ onSuccess, defaultSelected = ['remittance', 'docume
                 setPhoneOtp('');
                 setShowPhoneOtp(false);
                 onSuccess?.();
-                router.push({
-                    pathname: '/thank-you',
-                    query: {
-                        heading: 'Thank You!',
-                        message: 'Thanks for your interest. We have received your request, and our team will reach out to you shortly.',
-                        subtext: 'You can return to the  homepage by clicking the button below.',
-                        button: 'Return to Home',
-                        redirect: '/',
-                    },
-                });
+
+                // Check if redirectTo is an external URL
+                if (redirectTo && redirectTo.startsWith('http')) {
+                    const phoneWithCountryCode = `+91${formData.phone}`;
+                    const separator = redirectTo.includes('?') ? '&' : '?';
+                    const finalUrl = `${redirectTo}${separator}name=${encodeURIComponent(formData.first_name)}&email=${encodeURIComponent(formData.to_email)}&a1=${encodeURIComponent(formData.Company)}&a2=${encodeURIComponent(phoneWithCountryCode)}&a3=${encodeURIComponent(formData.designation)}&a4=${encodeURIComponent(formData.description)}`;
+                    window.location.href = finalUrl;
+                } else {
+                    router.push({
+                        pathname: redirectTo || '/thank-you',
+                        query: {
+                            heading: 'Thank You!',
+                            message: 'Thanks for your interest. We have received your request, and our team will reach out to you shortly.',
+                            subtext: 'You can return to the homepage by clicking the button below.',
+                            button: 'Return to Home',
+                            redirect: '/',
+                        },
+
+                    });
+                }
             } else {
                 setError(res.data.message || 'Submission failed');
             }

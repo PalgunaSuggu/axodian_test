@@ -2,7 +2,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { useState } from 'react';
 import OneComplianceForm from "./OneComplianceForm";
 
-const OneComplianceDailogForm = ({ children, showProductOptions = true, defaultSelected, buttonText, formTitle = "Schedule a Demo" }) => {
+const OneComplianceDailogForm = ({ children, showProductOptions = true, defaultSelected, buttonText, formTitle = "Schedule a Demo", redirectTo = '/thank-you' }) => {
     const [open, setOpen] = useState(false);
 
     const handleSuccess = () => {
@@ -14,12 +14,12 @@ const OneComplianceDailogForm = ({ children, showProductOptions = true, defaultS
             <DialogTrigger asChild>
                 {children}
             </DialogTrigger>
-            <DialogContent className="max-w-2xl bg-white/5  [&>button]:text-white" onInteractOutside={(e) => e.preventDefault()}>
+            <DialogContent className="max-w-2xl bg-white/5  [&>button]:text-white max-h-[70vh] flex flex-col gap-0" onInteractOutside={(e) => e.preventDefault()}>
                 <DialogHeader>
                     <DialogTitle className="text-white">{formTitle}</DialogTitle>
                 </DialogHeader>
-                <div>
-                   <OneComplianceForm buttonText={buttonText} showProductOptions={showProductOptions} onSuccess={handleSuccess} defaultSelected={defaultSelected} />
+                <div className="overflow-y-auto flex-1 p-1 [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-white/30 [&::-webkit-scrollbar-thumb]:rounded-full">
+                    <OneComplianceForm buttonText={buttonText} showProductOptions={showProductOptions} onSuccess={handleSuccess} defaultSelected={defaultSelected} redirectTo={redirectTo}/>
                 </div>
             </DialogContent>
         </Dialog>

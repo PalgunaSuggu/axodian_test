@@ -6,7 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { app_url } from "../config/config";
-import { newNavItems } from "./Data";
+import { navItems } from "./Data";
 import getUtmParams from "./getUtmParams";
 import CustomLink from "./Reusable_section/CustomLink/CustomLink";
 import ScheduleDialog from "./Reusable_section/ScheduleForm/LeRemDailogForm";
@@ -56,7 +56,7 @@ const Header = () => {
 
           {/* Navigation items on the right */}
           <div className="flex-1 flex justify-end items-center space-x-6 lg:space-x-8">
-            {newNavItems.map((item, index) => (
+            {navItems.map((item, index) => (
               <div key={index} className="relative">
                 {item.subItems ? (
                   <DropdownMenu>
@@ -114,7 +114,7 @@ const Header = () => {
             </div>
 
             <nav className="flex flex-col mt-4">
-              {newNavItems.map((item, index) => (
+              {navItems.map((item, index) => (
                 <div key={index} className="border-b">
                   {item.subItems ? (
                     <details className="group">

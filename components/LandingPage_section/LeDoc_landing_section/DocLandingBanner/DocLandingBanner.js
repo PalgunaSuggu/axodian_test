@@ -7,7 +7,7 @@ const DocLandingBanner = () => {
     const router = useRouter()
     const path = router.pathname
     return (
-        <section className="min-h-screen flex items-center justify-center bg-blue-50 bg-cover bg-center py-20 px-4" style={{ backgroundImage: "url('/images/DocLandingBanner.webp')" }}>
+        <section className="min-h-screen flex items-center justify-center bg-blue-50 bg-cover bg-center py-20" style={{ backgroundImage: "url('/images/DocLandingBanner.webp')" }}>
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
 
                 <div className="text-center mt-6 md:mt-0 md:text-left">
@@ -20,7 +20,7 @@ const DocLandingBanner = () => {
                 </div>
 
                 <div className="flex justify-center">
-                    <Card className="w-full max-w-lg bg-white/55 backdrop-blur-md border border-solid border-gray-200 shadow-none rounded-lg">
+                    <Card className="w-full md:h-[600px] bg-white/55 backdrop-blur-md border border-solid border-gray-200 shadow-xl rounded-lg overflow-y-auto">
                         <CardContent className="p-6">
                             <h4 className="leading-tight text-gray-800 mb-6">Schedule a Demo</h4>
                             {path === '/export-simplified' && <LeDocForm defaultSelected={['document_management']} buttonText='Talk to us' />}

@@ -89,13 +89,13 @@ export default function Contact() {
                   <Label htmlFor="first_name" className="block text-sm font-medium text-gray-700 mb-1">
                     First Name <span className="text-red-500">*</span>
                   </Label>
-                  <Input id="first_name" name="first_name" required placeholder="John" className="text-base py-3 px-4" value={formData.first_name} onChange={handleChange} />
+                  <Input id="first_name" name="first_name" required placeholder="First Name" className="text-base py-3 px-4" value={formData.first_name} onChange={handleChange} />
                 </div>
                 <div>
                   <Label htmlFor="last_name" className="block text-sm font-medium text-gray-700 mb-1">
                     Last Name <span className="text-red-500">*</span>
                   </Label>
-                  <Input id="last_name" name="last_name" required placeholder="Doe" className="text-base py-3 px-4" value={formData.last_name} onChange={handleChange} />
+                  <Input id="last_name" name="last_name" required placeholder="Last Name" className="text-base py-3 px-4" value={formData.last_name} onChange={handleChange} />
                 </div>
               </div>
 
@@ -104,13 +104,13 @@ export default function Contact() {
                   <Label htmlFor="to_email" className="block text-sm font-medium text-gray-700 mb-1">
                     Email <span className="text-red-500">*</span>
                   </Label>
-                  <Input id="to_email" name="to_email" type="email" required placeholder="your@email.com" className="text-base py-3 px-4" value={formData.to_email} onChange={handleChange} />
+                  <Input id="to_email" name="to_email" type="email" required placeholder="Email" className="text-base py-3 px-4" value={formData.to_email} onChange={handleChange} />
                 </div>
                 <div>
                   <Label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
                     Phone Number <span className="text-red-500">*</span>
                   </Label>
-                  <Input id="phone" type='number' name="phone" required placeholder="+91 1234567890" className="text-base py-3 px-4" value={formData.phone} onChange={handleChange} />
+                  <Input id="phone" type='number' name="phone" required placeholder="Phone Number" className="text-base py-3 px-4" value={formData.phone} onChange={handleChange} />
                 </div>
               </div>
 
@@ -118,7 +118,7 @@ export default function Contact() {
                 <Label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-2">
                   Message
                 </Label>
-                <Textarea id="description" name="description" placeholder="How can we help you?" className="h-24 text-base py-2 px-4" value={formData.description} onChange={handleChange} />
+                <Textarea id="description" name="description" placeholder="Message" className="h-24 text-base py-2 px-4" value={formData.description} onChange={handleChange} />
               </div>
 
               {/* Add this checkbox section just before the submit button */}

@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button'
 import { CheckCircle, Search, Share2, ShieldCheck, Users } from 'lucide-react'
-import LeDocDailogForm from '../../../Reusable_section/ScheduleForm/LeDocDailogForm'
 
 const features = [
     {
@@ -30,16 +29,20 @@ const features = [
     },
 ]
 
-const DocLandingWhyLeDoc = ({ formType }) => {
+const DocLandingWhyLeDoc = ({ formType, brand = "LeDoc" }) => {
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     return (
         <section className="py-16 md:py-24">
             <div className="container mx-auto px-4">
                 <h1 className="leading-tight text-center">
-                    <span className="md:block mb-2"> LeDoc Automates, Secures & Simplifies</span>
+                    <span className="md:block mb-2"> {brand} Automates, Secures & Simplifies</span>
                     <span className="md:block">Your Trade Documents!</span>
                 </h1>
                 <p className="text-center md:text-lg text-md text-gray-600 max-w-4xl mx-auto mt-6 mb-12">
-                    Managing export documentation shouldn’t be complex and time-consuming. LeDoc is an AI-powered platform designed to streamline your trade documentation, eliminate manual errors, and ensure 100% compliance—all in one place.
+                    Managing export documentation shouldn’t be complex and time-consuming. {brand} is an AI-powered platform designed to streamline your trade documentation, eliminate manual errors, and ensure 100% compliance—all in one place.
                 </p>
 
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -57,11 +60,9 @@ const DocLandingWhyLeDoc = ({ formType }) => {
                 </div>
 
                 <div className='mt-8'>
-                    <LeDocDailogForm defaultSelected={['document_management']} formType={formType}>
-                        <Button className=" mt-2 text-white text-md font-semibold bg-gradient-to-b from-[#234fdf] to-[#1A4FFF] rounded-lg hover:opacity-90">
-                            Request a Demo
-                        </Button>
-                    </LeDocDailogForm>
+                    <Button onClick={scrollToTop} className="px-8 py-6 text-lg font-semibold bg-gradient-to-r from-secondary-light-color to-primary-color text-white rounded-lg hover:from-secondary-color hover:to-primary-light-color transition-all duration-300 shadow-lg">
+                        Request a Demo
+                    </Button>
                 </div>
             </div>
         </section>

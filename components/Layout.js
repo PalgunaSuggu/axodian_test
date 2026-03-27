@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
     const router = useRouter();
 
     // Define routes that should NOT have Header and Footer
-    const noLayoutRoutes = ['/export-simplified', '/export-finance-loan-india', '/thank-you', '/export-simplified-lp', '/trade-simplified', '/export-compliance-edpms-ebrc', '/book-10-min-call'];
+    const noLayoutRoutes = ['/export-simplified', '/export-finance-loan-india', '/thank-you', '/export-simplified-lp', '/trade-simplified','/export-compliance-edpms-ebrc-lp', '/book-15-min-call',];
 
     const hideLayout = noLayoutRoutes.includes(router.pathname);
 

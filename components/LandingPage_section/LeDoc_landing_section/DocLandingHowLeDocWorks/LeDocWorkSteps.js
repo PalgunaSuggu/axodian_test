@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button';
 import { CheckCircle2, FileUp, Share2, ShieldCheck, Users } from 'lucide-react';
-import LeDocDailogForm from '../../../Reusable_section/ScheduleForm/LeDocDailogForm';
 
 const steps = [
     {
@@ -24,18 +23,22 @@ const steps = [
         color: 'bg-yellow-400',
     },
     {
-        title: 'Automated compliance management',
+        title: 'Automated compliance management',
         icon: ShieldCheck,
         color: 'bg-red-500',
     },
 ];
 
-const DocLeDocStepper = ({ formType }) => {
+const DocLeDocStepper = ({ formType, brand = "LeDoc" }) => {
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     return (
         <section className="py-16 md:py-24 px-4 bg-white">
             <div className="text-center max-w-4xl mx-auto mb-12">
                 <h1 className="leading-tight text-black mb-6">
-                    Smart, Simple & Scalable - Here’s How LeDoc Works
+                    Smart, Simple & Scalable - Here's How {brand} Works
                 </h1>
             </div>
 
@@ -59,11 +62,9 @@ const DocLeDocStepper = ({ formType }) => {
             </div>
 
             <div className="text-center flex justify-center md:mt-20 mt-12">
-                <LeDocDailogForm defaultSelected={['document_management']} formType={formType}>
-                    <Button className="px-4 py-2 bg-[#0461F0] text-white rounded-lg text-lg hover:bg-blue-700 transition-colors">
-                        Try LeDoc Today!
-                    </Button>
-                </LeDocDailogForm>
+                <Button onClick={scrollToTop} className="px-8 py-6 text-lg font-semibold bg-gradient-to-r from-secondary-light-color to-primary-color text-white rounded-lg hover:from-secondary-color hover:to-primary-light-color transition-all duration-300 shadow-lg">
+                    Try {brand} Today!
+                </Button>
             </div>
         </section>
     );

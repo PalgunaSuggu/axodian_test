@@ -1,80 +1,74 @@
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
-import { Facebook, Instagram, Linkedin, Mail, Phone, Youtube } from "lucide-react";
-import CustomLink from "../../../Reusable_section/CustomLink/CustomLink";
-import LeDocDailogForm from "../../../Reusable_section/ScheduleForm/LeDocDailogForm";
+import { Facebook, Instagram, Linkedin, Mail, MessageSquareText, Phone, Youtube } from "lucide-react";
 
-const DocLandingRegister = ({ formType }) => {
+const DocLandingRegister = ({ formType, brand = "LeDoc" }) => {
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     return (
-        <div className="h-screen bg-black bg-cover bg-center bg-[url('/images/RegisterLaning.webp')] flex flex-col">
+        <div className="min-h-screen bg-black bg-cover bg-center bg-[url('/images/RegisterLaning.webp')] flex flex-col">
             {/* Content Area */}
-            <div className="flex-grow flex flex-col justify-center items-center text-center px-4">
-                <div>
-                    <h1 className="leading-tight text-white mt-4">
-                        <span className="md:block mb-4">Trade Documentation Simplified & Automated.</span>
-                        <span className="md:block mb-4">Try LeDoc Today!</span>
+            <div className="flex-grow flex flex-col justify-center items-center text-center px-4 py-12">
+                <div className="max-w-5xl mx-auto">
+                    {/* Main Heading */}
+                    <h1 className="text-white mb-6 leading-tight">
+                        Trade Documentation<br />
+                        <span className="text-blue-400">Simplified & Automated</span>
                     </h1>
-                    <p className="text-white md:text-2xl mt-4 max-w-4xl mx-auto">
+                    
+                    <h2 className="text-white mb-8">
+                        Try {brand} Today!
+                    </h2>
+
+                    {/* Description */}
+                    <p className="text-gray-300 text-lg md:text-xl max-w-3xl mx-auto mb-12 leading-relaxed">
                         Experience a smarter, faster, and error-free way to manage trade documentation—built with exporters, for exporters.
                     </p>
 
-                    {/* Buttons */}
-                    <div className="flex justify-center gap-4 mt-6 flex-wrap">
-                        <CustomLink href="mailto:connect@axodian.com" className="flex items-center gap-2 text-md md:text-lg bg-white text-black font-semibold px-6 rounded-full hover:bg-gray-200 transition">
-                            <Mail size={18} />
-                            Email Us
-                        </CustomLink>
-
-                        <LeDocDailogForm defaultSelected={['document_management']} formType={formType}>
-                            <Button className="px-6 py-2 gap-2 text-md md:text-lg bg-[#0049BA] text-white font-semibold rounded-full hover:bg-blue-700 transition">
-                                Try LeDoc Today!
+                    {/* CTA Buttons */}
+                    <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12">
+                        <Button onClick={scrollToTop} size="lg" className="bg-secondary-light-color text-white rounded-lg hover:bg-secondary-light-color transition-colors">
+                            Get Started
+                        </Button>
+                        
+                        <div className="flex flex-col sm:flex-row gap-4">
+                            <Button 
+                                onClick={() => window.location.href = 'mailto:connect@axodian.com'}
+                                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
+                                size="lg"
+                            >
+                                <Mail size={18} />
+                                Email Us
                             </Button>
-                        </LeDocDailogForm>
-                    </div>
-                </div>
-
-                <CustomLink href="tel:+91 80500 87593" className="bg-white text-black cursor-pointer p-4 mt-6 rounded-lg w-80 transform hover:scale-105 transition-all duration-300">
-                    <div className="flex items-center justify-center gap-3">
-                        <div className="bg-blue-50 p-2 rounded-full">
-                            <Phone size={20} className="text-[#0049BA]" />
+                            
+                            <Button 
+                                onClick={() => window.location.href = 'tel:+918050087593'}
+                                className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800"
+                                size="lg"
+                            >
+                                <Phone size={18} />
+                                Call Us
+                            </Button>
                         </div>
-                        <span className="text-md md:text-lg font-semibold tracking-wide">+91 80500 87593</span>
                     </div>
-                </CustomLink>
+
+                    {/* WhatsApp CTA */}
+                    <Button 
+                        onClick={() => window.location.href = 'https://wa.me/918050087594'}
+                        className="bg-green-600/20 border border-green-600/50 text-green-400 hover:bg-green-600/30"
+                        size="lg"
+                    >
+                        <MessageSquareText size={20} />
+                        <span>Chat on WhatsApp</span>
+                        <span className="text-green-300">+91 80500 87594</span>
+                    </Button>
+                </div>
             </div>
 
-            {/* Footer at the Bottom */}
-            <footer className="text-white w-full">
-                <div className="px-6">
-                    <Separator className="bg-gray-500" />
-                </div>
-                <div className="container mx-auto my-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500 px-4">
-                    <p>© 2025 LeRemitt All rights reserved</p>
-                    <div className="flex gap-4 my-2 md:my-0">
-                        {[{ text: "Terms of Use", file: "6Point3_TermsandConditions.pdf" }, { text: "Privacy Policy", file: "6Point3_PrivacyPolicy.pdf" }].map((item) => (
-                            <CustomLink key={item.text} href={`/Documents/${item.file}`} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
-                                {item.text}
-                            </CustomLink>
-                        ))}
-                    </div>
-                    <div className="flex gap-4">
-                        {socialLinks.map(({ icon: Icon, href }) => (
-                            <CustomLink key={href} href={href} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
-                                <Icon size={20} />
-                            </CustomLink>
-                        ))}
-                    </div>
-                </div>
-            </footer>
+            {/* Footer */}
         </div>
     );
 };
 
 export default DocLandingRegister;
-
-const socialLinks = [
-    { icon: Linkedin, href: "https://www.linkedin.com/company/leremit/" },
-    { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61553149285914" },
-    { icon: Instagram, href: "https://www.instagram.com/leremitt_com/" },
-    { icon: Youtube, href: "https://www.youtube.com/@LeRemitt" },
-];

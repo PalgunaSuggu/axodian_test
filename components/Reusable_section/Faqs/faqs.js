@@ -5,7 +5,7 @@ import { useState } from "react";
 import CustomLink from "../CustomLink/CustomLink";
 
 export default function FAQs({ titleOne, titleTwo, subtitle, faqsData, productKey = "all", bgColor = "bg-secondary-light-color", hoverBgColor = "hover:bg-blue-700", textColor = "text-white", triggerBg = 'bg-[#F5F9FF]', triggerTextColor = 'text-[#3681F3]', showSeeMore = true }) {
-    const [visibleFaqs, setVisibleFaqs] = useState(5);
+    const [visibleFaqs] = useState(showSeeMore ? 5 : faqsData.length);
     const showAllFaqs = visibleFaqs >= faqsData.length;
     const router = useRouter();
 

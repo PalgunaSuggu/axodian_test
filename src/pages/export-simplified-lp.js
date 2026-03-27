@@ -11,11 +11,12 @@ const exportSimplifiedLp = () => {
     return (
         <>
             <SEO
-                title="LeDoc: Simplify Export Documentation & Stay Compliant"
-                description="Manage, share & track all export documents in one secure platform. Stay compliant with regulations."
+                title="LeDoc | Simplify Export Documentation & Compliance | Axodian"
+                description="LeDoc by Axodian helps exporters manage, share, and track export documents in one secure platform while staying compliant with global trade regulations."
                 url="https://www.axodian.com/export-simplified-lp"
-                image="https://www.axodian.com/images/articaldata-02.webp"
-                imageAlt="LeDocLanding"
+                image="https://www.axodian.com/images/LeDocLogo.webp"
+                imageAlt="LeDoc Export Documentation Platform"
+                noindex={true}
             />
             <LandingPage formType="LeDocFormLp" />
 

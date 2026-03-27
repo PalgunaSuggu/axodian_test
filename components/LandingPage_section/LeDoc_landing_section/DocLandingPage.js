@@ -1,28 +1,40 @@
 import { leDocFaqs } from '../../Data'
 import FAQs from '../../Reusable_section/Faqs/faqs'
 import Header from './Header'
-import LandingBanner from './DocLandingBanner/DocLandingBanner'
+import DocLandingBanner from './DocLandingBanner/DocLandingBanner'
 import LeDocWorkSteps from './DocLandingHowLeDocWorks/LeDocWorkSteps'
-import LandingMedia from './DocLandingMedia/DocLandingMedia'
-import LadingRegister from './DocLandingRegister/DocLadingRegister'
-import LandingWhyLeDoc from './DocLandingWhyLeDoc/DocLandingWhyLeDoc'
+import DocLandingMedia from './DocLandingMedia/DocLandingMedia'
+import DocLadingRegister from './DocLandingRegister/DocLadingRegister'
+import DocLandingWhyLeDoc from './DocLandingWhyLeDoc/DocLandingWhyLeDoc'
 import SuccessStories from './SuccessStories/SuccessStories'
 import WhatLeDocOffers from './WhatLeDocOffers/WhatLeDocOffers'
 
-const LandingPage = ({ formType }) => {
+const LeDocLandingPage = ({ formType }) => {
     return (
         <div>
-            <Header />
-            <LandingBanner />
-            <LandingWhyLeDoc formType={formType} />
-            <WhatLeDocOffers formType={formType} />
-            <LeDocWorkSteps formType={formType} />
-            <SuccessStories />
-            <LandingMedia />
-            <FAQs tag="Your Questions, answered" titleOne="Frequently Asked" titleTwo="Questions" subtitle="Find answers to your questions about LeRemitts cross-border services and discover how we can transform your export business." faqsData={leDocFaqs} />
-            <LadingRegister formType={formType} />
+            <Header src="https://www.axodian.com/images/LeDocLogo.webp" alt="LeDoc Logo" />
+            <DocLandingBanner />
+            <div id="features">
+                <DocLandingWhyLeDoc formType={formType} />
+            </div>
+            <div id="how-it-works">
+                <WhatLeDocOffers formType={formType} />
+                <LeDocWorkSteps formType={formType} />
+            </div>
+            <div id="testimonials">
+                <SuccessStories />
+            </div>
+            <div id="media">
+                <DocLandingMedia />
+            </div>
+            <div id="faqs">
+                <FAQs tag="Your Questions, answered" titleOne="Frequently Asked" titleTwo="Questions" subtitle="Find answers to your questions about LeRemitts cross-border services and discover how we can transform your export business." faqsData={leDocFaqs} />
+            </div>
+            <div id="contact">
+                <DocLadingRegister formType={formType} />
+            </div>
         </div>
     )
 }
 
-export default LandingPage
+export default LeDocLandingPage

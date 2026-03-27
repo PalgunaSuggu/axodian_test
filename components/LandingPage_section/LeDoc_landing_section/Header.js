@@ -1,56 +1,103 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Mail, Menu, MessageSquareText, Phone, X } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import Image from 'next/image'
 import CustomLink from '../../Reusable_section/CustomLink/CustomLink'
+import Link from 'next/link'
 
-const headerButtons = [
+const navItems = [
     {
-        id: 'email',
-        text: 'Email Us',
-        icon: Mail,
-        color: 'text-black hover:text-blue-600 hover:bg-blue-100',
-        href: 'mailto:connect@axodian.com',
+        id: 'features',
+        text: 'Features',
+        href: '#features',
     },
     {
-        id: 'phone',
-        text: 'Call Us',
-        icon: Phone,
-        color: 'text-black hover:text-gray-600 hover:bg-gray-100',
-        href: 'tel:+918050087593',
+        id: 'how-it-works',
+        text: 'How It Works',
+        href: '#how-it-works',
     },
     {
-        id: 'whatsapp',
-        text: 'WhatsApp',
-        icon: MessageSquareText,
-        color: 'text-black hover:text-green-600 hover:bg-green-50',
-        href: 'https://wa.me/918050087594',
+        id: 'faqs',
+        text: 'FAQs',
+        href: '#faqs',
+    },
+    {
+        id: 'contact',
+        text: 'Contact',
+        href: '#contact',
     },
 ]
 
-const Header = () => {
+const Header = ({ src, alt }) => {
     const [sheetOpen, setSheetOpen] = useState(false)
+    const [activeSection, setActiveSection] = useState('features')
+
+    const handleScrollToSection = (e, href) => {
+        e.preventDefault();
+        const targetId = href.substring(1); // Remove the # symbol
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+            const headerHeight = 80; // Adjust based on your header height
+            const targetPosition = targetElement.offsetTop - headerHeight;
+            
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        }
+        
+        // Close mobile menu if open
+        if (sheetOpen) {
+            setSheetOpen(false);
+        }
+    }
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const sections = navItems.map(item => item.id)
+            const scrollPosition = window.scrollY + 100 // Offset for header
+
+            for (const section of sections) {
+                const element = document.getElementById(section)
+                if (element) {
+                    const { offsetTop, offsetHeight } = element
+                    if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+                        setActiveSection(section)
+                        break
+                    }
+                }
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll)
+        handleScroll() // Check initial position
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
 
     return (
         <header className="bg-gradient-to-r from-white via-blue-50 to-white text-black shadow-lg fixed top-0 left-0 w-full z-50">
             <div className="px-4 py-3 flex items-center justify-between">
                 {/* Logo */}
                 <div className="bg-white px-2 pb-1 rounded-md">
-                    <Image src="https://www.axodian.com/images/LeDocLogo.webp" alt="LeDoc AI Logo" width={120} height={40} priority />
+                    <Image src={src} alt={alt} width={120} height={40} priority />
                 </div>
 
-                {/* Desktop Buttons */}
-                <div className="hidden md:flex items-center gap-3">
-                    {headerButtons.map((button) => (
-                        <CustomLink href={button.href} key={button.id} target="_blank" rel="noopener noreferrer">
-                            <Button variant="ghost" className={`gap-2 ${button.color}`}>
-                                <button.icon className="h-5 w-5" />
-                                {button.text}
-                            </Button>
-                        </CustomLink>
+                {/* Desktop Navigation */}
+                <nav className="hidden md:flex items-center gap-6">
+                    {navItems.map((item) => (
+                        <Link href={item.href} key={item.id} onClick={(e) => handleScrollToSection(e, item.href)}>
+                            <span className={`text-black transition-colors font-medium ${
+                                activeSection === item.id 
+                                    ? 'text-blue-600 border-b-2 border-blue-600 pb-1' 
+                                    : 'hover:text-blue-600'
+                            }`}>
+                                {item.text}
+                            </span>
+                        </Link>
                     ))}
-                </div>
+                </nav>
 
                 {/* Mobile Menu Button */}
                 <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
@@ -62,26 +109,26 @@ const Header = () => {
                     <SheetContent side="right" className="w-64 px-4 py-4">
                         {/* Top bar with logo and close button */}
                         <div className="flex items-center justify-between mb-6">
-                            <Image src="https://www.axodian.com/images/LeDocLogo.webp" alt="LeDoc AI Logo" width={120} height={30} className="bg-white rounded-md p-1" />
+                            <Image src={src} alt={alt} width={120} height={30} className="bg-white rounded-md p-1" />
                             <Button variant="ghost" size="icon" onClick={() => setSheetOpen(false)}>
                                 <X className="w-4 h-4" />
                             </Button>
                         </div>
 
-                        {/* Mobile Buttons */}
-                        <div className="flex flex-col gap-2">
-                            {headerButtons.map((button) => (
-                                <CustomLink href={button.href} key={button.id} target="_blank" rel="noopener noreferrer">
-                                    <Button
-                                        variant="ghost"
-                                        className={`w-full justify-start gap-2 ${button.color}`}
-                                    >
-                                        <button.icon className="h-5 w-5" />
-                                        {button.text}
-                                    </Button>
-                                </CustomLink>
+                        {/* Mobile Navigation */}
+                        <nav className="flex flex-col gap-4">
+                            {navItems.map((item) => (
+                                <Link href={item.href} key={item.id} onClick={(e) => handleScrollToSection(e, item.href)}>
+                                    <span className={`text-black transition-colors font-medium text-lg ${
+                                        activeSection === item.id 
+                                            ? 'text-blue-600 border-l-4 border-blue-600 pl-2' 
+                                            : 'hover:text-blue-600'
+                                    }`}>
+                                        {item.text}
+                                    </span>
+                                </Link>
                             ))}
-                        </div>
+                        </nav>
                     </SheetContent>
                 </Sheet>
             </div>

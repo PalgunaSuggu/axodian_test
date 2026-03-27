@@ -10,7 +10,7 @@ const tradeSimplified = () => {
             <SEO
                 title="Axodian | Global Trade. Simplified."
                 description="Axodian unifies documentation and compliance, payments, and financing for exporters and importers. See how to simplify global trade and book a walkthrough."
-                url="https://www.axodian.com/campaign/trade-simplified"
+                url="https://www.axodian.com/trade-simplified"
                 image="https://www.axodian.com/images/axodian-logo-footer.webp"
                 imageAlt="Axodian — Global Trade. Simplified."
             />

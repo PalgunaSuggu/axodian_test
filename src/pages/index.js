@@ -8,7 +8,7 @@ const HomePage = () => {
   return (
     <>
       <SEO
-        title="Global Trade, Simplified"
+        title="Axodian | Global Trade, Simplified"
         description="We simplify international Payments, automate global trade Documentation & Compliance and facilitate Financing"
         url="https://www.axodian.com/"
         image="https://www.axodian.com/images/axodian-logo-footer.webp"

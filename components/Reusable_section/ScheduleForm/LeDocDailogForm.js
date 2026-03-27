@@ -22,6 +22,7 @@ const LeDocDailogForm = ({ children, showProductOptions = true, defaultSelected,
                 <div>
                     {formType === 'LeDocForm' && <LeDocForm buttonText={buttonText} showProductOptions={showProductOptions} onSuccess={handleSuccess} defaultSelected={defaultSelected} />}
                     {formType === 'LeDocFormLp' && <LeDocFormLp buttonText={buttonText} showProductOptions={showProductOptions} onSuccess={handleSuccess} defaultSelected={defaultSelected} />}
+                    {formType === 'OneDocForm' && <LeDocForm buttonText={buttonText} showProductOptions={showProductOptions} onSuccess={handleSuccess} defaultSelected={defaultSelected} />}
                 </div>
             </DialogContent>
         </Dialog>

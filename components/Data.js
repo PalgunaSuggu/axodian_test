@@ -1,34 +1,12 @@
 import { AlertTriangle, ArrowDownUp, Banknote, BarChart3, BarChart4, Briefcase, Building2, Calendar, CalendarClock, CheckCircle, CircleDollarSign, ClipboardList, Coins, Database, Download, EyeOff, FileCheck, FileSearch, FileText, FileUp, FileUpIcon, Globe, GlobeIcon, Handshake, IndianRupee, Landmark, Layers, LayoutDashboard, LocateFixed, Lock, Mail, MapPin, Percent, Phone, Receipt, RefreshCcw, RotateCcw, Search, Settings, Share2, Shield, ShieldCheck, ShieldOff, Split, Timer, TrendingUp, Truck, User, UserCheck, Users, Wallet, Warehouse, Workflow, Zap } from "lucide-react";
 
 export const navItems = [
-    { name: "LeDoc", href: "/ledoc" },
-    { name: "LeRemitt", href: "/leremitt" },
-    { name: "LeFin", href: "/trade-finance-solution" },
-    { name: "About Us", href: "/about" },
-    {
-        name: "Resources",
-        subItems: [
-            { name: "Blogs", href: "/blogs" },
-            { name: "Media", href: "/media" },
-            { name: "FAQs", href: "/faqs" },
-        ],
-    },
-    { name: "Contact Us", href: "/contact" },
-    {
-        name: "Sign In",
-        subItems: [
-            { name: "LeRemitt", },
-            { name: "LeDoc", },
-        ],
-    },
-];
-
-export const newNavItems = [
     { name: "About Axodian", href: "/about" },
     {
         name: "Offerings",
         subItems: [
-            { name: "Compliance & Document Management", href: "/ledoc" },
+            { name: "Compliance Management", href: "/export-compliance-edpms-ebrc" },
+            { name: "Document Management", href: "/onedoc-export-simplified" },
             { name: "Export Payments", href: "/leremitt" },
             { name: "Trade Financing", href: "/trade-finance-solution" },
         ],
@@ -61,7 +39,8 @@ export const footerLinks = [
     },
     {
         title: "Products", links: [
-            { name: "Compliance Management", href: "/ledoc" },
+            { name: "Compliance Management", href: "/export-compliance-edpms-ebrc" },
+            { name: "Document Management", href: "/onedoc-export-simplified" },
             { name: "Export Payments", href: "/leremitt" },
             { name: "Trade Financing", href: "/trade-finance-solution" }
         ]
@@ -145,7 +124,7 @@ export const allReviews = [
     { id: 6, name: "Krishna Kumar, Co-founder", company: "@PepperTree.AI Pvt Ltd", body: "We were stuck with conventional banking process of collecting trade receivables from our cross-border customers. Though Banks have dependable systems, there is a lot of uncertainty with FOREX charges and even processes that required manual intervention many a times. Forex documentation management was another issue. We adopted LeRemitt with a belief that it'll reduce manual processes, improve documentation process, better customer relationship, and bring transparency with forex charges. LeRemitt has delivered on every aspect we wished for and in fact more with quick processing, and dependable and responsive support team. It's now my go-to platform for remittances!", image: "/images/Krishna.webp" },
     { id: 7, name: "Bharath Bade, Director", company: "@ITGS", body: "LeRemitt has made international payments seamless for my small business. The process is fast, secure, and incredibly easy to use. Also, the transparency in forex rates and fees is unmatched, saving me both time and money. I truly appreciate their dedication to customer satisfaction. Highly recommend their services!", image: "/images/Bharath.webp" },
     { id: 8, name: "", company: "@An MSME Service Exporter", body: "As an MSME, every penny counts. We don't always have the time to keep negotiating for better rates with our relationship managers. LeRemitt has been a huge revelation for us, and we've been able to save so much more." },
-    { id: 9, name:'Arbaz Khan', company: '@Exporter', body: 'We export leather saddles and accessories to buyers in the Middle East, Europe, Australia, and the U.S. — managing so many locations and international transactions used to be challenging. Leremitt changed that completely. Their remittance system is fast, clear, and reliable. I can now track every export payment without worrying about delays or confusion related to speed, hidden charges and conversion. The Leremitt team truly understands exporters’ requirements and provides complete peace of mind by covering all required aspects in their dashboard. I always recommend Leremitt to other exporters who want smooth and secure global payments.',image:"/images/arbaaz.webp" },
+    { id: 9, name: 'Arbaz Khan', company: '@Exporter', body: 'We export leather saddles and accessories to buyers in the Middle East, Europe, Australia, and the U.S. — managing so many locations and international transactions used to be challenging. Leremitt changed that completely. Their remittance system is fast, clear, and reliable. I can now track every export payment without worrying about delays or confusion related to speed, hidden charges and conversion. The Leremitt team truly understands exporters’ requirements and provides complete peace of mind by covering all required aspects in their dashboard. I always recommend Leremitt to other exporters who want smooth and secure global payments.', image: "/images/arbaaz.webp" },
 
     // ledocReviews
     { id: 10, name: "Uday Kumar, CEO", company: "@Deprocon Controls", body: "It is indeed a privilege to have been associated in the development of the product. The initiative is novel and an excellent one and meets the requirements of the export fraternity which has to handle multitude of documents with several stakeholders. We wish LeDoc unbound success in their venture." },
@@ -182,9 +161,8 @@ export const teamMembers = [
     { id: 6, fullName: "Palguna Suggu", role: "Software Engineer", image: "/images/Palguna.webp", link: "https://www.linkedin.com/in/palgunasuggu/" },
     { id: 7, fullName: "Irfan Khan", role: "Frontend Developer", image: "/images/Irfan.webp", link: "https://www.linkedin.com/in/irfan-khan-b63a66107/" },
     { id: 8, fullName: "Anusha Pothureddypalli", role: "Junior Software Engineer", image: "/images/Anusha.webp", link: "https://www.linkedin.com/in/anusha-pothureddypalli-0a16771b0/" },
-    { id: 9, fullName: "Sudhir Singh", role: "Business Development Manager", image: "/images/SudhirSingh.webp", link: "https://www.linkedin.com/in/realsudhirsingh/" },
-    { id: 10, fullName: "Gowtham Vegi", role: "Junior Software Engineer", image: "/images/Gowtham.webp", link: "https://www.linkedin.com/in/gowthamvegi/" },
-    { id: 11, fullName: "Lakshay Kumar", role: "Business Development Executive", image: "/images/Kumar.webp", link: "www.linkedin.com/in/lakshay-kumar-7443bb259" }
+    { id: 9, fullName: "Gowtham Vegi", role: "Junior Software Engineer", image: "/images/Gowtham.webp", link: "https://www.linkedin.com/in/gowthamvegi/" },
+    { id: 10, fullName: "Lakshay Kumar", role: "Business Development Executive", image: "/images/Kumar.webp", link: "www.linkedin.com/in/lakshay-kumar-7443bb259" }
 ];
 
 export const leremittFaqs = [
@@ -218,6 +196,18 @@ export const leDocFaqs = [
     { id: 15, question: "Can multiple stakeholders collaborate on LeDoc?", answer: "Yes, LeDoc enables multi-user access with role-based permissions, allowing teams from finance, operations, and logistics to collaborate efficiently." },
     { id: 16, question: "How can I get started with LeDoc?", answer: "You can reach out to our team for a demo and onboarding process. We provide training and support to ensure a smooth transition to LeDoc." },
     { id: 17, question: "How does LeDoc handle bulk document management?", answer: "LeDoc provides a bulk upload and bulk download feature, allowing businesses to process multiple documents efficiently, reducing manual effort." }
+];
+
+export const oneDocFaqs = [
+    { id: 1, question: "What is OneDoc?", answer: "OneDoc is a document and compliance management platform tailored for exporters and importers, helping them streamline, organize, and secure their trade-related documents." },
+    { id: 2, question: "Who can use OneDoc?", answer: "OneDoc is perfect for exporters, importers, freight forwarders, customs brokers, and logistics companies seeking to streamline their document workflows." },
+    { id: 3, question: "Can I share documents with my team and external partners?", answer: "OneDoc enables you to securely share documents with your team and external stakeholders." },
+    { id: 4, question: "Can OneDoc integrate with other business tools?", answer: "Yes, OneDoc integrates with popular ERPs, accounting software, and logistics platforms for seamless workflow automation." },
+    { id: 5, question: "How does OneDoc platform safeguard sensitive documents?", answer: "The platform employs advanced encryption to safeguard documents, ensuring access is restricted to authorized users. Security is reinforced with OTP authentication, role-based permissions, and comprehensive access logs." },
+    { id: 6, question: "What is the role of AI on OneDoc platform?", answer: "AI is utilized to intelligently analyze uploaded documents, improving document management and ensuring precise information extraction and categorization." },
+    { id: 7, question: "How does OneDoc help with export/import documentation?", answer: "OneDoc provides a single dashboard to manage trade-related documents such as FIRC, eBRC, AWB/BL, invoices, and bank documents. It automates workflows, improves visibility, and ensures compliance with trade regulations." },
+    { id: 8, question: "How can I get started with OneDoc?", answer: "You can reach out to our team for a demo and onboarding process. We provide training and support to ensure a smooth transition to OneDoc." },
+    { id: 9, question: "How does OneDoc handle bulk document management?", answer: "OneDoc provides a bulk upload and bulk download feature, allowing businesses to process multiple documents efficiently, reducing manual effort." }
 ];
 
 // Define subcategories for LeFin FAQs
@@ -480,6 +470,11 @@ export const oneComplianceFaqs = [
         id: 7,
         question: "How do I get started?",
         answer: "You can book a demo to see OneCompliance in action. Our team will help you get onboarded and start managing compliance with clarity from day one.",
+    },
+    {
+        id: 8,
+        question: "Who is One Compliance best suited for?",
+        answer: "It is ideal for exporters managing 5+ shipments per month who require automation for EBRC and EDPMS compliance.",
     }
 ]
 
@@ -1071,73 +1066,6 @@ export const factoringEligibility = [
         icon: User
     }
 ];
-
-// Loan Arrays
-// export const preShipmentLoans = [
-//     {
-//         id: "unsecured",
-//         title: "Unsecured Loans",
-//         description: "For exporters needing working capital before shipment without collateral.",
-//         link: "/apply/unsecured-loans",
-//         benefits: [
-//             { text: "Hassle-free approval for loans up to ₹50 lakh", icon: Banknote },
-//             { text: "Generate loan offers from 100+ financial institutions", icon: Building2 },
-//             { text: "No collateral required", icon: ShieldOff },
-//             { text: "Interest rates as low as 1.2% per month", icon: Percent },
-//             { text: "Minimal documentation required", icon: FileText },
-//         ],
-//         eligibility: unsecuredEligibility,
-//         defaultSelected: ["unsecured_loans"],
-//     },
-//     {
-//         id: "secured",
-//         title: "Secured Loans",
-//         description: "For exporters looking for higher funding backed by collateral.",
-//         link: "/apply/secured-loans",
-//         benefits: [
-//             { text: "Interest rates starting from 9% per annum", icon: BarChart4 },
-//             { text: "Funding up to 100% of collateral value", icon: Coins },
-//             { text: "Approval within 48 hours", icon: Timer },
-//             { text: "Expert banking support", icon: UserCheck },
-//             { text: "Flexible repayment plans", icon: RefreshCcw },
-//         ],
-//         eligibility: securedEligibility,
-//         defaultSelected: ["secured_loans"],
-//     },
-// ];
-
-// export const postShipmentLoans = [
-//     {
-//         id: "post-shipment",
-//         title: "Bill Discounting",
-//         description: "Businesses waiting for payments after shipment.",
-//         link: "/apply/post-shipment-finance",
-//         benefits: [
-//             { text: "Timely access to working capital", icon: Truck },
-//             { text: "Financing up to 90% of invoice value", icon: Coins },
-//             { text: "No collateral required", icon: ShieldOff },
-//             { text: "Competitive discount rates from 1-3% per month", icon: Percent },
-//             { text: "100% digital application & quick approvals", icon: Zap },
-//         ],
-//         eligibility: postShipmentEligibility,
-//         defaultSelected: ["bill_of_discounting"],
-//     },
-//     {
-//         id: "factoring",
-//         title: "Factoring Loans",
-//         description: "Invoice factoring solutions for businesses with established buyers.",
-//         link: "/apply/factoring-loans",
-//         benefits: [
-//             { text: "Non-recourse buyer-led financing", icon: Banknote },
-//             { text: "Off balancesheet financing", icon: Receipt },
-//             { text: "Buyer gets up to 120 days credit period", icon: CalendarClock },
-//             { text: "Get upto 80% of invoice paid upfront", icon: Wallet },
-//             { text: "Suitable for businesses that have established buyers in developed economies", icon: Globe },
-//         ],
-//         eligibility: factoringEligibility,
-//         defaultSelected: ["factoring_loans"],
-//     }
-// ];
 
 export const shipmentLoanTypes = [
     {

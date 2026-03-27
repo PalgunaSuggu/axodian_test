@@ -8,11 +8,11 @@ const leRemitt = () => {
   return (
     <>
       <SEO
-        title="Cross-Border Payments Platform For Exporters | LeRemitt"
+        title="LeRemitt | Cross Border Payments Platform For Exporters | Axodian"
         description="Efficient and cost-effective inward remittance services tailored exclusively to business customers."
         url="https://www.axodian.com/leremitt"
         image="https://www.axodian.com/images/LeRemittLogo.webp"
-        imageAlt="LeRemitt Home"
+        imageAlt="Axodian Home"
       />
       <LeRemitt />
     </>

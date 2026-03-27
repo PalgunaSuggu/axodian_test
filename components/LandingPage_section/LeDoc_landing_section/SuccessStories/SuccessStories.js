@@ -2,31 +2,45 @@ import React from 'react';
 import { Reviews3D } from './Reviews';
 import MediaVideos from './MediaVideos';
 
-const SuccessStories = () => {
+const SuccessStories = ({ brand = "LeDoc" }) => {
     return (
-        <section className="relative py-16 md:py-24 bg-black">
-            <div className="absolute inset-0">
-                <div className="w-full h-full bg-cover bg-center bg-[url('/images/SuccessBanner.webp')]">
-                    <div className="w-full h-full bg-black/30" />
-                </div>
+        <section className="relative py-20 md:py-32 bg-gradient-to-br from-black via-gray-900 to-black">
+            {/* Background Pattern */}
+            <div className="absolute inset-0 opacity-20">
+                <div className="w-full h-full bg-cover bg-center bg-[url('/images/SuccessBanner.webp')]"></div>
             </div>
+            
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
 
-            <div className="relative container mx-auto px-4 z-10">
-                <div className="text-center mb-16">
-                    <h1 className="text-white leading-tight">
-                        <span className="block mb-2">Co-Created with Exporters,</span>
-                        <span className="block">Designed for Real-World Trade Challenges</span>
+            <div className="relative container mx-auto px-6 z-10">
+                {/* Section Header */}
+                <div className="text-center mb-20">
+                    <div className="inline-flex items-center gap-3 px-4 py-2 bg-gradient-to-r from-secondary-light-color/20 to-primary-color/20 border border-secondary-light-color/30 rounded-full mb-6">
+                        <span className="text-secondary-light-color font-medium text-sm">SUCCESS STORIES</span>
+                    </div>
+                    <h1 className="text-white leading-tight mb-6">
+                        <span className="block mb-2 bg-gradient-to-r from-secondary-light-color to-primary-light-color bg-clip-text text-transparent">
+                            Co-Created with Exporters,
+                        </span>
+                        <span className="block text-white">
+                            Designed for Real-World Trade
+                        </span>
                     </h1>
-                    <p className="mt-6 text-md md:text-lg text-white/75 max-w-2xl md:max-w-3xl mx-auto">
-                        We built LeDoc in collaboration with exporters and logistics experts to solve real documentation & compliance painpoints — so you get a solution that truly works.
+                    <p className="text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                        We built {brand} in collaboration with exporters and logistics experts to solve real documentation & compliance painpoints — so you get a solution that truly works.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 shadow-xl hover:shadow-2xl transition-all duration-300">
+                {/* Content Grid - Stacked Layout */}
+                <div className="space-y-16">
+                    {/* Reviews Section - Top */}
+                    <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/10 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]">
                         <Reviews3D />
                     </div>
-                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 shadow-xl hover:shadow-2xl transition-all duration-300">
+                    
+                    {/* Videos Section - Bottom */}
+                    <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/10 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02]">
                         <MediaVideos />
                     </div>
                 </div>

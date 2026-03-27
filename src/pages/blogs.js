@@ -8,11 +8,11 @@ const blogs = () => {
     return (
         <>
             <SEO
-                title="LeRemitt | Knowledge Hub For International Trade"
-                description="Get news & articles on payments, banking & business growth. LeRemitt Blogs empower your financial journey & business success."
+                title="Axodian Blogs | Insights on Global Trade & Export Finance"
+                description="Explore Axodian Blogs for insights on global trade, cross-border payments, export documentation, and trade finance to help businesses grow internationally."
                 url="https://www.axodian.com/blogs"
                 image="https://www.axodian.com/images/axodian-logo-footer.webp"
-                imageAlt="LeRemitt Blogs"
+                imageAlt="Axodian Blogs"
             />
             <Blog />
         </>

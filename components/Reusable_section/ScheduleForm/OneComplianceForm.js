@@ -24,7 +24,7 @@ const ONECOMPLIANCE_CONSTANTS = {
     ]
 };
 
-const OneComplianceForm = ({ onSuccess, redirectTo = '/thank-you', defaultSelected = ['remittance', 'document_management', 'trade_finance', 'secured_loans', 'unsecured_loans', 'bill_of_discounting', 'factoring_loans'] }) => {
+const OneComplianceForm = ({ onSuccess, redirectTo = '/thank-you', defaultSelected = ['remittance', 'document_management', 'trade_finance', 'secured_loans', 'unsecured_loans', 'bill_of_discounting', 'factoring_loans'], textColor = 'text-white', buttonText = 'Book a 15-min Demo' }) => {
     const [formData, setFormData] = useState({
         first_name: '',
         last_name: '',
@@ -134,7 +134,7 @@ const OneComplianceForm = ({ onSuccess, redirectTo = '/thank-you', defaultSelect
         }
 
         if (!formData.turnover || !formData.export_type) {
-            setError('Please select Annual Turnover and Export Type.');
+            setError('Please fill in all mandatory fields: Annual Turnover and Export Type.');
             return;
         }
 
@@ -185,24 +185,23 @@ const OneComplianceForm = ({ onSuccess, redirectTo = '/thank-you', defaultSelect
 
     return (
         <div className="w-full">
-            <form onSubmit={handleSubmit} className="space-y-6 bg-white/5 p-8 md:p-10 rounded-3xl shadow-2xl border border-white/10 backdrop-blur-xl">
-                {/* Full width Name */}
-                <div className="space-y-2">
-                    <Label htmlFor="first_name" className="text-gray-200">Name <span className="text-red-500">*</span></Label>
-                    <Input id="first_name" name="first_name" value={formData.first_name} onChange={handleChange} placeholder="Enter your name" required className="w-full bg-white/5 border-white/10 text-white placeholder:text-gray-500 focus:border-primary-color/50 focus:ring-primary-color/50" />
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <form onSubmit={handleSubmit} className="space-y-6 bg-white/20 p-4 rounded-3xl border border-white/10 backdrop-blur-xl">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    {/* Full width Name */}
+                    <div>
+                        <Label htmlFor="first_name" className={`${textColor}`}>Name <span className="text-red-500">*</span></Label>
+                        <Input id="first_name" name="first_name" value={formData.first_name} onChange={handleChange} placeholder="Enter your name" required className={`w-full bg-white/20 border-white/10 ${textColor} placeholder:text-gray-500 focus:border-primary-color/50 focus:ring-primary-color/50`} />
+                    </div>
                     {/* Email */}
-                    <div className="space-y-2">
-                        <Label htmlFor="to_email" className="text-gray-200">Email <span className="text-red-500">*</span></Label>
-                        <Input id="to_email" name="to_email" value={formData.to_email} onChange={handleChange} type="email" placeholder="Enter work email" required className="w-full bg-white/5 border-white/10 text-white placeholder:text-gray-500 focus:border-primary-color/50 focus:ring-primary-color/50" />
+                    <div>
+                        <Label htmlFor="to_email" className={`${textColor}`}>Email <span className="text-red-500">*</span></Label>
+                        <Input id="to_email" name="to_email" value={formData.to_email} onChange={handleChange} type="email" placeholder="Enter work email" required className={`w-full bg-white/20 border-white/10 ${textColor} placeholder:text-gray-500 focus:border-primary-color/50 focus:ring-primary-color/50`} />
                     </div>
 
                     {/* Phone */}
-                    <div className="space-y-2">
+                    <div>
                         <div className='flex justify-between items-center'>
-                            <Label htmlFor="phone" className="text-gray-200">Phone <span className="text-red-500">*</span></Label>
+                            <Label htmlFor="phone" className={`${textColor}`}>Phone <span className="text-red-500">*</span></Label>
                             {formData.phone.length === 10 && showPhoneOtp && !phoneVerified && (
                                 <OtpInput
                                     value={phoneOtp}
@@ -226,36 +225,22 @@ const OneComplianceForm = ({ onSuccess, redirectTo = '/thank-you', defaultSelect
                             )}
                         </div>
                         <div className="flex items-center gap-2 mt-2">
-                            <span className="px-3 py-2 border border-white/10 bg-white/5 rounded-l-md text-white">+91</span>
-                            <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="Phone Number" required className="bg-white/5 border-white/10 text-white placeholder:text-gray-500 focus:border-primary-color/50 focus:ring-primary-color/50" readOnly={phoneVerified} />
+                            <span className={`px-3 py-2 border border-white/10 bg-white/20 rounded-l-md ${textColor}`}>+91</span>
+                            <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="Phone Number" required className={`bg-white/20 border-white/10 ${textColor} placeholder:text-gray-500 focus:border-primary-color/50 focus:ring-primary-color/50`} readOnly={phoneVerified} />
                         </div>
                     </div>
-                </div>
 
-                <div className="text-sm space-y-2 w-full">
-                    {formData.phone && (
-                        <>
-                            {error ? (
-                                <p className="text-red-500 bg-white/5 border border-red-200 rounded p-2">{error}</p>
-                            ) : phoneVerified ? (
-                                <p className="text-green-500 bg-white/5 border border-green-200 rounded p-2 flex">
-                                    Phone number successfully verified!
-                                </p>
-                            ) : showPhoneOtp ? (
-                                <p className="text-tertiary-light-color bg-white/5 border border-tertiary-light-color rounded p-2">
-                                    OTP sent to +91 {formData.phone}
-                                </p>
-                            ) : null}
-                        </>
-                    )}
-                </div>
+                    {/* Company name */}
+                    <div>
+                        <Label htmlFor="Company" className={`${textColor}`}>Company Name <span className="text-red-500">*</span></Label>
+                        <Input id="Company" name="Company" value={formData.Company} onChange={handleChange} placeholder="Your company name" required className={`w-full bg-white/20 border-white/10 ${textColor} placeholder:text-gray-500 focus:border-primary-color/50 focus:ring-primary-color/50`} />
+                    </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Type of Exporter */}
-                    <div className="space-y-2">
-                        <Label className="text-gray-200">Type of Exporter <span className="text-red-500">*</span></Label>
+                    <div>
+                        <Label className={`${textColor}`}>Type of Exporter <span className="text-red-500">*</span></Label>
                         <Select onValueChange={(val) => handleSelectChange('export_type', val)} value={formData.export_type}>
-                            <SelectTrigger className="w-full bg-white/5 border-white/10 text-white placeholder:text-gray-500 focus:border-primary-color/50 focus:ring-primary-color/50">
+                            <SelectTrigger className={`w-full bg-white/20 border-white/10 ${textColor} placeholder:text-gray-500 focus:border-primary-color/50 focus:ring-primary-color/50`}>
                                 <SelectValue placeholder="Select type" />
                             </SelectTrigger>
                             <SelectContent>
@@ -267,10 +252,10 @@ const OneComplianceForm = ({ onSuccess, redirectTo = '/thank-you', defaultSelect
                     </div>
 
                     {/* Annual Export Turnover */}
-                    <div className="space-y-2">
-                        <Label className="text-gray-200">Annual Export Turnover Range <span className="text-red-500">*</span></Label>
+                    <div>
+                        <Label className={`${textColor}`}>Annual Export Turnover Range <span className="text-red-500">*</span></Label>
                         <Select onValueChange={(val) => handleSelectChange('turnover', val)} value={formData.turnover}>
-                            <SelectTrigger className="w-full bg-white/5 border-white/10 text-white placeholder:text-gray-500 focus:border-primary-color/50 focus:ring-primary-color/50">
+                            <SelectTrigger className={`w-full bg-white/20 border-white/10 ${textColor} placeholder:text-gray-500 focus:border-primary-color/50 focus:ring-primary-color/50`}>
                                 <SelectValue placeholder="Select range" />
                             </SelectTrigger>
                             <SelectContent>
@@ -282,41 +267,62 @@ const OneComplianceForm = ({ onSuccess, redirectTo = '/thank-you', defaultSelect
                     </div>
 
                     {/* Designation */}
-                    <div className="space-y-2">
-                        <Label htmlFor="designation" className="text-gray-200">Designation <span className="text-red-500">*</span></Label>
-                        <Input id="designation" name="designation" value={formData.designation} onChange={handleChange} placeholder="Enter your designation" required className="w-full bg-white/5 border-white/10 text-white placeholder:text-gray-500 focus:border-primary-color/50 focus:ring-primary-color/50" />
+                    <div>
+                        <Label htmlFor="designation" className={`${textColor}`}>Designation <span className="text-red-500">*</span></Label>
+                        <Input id="designation" name="designation" value={formData.designation} onChange={handleChange} placeholder="Enter your designation" required className={`w-full bg-white/20 border-white/10 ${textColor} placeholder:text-gray-500 focus:border-primary-color/50 focus:ring-primary-color/50`} />
                     </div>
 
                     {/* Bank(s) */}
-                    <div className="space-y-2">
-                        <Label htmlFor="bank_name" className="text-gray-200">Bank(s) you work with <span className="text-red-500">*</span></Label>
-                        <Input id="bank_name" name="bank_name" value={formData.bank_name} onChange={handleChange} placeholder="e.g. HDFC, SBI, ICICI" required className="w-full bg-white/5 border-white/10 text-white placeholder:text-gray-500 focus:border-primary-color/50 focus:ring-primary-color/50" />
+                    <div className="w-full">
+                        <Label htmlFor="bank_name" className={`${textColor}`}>Bank(s) you work with <span className="text-red-500">*</span></Label>
+                        <Input id="bank_name" name="bank_name" value={formData.bank_name} onChange={handleChange} placeholder="e.g. HDFC, SBI, ICICI" required className={`w-full bg-white/20 border-white/10 ${textColor} placeholder:text-gray-500 focus:border-primary-color/50 focus:ring-primary-color/50`} />
                     </div>
                 </div>
 
-                <div className="space-y-2 w-full">
-                    <Label htmlFor="description" className="text-gray-200">Brief note on your current EDPMS/EBRC pain point (Optional)</Label>
-                    <Textarea id="description" name="description" value={formData.description} onChange={handleChange} placeholder="Tell us about your challenges..." className="w-full bg-white/5 border-white/10 text-white placeholder:text-gray-500 focus:border-primary-color/50 focus:ring-primary-color/50 min-h-[100px]" />
-                </div>
-
-                <div className="flex items-start gap-3">
-                    <div className="flex items-start mt-1">
-                        <input type="checkbox" id="agree" checked={agree} onChange={() => setAgree(!agree)} className="h-4 w-4 rounded border-white/30 bg-white/5 text-primary-color focus:ring-primary-color/50 cursor-pointer" />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <Label htmlFor="description" className={`${textColor}`}>Brief note on your current EDPMS/EBRC pain point (Optional)</Label>
+                        <Textarea rows={0} id="description" name="description" value={formData.description} onChange={handleChange} placeholder="Tell us about your challenges..." className={`w-full bg-white/20 border-white/10 ${textColor} placeholder:text-gray-500 focus:border-primary-color/50 focus:ring-primary-color/50`} />
                     </div>
-                    <Label htmlFor="agree" className="text-gray-400 text-sm leading-5">
-                        {`By submitting this form, you agree to our`} <Link href="https://www.axodian.com/Documents/6Point3_PrivacyPolicy.pdf" className="text-indigo-400 hover:text-indigo-300 underline">Terms & Conditions and Privacy Policy,</Link> {`and consent to be contacted about One Compliance.`} <span className="text-red-500">*</span>
-                    </Label>
+
+                    <div>
+                        <div className="flex items-start gap-3 mb-4">
+                            <div className="flex items-start mt-1">
+                                <input type="checkbox" id="agree" checked={agree} onChange={() => setAgree(!agree)} className="h-4 w-4 rounded border-white/30 bg-white/20 text-primary-color focus:ring-primary-color/50 cursor-pointer" />
+                            </div>
+                            <Label htmlFor="agree" className={`${textColor === 'text-white' ? 'text-gray-400' : 'text-gray-600'} text-sm leading-5`}>
+                                {`By submitting this form, I agree to Axodian's`} <Link href="https://www.axodian.com/Documents/6Point3_PrivacyPolicy.pdf" className="text-indigo-400 hover:text-indigo-300 underline">Terms & Conditions and Privacy Policy,</Link> <span className="text-red-500">*</span>
+                            </Label>
+                        </div>
+                        <Button
+                            type="submit"
+                            disabled={loading || !agree || !phoneVerified}
+                            className="w-full bg-white hover:bg-gray-100 text-secondary-color font-bold py-6 text-lg rounded-xl transition-all duration-200 hover:scale-[1.02]"
+                        >
+                            {loading ? 'Submitting...' : buttonText}
+                        </Button>
+                    </div>
                 </div>
 
-                <div className="pt-4">
-                    <Button
-                        type="submit"
-                        disabled={loading || !agree || !phoneVerified}
-                        className="w-full bg-white hover:bg-gray-100 text-secondary-color font-bold py-6 text-lg rounded-xl transition-all duration-200 hover:scale-[1.02]"
-                    >
-                        {loading ? 'Submitting...' : 'Book a 15-min Demo'}
-                    </Button>
+                <div className="text-sm w-full">
+                    {formData.phone && (
+                        <>
+                            {error ? (
+                                <p className="text-red-500 bg-white/20 border border-red-200 rounded p-2">{error}</p>
+                            ) : phoneVerified ? (
+                                <p className="text-green-500 bg-white/20 border border-green-200 rounded p-2 flex">
+                                    Phone number successfully verified!
+                                </p>
+                            ) : showPhoneOtp ? (
+                                <p className="text-primary-color font-semibold bg-white/5">
+                                    OTP sent to +91 {formData.phone}
+                                </p>
+                            ) : null}
+                        </>
+                    )}
                 </div>
+
+
             </form>
         </div>
     );

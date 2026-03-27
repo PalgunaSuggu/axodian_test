@@ -9,7 +9,7 @@ import BookDemo from './BookDemo/BookDemo'
 import OneComplianceSolves from './OneComplianceSolves/OneComplianceSolves'
 import TargetAudience from './TargetAudience/TargetAudience'
 import WhyOneCompliance from './WhyOneCompliance/WhyOneCompliance'
-import OneComplianceBanner from './OneComplianceBanner/OneComplianceBanner'
+import OneComplianceBannerLp from './OneComplianceBanner/OneComplianceBannerLp'
 import OneComplianceDailogForm from '../../Reusable_section/ScheduleForm/OneComplianceDailogForm'
 import OneCompNavbar from './OneCompNavbar'
 import OneCompFooter from './OneCompFooter'
@@ -17,9 +17,9 @@ import OneCompFooter from './OneCompFooter'
 const OneComplianceLp = ({ redirectTo = 'https://calendly.com/axodian/one-compliance' }) => {
   return (
     <div>
-      <OneCompNavbar redirectTo={redirectTo}/>
+      <OneCompNavbar redirectTo={redirectTo} buttonText="Book a 15-min Demo"/>
       <div id="home">
-        <OneComplianceBanner redirectTo={redirectTo} />
+        <OneComplianceBannerLp redirectTo={redirectTo} />
       </div>
       <div id="overview">
         <WhyOneCompliance />
@@ -34,7 +34,7 @@ const OneComplianceLp = ({ redirectTo = 'https://calendly.com/axodian/one-compli
         <HowOneComplianceWork />
       </div>
       <TargetAudience />
-      <BookDemo redirectTo={redirectTo}/>
+      <BookDemo redirectTo={redirectTo} />
       <div id="faqs">
         <Faqs faqsData={oneComplianceFaqs} productKey="onecompliance" titleOne="Frequently Asked" titleTwo="Questions" subtitle="Everything you need to know about the One Compliance Beta." bgColor="bg-secondary-light-color" hoverBgColor="hover:bg-secondary-light-color/90" textColor="text-white" triggerBg="bg-secondary-light-color/15" triggerTextColor="text-secondary-light-color" showSeeMore={false} />
       </div>

@@ -175,12 +175,15 @@ const LeDocForm = ({ onSuccess, buttonText = "Request a Demo", defaultSelected =
     return (
         <div className="w-full">
             <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                    <Label htmlFor="first_name" className="text-gray-700 font-medium">Full Name <span className="text-red-500">*</span></Label>
-                    <Input id="first_name" name="first_name" value={formData.first_name} onChange={handleChange} placeholder="Full Name" required className="mt-2 p-3 border rounded-lg w-full border-gray-300 focus:ring-indigo-500 focus:border-indigo-500" />
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <div>
+                        <Label htmlFor="first_name" className="text-gray-700 font-medium">Full Name <span className="text-red-500">*</span></Label>
+                        <Input id="first_name" name="first_name" value={formData.first_name} onChange={handleChange} placeholder="Full Name" required className="mt-2 p-3 border rounded-lg w-full border-gray-300 bg-secondary-color/5 focus:ring-indigo-500 focus:border-indigo-500" />
+                    </div>
+                    <div>
+                        <Label htmlFor="to_email" className="text-gray-700 font-medium">Email <span className="text-red-500">*</span></Label>
+                        <Input id="to_email" name="to_email" type="email" value={formData.to_email} onChange={handleChange} placeholder="example@domain.com" required className="mt-2 p-3 border rounded-lg w-full border-gray-300 bg-secondary-color/5 focus:ring-indigo-500 focus:border-indigo-500" />
+                    </div>
                     <div>
                         <div className='flex justify-between items-center'>
                             <Label htmlFor="phone" className="text-gray-700 font-medium">Phone <span className="text-red-500">*</span></Label>
@@ -207,60 +210,37 @@ const LeDocForm = ({ onSuccess, buttonText = "Request a Demo", defaultSelected =
                             )}
                         </div>
                         <div className="flex items-center gap-2 mt-2">
-                            <span className="px-3 py-2 border border-gray-300 bg-gray-100 rounded-l-md text-gray-700">+91</span>
+                            <span className="px-3 py-2 border border-gray-300 bg-secondary-color/5 bg-gray-100 rounded-l-md text-gray-700">+91</span>
                             <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="Phone Number" required
-                                className={`p-3 border rounded-r-lg w-full ${phoneVerified ? 'bg-green-50 border-green-500' : 'border-gray-300'} focus:ring-indigo-500 focus:border-indigo-500`} readOnly={phoneVerified} />
+                                className={`p-3 border rounded-r-lg w-full ${phoneVerified ? 'bg-green-50 border-green-500' : 'border-gray-300 bg-secondary-color/5'} focus:ring-indigo-500 focus:border-indigo-500`} readOnly={phoneVerified} />
                         </div>
+                    </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div>
+                        <Label htmlFor="Company" className="text-gray-700 font-medium">Company Name <span className="text-red-500">*</span></Label>
+                        <Input id="Company" name="Company" value={formData.Company} onChange={handleChange} placeholder="Your company name" required className="mt-2 p-3 border rounded-lg w-full border-gray-300 bg-secondary-color/5 focus:ring-indigo-500 focus:border-indigo-500" />
                     </div>
 
                     <div>
-                        <div className='flex justify-between items-center'>
-                            <Label htmlFor="to_email" className="text-gray-700 font-medium">Email <span className="text-red-500">*</span></Label>
-                        </div>
-                        <Input id="to_email" name="to_email" type="email" value={formData.to_email} onChange={handleChange} placeholder="example@domain.com" required className="mt-2 p-3 border rounded-lg w-full border-gray-300 focus:ring-indigo-500 focus:border-indigo-500" />
+                        <Label htmlFor="is_exporter" className="text-gray-700 font-medium">
+                            Are you an exporter? <span className="text-red-500">*</span>
+                        </Label>
+                        <Select
+                            onValueChange={(val) => handleSelectChange('is_exporter', val)}
+                            value={formData.is_exporter === null ? undefined : formData.is_exporter ? 'yes' : 'no'}
+                        >
+                            <SelectTrigger className="mt-2">
+                                <SelectValue placeholder="Select an option" />
+                            </SelectTrigger>
+                            <SelectContent>
+                                <SelectItem value="yes">Yes</SelectItem>
+                                <SelectItem value="no">No</SelectItem>
+                            </SelectContent>
+                        </Select>
                     </div>
-                </div>
 
-                {formData.phone && (
-                    <div className="text-sm">
-                        {error ? (
-                            <p className="text-red-600 bg-red-50 border border-red-200 rounded p-2">{error}</p>
-                        ) : phoneVerified ? (
-                            <p className="text-green-600 bg-green-50 border border-green-200 rounded p-2 flex">
-                                Phone number successfully verified!
-                            </p>
-                        ) : showPhoneOtp ? (
-                            <p className="text-blue-700 bg-blue-50 border border-blue-200 rounded p-2">
-                                OTP sent to +91 {formData.phone}
-                            </p>
-                        ) : null}
-                    </div>
-                )}
-
-                <div>
-                    <Label htmlFor="Company" className="text-gray-700 font-medium">Company Name <span className="text-red-500">*</span></Label>
-                    <Input id="Company" name="Company" value={formData.Company} onChange={handleChange} placeholder="Your company name" required className="mt-2 p-3 border rounded-lg w-full border-gray-300 focus:ring-indigo-500 focus:border-indigo-500" />
-                </div>
-
-                <div>
-                    <Label htmlFor="is_exporter" className="text-gray-700 font-medium">
-                        Are you an exporter? <span className="text-red-500">*</span>
-                    </Label>
-                    <Select
-                        onValueChange={(val) => handleSelectChange('is_exporter', val)}
-                        value={formData.is_exporter === null ? undefined : formData.is_exporter ? 'yes' : 'no'}
-                    >
-                        <SelectTrigger className="mt-2">
-                            <SelectValue placeholder="Select an option" />
-                        </SelectTrigger>
-                        <SelectContent>
-                            <SelectItem value="yes">Yes</SelectItem>
-                            <SelectItem value="no">No</SelectItem>
-                        </SelectContent>
-                    </Select>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                         <Label>Latest Annual Turnover<span className="text-red-500">*</span></Label>
                         <Select onValueChange={(val) => handleSelectChange('turnover', val)} value={formData.turnover}>
@@ -286,25 +266,47 @@ const LeDocForm = ({ onSuccess, buttonText = "Request a Demo", defaultSelected =
                     </div>
                 </div>
 
-                <div>
-                    <Label htmlFor="description" className="text-gray-700 font-medium">Additional Information</Label>
-                    <Textarea id="description" name="description" value={formData.description} onChange={handleChange} placeholder="Any specific requirements or questions?" rows={4} className="mt-2 p-3 border rounded-lg w-full border-gray-300 focus:ring-indigo-500 focus:border-indigo-500" />
+                <div className="grid grid-cols-2 gap-4">
+                    <div>
+                        <Label htmlFor="description" className="text-gray-700 font-medium">Additional Information</Label>
+                        <Textarea rows={0} id="description" name="description" value={formData.description} onChange={handleChange} placeholder="Any specific requirements or questions?" className="mt-2 p-3 border rounded-lg w-full border-gray-300 bg-secondary-color/5 focus:ring-indigo-500 focus:border-indigo-500" />
+                    </div>
+
+                    <div>
+                        <div className="flex items-start gap-2 mb-6">
+                            <input type="checkbox" id="agree" checked={agree} onChange={() => setAgree(!agree)} className="mt-1" />
+                            <Label htmlFor="agree" className="text-sm text-gray-600">
+                                {`By submitting this form, I agree to Axodian's`} <Link href="https://www.axodian.com/Documents/6Point3_PrivacyPolicy.pdf" className="underline text-indigo-600">Privacy Policy</Link> <span className="text-red-500">*</span>
+                            </Label>
+                        </div>
+
+                        <Button
+                            type="submit"
+                            disabled={loading || !agree || !phoneVerified}
+                            className="text-white bg-gradient-to-b from-indigo-600 to-indigo-700 rounded-lg hover:opacity-90 w-full"
+                        >
+                            {loading ? 'Submitting...' : buttonText}
+                        </Button>
+                    </div>
                 </div>
 
-                <div className="flex items-start gap-2">
-                    <input type="checkbox" id="agree" checked={agree} onChange={() => setAgree(!agree)} className="mt-1" />
-                    <Label htmlFor="agree" className="text-sm text-gray-600">
-                        {`By submitting this form, I agree to Axodian's`} <Link href="https://www.axodian.com/Documents/6Point3_PrivacyPolicy.pdf" className="underline text-indigo-600">Privacy Policy</Link> <span className="text-red-500">*</span>
-                    </Label>
-                </div>
 
-                <Button
-                    type="submit"
-                    disabled={loading || !agree || !phoneVerified}
-                    className="text-white bg-gradient-to-b from-indigo-600 to-indigo-700 rounded-lg hover:opacity-90 px-6 py-3"
-                >
-                    {loading ? 'Submitting...' : buttonText}
-                </Button>
+
+                {formData.phone && (
+                    <div className="text-sm">
+                        {error ? (
+                            <p className="text-red-600 bg-red-50 border border-red-200 rounded p-2">{error}</p>
+                        ) : phoneVerified ? (
+                            <p className="text-green-600 bg-green-50 border border-green-200 rounded p-2 flex">
+                                Phone number successfully verified!
+                            </p>
+                        ) : showPhoneOtp ? (
+                            <p className="text-blue-700 bg-blue-50 border border-blue-200 rounded p-2">
+                                OTP sent to +91 {formData.phone}
+                            </p>
+                        ) : null}
+                    </div>
+                )}
             </form>
         </div>
     );

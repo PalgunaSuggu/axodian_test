@@ -8,7 +8,7 @@ const leCheck = () => {
     return (
         <>
             <SEO
-                title="Historical Exchange Rates & Conversion Tool | LeRemitt"
+                title="LeCheck | Historical Exchange Rates & Currency Converter | Axodian"
                 description="Check historical exchange rates for various currencies and convert amounts using our LeCheck tool. Get insights into past currency values and plan your international payments effectively with LeRemitt."
                 url="https://www.axodian.com/lecheck"
                 image="https://www.axodian.com/images/axodian-logo-footer.webp"

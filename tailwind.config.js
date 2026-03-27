@@ -9,6 +9,39 @@ module.exports = {
 		// Or if using `src` directory:
 		"./src/**/*.{js,ts,jsx,tsx,mdx}",
 	],
+	safelist: [
+		// Keep dynamic classes that might be generated
+		'bg-primary-color',
+		'text-primary-color',
+		'border-primary-color',
+		'hover:bg-primary-color',
+		'bg-secondary-color',
+		'text-secondary-color',
+		'border-secondary-color',
+		'hover:bg-secondary-color',
+		'bg-secondary-light-color',
+		'text-secondary-light-color',
+		'border-secondary-light-color',
+		'hover:bg-secondary-light-color',
+		'bg-tertiary-color',
+		'text-tertiary-color',
+		'border-tertiary-color',
+		'hover:bg-tertiary-color',
+		'bg-tertiary-light-color',
+		'text-tertiary-light-color',
+		'border-tertiary-light-color',
+		'hover:bg-tertiary-light-color',
+		// Animation classes
+		'animate-fade-in-up',
+		'animate-slide-in',
+		'animate-pulse',
+		// Swiper classes
+		'swiper',
+		'swiper-slide',
+		'swiper-pagination',
+		'swiper-pagination-bullet',
+		'swiper-pagination-bullet-active',
+	],
 	theme: {
 		extend: {
 			borderRadius: {
@@ -104,6 +137,26 @@ module.exports = {
 					'100%': {
 						backgroundPosition: 'bottom center'
 					}
+				},
+				'fade-in-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'slide-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateX(-20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateX(0)'
+					}
 				}
 			},
 			animation: {
@@ -111,7 +164,9 @@ module.exports = {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				marquee: 'marquee var(--duration) infinite linear',
 				'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
-				'background-position-spin': 'background-position-spin 3000ms infinite alternate'
+				'background-position-spin': 'background-position-spin 3000ms infinite alternate',
+				'fade-in-up': 'fade-in-up 0.6s ease-out',
+				'slide-in': 'slide-in 0.4s ease-out'
 			},
 			container: {
 				center: true,

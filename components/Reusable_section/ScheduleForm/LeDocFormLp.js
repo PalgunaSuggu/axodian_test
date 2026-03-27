@@ -147,7 +147,7 @@ const LeDocFormLp = ({ onSuccess, buttonText = "Request a Demo", defaultSelected
             }
         } catch (err) {
             setError(err.response?.data?.message || 'Form submission error');
-        } 
+        }
         setLoading(false)
     };
 

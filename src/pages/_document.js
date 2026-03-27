@@ -5,16 +5,26 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        {/* Meta tags */}
+        {/* Performance and SEO Meta Tags */}
         <meta charSet="utf-8" />
-        <meta name="theme-color" content="#000000" />
+        <meta name="theme-color" content="#663399" />
+        <meta name="msapplication-TileColor" content="#663399" />
+        
+        {/* Preconnect for performance */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://connect.facebook.net" />
+        <link rel="preconnect" href="https://snap.licdn.com" />
+        <link rel="preconnect" href="https://www.clarity.ms" />
+        <link rel="preconnect" href="https://csm.leremitt.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
         {/* Favicon */}
         <link rel="icon" type="image/webp" sizes="32x32" href="/images/axodian-fav-icon.webp" />
         <link rel="icon" type="image/webp" sizes="192x192" href="/images/axodian-fav-icon.webp" />
         <link rel="apple-touch-icon" sizes="180x180" href="/images/axodian-fav-icon.webp" />
+        <link rel="manifest" href="/manifest.json" />
 
-        {/* Google Tag Manager */}
+        {/* Google Tag Manager - Optimized */}
         <Script
           strategy="afterInteractive"
           id="gtm"
@@ -29,7 +39,7 @@ export default function Document() {
           }}
         />
 
-        {/* LinkedIn Insight Tag */}
+        {/* LinkedIn Insight Tag - Optimized */}
         <Script
           strategy="afterInteractive"
           id="linkedin-insight"
@@ -54,7 +64,7 @@ export default function Document() {
           }}
         />
 
-        {/* Facebook Pixel */}
+        {/* Facebook Pixel - Optimized */}
         <Script
           strategy="afterInteractive"
           id="facebook-pixel"
@@ -74,7 +84,7 @@ export default function Document() {
           }}
         />
 
-        {/* Microsoft Clarity */}
+        {/* Microsoft Clarity - Optimized */}
         <Script
           strategy="afterInteractive"
           id="microsoft-clarity"
@@ -89,7 +99,7 @@ export default function Document() {
           }}
         />
 
-        {/* Mautic Tracking Script */}
+        {/* Mautic Tracking Script - Optimized */}
         <Script
           strategy="afterInteractive"
           id="mautic-tracking"
@@ -99,7 +109,6 @@ export default function Document() {
               w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),
               m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
               })(window,document,'script','https://csm.leremitt.com/mtc.js','mt');
-
               mt('send', 'pageview');
             `,
           }}

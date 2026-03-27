@@ -16,8 +16,8 @@ const OneCompFooter = () => {
       <div className="container mx-auto px-4 flex flex-col items-center text-center">
 
         {/* Brand Section */}
-        <Link href="/export-compliance-edpms-ebrc" className="relative h-20 w-64 mb-8 inline-block transition-opacity hover:opacity-80">
-          <Image src="/images/axodian-logo-footer.webp" alt="Axodian Logo" fill className="object-contain" priority />
+        <Link href="/export-compliance-edpms-ebrc" className="relative h-20 w-64 mb-4 inline-block transition-opacity hover:opacity-80">
+          <Image src="/images/OneCompliance.webp" alt="Axodian Logo" fill className="object-contain" priority />
         </Link>
 
         <p className="text-gray-500 text-lg leading-relaxed max-w-2xl mb-10 font-light">

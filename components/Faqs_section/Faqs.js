@@ -14,18 +14,19 @@ const faqCategories = [
         // Don't combine faqs here, we'll handle them separately
         faqs: []
     },
-    { key: "leremitt", label: "LeRemitt", faqs: leremittFaqs },
-    { key: "ledoc", label: "LeDoc", faqs: leDocFaqs },
-    { key: "lefin", label: "LeFin", faqs: leFinFaqs },
-    { key: "onecompliance", label: "One Compliance", faqs: oneComplianceFaqs },
+    { key: "onecompliance", label: "Compliance Management", faqs: oneComplianceFaqs },
+    { key: "ledoc", label: "Document Management", faqs: leDocFaqs },
+    { key: "leremitt", label: "Export Payments", faqs: leremittFaqs },
+    { key: "lefin", label: "Trade Finance", faqs: leFinFaqs },
+    
 ];
 
 // Group the questions by category for the "All Questions" tab
 const categorizedFaqs = [
-    { key: "leremitt", label: "LeRemitt", faqs: leremittFaqs },
-    { key: "ledoc", label: "LeDoc", faqs: leDocFaqs },
-    { key: "lefin", label: "LeFin", faqs: leFinFaqs },
-    { key: "onecompliance", label: "One Compliance", faqs: oneComplianceFaqs },
+    { key: "onecompliance", label: "Compliance Management", faqs: oneComplianceFaqs },
+    { key: "ledoc", label: "Document Management", faqs: leDocFaqs },
+    { key: "leremitt", label: "Export Payments", faqs: leremittFaqs },
+    { key: "lefin", label: "Trade Finance", faqs: leFinFaqs },
 ];
 
 export default function FAQComponent({ showAll = false, defaultTab = "all", showLoginLink = false }) {

@@ -9,19 +9,9 @@ import { useEffect } from 'react';
 import OtpInput from 'react-otp-input';
 import { Label } from '@/components/ui/label';
 
-const BookCall = ({ defaultSelected = ['remittance', 'document_management', 'trade_finance', 'secured_loans', 'unsecured_loans', 'bill_of_discounting', 'factoring_loans', 'book_call'] }) => {
+const BookCall = ({ defaultSelected = ['book_call'] }) => {
     const [formData, setFormData] = useState({
-        first_name: '',
-        last_name: '',
         phone: '',
-        remittance: defaultSelected.includes('remittance') || undefined,
-        document_management: defaultSelected.includes('document_management') || undefined,
-        trade_finance: defaultSelected.includes('trade_finance') || undefined,
-        secured_loans: defaultSelected.includes('secured_loans') || undefined,
-        unsecured_loans: defaultSelected.includes('unsecured_loans') || undefined,
-        bill_of_discounting: defaultSelected.includes('bill_of_discounting') || undefined,
-        factoring_loans: defaultSelected.includes('factoring_loans') || undefined,
-        one_compliance: defaultSelected.includes('one_compliance') || undefined,
         book_call: defaultSelected.includes('book_call') || undefined,
         from: "",
         medium: "",
@@ -141,17 +131,13 @@ const BookCall = ({ defaultSelected = ['remittance', 'document_management', 'tra
                         Book a 15-Minute Call
                     </h2>
                     <p className="mt-2 text-center text-sm text-gray-600">
-                        Share your name and phone number below, and our team will connect with you for a quick 15-minute call.
+                        Share your phone number below, and our team will connect with you for a quick 15-minute call.
                     </p>
                 </div>
 
                 {!submitted ? (
                     <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
                         <div className="space-y-4">
-                            <div className="space-y-2">
-                                <Label htmlFor="first_name">Name <span className="text-red-500">*</span></Label>
-                                <Input id="first_name" name="first_name" value={formData.first_name} onChange={handleChange} placeholder="Enter your name" required className="w-full bg-white/5 border-white/10 text-white placeholder:text-gray-500 focus:border-primary-color/50 focus:ring-primary-color/50" />
-                            </div>
                             <div className="space-y-2">
                                 <div className='flex justify-between items-center'>
                                     <Label htmlFor="phone">Phone <span className="text-red-500">*</span></Label>

@@ -8,11 +8,11 @@ const contact = () => {
     return (
         <>
             <SEO
-                title="Connect With Us | LeRemitt"
-                description="Having queries about international payments? Connect with us. We will contact you as soon as possible."
+                title="Contact Axodian | Global Trade Solutions"
+                description="Contact Axodian for inquiries about global trade solutions, cross-border payments, export documentation, and trade finance. Our team will get back to you shortly."
                 url="https://www.axodian.com/contact"
                 image="https://www.axodian.com/images/axodian-logo-footer.webp"
-                imageAlt="Contact Us"
+                imageAlt="Contact Axodian"
             />
             <Contact />
         </>

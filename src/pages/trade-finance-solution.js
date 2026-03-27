@@ -8,11 +8,11 @@ const tradeFinanceSolution = () => {
   return (
     <>
       <SEO
-        title="Trade Finance Solutions for Indian Exporters | LeRemitt"
-        description="Struggling with cash flow and payment delays in your export business? Our trade finance solutions empower Indian exporters to overcome challenges, improve cash flows."
+        title="LeFin | Trade Finance Solutions for Indian Exporters | Axodian"
+        description="LeFin by Axodian provides trade finance solutions that help Indian exporters overcome cash flow challenges, manage payment delays, and access fast export financing."
         url="https://www.axodian.com/trade-finance-solution"
         image="https://www.axodian.com/images/LeFinLogo.webp"
-        imageAlt="Post Shipment Financing"
+        imageAlt="LeFin Trade Finance Platform"
       />
       <LeFin />
     </>

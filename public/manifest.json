@@ -1,0 +1,28 @@
+{
+  "name": "Axodian - Trade Finance Platform",
+  "short_name": "Axodian",
+  "description": "Simplifying trade finance, compliance, and cross-border payments for businesses",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#663399",
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["business", "finance", "productivity"],
+  "icons": [
+    {
+      "src": "/images/axodian-fav-icon.webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/axodian-fav-icon.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ],
+  "splash_pages": null
+}

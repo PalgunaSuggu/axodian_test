@@ -6,7 +6,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, X } from "lucide-react";
 import OneComplianceDailogForm from '../../Reusable_section/ScheduleForm/OneComplianceDailogForm';
 
-const OneCompNavbar = ({redirectTo}) => {
+const OneCompNavbar = ({ redirectTo, buttonText = "Book a Demo", showForm = true }) => {
     const [scrolled, setScrolled] = useState(false);
     const [open, setOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('');
@@ -47,6 +47,13 @@ const OneCompNavbar = ({redirectTo}) => {
         }
     };
 
+        const scrollToHome = () => {
+        const homeElement = document.getElementById('home');
+        if (homeElement) {
+            homeElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-1 ${scrolled ? 'bg-white/80 backdrop-blur-md shadow-lg' : 'bg-white'}`}>
             <div className="container mx-auto px-4 flex justify-between items-center">
@@ -54,7 +61,7 @@ const OneCompNavbar = ({redirectTo}) => {
                 {/* Logo */}
                 <Link href="/export-compliance-edpms-ebrc" className="flex-shrink-0">
                     <div className="relative h-12 w-36">
-                        <Image src="/images/axodian-Logo-nav.webp" alt="Axodian OneCompliance" fill className="object-contain" priority />
+                        <Image src="/images/OneCompliance.webp" alt="Axodian OneCompliance" fill className="object-contain" priority />
                     </div>
                 </Link>
 
@@ -80,11 +87,20 @@ const OneCompNavbar = ({redirectTo}) => {
 
                     {/* Desktop Right Side Actions */}
                     <div className="hidden md:block">
-                        <OneComplianceDailogForm defaultSelected={['one_compliance']} showProductOptions={true}>
-                            <Button className="bg-primary-color text-white hover:bg-primary-color/90 font-semibold px-6 py-2 rounded-md transition-all duration-300 border border-primary-color">
-                                Book a Demo
+                        {showForm ? (
+                            <OneComplianceDailogForm defaultSelected={['one_compliance']} showProductOptions={true} buttonText={buttonText} redirectTo={redirectTo}>
+                                <Button className="bg-primary-color text-white hover:bg-primary-color/90 font-semibold px-6 py-2 rounded-md transition-all duration-300 border border-primary-color">
+                                    {buttonText}
+                                </Button>
+                            </OneComplianceDailogForm>
+                        ) : (
+                            <Button 
+                                onClick={scrollToHome}
+                                className="bg-primary-color text-white hover:bg-primary-color/90 font-semibold px-6 py-2 rounded-md transition-all duration-300 border border-primary-color"
+                            >
+                                {buttonText}
                             </Button>
-                        </OneComplianceDailogForm>
+                        )}
                     </div>
 
                     {/* Mobile Menu Trigger */}
@@ -98,7 +114,7 @@ const OneCompNavbar = ({redirectTo}) => {
                             <div className="flex justify-between items-center gap-4 border-b border-solid border-gray-200">
                                 <Link href="/" className="flex-shrink-0">
                                     <div className="relative h-10 w-32">
-                                        <Image src="/images/axodian-Logo-nav.webp" alt="Axodian OneCompliance" fill className="object-contain" priority />
+                                        <Image src="/images/OneCompliance.webp" alt="Axodian OneCompliance" fill className="object-contain" priority />
                                     </div>
                                 </Link>
                                 <SheetTrigger asChild>
@@ -124,11 +140,20 @@ const OneCompNavbar = ({redirectTo}) => {
                                     })}
                                 </div>
                                 <div>
-                                    <OneComplianceDailogForm defaultSelected={['one_compliance']} showProductOptions={true} redirectTo={redirectTo}>
-                                        <Button className="w-full bg-primary-color text-white hover:bg-primary-color/90 font-semibold py-3 rounded-md transition-all duration-300 border border-primary-color">
-                                            Book a Demo
+                                    {showForm ? (
+                                        <OneComplianceDailogForm defaultSelected={['one_compliance']} showProductOptions={true} redirectTo={redirectTo}>
+                                            <Button className="w-full bg-primary-color text-white hover:bg-primary-color/90 font-semibold py-3 rounded-md transition-all duration-300 border border-primary-color">
+                                                {buttonText}
+                                            </Button>
+                                        </OneComplianceDailogForm>
+                                    ) : (
+                                        <Button 
+                                            onClick={scrollToHome}
+                                            className="w-full bg-primary-color text-white hover:bg-primary-color/90 font-semibold py-3 rounded-md transition-all duration-300 border border-primary-color"
+                                        >
+                                            {buttonText}
                                         </Button>
-                                    </OneComplianceDailogForm>
+                                    )}
                                 </div>
                             </div>
                         </SheetContent>

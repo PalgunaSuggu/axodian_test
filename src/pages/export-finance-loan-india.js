@@ -9,11 +9,11 @@ const exportFinanceLoanIndia = () => {
     return (
         <>
             <SEO
-                title="Export Finance Loan India | LeFin – Fast Business Loans"
-                description="Apply for fast, flexible export finance loans in India. Tailored for exporters. Pre-shipment & post-shipment funding. Simple digital process with LeFin."
+                title="LeFin | Export Finance Loans for Indian Exporters | Axodian"
+                description="LeFin by Axodian provides fast and flexible export finance loans for Indian exporters, including pre-shipment and post-shipment funding through a simple digital process."
                 url="https://www.axodian.com/export-finance-loan-india"
                 image="https://www.axodian.com/images/LeFinLogo.webp"
-                imageAlt="LEFinLanding"
+                imageAlt="LeFin Export Finance Platform"
             />
             <LeFinLandingPage />
         </>

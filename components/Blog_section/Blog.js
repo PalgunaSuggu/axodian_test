@@ -8,7 +8,7 @@ import CustomLink from "../Reusable_section/CustomLink/CustomLink";
 import ScrollToTop from "../Reusable_section/ScrollToTop/ScrollToTop";
 
 const Blog = () => {
-    const categories = ["All Blog Posts", "EXIM Landscape", "Remittance", "Trade Documentation", "Trade Finance", "Founder's Desk"];
+    const categories = ["All Blog Posts","Compliance & Risk Management", "EXIM Landscape", "Remittance", "Trade Documentation", "Trade Finance", "Founder's Desk"];
     const [activeCategory, setActiveCategory] = useState("All Blog Posts");
     const [showAllBlogs, setShowAllBlogs] = useState({});
     const [blogData, setBlogData] = useState([]);

@@ -8,11 +8,11 @@ const partners = () => {
   return (
     <div>
       <SEO
-        title="Partner With LeRemitt"
-        description="Join LeRemitt's partner program. Grow together as we simplify international trade for Indian exporters through our AI-powered document management platform, LeDoc."
+        title="Partner With Axodian | Global Trade Partnership Program"
+        description="Join the Axodian Partner Program and collaborate with us to simplify global trade for exporters through innovative solutions for payments, documentation, and trade finance."
         url="https://www.axodian.com/partners"
         image="https://www.axodian.com/images/axodian-logo-footer.webp"
-        imageAlt="Partner With LeRemitt"
+        imageAlt="Partner With Axodian"
       />
       <Partners />
     </div>

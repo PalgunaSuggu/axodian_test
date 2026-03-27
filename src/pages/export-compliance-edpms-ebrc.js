@@ -8,11 +8,12 @@ const ExportCompliancePage = () => {
   return (
     <>
       <SEO
-        title="Export Compliance – EBRC Issuance & EDPMS Reconciliation Tool"
-        description="Get early access to Export Compliance — a unified platform for EBRC issuance, EDPMS reconciliation, and export compliance. Automate workflows and simplify reporting."
+        title="Export Compliance Tool | EBRC & EDPMS Reconciliation | Axodian"
+        description="Axodian's Export Compliance platform helps exporters manage EBRC issuance, EDPMS reconciliation, and regulatory reporting with automated workflows and simplified compliance management."
         url="https://www.axodian.com/export-compliance-edpms-ebrc"
         image="https://www.axodian.com/images/axodian-logo-footer.webp"
-        imageAlt="Export Compliance EBRC EDPMS"
+        imageAlt="Axodian Export Compliance Platform"
+        noindex={true}
       />
       <OneCompliance redirectTo="/thank-you" />
     </>

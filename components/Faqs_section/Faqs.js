@@ -77,7 +77,7 @@ export default function FAQComponent({ showAll = false, defaultTab = "all", show
                 {/* Tabs for FAQ Categories - only show if displaying all categories */}
                 {showAll ? (
                     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-                        <TabsList className="flex bg-transparent justify-center gap-2 flex-wrap mb-8">
+                        <TabsList className="flex bg-transparent justify-center gap-2 flex-wrap mb-28 md:mb-8">
                             {faqCategories.map(cat => (
                                 <TabsTrigger key={cat.key} value={cat.key} className="px-4 py-2 rounded-lg text-sm md:text-base data-[state=active]:bg-[#0461F0] data-[state=active]:text-white">{cat.label}</TabsTrigger>
                             ))}
@@ -90,7 +90,7 @@ export default function FAQComponent({ showAll = false, defaultTab = "all", show
                                     <div>
                                         {categorizedFaqs.map((category, catIndex) => (
                                             <div key={catIndex} className="mb-8">
-                                                <h3 className="text-xl font-semibold mb-4 text-blue-600 border-b pb-2">{category.label} Questions</h3>
+                                                <h3 className="text-base md:text-xl font-semibold mb-4 text-blue-600 border-b pb-2">{category.label} Questions</h3>
                                                 <Accordion type="single" collapsible>
                                                     {category.faqs.map((faq, faqIndex) => (
                                                         <AccordionItem key={faqIndex} value={`${category.key}-${faqIndex}`} className="border border-gray-200 bg-white rounded-lg shadow-sm mb-4">
@@ -121,7 +121,7 @@ export default function FAQComponent({ showAll = false, defaultTab = "all", show
 
                                             return subcategoryFaqs.length > 0 ? (
                                                 <div key={subIndex} className="mb-8">
-                                                    <h3 className="text-xl font-semibold mb-4 text-blue-600 border-b pb-2">{subcategory.label}</h3>
+                                                    <h3 className="text-base md:text-xl font-semibold mb-4 text-blue-600 border-b pb-2">{subcategory.label}</h3>
                                                     <Accordion type="single" collapsible>
                                                         {subcategoryFaqs.map((faq, faqIndex) => (
                                                             <AccordionItem key={faqIndex} value={`${subcategory.key}-${faqIndex}`} className="border border-gray-200 bg-white rounded-lg shadow-sm mb-4">
@@ -170,7 +170,7 @@ export default function FAQComponent({ showAll = false, defaultTab = "all", show
                     </Tabs>
                 ) : (
                     // Show single category without tabs
-                    <div className="w-full">
+                    <div className="w-full mt-10">
                         <Accordion type="single" collapsible>
                             {categoriesToShow[0].faqs.map((faq, index) => (
                                 <AccordionItem key={index} value={index.toString()} className="border border-gray-200 bg-white rounded-lg shadow-sm mb-4">

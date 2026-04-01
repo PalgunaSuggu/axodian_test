@@ -23,7 +23,7 @@ const GetStarted = ({ tag, heading, subtitleOne, subtitleTwo, buttonText, button
                     </Button>
                 </ScheduleDialog>
 
-                <Image src="/images/GetStarted.webp" alt="Export Business" width={1000} height={400} priority />
+                <Image src="/images/GetStarted.webp" alt="Global Trade Solutions - Export Business Platform" width={1000} height={400} priority style={{ width: 'auto', height: 'auto' }} />
             </div>
         </div>
     );

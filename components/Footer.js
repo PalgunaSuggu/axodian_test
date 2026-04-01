@@ -3,6 +3,7 @@ import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import Image from "next/image";
 import CustomLink from "./Reusable_section/CustomLink/CustomLink";
 import { footerLinks } from "./Data";
+import DynamicLogo from "./Reusable_section/DynamicLogo/DynamicLogo";
 
 const socialLinks = [
   { icon: Linkedin, href: "https://www.linkedin.com/company/axodian/" },
@@ -53,10 +54,10 @@ const Footer = () => {
       <div className="px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-0">
 
         <div className="col-span-12 md:col-span-2 text-center md:text-left flex flex-col items-center md:items-start">
-          <Image src="/images/axodian-logo-footer.webp" alt="Axodian Logo" width={180} height={70} />
+          <DynamicLogo variant="footer" />
           <p className="text-md py-3">Backed by <span className="font-semibold">Axilor | Capital A</span></p>
           <div className="flex items-center gap-3">
-            <Image src="/images/iso-certified.webp" alt="ISO 27001" width={55} height={55} />
+            <Image src="/images/iso-certified.webp" alt="ISO 27001 Information Security Management Certification" width={55} height={55} />
             <p className="text-md font-semibold">ISO 27001 Certified</p>
           </div>
         </div>

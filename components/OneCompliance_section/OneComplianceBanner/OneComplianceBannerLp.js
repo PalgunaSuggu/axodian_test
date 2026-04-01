@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import React from 'react';
-import OneComplianceDailogForm from '../../../Reusable_section/ScheduleForm/OneComplianceDailogForm';
+import OneComplianceDailogForm from '../../Reusable_section/ScheduleForm/OneComplianceDailogForm';
 
 const OneComplianceBannerLp = ({ redirectTo }) => {
   return (

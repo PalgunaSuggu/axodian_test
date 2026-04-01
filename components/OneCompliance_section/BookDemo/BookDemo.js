@@ -1,9 +1,9 @@
 import React from 'react'
-import OneComplianceForm from '../../../Reusable_section/ScheduleForm/OneComplianceForm'
+import OneComplianceForm from '../../Reusable_section/ScheduleForm/OneComplianceForm'
 
 const BookDemo = ({ redirectTo }) => {
-  return (
-         <section className="py-24 relative overflow-hidden bg-gray-900">
+    return (
+        <section className="py-24 relative overflow-hidden bg-gray-900">
             <div className="absolute inset-0 z-0" style={{ background: "radial-gradient(125% 125% at 50% 100%, #000000 40%, #350136 100%)" }}></div>
 
             <div className="container mx-auto px-4 relative z-10">
@@ -15,12 +15,10 @@ const BookDemo = ({ redirectTo }) => {
                     </p>
                 </div>
 
-                <div className="max-w-3xl mx-auto">
-                    <OneComplianceForm redirectTo={redirectTo} />
-                </div>
+                <OneComplianceForm redirectTo={redirectTo} />
             </div>
         </section>
-  )
+    )
 }
 
 export default BookDemo

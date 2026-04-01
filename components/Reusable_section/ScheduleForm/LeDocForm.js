@@ -266,7 +266,7 @@ const LeDocForm = ({ onSuccess, buttonText = "Request a Demo", defaultSelected =
                     </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                         <Label htmlFor="description" className="text-gray-700 font-medium">Additional Information</Label>
                         <Textarea rows={0} id="description" name="description" value={formData.description} onChange={handleChange} placeholder="Any specific requirements or questions?" className="mt-2 p-3 border rounded-lg w-full border-gray-300 bg-secondary-color/5 focus:ring-indigo-500 focus:border-indigo-500" />
@@ -289,8 +289,6 @@ const LeDocForm = ({ onSuccess, buttonText = "Request a Demo", defaultSelected =
                         </Button>
                     </div>
                 </div>
-
-
 
                 {formData.phone && (
                     <div className="text-sm">

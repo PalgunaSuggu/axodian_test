@@ -1,5 +1,5 @@
 import React from 'react';
-import OneComplianceForm from '../../../Reusable_section/ScheduleForm/OneComplianceForm';
+import OneComplianceForm from '../../Reusable_section/ScheduleForm/OneComplianceForm';
 
 const OneComplianceBanner = ({ redirectTo }) => {
   return (
@@ -17,36 +17,29 @@ const OneComplianceBanner = ({ redirectTo }) => {
 
       {/* Content */}
       <div className="relative z-10 pt-28 pb-16 md:pb-0 md:pt-0 p-4 sm:p-6 lg:p-8 container mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen">
           {/* Left Content */}
-          <div className="text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-200 bg-blue-50 backdrop-blur-sm mb-8 animate-fade-in-up">
-              <span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
-              <span className="text-sm font-medium text-gray-700">Now Available</span>
-            </div>
-
-            <h1 className="bannerText text-gray-900 mb-6 leading-tight">
+          <div className="text-center mb-6">
+            <h1 className="bannerText text-gray-900 mb-4 leading-tight">
               Compliance without <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Chaos</span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed max-w-3xl mb-4">
+            <p className="text-xl md:text-2xl text-gray-700 leading-relaxed mb-4">
               EDPMS reconciliation, EBRC tracking, and export compliance — managed end-to-end in one workspace.
             </p>
 
-            <p className="text-lg text-gray-600 mb-10">
+            <p className="text-lg text-gray-600 mb-4">
               Track invoices, shipping bills, and remittances in one place. Close compliance faster. Reduce follow-ups, delays, and risk.
             </p>
 
-            <p className="text-lg text-gray-600 bg-blue-50 backdrop-blur-sm inline-block px-4 py-2 rounded-lg border border-solid border-blue-200 mb-6">
+            <p className="text-lg text-gray-600 bg-blue-50 backdrop-blur-sm inline-block px-4 py-2 rounded-lg border border-solid border-blue-200">
               Designed for exporters managing <span className="font-semibold text-gray-900">5+ shipments per month</span>
             </p>
           </div>
 
           {/* Right Content - Form */}
-          <div className="flex justify-center lg:justify-end overflow-y-auto md:h-[600px] shadow-2xl rounded-2xl">
-            <OneComplianceForm  textColor="text-black" buttonText="Talk to Us" redirectTo={redirectTo} />
+          <div className="rounded-2xl border border-solid border-blue-300">
+            <OneComplianceForm textColor="text-black" buttonText="Talk to Us" redirectTo={redirectTo} />
           </div>
-        </div>
       </div>
     </div>
   );

@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ChevronDown, Menu, X } from "lucide-react";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { app_url } from "../config/config";
@@ -10,6 +9,7 @@ import { navItems } from "./Data";
 import getUtmParams from "./getUtmParams";
 import CustomLink from "./Reusable_section/CustomLink/CustomLink";
 import ScheduleDialog from "./Reusable_section/ScheduleForm/LeRemDailogForm";
+import DynamicLogo from "./Reusable_section/DynamicLogo/DynamicLogo";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -37,9 +37,7 @@ const Header = () => {
       <div className="px-3 sm:px-4 py-2 sm:py-3 flex justify-between items-center">
         {/* Mobile Logo on the left */}
         <div className="block md:hidden">
-          <CustomLink href="/">
-            <Image src="/images/axodian-fav-icon.webp" alt="axodian" width={42} height={42} className="sm:w-[54px] sm:h-[54px]" priority />
-          </CustomLink>
+          <DynamicLogo variant="mobile" />
         </div>
 
         {/* Desktop Navigation */}
@@ -48,11 +46,7 @@ const Header = () => {
           {/* <CustomLink href="/" className="flex-shrink-0">
             <Image src="/images/axodian-Logo-nav.webp" alt="axodian logo" height={45} width={180} priority /> 
           </CustomLink> */}
-          <CustomLink href="/" className="flex-shrink-0">
-            <div className="relative h-10 w-32">
-              <Image src="/images/axodian-Logo-nav.webp" alt="Axodian OneCompliance" fill className="object-contain" priority />
-            </div>
-          </CustomLink>
+          <DynamicLogo variant="desktop" className="flex-shrink-0" />
 
           {/* Navigation items on the right */}
           <div className="flex-1 flex justify-end items-center space-x-6 lg:space-x-8">
@@ -103,11 +97,7 @@ const Header = () => {
 
           <SheetContent side="right" className="w-72 p-0 bg-white">
             <div className="flex justify-between items-center gap-4 p-4 border-b">
-              <CustomLink href="/" className="flex-shrink-0">
-                <div className="relative h-14 w-44">
-                  <Image src="/images/axodian-Logo-nav.webp" alt="Axodian OneCompliance" fill className="object-contain" priority />
-                </div>
-              </CustomLink>
+              <DynamicLogo variant="mobile-sheet" className="flex-shrink-0" />
               <SheetTrigger asChild>
                 <button><X size={24} /></button>
               </SheetTrigger>

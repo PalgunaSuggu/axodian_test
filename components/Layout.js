@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from './Footer';
 import Header from './Header';
+import ScrollToTop from './Reusable_section/ScrollToTop/ScrollToTop';
 
 import { Poppins } from "next/font/google";
 import { useRouter } from 'next/router';
@@ -24,6 +25,7 @@ const Layout = ({ children }) => {
             {!hideLayout && <Header />}
             <main className={`${poppins.variable} font-sans`}>{children}</main>
             {!hideLayout && <Footer />}
+            <ScrollToTop />
         </div>
     );
 };

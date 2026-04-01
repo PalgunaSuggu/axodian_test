@@ -14,7 +14,7 @@ const OneComplianceDailogForm = ({ children, showProductOptions = true, defaultS
             <DialogTrigger asChild>
                 {children}
             </DialogTrigger>
-            <DialogContent className="max-w-2xl bg-white/5  [&>button]:text-white max-h-[70vh] flex flex-col gap-0" onInteractOutside={(e) => e.preventDefault()}>
+            <DialogContent className="max-w-6xl bg-white/5  [&>button]:text-white max-h-[70vh] flex flex-col gap-0" onInteractOutside={(e) => e.preventDefault()}>
                 <DialogHeader>
                     <DialogTitle className="text-white pb-2">{formTitle}</DialogTitle>
                 </DialogHeader>

@@ -230,7 +230,7 @@ const Rates = () => {
                                 <div>
                                     <Label className="text-gray-700 mb-1 block">To Currency</Label>
                                     <div className="flex items-center px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg">
-                                        <Image src={getFlagImage("INR")} alt='Inr' width={24} height={24} className="w-6 h-6 mr-2" />
+                                        <Image src={getFlagImage("INR")} alt="INR" width={24} height={24} className="w-6 h-6 mr-2" />
                                         INR -
                                         <span className="ml-auto font-medium">
                                             {calCharges.isLoading ? (

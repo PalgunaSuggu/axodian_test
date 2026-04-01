@@ -1,4 +1,4 @@
-import { OneComplianceSteps } from "../../../Data";
+import { OneComplianceSteps } from "../../Data";
 
 const CoreCapabilities = () => {
     return (

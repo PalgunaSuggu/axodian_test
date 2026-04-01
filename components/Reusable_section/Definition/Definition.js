@@ -5,7 +5,7 @@ const Definition = ({ title, subtitle, highlight, description1, description2, de
         <section className="py-16 md:py-24 container mx-auto bg-white">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div className="flex justify-center">
-                    <Image src={image} width={600} height={400} alt="Docs" className="rounded-lg object-cover w-full h-auto" />
+                    <Image src={image} width={600} height={400} alt={`${title} - ${subtitle || 'Documentation illustration'}`} className="rounded-lg object-cover w-full h-auto" />
                 </div>
 
                 <div className="flex flex-col justify-center space-y-6">

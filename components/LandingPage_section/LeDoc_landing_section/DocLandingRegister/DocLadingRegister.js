@@ -67,8 +67,81 @@ const DocLandingRegister = ({ formType, brand = "LeDoc" }) => {
             </div>
 
             {/* Footer */}
+            <footer className="bg-black/50 backdrop-blur-sm text-white py-8 relative">
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500/50 via-blue-500/50 to-purple-500/50 opacity-60"></div>
+                <div className="container mx-auto px-4">                    
+                    {/* Contact Info */}
+                    <div className="flex flex-col md:flex-row justify-between items-center mb-6">
+                        <div className="flex flex-wrap justify-center gap-6 mb-4 md:mb-0">
+                            <Button 
+                                onClick={() => window.location.href = 'mailto:connect@axodian.com'}
+                                size="lg"
+                            >
+                                <Mail size={16} />
+                                connect@axodian.com
+                            </Button>
+                            <Button 
+                                onClick={() => window.location.href = 'tel:+918050087593'}
+                                size="lg"
+                            >
+                                <Phone size={16} />
+                                +91 80500 87593
+                            </Button>
+                            <Button 
+                                onClick={() => window.location.href = 'https://wa.me/918050087594'}
+                                size="lg"
+                            >
+                                <MessageSquareText size={16} />
+                                WhatsApp
+                            </Button>
+                        </div>
+                        
+                        {/* Social Links */}
+                        <div className="flex gap-4">
+                            {socialLinks.map(({ icon: Icon, href }) => (
+                                <Button 
+                                    key={href} 
+                                    onClick={() => window.open(href, '_blank')}
+                                    variant="ghost"
+                                    size="icon"
+                                >
+                                    <Icon size={20} />
+                                </Button>
+                            ))}
+                        </div>
+                    </div>
+                    
+                    {/* Legal Links */}
+                    <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                        <p>© 2025 Axodian All rights reserved</p>
+                        <div className="flex gap-6 mt-4 md:mt-0">
+                            <Button 
+                                onClick={() => window.open(`/Documents/6Point3_TermsandConditions.pdf`, '_blank')}
+                                variant="ghost"
+                                size="sm"
+                            >
+                                Terms of Use
+                            </Button>
+                            <Button 
+                                onClick={() => window.open(`/Documents/6Point3_PrivacyPolicy.pdf`, '_blank')}
+                                variant="ghost"
+                                size="sm"
+                            >
+                                Privacy Policy
+                            </Button>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
     );
 };
 
 export default DocLandingRegister;
+
+const socialLinks = [
+    { icon: Linkedin, href: "https://www.linkedin.com/company/leremit/" },
+    { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61553149285914" },
+    { icon: Instagram, href: "https://www.instagram.com/leremitt_com/" },
+    { icon: Youtube, href: "https://www.youtube.com/@LeRemitt" },
+];

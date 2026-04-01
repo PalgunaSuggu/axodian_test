@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { OneComplianceHowItWorks } from "../../../Data";
+import { OneComplianceHowItWorks } from "../../Data";
 
 const HowOneComplianceWork = () => {
 

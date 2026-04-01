@@ -1,5 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { oneComplianceSolves } from "../../../Data";
+import { oneComplianceSolves } from "../../Data";
 
 const OneComplianceSolves = () => {
     return (

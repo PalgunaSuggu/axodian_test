@@ -1,7 +1,7 @@
 // Page Title: Export Compliance
 // Page URL: https://www.axodian.com/export-compliance-edpms-ebrc-lp
 // Local URL: http://localhost:3000/export-compliance-edpms-ebrc-lp
-import OneComplianceLp from '../../components/LandingPage_section/OneCompliance_landing_section/OneComplianceLp'
+import OneComplianceLp from '../../components/OneCompliance_section/OneComplianceLp'
 import SEO from '../../components/SEO'
 
 const ExportCompliancePageLp = () => {

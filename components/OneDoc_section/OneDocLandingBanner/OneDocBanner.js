@@ -1,5 +1,5 @@
 import { Card, CardContent } from '@/components/ui/card';
-import LeDocForm from '../../../Reusable_section/ScheduleForm/LeDocForm';
+import LeDocForm from '../../Reusable_section/ScheduleForm/LeDocForm';
 import { useRouter } from 'next/router';
 
 const OneDocLandingBanner = () => {

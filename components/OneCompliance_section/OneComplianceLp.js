@@ -1,8 +1,8 @@
 "use client"
 
-import { oneComplianceFaqs } from '../../Data'
-import Faqs from '../../Reusable_section/Faqs/faqs'
-import Register from '../../Reusable_section/Register/Register'
+import { oneComplianceFaqs } from '../Data'
+import Faqs from '../Reusable_section/Faqs/faqs'
+import Register from '../Reusable_section/Register/Register'
 import CoreCapabilities from './CoreCapabilities/CoreCapabilities'
 import HowOneComplianceWork from './HowOneComplianceWork/HowOneComplianceWork'
 import BookDemo from './BookDemo/BookDemo'
@@ -10,7 +10,7 @@ import OneComplianceSolves from './OneComplianceSolves/OneComplianceSolves'
 import TargetAudience from './TargetAudience/TargetAudience'
 import WhyOneCompliance from './WhyOneCompliance/WhyOneCompliance'
 import OneComplianceBannerLp from './OneComplianceBanner/OneComplianceBannerLp'
-import OneComplianceDailogForm from '../../Reusable_section/ScheduleForm/OneComplianceDailogForm'
+import OneComplianceDailogForm from '../Reusable_section/ScheduleForm/OneComplianceDailogForm'
 import OneCompNavbar from './OneCompNavbar'
 import OneCompFooter from './OneCompFooter'
 

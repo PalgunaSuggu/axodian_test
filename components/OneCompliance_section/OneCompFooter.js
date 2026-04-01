@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Separator } from "@/components/ui/separator";
 import { Facebook, Linkedin, Mail } from "lucide-react";
+import DynamicLogo from '../Reusable_section/DynamicLogo/DynamicLogo';
 
 // Social links data
 const socialLinks = [
@@ -17,7 +17,7 @@ const OneCompFooter = () => {
 
         {/* Brand Section */}
         <Link href="/export-compliance-edpms-ebrc" className="relative h-20 w-64 mb-4 inline-block transition-opacity hover:opacity-80">
-          <Image src="/images/OneCompliance.webp" alt="Axodian Logo" fill className="object-contain" priority />
+          <DynamicLogo variant="footer" imageProps={{ fill: true, className: 'object-contain', style: { width: '100%', height: '100%' } }} withLink={false} />
         </Link>
 
         <p className="text-gray-500 text-lg leading-relaxed max-w-2xl mb-10 font-light">
@@ -44,7 +44,7 @@ const OneCompFooter = () => {
             <p>© 2025 Axodian. All rights reserved.</p>
             <span className="hidden md:inline text-gray-300">•</span>
             <div className="flex items-center gap-2 text-gray-500 font-medium">
-              <Image src="/images/iso-certified.webp" alt="ISO" width={24} height={24} className="opacity-80" />
+              <Image src="/images/iso-certified.webp" alt="ISO 27001 Information Security Management Certification" width={24} height={24} className="opacity-80" />
               <p>ISO 27001 Certified</p>
             </div>
           </div>

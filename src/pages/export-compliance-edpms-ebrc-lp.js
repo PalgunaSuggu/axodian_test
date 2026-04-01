@@ -22,3 +22,10 @@ const ExportCompliancePageLp = () => {
 
 export default ExportCompliancePageLp
 
+// Disable static generation for this page to prevent SSR issues
+export async function getServerSideProps() {
+  return {
+    props: {},
+  }
+}
+

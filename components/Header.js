@@ -37,7 +37,7 @@ const Header = () => {
       <div className="px-3 sm:px-4 py-2 sm:py-3 flex justify-between items-center">
         {/* Mobile Logo on the left */}
         <div className="block md:hidden">
-          <DynamicLogo variant="mobile" />
+          <DynamicLogo variant="desktop" />
         </div>
 
         {/* Desktop Navigation */}

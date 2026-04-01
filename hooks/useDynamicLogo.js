@@ -23,8 +23,8 @@ export const useDynamicLogo = () => {
         footerSrc: '/images/OneCompliance.webp',
         isOneCompliance: true,
         sizeOverride: {
-          desktop: { width: 'w-56', height: 'h-12' },
-          mobileSheet: { width: 'w-60', height: 'h-16' },
+          desktop: { width: 'w-56', height: 'h-8' },
+          mobileSheet: { width: 'w-36', height: 'h-8' },
           footer: { width: '220px', height: 'auto' }
         }
       };
@@ -37,7 +37,12 @@ export const useDynamicLogo = () => {
         alt: 'OneDoc',
         mobileSrc: '/images/OneDoc.webp',
         footerSrc: '/images/OneDoc.webp',
-        isOneDoc: true
+        isOneDoc: true,
+        sizeOverride: {
+          desktop: { width: 'w-32', height: 'h-8' },
+          mobileSheet: { width: 'w-32', height: 'h-8' },
+          footer: { width: '180px', height: 'auto' }
+        }
       };
     }
 

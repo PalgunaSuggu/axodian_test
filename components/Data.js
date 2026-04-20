@@ -23,8 +23,8 @@ export const navItems = [
     {
         name: "Sign In",
         subItems: [
-            { name: "LeRemitt", },
-            { name: "LeDoc", },
+            { name: "Document Management" },
+            { name: "Export Payments" },
         ],
     },
 ];
@@ -801,6 +801,7 @@ export const mediaFeatures = [
         source: "ETEdgeINSIGHTS",
         date: "2024",
         image: "/images/articalimg-13.webp",
+        link: "#",
     },
 ];
 
@@ -1272,21 +1273,25 @@ export const OneComplianceSteps = [
 
 export const oneComplianceSolves = [
     {
+        id: 1,
         title: "Broken, manual reconciliation",
         description: "No more juggling spreadsheets, PDFs and mails to figure out which invoices are closed, which payments are pending, and what’s ageing.",
         icon: Split,
     },
     {
+        id: 2,
         title: "Zero visibility on EBRC status",
         description: "Know exactly which invoices have EBRCs, what’s pending, and what’s stuck – without chasing different portals and branches.",
         icon: EyeOff,
     },
     {
+        id: 3,
         title: "Fragmented data across systems",
         description: "Bring data from DGFT, ICEGATE and banks into a single view for better control, internal reviews and audits.",
         icon: Layers,
     },
     {
+        id: 4,
         title: "Last-minute compliance fire-fighting",
         description: "Review your unmatched entries and missing documentation instead of discovering issues during audits or bank reviews.",
         icon: AlertTriangle,

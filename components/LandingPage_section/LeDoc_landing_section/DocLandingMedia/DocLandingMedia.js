@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { mediaFeatures } from "../../../Data";
-import CustomLink from "../../../Reusable_section/CustomLink/CustomLink";
+import Link from "next/link";
 
 const DocLandingMedia = () => {
     const swiperRef = useRef(null);
@@ -46,7 +46,7 @@ const DocLandingMedia = () => {
                 >
                     {mediaFeatures.map((feature) => (
                         <SwiperSlide key={feature.id} className="cursor-pointer h-[450px]">
-                            <CustomLink href={feature.link} target="_blank" rel="noopener noreferrer">
+                            <Link href={feature.link} target="_blank" rel="noopener noreferrer">
                                 <Card className="h-full flex flex-col bg-transparent border border-dashed border-black/25 shadow-none">
                                     <div className="h-[220px] w-full">
                                         <Image src={feature.image} alt={feature.alt} width={300} height={300} className="rounded-md w-full h-full object-cover" />
@@ -66,7 +66,7 @@ const DocLandingMedia = () => {
                                         <p className="text-sm mt-1 font-light">{feature.date}</p>
                                     </div>
                                 </Card>
-                            </CustomLink>
+                            </Link>
                         </SwiperSlide>
                     ))}
                 </Swiper>

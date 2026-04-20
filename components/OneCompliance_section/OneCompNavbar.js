@@ -58,11 +58,11 @@ const OneCompNavbar = ({ redirectTo, buttonText = "Book a Demo", showForm = true
 
     return (
         <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-1 ${scrolled ? 'bg-white/80 backdrop-blur-md shadow-lg' : 'bg-white'}`}>
-            <div className="container mx-auto px-4 flex justify-between items-center">
+            <div className="px-4 flex justify-between items-center">
 
                 {/* Logo */}
                 <Link href="/export-compliance-edpms-ebrc" className="flex-shrink-0">
-                    <div className="relative h-12 w-36">
+                    <div className="relative h-12 w-56">
                         <Image src="/images/OneCompliance.webp" alt="Axodian OneCompliance" fill className="object-contain" priority />
                     </div>
                 </Link>
@@ -115,7 +115,7 @@ const OneCompNavbar = ({ redirectTo, buttonText = "Book a Demo", showForm = true
                         <SheetContent side="right" className='w-64 p-2 px-4'>
                             <div className="flex justify-between items-center gap-4 border-b border-solid border-gray-200">
                                 <Link href="/" className="flex-shrink-0">
-                                    <div className="relative h-10 w-32">
+                                    <div className="relative h-10 w-56">
                                         <Image src="/images/OneCompliance.webp" alt="Axodian OneCompliance" fill className="object-contain" priority />
                                     </div>
                                 </Link>

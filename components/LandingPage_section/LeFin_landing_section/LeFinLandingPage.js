@@ -17,7 +17,7 @@ const LeFinLandingPage = () => {
             <FinLandingWhyLeFin />
             <LoanFeaturesEligibility />
             <FinLandingSteps />
-            <FAQs productKey='lefin' tag="Your Questions, answered" titleOne="Frequently Asked" titleTwo="Questions" subtitle="Find answers to your questions about LeRemitt's cross-border services and discover how we can transform your export business." faqsData={leFinFaqs} />
+            <FAQs productKey='lefin' tag="Your Questions, answered" titleOne="Frequently Asked" titleTwo="Questions" subtitle="Find answers to your questions about Axodian's cross-border services and discover how we can transform your export business." faqsData={leFinFaqs} />
             <FinalCTA />
         </div>
     )

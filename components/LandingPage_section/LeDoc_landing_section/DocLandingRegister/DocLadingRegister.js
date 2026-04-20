@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Facebook, Instagram, Linkedin, Mail, MessageSquareText, Phone, Youtube } from "lucide-react";
 
-const DocLandingRegister = ({ formType, brand = "LeDoc" }) => {
+const DocLandingRegister = ({ formType, brand = "LeDoc", showFooter = true }) => {
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
@@ -67,7 +67,8 @@ const DocLandingRegister = ({ formType, brand = "LeDoc" }) => {
             </div>
 
             {/* Footer */}
-            <footer className="bg-black/50 backdrop-blur-sm text-white py-8 relative">
+            {showFooter && (
+                <footer className="bg-black/50 backdrop-blur-sm text-white py-8 relative">
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-500/50 via-blue-500/50 to-purple-500/50 opacity-60"></div>
                 <div className="container mx-auto px-4">                    
                     {/* Contact Info */}
@@ -133,6 +134,7 @@ const DocLandingRegister = ({ formType, brand = "LeDoc" }) => {
                     </div>
                 </div>
             </footer>
+            )}
         </div>
     );
 };

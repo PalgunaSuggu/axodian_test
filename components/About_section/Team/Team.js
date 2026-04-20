@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { teamFounders, teamMembers } from '../../Data';
-import CustomLink from "../../Reusable_section/CustomLink/CustomLink";
+import Link from "next/link";
 
 const Team = () => {
     const swiperRef = useRef(null);
@@ -64,7 +64,7 @@ const Team = () => {
                                             <div className="flex space-x-2">
                                                 <span className="text-sm text-gray-500">Connect:</span>
                                             </div>
-                                            <CustomLink
+                                            <Link
                                                 href={member.inlink}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
@@ -72,7 +72,7 @@ const Team = () => {
                                                 aria-label={`Connect with ${member.fullName} on LinkedIn`}
                                             >
                                                 <Linkedin className="w-5 h-5" />
-                                            </CustomLink>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -91,7 +91,7 @@ const Team = () => {
                     <button className="hidden md:block absolute right-[-2rem] lg:right-[-6rem] top-1/2 -translate-y-1/2 z-10 bg-primary-color/10 border-2 border-solid border-primary-color/25 h-full p-2 rounded-lg" id="custom-next">
                         <ChevronRight className="w-6 h-6 text-primary-color" />
                     </button>
-                    
+
                     <Swiper
                         modules={[Autoplay, Navigation]}
                         spaceBetween={20}
@@ -124,9 +124,9 @@ const Team = () => {
                                             <p className="text-lg font-semibold">{item.fullName}</p>
                                             <p className="text-sm">{item.role}</p>
                                         </div>
-                                        <CustomLink href={item.link} target="_blank" rel="noopener noreferrer" className="inline-block mt-2 text-blue-500 hover:text-blue-700">
+                                        <Link href={item.link} target="_blank" rel="noopener noreferrer" className="inline-block mt-2 text-blue-500 hover:text-blue-700">
                                             <Linkedin className="w-5 h-5 inline-block text-white" />
-                                        </CustomLink>
+                                        </Link>
                                     </div>
                                     <Image src={item.image} alt={item.name} width={600} height={400} className="w-full h-96 object-cover rounded-lg" />
                                 </Card>

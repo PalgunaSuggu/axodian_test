@@ -2,7 +2,6 @@ import React from 'react';
 import Footer from './Footer';
 import Header from './Header';
 import ScrollToTop from './Reusable_section/ScrollToTop/ScrollToTop';
-
 import { Poppins } from "next/font/google";
 import { useRouter } from 'next/router';
 
@@ -16,7 +15,7 @@ const Layout = ({ children }) => {
     const router = useRouter();
 
     // Define routes that should NOT have Header and Footer
-    const noLayoutRoutes = ['/export-simplified', '/export-finance-loan-india', '/thank-you', '/export-simplified-lp', '/trade-simplified','/export-compliance-edpms-ebrc-lp', '/book-15-min-call',];
+    const noLayoutRoutes = ['/404', '/export-simplified', '/export-finance-loan-india', '/thank-you', '/export-simplified-lp', '/trade-simplified', '/export-compliance-edpms-ebrc-lp', '/book-15-min-call', '/onedoc-export-simplified-lp'];
 
     const hideLayout = noLayoutRoutes.includes(router.pathname);
 

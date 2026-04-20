@@ -24,7 +24,7 @@ const FinLandingWhyLeFin = () => {
         <section className="flex items-center text-center bg-gray-50 py-16 md:py-24 text-black">
             <div className='container mx-auto'>
                 <h1 className="leading-tight text-gray-900 mb-4 z-10">
-                    Built for Exporters. Backed by LeRemitt.
+                    Built for Exporters. Backed by Axodian.
                 </h1>
                 <p className="text-gray-900 text-xl max-w-2xl mx-auto mb-12">
                     We understand your export cycle and built LeFin to match your cash flow with fast, digital funding.

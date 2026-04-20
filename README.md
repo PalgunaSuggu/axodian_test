@@ -82,30 +82,43 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Here is a list of all the pages available in the project:
 
+### Main Pages
 - **Home**: [`https://www.axodian.com/`](src/pages/index.js)
 - **About Us**: [`https://www.axodian.com/about`](src/pages/about.js)
 - **Blogs**: [`https://www.axodian.com/blogs`](src/pages/blogs.js)
-  - Blog Post: `https://www.axodian.com/blogs/[slug]`
+  - Blog Post: `https://www.axodian.com/blogs/[slug]` ([`src/pages/blogs/[slug].js`](src/pages/blogs/[slug].js))
 - **Contact Us**: [`https://www.axodian.com/contact`](src/pages/contact.js)
-- **Export Compliance**: [`https://www.axodian.com/export-compliance-edpms-ebrc](src/pages/export-compliance-edpms-ebrc.js)
-- **Export Compliance LP**: [`https://www.axodian.com/export-compliance-edpms-ebrc-lp](src/pages/export-compliance-edpms-ebrc-lp.js)
-- **Export Finance Loan India**: [`https://www.axodian.com/export-finance-loan-india`](src/pages/export-finance-loan-india.js)
-- **Export Simplified**: [`https://www.axodian.com/export-simplified`](src/pages/export-simplified.js)
-- **Export Simplified LP**: [`https://www.axodian.com/export-simplified-lp`](src/pages/export-simplified-lp.js)
 - **FAQs**: [`https://www.axodian.com/faqs`](src/pages/faqs.js)
-- **LeCheck**: [`https://www.axodian.com/lecheck`](src/pages/lecheck.js)
-- **LeDoc**: [`https://www.axodian.com/ledoc`](src/pages/ledoc.js)
-- **LeRemitt**: [`https://www.axodian.com/leremitt`](src/pages/leremitt.js)
 - **Media**: [`https://www.axodian.com/media`](src/pages/media.js)
 - **Partners**: [`https://www.axodian.com/partners`](src/pages/partners.js)
 - **Thank You**: [`https://www.axodian.com/thank-you`](src/pages/thank-you.js)
+- **Book 15 Min Call**: [`https://www.axodian.com/book-15-min-call`](src/pages/book-15-min-call.js)
+
+### Product Pages
+- **LeCheck**: [`https://www.axodian.com/lecheck`](src/pages/lecheck.js)
+- **LeDoc**: [`https://www.axodian.com/ledoc`](src/pages/ledoc.js)
+- **LeRemitt**: [`https://www.axodian.com/leremitt`](src/pages/leremitt.js)
+
+### Export & Trade Pages
+- **Export Compliance**: [`https://www.axodian.com/export-compliance-edpms-ebrc`](src/pages/export-compliance-edpms-ebrc.js)
+- **Export Compliance LP**: [`https://www.axodian.com/export-compliance-edpms-ebrc-lp`](src/pages/export-compliance-edpms-ebrc-lp.js)
+- **Export Finance Loan India**: [`https://www.axodian.com/export-finance-loan-india`](src/pages/export-finance-loan-india.js)
+- **Export Simplified**: [`https://www.axodian.com/export-simplified`](src/pages/export-simplified.js)
+- **Export Simplified LP**: [`https://www.axodian.com/export-simplified-lp`](src/pages/export-simplified-lp.js)
+- **OneDoc Export Simplified**: [`https://www.axodian.com/onedoc-export-simplified`](src/pages/onedoc-export-simplified.js)
+- **OneDoc Export Simplified LP**: [`https://www.axodian.com/onedoc-export-simplified-lp`](src/pages/onedoc-export-simplified-lp.js)
 - **Trade Finance Solution**: [`https://www.axodian.com/trade-finance-solution`](src/pages/trade-finance-solution.js)
 - **Trade Simplified**: [`https://www.axodian.com/trade-simplified`](src/pages/trade-simplified.js)
-- **Book 10 Min Call**: [`https://www.axodian.com/book-15-min-call`](src/pages/book-10-min-call.js)
+
+### API Endpoints
+- **Contact Us API**: [`/api/contact-us`](src/pages/api/contact-us.js)
+- **Get Rates API**: [`/api/getrates`](src/pages/api/getrates.js)
+- **Historical Charges API**: [`/api/historical-charges`](src/pages/api/historical-charges.js)
+- **LeCheck Charges API**: [`/api/lecheck-charges`](src/pages/api/lecheck-charges.js)
+- **Send OTP API**: [`/api/otp_verification/send-otp`](src/pages/api/otp_verification/send-otp.js)
+- **Verify OTP API**: [`/api/otp_verification/verify-otp`](src/pages/api/otp_verification/verify-otp.js)
+
 ---
 
-© 2025 LeRemit. All rights reserved.
-
-
-
+ 2025 LeRemit. All rights reserved.
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { ArrowRight, Building, Briefcase, Database, Handshake, Award } from 'lucide-react'
-import CustomLink from '../../Reusable_section/CustomLink/CustomLink'
+import Link from 'next/link'
 
 const partnerTypes = [
   {
@@ -137,12 +137,12 @@ const WhoShouldPartner = () => {
                 <p className="text-blue-700 mb-8">Start a conversation with us. We&apos;ll help you explore the right model based on your audience, bandwidth, and business goals.</p>
                 
                 <div className="mt-auto">
-                  <CustomLink href="" className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                  <Link href="" className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-xl">
                     Contact Us 
                     <div className="relative ml-2 group-hover:translate-x-1 transition-transform duration-200">
                       <ArrowRight className="h-5 w-5" />
                     </div>
-                  </CustomLink>
+                  </Link>
                 </div>
               </div>
             </div>

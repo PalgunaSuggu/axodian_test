@@ -4,14 +4,14 @@ import { Card } from "@/components/ui/card";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { ChevronLeft, ChevronRight, User } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import CustomLink from "../CustomLink/CustomLink";
 
-export function Testimonials({ reviews = [],  duration="", titleOne, titleTwo, subHeading, isHomePage, mediaFeatures, withImgReviews, withoutImgReviews }) {
+export function Testimonials({ reviews = [], duration = "", titleOne, titleTwo, subHeading, isHomePage, mediaFeatures, withImgReviews, withoutImgReviews }) {
 
     const swiperRef = useRef(null);
 
@@ -137,10 +137,10 @@ export function Testimonials({ reviews = [],  duration="", titleOne, titleTwo, s
                             {mediaFeatures.map((feature) => (
                                 <SwiperSlide key={feature.id} className="cursor-pointer h-[450px]">
                                     {feature.link ? (
-                                        <CustomLink href={feature.link} target="_blank" rel="noopener noreferrer">
+                                        <Link href={feature.link} target="_blank" rel="noopener noreferrer">
                                             <Card className="h-full flex flex-col bg-transparent border border-solid border-white/25 shadow-none">
                                                 <div className="h-[220px] w-full">
-                                                    <Image src={feature.image} alt={feature.alt} width={300} height={300} className="rounded-md w-full h-full object-cover" />
+                                                    <Image src={feature.image} alt={feature.alt || feature.title || "Media Mention"} width={300} height={300} className="rounded-md w-full h-full object-cover" />
                                                 </div>
                                                 <div className="text-white text-center md:text-left flex-1 flex flex-col justify-center p-4">
                                                     <TooltipProvider>
@@ -157,11 +157,11 @@ export function Testimonials({ reviews = [],  duration="", titleOne, titleTwo, s
                                                     <p className="text-sm mt-1 font-light">{feature.date}</p>
                                                 </div>
                                             </Card>
-                                        </CustomLink>
+                                        </Link>
                                     ) : (
                                         <Card className="h-full flex flex-col bg-transparent border border-solid border-white/25 shadow-none">
                                             <div className="h-[220px] w-full">
-                                                <Image src={feature.image} alt={feature.alt} width={300} height={300} className="rounded-md w-full h-full object-cover" />
+                                                <Image src={feature.image} alt={feature.alt || feature.title || "Media Mention"} width={300} height={300} className="rounded-md w-full h-full object-cover" />
                                             </div>
                                             <div className="text-white text-center md:text-left flex-1 flex flex-col justify-center p-4">
                                                 <TooltipProvider>

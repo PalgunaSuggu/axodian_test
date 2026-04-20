@@ -43,13 +43,13 @@ const PartnerForm = () => {
     try {
       // Replace with your actual form submission logic
       console.log('Form submitted:', formData);
-      
+
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       // Clear form or show success message
       alert('Your partner application has been submitted successfully. Our team will contact you within 2 business days.');
-      
+
       // Optional: Reset form
       setFormData({
         fullName: '',
@@ -65,7 +65,7 @@ const PartnerForm = () => {
         questions: ''
       });
       setAgree(false);
-      
+
     } catch (err) {
       setError('There was an error submitting your application. Please try again.');
       console.error('Form submission error:', err);
@@ -205,11 +205,11 @@ const PartnerForm = () => {
             </Button>
           </form>
         </div>
-        
+
         {/* Image Section - Right Side */}
         <div className="w-full lg:w-2/5 bg-gradient-to-t from-blue-600/20 to-transparent flex flex-col items-center justify-center p-6">
           <div className="w-full h-[500px] mb-4 relative">
-            <Image src="/images/PartnerForm.webp" alt="Business partnership" fill style={{ objectFit: 'cover' }}unoptimized={true}/>
+            <Image src="/images/PartnerForm.webp" alt="Business partnership" fill style={{ objectFit: 'cover' }} unoptimized={true} />
           </div>
           <div className="text-center p-4 bg-white rounded-lg shadow-sm w-full">
             <h3 className="text-lg font-semibold text-blue-800">Grow Your Business with LeRemitt</h3>

@@ -9,7 +9,7 @@ import SuccessStories from '../LandingPage_section/LeDoc_landing_section/Success
 import WhatLeDocOffers from '../LandingPage_section/LeDoc_landing_section/WhatLeDocOffers/WhatLeDocOffers'
 import OneDocLandingBanner from './OneDocLandingBanner/OneDocBanner'
 
-const OneDocLandingPage = () => {
+const OneDocLandingPage = ({ showFooter = true }) => {
     return (
         <div>
             <OneDocLandingBanner />
@@ -27,10 +27,10 @@ const OneDocLandingPage = () => {
                 <DocLandingMedia />
             </div>
             <div id="faqs">
-                <FAQs tag="Your Questions, answered" titleOne="Frequently Asked" titleTwo="Questions" subtitle="Find answers to your questions about OneDoc cross-border services and discover how we can transform your export business." faqsData={oneDocFaqs} showSeeMore={false} />
+                <FAQs tag="Your Questions, answered" titleOne="Frequently Asked" titleTwo="Questions" subtitle="Find answers to your questions about OneDoc cross-border services and discover how we can transform your export business." faqsData={oneDocFaqs}  />
             </div>
             <div id="contact">
-                <DocLandingRegister formType="OneDocForm" brand="OneDoc" />
+                <DocLandingRegister formType="OneDocForm" brand="OneDoc" showFooter={showFooter} />
             </div>
         </div>
     )

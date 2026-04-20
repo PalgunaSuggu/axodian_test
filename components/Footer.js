@@ -1,5 +1,5 @@
 import { Separator } from "@/components/ui/separator";
-import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Facebook, Linkedin } from "lucide-react";
 import Image from "next/image";
 import CustomLink from "./Reusable_section/CustomLink/CustomLink";
 import { footerLinks } from "./Data";
@@ -111,6 +111,7 @@ const Footer = () => {
     </footer>
   );
 };
+
 
 export default Footer;
 

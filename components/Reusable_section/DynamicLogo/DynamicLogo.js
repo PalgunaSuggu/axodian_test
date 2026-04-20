@@ -37,28 +37,35 @@ const DynamicLogo = ({ variant = 'desktop', className = '', imageProps = {}, wit
         return {
           width: 42,
           height: 42,
+          sizes: "42px",
           className: `sm:w-[54px] sm:h-[54px] ${imageProps.className || ''}`
         };
       case 'footer':
         return {
-          width: 200,
-          height: 70,
-          style: logoInfo.sizeOverride?.footer ? 
-            { width: logoInfo.sizeOverride.footer.width, height: logoInfo.sizeOverride.footer.height } : 
-            { width: '200px', height: 'auto' },
+          ...(imageProps.fill ? {} : { width: 200, height: 70 }),
+          sizes: imageProps.fill ? "100%" : "200px",
+          style: imageProps.fill ? {
+            width: logoInfo.sizeOverride?.footer?.width || '100%',
+            height: '100%'
+          } : {
+            width: logoInfo.sizeOverride?.footer?.width || '200px',
+            height: 'auto'
+          },
           ...imageProps
         };
       case 'mobile-sheet':
         return {
           fill: true,
           className: `object-contain ${imageProps.className || ''}`,
-          sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
+          style: { objectFit: 'contain' }
         };
       default:
         return {
           fill: true,
           className: `object-contain ${imageProps.className || ''}`,
-          sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
+          style: { objectFit: 'contain' }
         };
     }
   };
@@ -67,7 +74,7 @@ const DynamicLogo = ({ variant = 'desktop', className = '', imageProps = {}, wit
     ...getDefaultProps(),
     ...imageProps,
     src: getLogoSrc(),
-    alt: logoInfo.alt,
+    alt: logoInfo.alt || 'Logo',
     priority: true
   };
 

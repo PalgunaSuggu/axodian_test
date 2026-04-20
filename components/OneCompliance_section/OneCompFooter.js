@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Separator } from "@/components/ui/separator";
 import { Facebook, Linkedin, Mail } from "lucide-react";
 import DynamicLogo from '../Reusable_section/DynamicLogo/DynamicLogo';

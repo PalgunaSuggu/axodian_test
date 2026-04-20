@@ -50,7 +50,7 @@ const Header = () => {
 
           {/* Navigation items on the right */}
           <div className="flex-1 flex justify-end items-center space-x-6 lg:space-x-8">
-            {navItems.map((item, index) => (
+            {navItems?.map((item, index) => (
               <div key={index} className="relative">
                 {item.subItems ? (
                   <DropdownMenu>
@@ -104,7 +104,7 @@ const Header = () => {
             </div>
 
             <nav className="flex flex-col mt-4">
-              {navItems.map((item, index) => (
+              {navItems?.map((item, index) => (
                 <div key={index} className="border-b">
                   {item.subItems ? (
                     <details className="group">

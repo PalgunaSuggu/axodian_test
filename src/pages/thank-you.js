@@ -3,9 +3,9 @@
 // Local URL: http://localhost:3000/thank-you
 import { CheckCircle } from 'lucide-react'
 import Head from 'next/head'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-import CustomLink from '../../components/Reusable_section/CustomLink/CustomLink'
 
 const ThankYouPage = () => {
     const router = useRouter()
@@ -46,9 +46,9 @@ const ThankYouPage = () => {
                     <h1 className="leading-tight text-gray-800 mb-2">{content.heading}</h1>
                     <p className="text-gray-600 text-md md:text-xl mb-2">{content.message}</p>
                     <p className="text-gray-500 text-sm md:text-lg mb-6">{content.subtext}</p>
-                    <CustomLink href="/" className="inline-block bg-secondary-light-color text-white px-6 py-3 rounded-full text-lg font-semibold transition hover:bg-secondary-light-color">
+                    <Link href="/" className="inline-block bg-secondary-light-color text-white px-6 py-3 rounded-full text-lg font-semibold transition hover:bg-secondary-light-color">
                         {content.button}
-                    </CustomLink>
+                    </Link>
                 </div>
             </div>
         </>

@@ -1,8 +1,8 @@
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
-import { ArrowRight, Facebook, Instagram, Linkedin, Mail, PhoneCall, Youtube } from 'lucide-react'
-import CustomLink from '../../../Reusable_section/CustomLink/CustomLink'
+import { ArrowRight, Facebook, Linkedin, Mail, PhoneCall } from 'lucide-react'
 import LeFinDailogFrom from '../../../Reusable_section/ScheduleForm/LeFinDailogForm'
+import Link from 'next/link'
 
 const FinalCTA = () => {
     return (
@@ -23,21 +23,21 @@ const FinalCTA = () => {
                         </Button>
                     </LeFinDailogFrom>
 
-                    <CustomLink href="mailto:connect@axodian.com" >
+                    <Link href="mailto:connect@axodian.com" >
                         <Button className="flex items-center gap-2 w-full bg-transparent hover:bg-transparent text-white font-semibold p-6 rounded-lg border border-solid border-white transition">
                             <Mail size={18} />
                             Email Us
                         </Button>
-                    </CustomLink>
+                    </Link>
                 </div>
 
                 {/* Contact Buttons */}
-                <CustomLink href="tel:+91 80500 87593" className="flex justify-start">
+                <Link href="tel:+91 80500 87593" className="flex justify-start">
                     <div className="bg-white/10 hover:bg-white/20 text-white rounded-lg border border-white flex items-center gap-2 p-6">
                         <PhoneCall className="mr-2 w-5 h-5" />
                         <span> +91 80500 87593</span>
                     </div>
-                </CustomLink>
+                </Link>
             </div>
 
             {/* Footer at the Bottom */}
@@ -46,19 +46,19 @@ const FinalCTA = () => {
                     <Separator className="bg-gray-200" />
                 </div>
                 <div className="container mx-auto my-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500 px-4">
-                    <p>© 2025 LeRemitt All rights reserved</p>
+                    <p>© 2025 Axodian All rights reserved</p>
                     <div className="flex gap-4 my-2 md:my-0">
                         {[{ text: "Terms of Use", file: "6Point3_TermsandConditions.pdf" }, { text: "Privacy Policy", file: "6Point3_PrivacyPolicy.pdf" }].map((item) => (
-                            <CustomLink key={item.text} href={`https://www.axodian.com/Documents/${item.file}`} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
+                            <Link key={item.text} href={`https://www.axodian.com/Documents/${item.file}`} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
                                 {item.text}
-                            </CustomLink>
+                            </Link>
                         ))}
                     </div>
                     <div className="flex gap-4">
                         {socialLinks.map(({ icon: Icon, href }) => (
-                            <CustomLink key={href} href={href} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
+                            <Link key={href} href={href} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
                                 <Icon size={20} />
-                            </CustomLink>
+                            </Link>
                         ))}
                     </div>
                 </div>

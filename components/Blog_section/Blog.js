@@ -5,10 +5,10 @@ import { Skeleton } from "@/components/ui/skeleton";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import CustomLink from "../Reusable_section/CustomLink/CustomLink";
-import ScrollToTop from "../Reusable_section/ScrollToTop/ScrollToTop";
+import { api_url, strapi_url } from "../../config/config";
 
 const Blog = () => {
-    const categories = ["All Blog Posts","Compliance & Risk Management", "EXIM Landscape", "Remittance", "Trade Documentation", "Trade Finance", "Founder's Desk"];
+    const categories = ["All Blog Posts", "Compliance & Risk Management", "EXIM Landscape", "Remittance", "Trade Documentation", "Trade Finance", "Founder's Desk"];
     const [activeCategory, setActiveCategory] = useState("All Blog Posts");
     const [showAllBlogs, setShowAllBlogs] = useState({});
     const [blogData, setBlogData] = useState([]);
@@ -33,17 +33,17 @@ const Blog = () => {
         const fetchBlogs = async () => {
             try {
                 setIsLoading(true);
-                const token = 'd83825e40bf7fce2e437b6979ddb17f01e666c52642e502e6dbbfb1e8926ffe8e8cc146bea5b39a9147c3d9ca3e02b499e716d2b3ffa87cf3338641a0354a01e932ca9bf4b52be398d938d4fe2cd2c6268e0cdd8220d28f1886da78eb69ecb068e6fe3c528b662f419c0ab1cfb675865c845b903ca5a5e24d8026072d6c83a85';
-                const response = await fetch('https://strapi.leremitt.com/api/articles?populate=*&sort=createdAt:desc&pagination[start]=0&pagination[limit]=500', {
-                    headers: { 'Authorization': `Bearer ${token}` },
-                });
+                const response = await fetch(`${api_url}/articles?populate=*&sort=createdAt:desc&pagination[start]=0&pagination[limit]=500`);
 
                 const data = await response.json();
                 const filteredData = data.data.map(blog => ({
                     id: blog.id,
                     title: blog.title,
                     slug: blog.slug,
-                    image: blog.cover?.formats?.medium?.url || blog.cover?.formats?.thumbnail?.url,
+                    image: blog.cover?.formats?.medium?.url || 
+                           blog.cover?.formats?.small?.url || 
+                           blog.cover?.formats?.thumbnail?.url || 
+                           blog.cover?.url || '',
                     category: blog.category?.Category || '',
                 }));
 
@@ -136,14 +136,19 @@ const Blog = () => {
                                                         <CardContent className="p-4 flex flex-col flex-grow">
                                                             <h5 className="leading-tight text-md md:text-lg font-normal">{blog.title}</h5>
                                                             <div className="mt-auto">
-                                                                <CustomLink href={`/blogs/${blog.slug}`}>
-                                                                    <Button className="p-0 bg-transparent text-blue-700 text-md md:text-lg hover:bg-transparent hover:underline shadow-none">
-                                                                        Read More
-                                                                    </Button>
-                                                                </CustomLink>
+                                                                <Button className="p-0 bg-transparent text-blue-700 text-md md:text-lg hover:bg-transparent hover:underline shadow-none">
+                                                                    Read More
+                                                                </Button>
                                                             </div>
                                                         </CardContent>
-                                                        <Image src={`https://strapi.leremitt.com${blog.image}`} alt={blog.title} width={400} height={400} className="w-full h-[240px] object-cover" />
+                                                        <Image
+                                                            src={blog.image.startsWith('http') ? blog.image : `${strapi_url}${blog.image}`}
+                                                            alt={blog.title}
+                                                            width={400}
+                                                            height={400}
+                                                            className="w-full h-[240px] object-cover"
+                                                            unoptimized={true}
+                                                        />
                                                     </Card>
                                                 </CustomLink>
                                             ))}
@@ -162,8 +167,6 @@ const Blog = () => {
                         );
                     })()
                 )}
-
-                <ScrollToTop />
             </div>
         </div>
     );

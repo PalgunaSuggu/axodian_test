@@ -1,8 +1,8 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import CustomLink from "../CustomLink/CustomLink";
 
 export default function FAQs({ titleOne, titleTwo, subtitle, faqsData, productKey = "all", bgColor = "bg-secondary-light-color", hoverBgColor = "hover:bg-blue-700", textColor = "text-white", triggerBg = 'bg-[#F5F9FF]', triggerTextColor = 'text-[#3681F3]', showSeeMore = true }) {
     const [visibleFaqs] = useState(showSeeMore ? 5 : faqsData.length);
@@ -46,9 +46,9 @@ export default function FAQs({ titleOne, titleTwo, subtitle, faqsData, productKe
                                                     return (
                                                         <p key={i} className="mb-2 text-md md:text-lg">
                                                             {parts[0]}
-                                                            <CustomLink href={linkUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                                                            <Link href={linkUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
                                                                 {linkText}
-                                                            </CustomLink>
+                                                            </Link>
                                                             {parts[1]}
                                                         </p>
                                                     );

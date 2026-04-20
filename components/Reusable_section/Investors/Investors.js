@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const   Investors = () => {
+const Investors = () => {
     return (
         <div className="text-center py-16 md:py-24 bg-cover bg-center bg-white  bg-[url('/images/InvestorsBg.webp')]">
             <div className="text-center mb-12">

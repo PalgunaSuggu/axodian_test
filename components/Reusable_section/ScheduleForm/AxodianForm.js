@@ -16,7 +16,7 @@ const LEFIN_CONSTANTS = {
     shipments_completed: [{ id: 1, value: '2-10', label: '2 - 10 Shipments' }, { id: 2, value: '10+', label: '>10 Shipments' },],
 };
 
-const AxodianForm = ({ onSuccess, buttonText = "Request a Demo", defaultSelected = ['remittance', 'document_management', 'trade_finance', 'secured_loans', 'unsecured_loans', 'bill_of_discounting', 'factoring_loans', 'axodina'] }) => {
+const AxodianForm = ({ onSuccess, buttonText = "Request a Demo", defaultSelected = ['remittance', 'document_management', 'axodina'] }) => {
     const router = useRouter();
 
     const [formData, setFormData] = useState({

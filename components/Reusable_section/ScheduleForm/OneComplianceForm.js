@@ -24,7 +24,7 @@ const ONECOMPLIANCE_CONSTANTS = {
     ]
 };
 
-const OneComplianceForm = ({ onSuccess, redirectTo = '/thank-you', defaultSelected = ['remittance', 'document_management', 'trade_finance', 'secured_loans', 'unsecured_loans', 'bill_of_discounting', 'factoring_loans'], textColor = 'text-white', buttonText = 'Book a 15-min Demo' }) => {
+const OneComplianceForm = ({ onSuccess, redirectTo = '/thank-you', defaultSelected = ['remittance', 'document_management'], textColor = 'text-white', buttonText = 'Book a 15-min Demo' }) => {
     const [formData, setFormData] = useState({
         first_name: '',
         last_name: '',

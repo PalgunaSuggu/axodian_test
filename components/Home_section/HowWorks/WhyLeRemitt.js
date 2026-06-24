@@ -75,7 +75,7 @@ const benefits = [
     },
     {
         id: 2,
-        title: "AI-Driven Automation",
+        title: "Automated Workflows",
         description: "Seamlessly automate processes from post-ERP integration to eBRC generation with minimal manual effort.",
         icon: Settings,
     },

@@ -28,7 +28,7 @@ const FeaturesData = [
     },
     {
         id: 5,
-        title: "AI-Driven Document Generation",
+        title: "Automated Document Generation",
         description: "Creates customer specific document templates and compliance documents instantly",
         image: "/images/LeDocFeatures_05.webp",
     },

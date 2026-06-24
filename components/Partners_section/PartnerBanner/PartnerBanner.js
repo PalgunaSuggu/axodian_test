@@ -41,7 +41,7 @@ const PartnerBanner = () => {
             </div>
 
             <p className="text-gray-300 mt-6 text-lg">
-              At LeRemitt, we simplify international trade for Indian exporters and importers through our AI-powered document management platform.
+              At LeRemitt, we simplify international trade for Indian exporters and importers through our automated document management platform.
             </p>
           </div>
         </div>

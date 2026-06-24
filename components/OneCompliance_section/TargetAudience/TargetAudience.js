@@ -45,16 +45,14 @@ const TargetAudience = () => {
 
     return (
         <section className="py-28 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
-
             {/* --- Background Glow --- */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary-color/5 blur-3xl rounded-full"></div>
             </div>
 
             <div className="container mx-auto relative z-10">
-
                 {/* === SECTION TITLE === */}
-                <div className="text-center max-w-3xl mx-auto mb-20">
+                <div className="text-center max-w-4xl mx-auto mb-20">
                     <h1 className="text-gray-900 leading-tight">Built for the Ones Who Drive Export Growth</h1>
                     <p className="text-lg md:text-2xl text-gray-600 mt-4">If compliance drains your team’s time, One Compliance is built to fix that.</p>
                 </div>
@@ -62,9 +60,7 @@ const TargetAudience = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
                     <div className="space-y-10">
-
                         <h3 className="text-gray-900">One Compliance is for you if you are:</h3>
-
                         <div className="space-y-4">
                             {audience.map((item, i) => (
                                 <div key={i} className="group flex items-start gap-4 bg-white border border-gray-200 p-5 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 cursor-default">
@@ -101,7 +97,6 @@ const TargetAudience = () => {
                                 </div>
 
                                 <h3 className="text-gray-900">{`Why It's the Best Time to Join`}</h3>
-
                                 <p className="text-gray-600">Be part of our growing community of export compliance professionals.</p>
                             </div>
 

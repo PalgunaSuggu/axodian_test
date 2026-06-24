@@ -1,21 +1,34 @@
-// Page Title: Export Finance Loan India
+// Page Title: Export Finance Loan India (Discontinued)
 // Page URL: https://www.axodian.com/export-finance-loan-india
 // Local URL: http://localhost:3000/export-finance-loan-india
-import React from 'react'
-import LeFinLandingPage from '../../components/LandingPage_section/LeFin_landing_section/LeFinLandingPage'
 import SEO from '../../components/SEO'
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
 
 const exportFinanceLoanIndia = () => {
     return (
         <>
             <SEO
-                title="LeFin | Export Finance Loans for Indian Exporters | Axodian"
-                description="LeFin by Axodian provides fast and flexible export finance loans for Indian exporters, including pre-shipment and post-shipment funding through a simple digital process."
+                title="Service No Longer Offered | Axodian"
+                description="This service is no longer offered by Axodian. Explore our other solutions for documentation, compliance, and payments."
                 url="https://www.axodian.com/export-finance-loan-india"
-                image="https://www.axodian.com/images/LeFinLogo.webp"
-                imageAlt="LeFin Export Finance Platform"
+                image="https://www.axodian.com/images/axodian-logo-footer.webp"
+                imageAlt="Axodian"
+                noindex={true}
             />
-            <LeFinLandingPage />
+            <div className="min-h-screen flex items-center justify-center bg-gray-100">
+                <div className="text-center px-6">
+                    <h1 className="text-gray-900 mb-4">Service No Longer Offered</h1>
+                    <p className="text-gray-600 text-lg max-w-3xl mb-8">
+                        This service is no longer available. Explore our other solutions for documentation, compliance, and cross-border payments.
+                    </p>
+                    <Link href="/">
+                        <Button className="bg-primary-color hover:bg-primary-color/90 text-white px-8 py-3 rounded-lg">
+                            Explore Our Solutions
+                        </Button>
+                    </Link>
+                </div>
+            </div>
         </>
     )
 }

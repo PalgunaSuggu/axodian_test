@@ -110,38 +110,6 @@ export default function FAQComponent({ showAll = false, defaultTab = "all", show
                                             </div>
                                         ))}
                                     </div>
-                                ) : cat.key === "lefin" ? (
-                                    // Special handling for LeFin tab - group by subcategory
-                                    <div>
-                                        {leFinSubcategories.map((subcategory, subIndex) => {
-                                            // Filter FAQs by subcategory
-                                            const subcategoryFaqs = leFinFaqs.filter(faq => faq.subcategory === subcategory.key);
-
-                                            return subcategoryFaqs.length > 0 ? (
-                                                <div key={subIndex} className="mb-8">
-                                                    <h3 className="mb-4 text-blue-600 border-b pb-2">{subcategory.label}</h3>
-                                                    <Accordion type="single" collapsible>
-                                                        {subcategoryFaqs.map((faq, faqIndex) => (
-                                                            <AccordionItem key={faqIndex} value={`${subcategory.key}-${faqIndex}`} className="border border-gray-200 bg-white rounded-lg shadow-sm mb-4">
-                                                                <AccordionTrigger className="text-lg md:text-xl text-start font-semibold px-4 py-3 hover:no-underline">{faq.question}</AccordionTrigger>
-                                                                <AccordionContent className="px-4 pb-3 text-gray-600">
-                                                                    {typeof faq.answer === 'string' ? (
-                                                                        <div className={faq.answer.split("\n").length > 1 ? "h-36 overflow-y-auto pr-2" : ""}>
-                                                                            {faq.answer.split("\n").map((paragraph, i) => (
-                                                                                <p key={i} className="mb-2 text-base md:text-lg">{paragraph}</p>
-                                                                            ))}
-                                                                        </div>
-                                                                    ) : (
-                                                                        <div className="text-base md:text-lg">{faq.answer}</div>
-                                                                    )}
-                                                                </AccordionContent>
-                                                            </AccordionItem>
-                                                        ))}
-                                                    </Accordion>
-                                                </div>
-                                            ) : null;
-                                        })}
-                                    </div>
                                 ) : (
                                     // Normal handling for other category tabs
                                     <Accordion type="single" collapsible>

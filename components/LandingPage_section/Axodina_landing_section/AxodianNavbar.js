@@ -93,7 +93,7 @@ const AxodianNavbar = forwardRef(({ refs }) => {
                             </div>
                         ))}
                         <div className="flex items-center ml-4 space-x-4">
-                            <AxodianDailogForm showProductOptions={true} defaultSelected={['remittance', 'document_management', 'trade_finance']}>
+                            <AxodianDailogForm showProductOptions={true} defaultSelected={['remittance', 'document_management']}>
                                 <Button className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary-color hover:bg-primary-color/80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors cursor-pointer">
                                     Get Started
                                     <ArrowUpRight className="ml-1 h-4 w-4" />
@@ -135,7 +135,7 @@ const AxodianNavbar = forwardRef(({ refs }) => {
                                     ))}
                                     <div className="pt-4 border-t border-slate-200 mt-4">
                                         <SheetClose asChild>
-                                            <AxodianDailogForm showProductOptions={true} defaultSelected={['remittance', 'document_management', 'trade_finance']}>
+                                            <AxodianDailogForm showProductOptions={true} defaultSelected={['remittance', 'document_management']}>
                                                 <Button className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-md text-white bg-primary-color hover:bg-primary-color/80">
                                                     Get Started
                                                     <ArrowUpRight className="ml-1 h-4 w-4" />

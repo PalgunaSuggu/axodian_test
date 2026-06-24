@@ -25,7 +25,7 @@ const LEDOC_CONSTANTS = {
     ],
 };
 
-const LeDocForm = ({ onSuccess, buttonText = "Request a Demo", defaultSelected = ['remittance', 'document_management', 'trade_finance', 'secured_loans', 'unsecured_loans', 'bill_of_discounting', 'factoring_loans'] }) => {
+const LeDocForm = ({ onSuccess, buttonText = "Request a Demo", defaultSelected = ['remittance', 'document_management'] }) => {
     const [formData, setFormData] = useState({
         first_name: '',
         last_name: '',

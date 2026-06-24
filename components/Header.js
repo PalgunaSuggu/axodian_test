@@ -81,7 +81,7 @@ const Header = () => {
             ))}
 
             {/* Schedule Demo Button */}
-            <ScheduleDialog showProductOptions={true} defaultSelected={['remittance', 'document_management', 'trade_finance']}>
+            <ScheduleDialog showProductOptions={true} defaultSelected={['remittance', 'document_management']}>
               <Button className="bg-[#663399] hover:bg-[#5b2d90] text-white font-semibold px-4 py-2 rounded-lg transition-colors">Schedule Demo</Button>
             </ScheduleDialog>
           </div>

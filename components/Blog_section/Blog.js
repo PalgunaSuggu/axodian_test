@@ -8,7 +8,7 @@ import CustomLink from "../Reusable_section/CustomLink/CustomLink";
 import { api_url, strapi_url } from "../../config/config";
 
 const Blog = () => {
-    const categories = ["All Blog Posts", "Compliance & Risk Management", "EXIM Landscape", "Remittance", "Trade Documentation", "Trade Finance", "Founder's Desk"];
+    const categories = ["All Blog Posts", "Compliance & Risk Management", "EXIM Landscape", "Remittance", "Trade Documentation", "Founder's Desk"];
     const [activeCategory, setActiveCategory] = useState("All Blog Posts");
     const [showAllBlogs, setShowAllBlogs] = useState({});
     const [blogData, setBlogData] = useState([]);
@@ -85,7 +85,7 @@ const Blog = () => {
                         <span className="md:block">Where Global Trade Meets </span>
                         <span className="md:block">Real-World Ideas</span>
                     </h1>
-                    <p className="text-gray-600 text-md md:text-lg mt-6">
+                    <p className="text-gray-600 text-base md:text-lg mt-6">
                         Dive into stories, trends, and strategies shaping the future of cross-border business. From navigating regulations to simplifying documentation and unlocking growth, our blog is your window into smarter global trade.
                     </p>
                 </div>
@@ -134,9 +134,9 @@ const Blog = () => {
                                                 <CustomLink key={blog.id} href={`/blogs/${blog.slug}`}>
                                                     <Card className="overflow-hidden bg-white rounded-lg shadow-none flex flex-col h-full">
                                                         <CardContent className="p-4 flex flex-col flex-grow">
-                                                            <h5 className="leading-tight text-md md:text-lg font-normal">{blog.title}</h5>
+                                                            <h5 className="leading-tight text-base md:text-lg font-normal">{blog.title}</h5>
                                                             <div className="mt-auto">
-                                                                <Button className="p-0 bg-transparent text-blue-700 text-md md:text-lg hover:bg-transparent hover:underline shadow-none">
+                                                                <Button className="p-0 bg-transparent text-blue-700 text-base md:text-lg hover:bg-transparent hover:underline shadow-none">
                                                                     Read More
                                                                 </Button>
                                                             </div>

@@ -25,9 +25,9 @@ const Header = () => {
   };
 
   const handleSignInClick = (name) => {
-    if (name === "LeRemitt") {
+    if (name === "Export Payments") {
       handleLeRemittLogin();
-    } else if (name === "LeDoc") {
+    } else if (name === "Document Management") {
       handleLeDocLogin();
     }
   };
@@ -55,7 +55,7 @@ const Header = () => {
                 {item.subItems ? (
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                      <button className={`flex items-center space-x-1 hover:text-primary-color font-semibold text-base lg:text-lg ${pathname && item.subItems?.some(subItem => subItem.href && pathname.includes(subItem.href)) ? "text-primary-color" : ""}`}>
+                      <button className={`flex items-center space-x-1 hover:text-primary-color font-semibold text-base ${pathname && item.subItems?.some(subItem => subItem.href && pathname.includes(subItem.href)) ? "text-primary-color" : ""}`}>
                         <span>{item.name}</span>
                         <ChevronDown size={16} className="mt-0.5" />
                       </button>
@@ -75,7 +75,7 @@ const Header = () => {
                     </DropdownMenuContent>
                   </DropdownMenu>
                 ) : (
-                  <CustomLink href={item.href} className={`hover:text-primary-color font-semibold text-base lg:text-lg ${pathname === item.href ? "text-primary-color" : ""}`}>{item.name}</CustomLink>
+                  <CustomLink href={item.href} className={`hover:text-primary-color font-semibold text-base ${pathname === item.href ? "text-primary-color" : ""}`}>{item.name}</CustomLink>
                 )}
               </div>
             ))}
@@ -108,7 +108,7 @@ const Header = () => {
                 <div key={index} className="border-b">
                   {item.subItems ? (
                     <details className="group">
-                      <summary className={`px-4 py-3 flex justify-between items-center cursor-pointer text-[15px] ${
+                      <summary className={`px-4 py-3 flex justify-between items-center cursor-pointer text-sm ${
                         pathname && item.subItems?.some(subItem => 
                           subItem.href && pathname.includes(subItem.href)
                         ) ? "text-primary-color" : ""
@@ -119,12 +119,12 @@ const Header = () => {
                       <div className="bg-gray-100">
                         {item.subItems.map((subItem, subIndex) => (
                           item.name === "Sign In" ? (
-                            <button key={subIndex} onClick={() => { handleSignInClick(subItem.name); setOpen(false); }} className="block w-full text-left px-6 py-2 hover:bg-gray-200 text-[15px]">{subItem.name}</button>
+                            <button key={subIndex} onClick={() => { handleSignInClick(subItem.name); setOpen(false); }} className="block w-full text-left px-6 py-2 hover:bg-gray-200 text-sm">{subItem.name}</button>
                           ) : (
                             <CustomLink 
                               key={subIndex} 
                               href={subItem.href} 
-                              className={`block px-6 py-2 hover:bg-gray-200 text-[15px] ${
+                              className={`block px-6 py-2 hover:bg-gray-200 text-sm ${
                                 pathname === subItem.href ? "text-primary-color bg-gray-50" : ""
                               }`} 
                               onClick={() => setOpen(false)}
@@ -145,7 +145,7 @@ const Header = () => {
             {/* Mobile Button */}
             <div className="p-4">
               <ScheduleDialog showProductOptions={true}>
-                <Button className="w-full text-white bg-secondary-light-color hover:bg-blue-700 rounded-lg py-2 sm:py-3 text-[15px]">
+                <Button className="w-full text-white bg-secondary-light-color hover:bg-blue-700 rounded-lg py-2 sm:py-3 text-sm font-medium">
                   Schedule a Demo
                 </Button>
               </ScheduleDialog>

@@ -14,7 +14,7 @@ const DocLandingBanner = () => {
                         The Smartest Way to Manage Export Documents & Compliance
                     </h1>
                     <p className="text-lg md:text-2xl text-gray-700 mb-8 mx-auto md:mx-0">
-                        LeDoc is an AI-powered platform designed to simplify trade documentation, ensure compliance, and accelerate global exports—All in One Place
+                        LeDoc is a platform designed to simplify trade documentation, ensure compliance, and accelerate global exports—All in One Place
                     </p>
                 </div>
 

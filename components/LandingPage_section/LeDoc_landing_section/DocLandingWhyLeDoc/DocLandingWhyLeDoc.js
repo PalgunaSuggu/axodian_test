@@ -41,8 +41,8 @@ const DocLandingWhyLeDoc = ({ formType, brand = "LeDoc" }) => {
                     <span className="md:block mb-2"> {brand} Automates, Secures & Simplifies</span>
                     <span className="md:block">Your Trade Documents!</span>
                 </h1>
-                <p className="text-center md:text-lg text-md text-gray-600 max-w-4xl mx-auto mt-6 mb-12">
-                    Managing export documentation shouldn’t be complex and time-consuming. {brand} is an AI-powered platform designed to streamline your trade documentation, eliminate manual errors, and ensure 100% compliance—all in one place.
+                <p className="text-center md:text-lg text-base text-gray-600 max-w-4xl mx-auto mt-6 mb-12">
+                    Managing export documentation shouldn’t be complex and time-consuming. {brand} is a platform designed to streamline your trade documentation, eliminate manual errors, and ensure 100% compliance—all in one place.
                 </p>
 
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -53,7 +53,7 @@ const DocLandingWhyLeDoc = ({ formType, brand = "LeDoc" }) => {
                             </div>
                             <div>
                                 <h5 className="leading-tight mb-1">{feature.title}</h5>
-                                <p className="text-md md:text-lg text-gray-600">{feature.description}</p>
+                                <p className="text-base md:text-lg text-gray-600">{feature.description}</p>
                             </div>
                         </div>
                     ))}

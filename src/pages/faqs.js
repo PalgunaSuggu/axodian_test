@@ -9,7 +9,7 @@ const faqs = () => {
         <>
             <SEO
                 title="Axodian FAQs | Frequently Asked Questions"
-                description="Find answers to common questions about Axodian, including global trade solutions, cross-border payments, export documentation, and trade finance."
+                description="Find answers to common questions about Axodian, including global trade solutions, cross-border payments, export documentation, and compliance."
                 url="https://www.axodian.com/faqs"
                 image="https://www.axodian.com/images/axodian-logo-footer.webp"
                 imageAlt="Axodian Frequently Asked Questions"

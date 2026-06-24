@@ -33,7 +33,7 @@ const AxodianBanner = () => {
           </h1>
 
           <p className="mx-auto mb-10 max-w-3xl text-lg text-gray-300 sm:text-xl md:mb-12 md:text-2xl">
-            Axodian brings documentation and compliance, payments, and financing together
+            Axodian brings documentation and compliance, and payments together
             so you can move faster with confidence.
           </p>
 

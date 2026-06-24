@@ -11,7 +11,7 @@ const ValuesData = [
     {
         id: 2,
         title: "Tech-Driven Efficiency",
-        description: "AI-powered automation streamlines payments, documentation, and financing.",
+        description: "Automation that streamlines payments, documentation, and compliance.",
         icon: Settings,
     },
     {

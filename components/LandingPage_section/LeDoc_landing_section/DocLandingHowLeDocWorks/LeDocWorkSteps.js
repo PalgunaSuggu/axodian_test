@@ -52,7 +52,7 @@ const DocLeDocStepper = ({ formType, brand = "LeDoc" }) => {
                             <div className={`w-14 h-14 rounded-full ${step.color} flex items-center justify-center text-white shadow-md`}>
                                 <Icon className="w-6 h-6" />
                             </div>
-                            <div className="inline-block uppercase text-[#0461F0] bg-[#F5F9FF] px-4 py-1 rounded-lg text-md font-semibold mt-4">
+                            <div className="inline-block uppercase text-[#0461F0] bg-[#F5F9FF] px-4 py-1 rounded-lg text-base font-semibold mt-4">
                                 Step {index + 1}
                             </div>
                             <h5 className="mt-4 leading-tight bg-white sm:px-0 md:px-2 text-gray-800">{step.title}</h5>

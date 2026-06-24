@@ -18,11 +18,11 @@ const LeDocLandingPage = ({ formType }) => {
                 <DocLandingWhyLeDoc brand="OneDoc" formType={formType} />
             </div>
             <div id="how-it-works">
-                <WhatLeDocOffers formType={formType} />
+                <WhatLeDocOffers formType={formType} brand='OneDoc' />
                 <LeDocWorkSteps brand="OneDoc" formType={formType} />
             </div>
             <div id="testimonials">
-                <SuccessStories />
+                <SuccessStories brand='OneDoc' />
             </div>
             <div id="media">
                 <DocLandingMedia />

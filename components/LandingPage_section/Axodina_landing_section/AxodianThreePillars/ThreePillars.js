@@ -26,7 +26,7 @@ export function ThreePillars() {
       image: '/images/AxodianSol-03.webp',
       title: "Financing",
       benefits: [
-        "Access financing options based on your trade profile",
+        "Track compliance requirements alongside your trade data",
         "Faster decisions with cleaner data and verified documents",
         "Track disbursals and repayments with ease",
       ],
@@ -37,7 +37,7 @@ export function ThreePillars() {
     <section className="py-24 lg:py-40 bg-gray-50 relative overflow-hidden">
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         <header className="text-center mb-20">
-          <h1 className="leading-tight text-gray-800 text-3xl md:text-4xl lg:text-5xl">
+          <h1 className="leading-tight text-gray-800">
             One ecosystem. Three powerful solutions.
           </h1>
         </header>
@@ -58,7 +58,7 @@ export function ThreePillars() {
                   />
                 </div>
                 
-                <h2 className="mb-6 px-8 text-gray-600 leading-tight text-xl font-semibold">{pillar.title}</h2>
+                <h2 className="mb-6 px-8 text-gray-600 leading-tight">{pillar.title}</h2>
                 
                 <ul className="space-y-4 px-8 pb-8" role="list">
                   {pillar.benefits.map((benefit, idx) => (

@@ -21,7 +21,7 @@ const Definition = ({ title, subtitle, highlight, description1, description2, de
                     {[description1, description2, description3].map((desc, index) =>
                         desc ? (
                             <div key={index} className="p-4 bg-gray-50 rounded-lg shadow-sm">
-                                <p className="text-gray-700 text-md md:text-lg">{desc}</p>
+                                <p className="text-gray-700 text-base md:text-lg">{desc}</p>
                             </div>
                         ) : null
                     )}

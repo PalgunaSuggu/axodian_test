@@ -113,7 +113,7 @@
 //                                                     </div>
 //                                                     <p className="font-bold text-lg text-gray-800">{item.title}</p>
 //                                                 </div>
-//                                                 <p className="text-gray-600 text-md">{item.description}</p>
+//                                                 <p className="text-gray-600 text-base">{item.description}</p>
 //                                             </div>
 //                                         </div>
 //                                     ))}
@@ -169,7 +169,7 @@ const LefinSolutions = ({ onApplyClick }) => {
             {/* Main Heading with Improved Styling */}
             <div className="text-center mb-12">
                 <h1 className="leading-tight text-black mb-6">Our Financing Solutions</h1>
-                <p className="text-black text-md md:text-lg max-w-4xl mx-auto">Flexible export financing solutions tailored for every stage—pre-shipment, secured, or post-shipment—with fast approvals, low rates, and minimal documentation.</p>
+                <p className="text-black text-base md:text-lg max-w-4xl mx-auto">Flexible export financing solutions tailored for every stage—pre-shipment, secured, or post-shipment—with fast approvals, low rates, and minimal documentation.</p>
             </div>
             <div className="w-full container mx-auto px-4">
                 <Tabs defaultValue="unsecured" className="w-full">
@@ -207,7 +207,7 @@ const LefinSolutions = ({ onApplyClick }) => {
                                             </span>
                                             <div>
                                                 <h5 className="leading-tight text-gray-900">{benefit.text}</h5>
-                                                <p className="text-md md:text-lg text-gray-500 mt-1">{benefit.details}</p>
+                                                <p className="text-base md:text-lg text-gray-500 mt-1">{benefit.details}</p>
                                             </div>
                                         </div>
                                     ))}
@@ -369,7 +369,7 @@ export default LefinSolutions;
 //                                                     </div>
 //                                                     <p className="font-bold text-lg text-gray-800">{item.title}</p>
 //                                                 </div>
-//                                                 <p className="text-gray-600 text-md">{item.description}</p>
+//                                                 <p className="text-gray-600 text-base">{item.description}</p>
 //                                             </div>
 //                                         </Card>
 //                                     ))}

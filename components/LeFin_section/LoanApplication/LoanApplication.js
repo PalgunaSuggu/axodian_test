@@ -9,7 +9,7 @@ const LoanApplication = () => {
                 <h2 className="leading-tight mb-4">
                     Apply for <span className="text-blue-600 font-bold">Import-Export Loans</span>
                 </h2>
-                <p className="text-gray-600 mb-8 text-md md:text-lg">
+                <p className="text-gray-600 mb-8 text-base md:text-lg">
                     {`Get in touch with our friendly team and we'll get in touch within short time.`}
                 </p>
 

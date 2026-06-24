@@ -52,7 +52,7 @@ const Media = () => {
             {/* Header Section */}
             <div className="mb-6 mt-8 md:my-10">
                 <h1 className="leading-snug text-blue-600 mt-6">Media Mentions, Stories & Announcements</h1>
-                <p className="text-gray-600 text-md md:text-lg mt-6 w-1/1">
+                <p className="text-gray-600 text-base md:text-lg mt-6 w-1/1">
                     From product innovations to partnerships and thought leadership, explore how LeRemitt is making headlines. This is your go-to space for press coverage, company updates, and the conversations we’re part of in the global trade and fintech ecosystem.
                 </p>
             </div>
@@ -106,7 +106,7 @@ const Media = () => {
                                 <TooltipProvider>
                                     <Tooltip>
                                         <TooltipTrigger asChild>
-                                            <p className="text-md md:text-lg pt-1 line-clamp-3 md:line-clamp-2 cursor-pointer text-gray-600">{data.description}</p>
+                                            <p className="text-base md:text-lg pt-1 line-clamp-3 md:line-clamp-2 cursor-pointer text-gray-600">{data.description}</p>
                                         </TooltipTrigger>
                                         <TooltipContent className="max-w-sm bg-blue-50 text-black p-4 shadow-lg rounded-lg">
                                             <p>{data.description}</p>
@@ -114,7 +114,7 @@ const Media = () => {
                                     </Tooltip>
                                 </TooltipProvider>
 
-                                <Button className="p-0 bg-transparent text-blue-700 text-md md:text-lg hover:bg-transparent shadow-none">
+                                <Button className="p-0 bg-transparent text-blue-700 text-base md:text-lg hover:bg-transparent shadow-none">
                                     <Link href={data.link} target="_blank" rel="noopener noreferrer">
                                         Read More
                                     </Link>
@@ -128,7 +128,7 @@ const Media = () => {
 
             {filteredData.length > 3 && (
                 <div className="flex justify-center mt-12">
-                    <Button className="text-white bg-blue-700 hover:bg-blue-800 p-6 text-md md:text-lg rounded-lg" onClick={toggleShowAllData}>
+                    <Button className="text-white bg-blue-700 hover:bg-blue-800 p-6 text-base md:text-lg rounded-lg" onClick={toggleShowAllData}>
                         {showAllData ? "Show less" : "Show more"}
                     </Button>
                 </div>

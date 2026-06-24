@@ -212,7 +212,7 @@ const PartnerForm = () => {
             <Image src="/images/PartnerForm.webp" alt="Business partnership" fill style={{ objectFit: 'cover' }} unoptimized={true} />
           </div>
           <div className="text-center p-4 bg-white rounded-lg shadow-sm w-full">
-            <h3 className="text-lg font-semibold text-blue-800">Grow Your Business with LeRemitt</h3>
+            <h3 className="text-blue-800">Grow Your Business with LeRemitt</h3>
             <p className="text-sm text-gray-700 mt-2">Join our network of trusted partners and expand your business opportunities</p>
           </div>
         </div>

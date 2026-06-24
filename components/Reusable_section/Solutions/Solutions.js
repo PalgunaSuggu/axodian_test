@@ -15,7 +15,7 @@ const Solutions = ({ title, featuresData }) => {
                             <Image src={featuresData.image} alt={featuresData.title} width={400} height={250} className="w-full h-auto rounded-lg" />
                             <div className="p-6">
                                 <h5 className="text-gray-800 mb-2">{featuresData.title}</h5>
-                                <p className="text-gray-600 text-md md:text-lg">{featuresData.description}</p>
+                                <p className="text-gray-600 text-base md:text-lg">{featuresData.description}</p>
                             </div>
                         </Card>
                     ))}

@@ -7,7 +7,7 @@ const LeDocBanner = () => {
         <div className="h-[64vh] lg:h-screen bg-cover bg-center text-black bg-[#B9BFFF] bg-[url('/images/LeDocBgAxodianMob.webp')] lg:bg-[url('/images/LeDocBgAxodian.webp')] flex justify-center items-center">
             <div className="container mx-auto text-center">
                 <h1 className="text-black leading-tight mb-6">
-                    <span className="md:block mb-2">AI-powered Document & Compliance</span>
+                    <span className="md:block mb-2">Automated Document & Compliance</span>
                     <span className="md:block">Management for Exporters</span>
                 </h1>
                 <p className="text-sm sm:text-lg md:text-2xl mb-12">

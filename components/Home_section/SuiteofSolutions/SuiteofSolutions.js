@@ -85,7 +85,7 @@
 //                                                     <item.icon className="w-9 h-9 p-2 rounded-full text-blue-600 bg-blue-100" />
 //                                                     <div>
 //                                                         <p className="font-semibold text-lg lg:text-xl text-gray-700 mb-1">{item.title}</p>
-//                                                         <p className="text-gray-600 text-md">{item.description}</p>
+//                                                         <p className="text-gray-600 text-base">{item.description}</p>
 //                                                     </div>
 //                                                 </li>
 //                                             ))}
@@ -96,7 +96,7 @@
 //                                                     <item.icon className="w-9 h-9 p-2 rounded-full text-blue-600 bg-blue-100" />
 //                                                     <div>
 //                                                         <p className="font-semibold text-lg lg:text-xl text-gray-700 mb-1">{item.title}</p>
-//                                                         <p className="text-gray-600 text-md">{item.description}</p>
+//                                                         <p className="text-gray-600 text-base">{item.description}</p>
 //                                                     </div>
 //                                                 </li>
 //                                             ))}
@@ -108,7 +108,7 @@
 //                                             <item.icon className="w-9 h-9 p-2 rounded-full text-blue-600 bg-blue-100" />
 //                                             <div>
 //                                                 <p className="font-semibold text-lg lg:text-xl text-gray-700 mb-1">{item.title}</p>
-//                                                 <p className="text-gray-600 text-md">{item.description}</p>
+//                                                 <p className="text-gray-600 text-base">{item.description}</p>
 //                                             </div>
 //                                         </li>
 //                                     ))
@@ -181,25 +181,6 @@ const benefitsData = [
         ],
         image: "/images/LeRemittSuiteofSolutions.webp",
         link: "/leremitt",
-        isFirstCard: false,
-    },
-    {
-        id: "trade-financing",
-        heading: "Trade Financing",
-        subheading: (
-            <>
-                Financial solutions to support global trade
-            </>
-        ),
-        defaultImage: "/images/FinSuiteofSolutionsAx.webp",
-        activeImage: "/images/FinSuiteofSolutions1.png",
-        cardContent: [
-            { icon: Package, title: "Pre-Shipment Financing", description: "Get the capital you need to fulfill orders before shipping." },
-            { icon: Truck, title: "Post-Shipment Financing", description: "Bridge the gap between shipping and payment receipt." },
-            { icon: DollarSign, title: "Factoring Solutions", description: "Buyer-led Non-Recourse financing options" },
-        ],
-        image: "/images/LeFinSuiteofSolutions.webp",
-        link: "/trade-finance-solution",
         isFirstCard: false,
     },
 ];
@@ -293,7 +274,7 @@ const SuiteofSolutions = () => {
                                                                             <item.icon className="w-10 h-10 p-2 rounded-full text-primary-color bg-primary-color/10" />
                                                                             <div>
                                                                                 <p className="font-semibold text-lg text-gray-700 mb-1">{item.title}</p>
-                                                                                <p className="text-gray-600 text-md">
+                                                                                <p className="text-gray-600 text-base">
                                                                                     {item.description}
                                                                                 </p>
                                                                             </div>
@@ -309,7 +290,7 @@ const SuiteofSolutions = () => {
                                                                     <item.icon className="w-10 h-10 p-2 rounded-full text-primary-color bg-primary-color/10" />
                                                                     <div>
                                                                         <p className="font-semibold text-lg text-gray-700 mb-1">{item.title}</p>
-                                                                        <p className="text-gray-600 text-md">{item.description}</p>
+                                                                        <p className="text-gray-600 text-base">{item.description}</p>
                                                                     </div>
                                                                 </li>
                                                             ))}

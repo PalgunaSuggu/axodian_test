@@ -18,15 +18,15 @@ const Home = () => {
   return (
     <div>
       <HomeBanner onExploreClick={scrollToBenefits} />
-      <Features title="Enabling Smarter Trade, Seamlessly" description="Axodian brings together intelligent solutions that simplify documentation, compliance, payments, and financing - helping businesses trade globally with confidence and trust." features={homeFeatures} />
+      <Features title="Enabling Smarter Trade, Seamlessly" description="Axodian brings together intelligent solutions that simplify documentation, compliance, and payments - helping businesses trade globally with confidence and trust." features={homeFeatures} />
       <div ref={benefitsRef}><SuiteofSolutions /></div>
       <WhyLeRemitt />
       <Testimonials reviews={allReviews} duration='40s' mediaFeatures={mediaFeatures} isHomePage={true} withoutImgReviews={true} withImgReviews={false} titleOne="How We're Making Global Trade Effortless" titleTwo="Hear From Our Clients" />
       <Investors />
-      <GetStarted tag="TRANSFORM YOUR EXPORT BUSINESS"
-       heading="Global Trade. Simplified." 
-      // heading="Trusted. Unified. Global."
-      subtitleOne="Join 500+ businesses powering cross-border trade with Axodian." subtitleTwo="a portfolio of solutions simplifying documentation, compliance, payments, and financing." buttonText="See How It Works" buttonLink="/" />
+      <GetStarted
+        heading="Global Trade. Simplified."
+        // heading="Trusted. Unified. Global."
+        subtitleOne="Join 500+ businesses powering cross-border trade with Axodian." subtitleTwo="a portfolio of solutions simplifying documentation, compliance, and payments." buttonText="See How It Works" buttonLink="/" />
     </div>
   )
 }

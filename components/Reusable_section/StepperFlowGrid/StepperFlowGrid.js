@@ -17,7 +17,7 @@ const StepperFlowGrid = ({ steps = [], title = "Smart, Simple & Scalable" }) => 
                                         <div className="absolute top-0 right-0 w-9 h-9 rounded-bl-xl bg-gray-100 backdrop-blur-md text-gray-600 text-sm font-bold flex items-center justify-center shadow-md z-10 border border-blue-200">{index + 1}</div>
                                         <div className={`w-10 h-10 mb-4 rounded-lg bg-gradient-to-br ${step.color} flex items-center justify-center text-white`}><Icon className="w-5 h-5" /></div>
                                         <h5 className="leading-tight text-gray-800 mb-1">{step.title}</h5>
-                                        <p className="text-gray-600 text-md md:text-lg">{step.description}</p>
+                                        <p className="text-gray-600 text-base md:text-lg">{step.description}</p>
                                     </div>
                                 </div>
                             );

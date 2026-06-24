@@ -9,7 +9,7 @@ const Register = ({ formType, formTitle, subtitleOne, subtitleTwo, subtitleThree
                 <span className="md:block mb-2">{subtitleTwo}</span>
                 <span className="md:block mb-2">{subtitleThree}</span>
             </h1>
-            <p className="text-white text-md md:text-2xl mt-3 max-w-4xl">{description}</p>
+            <p className="text-white text-base md:text-2xl mt-3 max-w-4xl">{description}</p>
 
             <DialogComponent showProductOptions={true} formTitle={formTitle} defaultSelected={defaultSelected} formType={formType} redirectTo={redirectTo}>
                 <Button className="mt-6 flex text-lg items-center gap-4 bg-white text-blue-700 font-semibold p-6 rounded-lg hover:bg-white/95 transition">

@@ -39,7 +39,7 @@ const CoreCapabilities = () => {
                             </div>
 
                             {/* Title */}
-                            <h3 className="relative z-10 text-xl font-bold text-gray-900 mb-4 group-hover:text-secondary-light-color transition-colors duration-300">{cap.title}</h3>
+                            <h3 className="relative z-10 text-gray-900 mb-4 group-hover:text-secondary-light-color transition-colors duration-300">{cap.title}</h3>
 
                             {/* Points */}
                             <ul className="relative z-10 space-y-3">

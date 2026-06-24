@@ -232,7 +232,7 @@ const AxodianForm = ({ onSuccess, buttonText = "Request a Demo", defaultSelected
                                 <SelectContent>
                                     <SelectItem value="documentation">Documentation & Compliance</SelectItem>
                                     <SelectItem value="payments">Payments</SelectItem>
-                                    <SelectItem value="financing">Financing</SelectItem>
+                                    <SelectItem value="compliance">Compliance</SelectItem>
                                     <SelectItem value="not_sure">Not sure</SelectItem>
                                 </SelectContent>
                             </Select>

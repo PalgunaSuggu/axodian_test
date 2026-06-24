@@ -2,7 +2,7 @@ import { ArrowRight, Check } from 'lucide-react';
 import React from 'react'
 
 const partnerBenefits = [
-  "AI-powered document management solutions",
+  "Automated document management solutions",
   "Streamlined compliance and documentation",
   "New revenue opportunities for partners"
 ];
@@ -35,7 +35,7 @@ const PartnerBanner = () => {
                   <div className="bg-secondary-light-color rounded-full p-1">
                     <Check className="h-4 w-4 text-white" />
                   </div>
-                  <p className="text-gray-200 text-md">{item}</p>
+                  <p className="text-gray-200 text-base">{item}</p>
                 </div>
               ))}
             </div>

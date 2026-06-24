@@ -271,14 +271,14 @@ const LeCheckBanner = () => {
                     <CardContent className="p-6">
                         <Tabs defaultValue="table1" className="w-full">
                             <TabsList className="bg-gray-100 rounded-md mb-4">
-                                <TabsTrigger value="table1" className='text-md'>LeCheck</TabsTrigger>
-                                <TabsTrigger value="table2" className='text-md'>Historical Rates</TabsTrigger>
+                                <TabsTrigger value="table1" className='text-base'>LeCheck</TabsTrigger>
+                                <TabsTrigger value="table2" className='text-base'>Historical Rates</TabsTrigger>
                             </TabsList>
 
                             {/* --- LeCheck Tab Content --- */}
                             <TabsContent value="table1">
                                 <div className="text-left text-sm space-y-4">
-                                    <h3 className="text-lg font-semibold">Calculate Charges</h3>
+                                    <h3 className="font-semibold">Calculate Charges</h3>
                                     <div className="relative w-full border rounded-md">
                                         {/* Select inside input */}
                                         <div className="absolute inset-y-0 left-0 flex items-center">
@@ -366,7 +366,7 @@ const LeCheckBanner = () => {
                             {/* --- Historical Rates Tab Content --- */}
                             <TabsContent value="table2">
                                 <div className="text-left text-sm text-gray-700 space-y-4">
-                                    <h3 className="text-lg font-semibold text-gray-900">Historical Rates</h3>
+                                    <h3 className="font-semibold text-gray-900">Historical Rates</h3>
                                     <Popover open={open} onOpenChange={setOpen}>
                                         <PopoverTrigger asChild>
                                             <Button variant="outline" id="date" className="w-full justify-between font-normal">

@@ -17,7 +17,7 @@ const LeFinBanner = ({ onApplyClick }) => {
 
             <div className="mt-8 flex gap-4">
                 {/* Call-to-Action Button */}
-                {/* <Button onClick={onExploreClick} className="px-6 py-3 text-black text-md font-semibold bg-gradient-to-b from-white to-white/95 rounded-full shadow-lg hover:opacity-90">
+                {/* <Button onClick={onExploreClick} className="px-6 py-3 text-black text-base font-semibold bg-gradient-to-b from-white to-white/95 rounded-full shadow-lg hover:opacity-90">
                     Explore Our Solutions
                 </Button> */}
 

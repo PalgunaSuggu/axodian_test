@@ -27,7 +27,7 @@ const FinLandingWhyLeFin = () => {
                     Built for Exporters. Backed by Axodian.
                 </h1>
                 <p className="text-gray-900 text-xl max-w-2xl mx-auto mb-12">
-                    We understand your export cycle and built LeFin to match your cash flow with fast, digital funding.
+                    We understand your export cycle and built Axodian to match your cash flow with fast, digital funding.
                 </p>
 
                 <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto z-10">

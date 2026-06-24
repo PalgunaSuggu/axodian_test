@@ -9,7 +9,7 @@ const contact = () => {
         <>
             <SEO
                 title="Contact Axodian | Global Trade Solutions"
-                description="Contact Axodian for inquiries about global trade solutions, cross-border payments, export documentation, and trade finance. Our team will get back to you shortly."
+                description="Contact Axodian for inquiries about global trade solutions, cross-border payments, export documentation, and compliance. Our team will get back to you shortly."
                 url="https://www.axodian.com/contact"
                 image="https://www.axodian.com/images/axodian-logo-footer.webp"
                 imageAlt="Contact Axodian"

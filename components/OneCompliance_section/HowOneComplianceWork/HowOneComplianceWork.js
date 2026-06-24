@@ -36,14 +36,14 @@ const HowOneComplianceWork = () => {
                                             </div>
 
                                             {/* Title */}
-                                            <h5 className="mt-4 text-gray-900 mb-4 text-xl font-bold">{step.title}</h5>
+                                            <h5 className="mt-4 text-gray-900 mb-4">{step.title}</h5>
 
                                             {/* Points */}
                                             <ul className="space-y-2 text-gray-600 text-base leading-relaxed">
                                                 {step.points.map((p, idx) => (
                                                     <li key={idx} className={cn("flex gap-2")}>
                                                         <span className="mt-2 w-1.5 h-1.5 rounded-full bg-gray-400 shrink-0"></span>
-                                                        <p className="text-md md:text-lg">{p}</p>
+                                                        <p className="text-base md:text-lg">{p}</p>
                                                     </li>
                                                 ))}
                                             </ul>

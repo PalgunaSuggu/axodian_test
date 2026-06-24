@@ -13,7 +13,7 @@ const OneDocLandingBanner = () => {
                         The Smartest Way to Manage Export Documents & Compliance
                     </h1>
                     <p className="text-lg md:text-2xl text-gray-700 mb-4 max-w-4xl mx-auto">
-                        OneDoc is an AI-powered platform designed to simplify trade documentation, ensure compliance, and accelerate global exports—All in One Place
+                        OneDoc is a platform designed to simplify trade documentation, ensure compliance, and accelerate global exports—All in One Place
                     </p>
                 </div>
 

@@ -136,7 +136,7 @@ const Rates = () => {
                     {/* Left Section */}
                     <div className="bg-white border border-gray-200 shadow-md rounded-lg p-6 space-y-4 flex flex-col justify-between h-full">
                         <div>
-                            <h3 className="text-xl font-semibold text-gray-800 mb-3">Real-time Exchange Rates</h3>
+                            <h3 className="text-gray-800 mb-3">Real-time Exchange Rates</h3>
                             <p className="text-gray-600">
                                 Get the latest exchange rates for your international transactions. Our rates are updated in real-time to ensure you get the best value for your money.
                             </p>
@@ -184,7 +184,7 @@ const Rates = () => {
                             {/* Title */}
                             <div className="flex items-center justify-center gap-2">
                                 <TrendingUp className="h-7 w-7 text-blue-600" />
-                                <h2 className="text-xl font-bold text-gray-800">Currency Converter</h2>
+                                <h2 className="text-gray-800">Currency Converter</h2>
                             </div>
 
                             {/* Amount Input */}

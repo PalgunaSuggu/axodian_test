@@ -18,14 +18,14 @@ const Custom404 = () => {
     }, [router]);
 
     return (
-        <div className="h-screen flex justify-center items-center bg-black bg-cover bg-center bg-[url('/images/RegisterLaning.webp')] flex-col">
-            <div className="text-center">
-                <h1 className="text-8xl font-bold text-gray-100">404-error</h1>
-                <p className="text-2xl mt-4 text-gray-300">Page Not Found</p>
-                <p className="text-xl mt-4 text-gray-100">Your search has ventured beyond the known universe.</p>
-                <Link href="/" rel="noopener noreferrer" passHref>
-                    <Button className="mt-6 px-6 py-2 text-lg bg-white text-black rounded-lg hover:bg-white/90 transition">
-                        Back To Home
+        <div className="min-h-screen flex items-center justify-center bg-gray-100">
+            <div className="text-center px-6">
+                <h1 className="text-gray-900 mb-4">404-error</h1>
+                <p className="text-gray-600 text-lg max-w-3xl mb-2">Page Not Found</p>
+                <p className="text-gray-600 text-lg max-w-3xl mb-8">Your search has ventured beyond the known universe.</p>
+                <Link href="/">
+                    <Button className="bg-primary-color hover:bg-primary-color/90 text-white px-8 py-3 rounded-lg">
+                        Back to Home
                     </Button>
                 </Link>
             </div>

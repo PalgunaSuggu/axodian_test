@@ -68,7 +68,7 @@ const LeDocFeatures = () => {
                                 <Image src={feature.image} alt={feature.title} width={400} height={300} className="w-full h-auto rounded-lg" />
                                 <div className="p-4 pt-0">
                                     <h5 className="leading-tight text-gray-800 mb-2">{feature.title}</h5>
-                                    <p className="text-gray-600 text-md md:text-lg">{feature.description}</p>
+                                    <p className="text-gray-600 text-base md:text-lg">{feature.description}</p>
                                 </div>
                             </CardContent>
                         </Card>

@@ -8,7 +8,6 @@ export const navItems = [
             { name: "Compliance Management", href: "/export-compliance-edpms-ebrc" },
             { name: "Document Management", href: "/onedoc-export-simplified" },
             { name: "Export Payments", href: "/leremitt" },
-            { name: "Trade Financing", href: "/trade-finance-solution" },
         ],
     },
     {
@@ -42,7 +41,6 @@ export const footerLinks = [
             { name: "Compliance Management", href: "/export-compliance-edpms-ebrc" },
             { name: "Document Management", href: "/onedoc-export-simplified" },
             { name: "Export Payments", href: "/leremitt" },
-            { name: "Trade Financing", href: "/trade-finance-solution" }
         ]
     },
     {
@@ -69,7 +67,7 @@ export const footerLinks = [
 ];
 
 export const homeFeatures = [
-    { id: 1, percentage: '40%', title: 'FASTER', description: 'Faster trade document processing with AI' },
+    { id: 1, percentage: '40%', title: 'FASTER', description: 'Faster trade document processing' },
     { id: 2, percentage: '500+', title: 'COMPANIES', description: 'Exporters & MSMEs trust our platform' },
     { id: 3, percentage: '90%', title: 'REDUCTION', description: 'Reduction in manual errors & compliance risks' },
     { id: 4, percentage: '50%', title: 'SAVINGS', description: 'Cost savings on Inward Remittance fees' },
@@ -87,7 +85,7 @@ export const leRemittFeatures = [
 
 export const leDocFeatures = [
     { id: 1, title: "Update or Sync Documents", description: "Connects with your ERP & existing systems", image: "/images/LeDocWorks_01.webp" },
-    { id: 2, title: "AI-Powered Document Generation", description: "Auto-fills data & validates accuracy", image: "/images/LeDocWorks_02.webp" },
+    { id: 2, title: "Smart Document Generation", description: "Auto-fills data & validates accuracy", image: "/images/LeDocWorks_02.webp" },
     { id: 3, title: "Instant Sharing & Submission", description: "Send documents to banks, Freight-Forwarders and partners", image: "/images/LeDocWorks_03.webp" },
     { id: 4, title: "Compliance & Approval Checks", description: "Ensures regulatory adherence before submission e.g., Shipping Bill Validation", image: "/images/LeDocWorks_04.webp" },
     { id: 5, title: "Auto Compliance Management", description: "Seamless eBRC generation, Advance Authorization tracking, and EPCG obligation export monitoring", image: "/images/LeDocWorks_05.webp" },
@@ -102,8 +100,7 @@ export const leFinFeatures = [
 
 export const aboutFeatures = [
     { id: 1, title: "Seamless International Payments", description: "Secure, fast, and transparent transactions across borders.", image: "/images/WhatWeDo-01.webp" },
-    { id: 2, title: "Automated Trade Documentation & Real-Time Compliance", description: "AI-driven document generation, storage, and compliance tracking.", image: "/images/WhatWeDo-02.webp" },
-    { id: 3, title: "Export & Trade Finance", description: "Tailored financing solutions for global businesses. ", image: "/images/WhatWeDo-03.webp" }
+    { id: 2, title: "Automated Trade Documentation & Real-Time Compliance", description: "Digital document generation, organised storage, and compliance tracking.", image: "/images/WhatWeDo-02.webp" },
 ];
 
 export const leRemittChoose = [
@@ -129,9 +126,13 @@ export const allReviews = [
     // ledocReviews
     { id: 10, name: "Uday Kumar, CEO", company: "@Deprocon Controls", body: "It is indeed a privilege to have been associated in the development of the product. The initiative is novel and an excellent one and meets the requirements of the export fraternity which has to handle multitude of documents with several stakeholders. We wish LeDoc unbound success in their venture." },
     { id: 11, name: "Nikhilesh K", company: "@Exporter", body: "LeDoc's centralized and indexed storage system has streamlined our document management, allowing for efficient organization and quick retrieval. LeDoc has truly simplified our compliance processes and improved our overall operational efficiency. The team is very responsive to any requirements, and we believe that the product will help us in generating all our business tracking reports." },
-    { id: 12, name: "Shobha Prasad, Partner", company: "Yashashwi Exports", body: "We have been using LeDoc for around 3 months now, and we are happy to state that the whole platform is very convenient for people engaged in exporting business. Before LeDoc we used to store our data in the drives in our computers, which was very primitive, because every time we wanted any document, we needed access to that computer to retrieve our data. But now our data is saved in a very systematic manner and can be accessed anytime and anywhere. The customer support is also the best, where issues are solved in very efficient manner.  And whole platform is customizable and is very suitable to our needs. Overall, our experience with the platform and the team is good and will be looking forward to use the platform to its full extent." },
+    { id: 12, name: "Shobha Prasad, Partner", company: "@Yashashwi Exports", body: "We have been using LeDoc for around 3 months now, and we are happy to state that the whole platform is very convenient for people engaged in exporting business. Before LeDoc we used to store our data in the drives in our computers, which was very primitive, because every time we wanted any document, we needed access to that computer to retrieve our data. But now our data is saved in a very systematic manner and can be accessed anytime and anywhere. The customer support is also the best, where issues are solved in very efficient manner.  And whole platform is customizable and is very suitable to our needs. Overall, our experience with the platform and the team is good and will be looking forward to use the platform to its full extent." },
     { id: 13, name: "Llewellyn Alan Monis", company: "@CM Envirosystems", body: "Our experience with LeDoc has been great. The platform has allowed us to create both processes and a data center for export and import related documentation.We now look forward to using the collaboration capability with external partners and other new developments to increase our efficiency on this front." },
     { id: 14, name: "Nagarjun Reddy, Director", company: "@Virupaksha Organics Ltd", body: "LeDoc’s centralized and indexed storage system has transformed the way we manage documents. It enables efficient organization and fast retrieval, simplifying compliance processes and boosting our operational efficiency. The LeDoc team is highly responsive to our needs, and we’re confident that their platform will support us in generating comprehensive business tracking reports — helping us stay ahead in our operations." },
+
+    // oneCompalanceReviews
+    { id: 15, name: "Service Agreement", company: "@S and J Sales", body: `We are pleased to share our positive experience with One Compliance for eBRC generation and management.The application has proven to be an excellent solution for our export compliance requirements. One of its key strengths is its seamless integration with our accounting records, enabling automatic synchronization of data from our books. This has significantly reduced manual effort and improved the accuracy of our eBRC processes. The system allows us to efficiently set off individual export shipments against inward remittances, providing clear visibility and effective tracking of transactions. The user-friendly interface makes the application easy to understand and operate, even for new users. As a result, our team has been able to complete tasks more quickly and with greater confidence. We are also highly satisfied with the support provided by the One Compliance team. Their responsiveness, professionalism, and commitment to customer service have been exceptional, ensuring a smooth and hassle-free experience. Overall, One Compliance has helped streamline our eBRC management process, save valuable time, and enhance operational efficiency. We are very satisfied with the application and would confidently recommend it to organizations seeking a reliable and effective eBRC solution.` }
+
     // { id: , name: "", company: "@", body: "" },
 ];
 
@@ -141,7 +142,7 @@ export const ledocReviews = allReviews.filter(r => r.id >= 10);
 
 export const leDocBenefits = [
     { id: 1, title: "Error-Free Compliance", description: "Generation of compliance Documents & Pre-checks ensure regulatory compliance", icon: FileText },
-    { id: 2, title: "Automated Documentation", description: "AI-driven generation & validation of trade documents", icon: Layers },
+    { id: 2, title: "Automated Documentation", description: "Structured generation & validation of trade documents", icon: Layers },
     { id: 3, title: "Seamless Integration", description: "Works with your existing ERP, Accounting, HRMS or any other existing systems", icon: ShieldCheck },
     { id: 4, title: "Centralized Document Storage", description: "All shipment documents in one place", icon: TrendingUp },
     { id: 5, title: "Indexed Documents", description: "Making retrieval and search effortless", icon: Search },

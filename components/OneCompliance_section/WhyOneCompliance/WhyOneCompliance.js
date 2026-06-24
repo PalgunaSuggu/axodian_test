@@ -35,13 +35,13 @@ const WhyOneCompliance = () => {
                             <div className="bg-red-50 p-3 rounded-lg shrink-0">
                                 <item.icon className="w-6 h-6 text-red-500" />
                             </div>
-                            <p className="text-gray-900 text-md md:text-lg leading-relaxed">{item.text}</p>
+                            <p className="text-gray-900 text-base md:text-lg leading-relaxed">{item.text}</p>
                         </div>
                     ))}
                 </div>
 
                 <div className="text-center max-w-4xl mx-auto">
-                    <p className="text-md md:text-xl text-gray-600 font-semibold leading-relaxed">One Compliance brings everything into one place – so your team spends less time chasing compliance, and more time growing exports.</p>
+                    <p className="text-base md:text-xl text-gray-600 font-semibold leading-relaxed">One Compliance brings everything into one place – so your team spends less time chasing compliance, and more time growing exports.</p>
                 </div>
             </div>
         </section>

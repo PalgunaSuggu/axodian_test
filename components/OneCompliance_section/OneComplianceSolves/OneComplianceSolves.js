@@ -16,7 +16,7 @@ const OneComplianceSolves = () => {
                                 <oneComplianceSolve.icon className="w-12 h-12 text-secondary-light-color bg-white p-2 rounded-lg" />
                                 <h5 className="leading-tight">{oneComplianceSolve.title}</h5>
                             </div>
-                            <p className="text-md md:text-lg opacity-75">{oneComplianceSolve.description}</p>
+                            <p className="text-base md:text-lg opacity-75">{oneComplianceSolve.description}</p>
                         </div>
                     ))}
                 </div>

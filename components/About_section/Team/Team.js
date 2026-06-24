@@ -52,7 +52,7 @@ const Team = () => {
                                             <TooltipProvider>
                                                 <Tooltip>
                                                     <TooltipTrigger asChild>
-                                                        <p className="text-gray-600 mb-6 md:line-clamp-3 text-md md:text-lg cursor-pointer">{member.description}</p>
+                                                        <p className="text-gray-600 mb-6 md:line-clamp-3 text-base md:text-lg cursor-pointer">{member.description}</p>
                                                     </TooltipTrigger>
                                                     <TooltipContent className="max-w-xs bg-white text-black p-4 shadow-lg rounded-sm">
                                                         <p>{member.description}</p>

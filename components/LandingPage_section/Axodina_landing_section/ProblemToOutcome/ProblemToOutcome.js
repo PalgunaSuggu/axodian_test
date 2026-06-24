@@ -42,7 +42,7 @@ const ProblemToOutcome = () => {
               Manual paperwork. Fragmented tools. Unclear compliance steps. Missed payment timelines.
             </p>
             <p className="text-lg md:text-xl text-gray-700 mb-8 border-solid border-l-4 border-primary-light-color pl-4">
-              Axodian replaces this chaos with one connected environment that keeps documents clean, payments on time, and financing within reach.
+              Axodian replaces this chaos with one connected environment that keeps documents clean, payments on time, and compliance on track.
             </p>
           </div>
 
@@ -50,7 +50,7 @@ const ProblemToOutcome = () => {
             {features.map((feature, index) => (
               <div key={index} className="flex flex-col items-center text-center space-y-4 bg-white/10 hover:bg-white/30 p-2 md:p-8 rounded-md transition-all duration-300">
                 <div className="p-3 bg-primary-light-color/10 text-primary-light-color rounded-xl">{feature.icon}</div>
-                <h3 className="md:text-lg text-sm font-medium text-gray-800">{feature.title}</h3>
+                <h3 className="font-medium text-gray-800">{feature.title}</h3>
               </div>
             ))}
           </div>

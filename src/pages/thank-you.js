@@ -44,7 +44,7 @@ const ThankYouPage = () => {
                 <div className="bg-white/60 p-8 rounded-lg text-center max-w-2xl w-full border border-dashed border-blue-300">
                     <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
                     <h1 className="leading-tight text-gray-800 mb-2">{content.heading}</h1>
-                    <p className="text-gray-600 text-md md:text-xl mb-2">{content.message}</p>
+                    <p className="text-gray-600 text-base md:text-xl mb-2">{content.message}</p>
                     <p className="text-gray-500 text-sm md:text-lg mb-6">{content.subtext}</p>
                     <Link href="/" className="inline-block bg-secondary-light-color text-white px-6 py-3 rounded-full text-lg font-semibold transition hover:bg-secondary-light-color">
                         {content.button}

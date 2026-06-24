@@ -9,7 +9,7 @@ const blogs = () => {
         <>
             <SEO
                 title="Axodian Blogs | Insights on Global Trade & Export Finance"
-                description="Explore Axodian Blogs for insights on global trade, cross-border payments, export documentation, and trade finance to help businesses grow internationally."
+                description="Explore Axodian Blogs for insights on global trade, cross-border payments, export documentation, and compliance to help businesses grow internationally."
                 url="https://www.axodian.com/blogs"
                 image="https://www.axodian.com/images/axodian-logo-footer.webp"
                 imageAlt="Axodian Blogs"

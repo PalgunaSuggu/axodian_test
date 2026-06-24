@@ -25,7 +25,7 @@ const WhatLeDocOffers = ({ formType, brand = "LeDoc" }) => {
     return (
         <section className="py-16 md:py-24 min-h-screen md:h-screen bg-cover bg-center bg-black/90 bg-[url('/images/LeDocBenefitsAxodian.webp')] md:flex md:items-center md:justify-center">
             <div className="container mx-auto">
-                <h1 className="tleading-tight text-center mb-12 text-white">
+                <h1 className="leading-tight text-center mb-12 text-white">
                     <span className="block mb-2">A Smarter Way to Manage</span>
                     <span className="block">Export Documentation</span>
                 </h1>

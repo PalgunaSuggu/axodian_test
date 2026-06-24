@@ -85,25 +85,102 @@ a {
   * {
     @apply border-border;
   }
+
   body {
-    @apply bg-background text-foreground text-base;
+    /* Inter as primary font, system-ui and sans-serif as fallbacks */
+    font-family: 'Inter', system-ui, sans-serif;
+    @apply bg-background text-foreground;
+    font-size: 16px;       /* Body Text: 16px */
+    font-weight: 400;
+    line-height: 1.5;      /* Body: 150% */
   }
+
+  /* ─── Heading Scale ─────────────────────────────────────────────────────────
+     H1 Page Heading : 40px / 700 / 120%
+     H2 Section      : 32px / 600 / 120%
+     H3 Subsection   : 24px / 600 / 120%
+     H4 Card Heading : 20px / 600 / 120%
+     H5 Small Card   : 18px / 600 / 120%
+     H6 Helper label : 14px / 500 / 140%
+  ──────────────────────────────────────────────────────────────────────────── */
   h1 {
-    @apply text-3xl sm:text-4xl md:text-5xl font-bold;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);   /* 28px → 40px */
+    font-weight: 700;
+    line-height: 1.2;
   }
   h2 {
-    @apply text-2xl sm:text-3xl md:text-4xl font-bold;
+    font-size: clamp(1.5rem, 3vw, 2rem);       /* 24px → 32px */
+    font-weight: 600;
+    line-height: 1.2;
   }
   h3 {
-    @apply text-xl sm:text-2xl md:text-3xl font-semibold;
+    font-size: clamp(1.125rem, 2.5vw, 1.5rem); /* 18px → 24px */
+    font-weight: 600;
+    line-height: 1.2;
   }
   h4 {
-    @apply text-lg sm:text-xl md:text-2xl font-semibold;
+    font-size: clamp(1rem, 2vw, 1.25rem);      /* 16px → 20px */
+    font-weight: 600;
+    line-height: 1.2;
   }
   h5 {
-    @apply text-base sm:text-lg md:text-xl font-medium;
+    font-size: clamp(0.9375rem, 1.5vw, 1.125rem); /* 15px → 18px */
+    font-weight: 600;
+    line-height: 1.2;
   }
+  h6 {
+    font-size: 0.875rem;   /* 14px */
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  p {
+    font-size: 1rem;        /* 16px */
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  small {
+    font-size: 0.875rem;   /* 14px */
+    font-weight: 400;
+    line-height: 1.4;
+  }
+}
+
+@layer components {
+  /* ─── Banner / Hero heading: 48px+ / 700 / 120% ─────────────────────────── */
   .bannerText {
-    @apply text-4xl sm:text-5xl md:text-6xl font-bold;
+    font-size: clamp(2rem, 5vw, 3rem);  /* 32px → 48px */
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  /* Alias for legacy usage in LeRemittBanner */
+  .bannerTitle {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  /* ─── Body variants ──────────────────────────────────────────────────────── */
+  /* text-md was used incorrectly (not a Tailwind class). Map it to text-base */
+  .text-body-lg {
+    font-size: 1.125rem;   /* 18px */
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  /* ─── Button text ────────────────────────────────────────────────────────── */
+  .btn-text {
+    font-size: 1rem;        /* 16px */
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  /* ─── Caption / helper ───────────────────────────────────────────────────── */
+  .text-caption {
+    font-size: 0.75rem;    /* 12px */
+    font-weight: 400;
+    line-height: 1.4;
   }
 }

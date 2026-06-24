@@ -12,7 +12,7 @@ const Benefits = ({ subtitleOne, subtitleTwo, description, benefits }) => {
                             <span className="md:block">{subtitleOne}</span>
                             <span className="md:block">{subtitleTwo}</span>
                         </h1>
-                        <p className="mt-2 text-md md:text-lg">{description}</p>
+                        <p className="mt-2 text-base md:text-lg">{description}</p>
                     </div>
                 </div>
 
@@ -28,7 +28,7 @@ const Benefits = ({ subtitleOne, subtitleTwo, description, benefits }) => {
                                                 <benefit.icon className="w-10 h-10 text-[#1E77FF] bg-white p-2 rounded-[5px]" />
                                                 <h5>{benefit.title}</h5>
                                             </div>
-                                            <p className="text-md md:text-lg opacity-65">{benefit.description}</p>
+                                            <p className="text-base md:text-lg opacity-65">{benefit.description}</p>
                                         </CardContent>
                                     </Card>
                                 </div>

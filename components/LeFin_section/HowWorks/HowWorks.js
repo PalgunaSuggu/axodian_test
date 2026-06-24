@@ -20,7 +20,7 @@ const HowWorks = () => {
                         </div>
                         <div className="flex-grow">
                             <h5 className="leading-tight text-gray-700">{step.title}</h5>
-                            <p className="text-gray-500 mt-2 text-md md:text-lg">{step.description}</p>
+                            <p className="text-gray-500 mt-2 text-base md:text-lg">{step.description}</p>
                         </div>
                     </Card>
                 ))}

@@ -9,7 +9,7 @@ const HowWorks = ({ steps, titleOne, titleTwo, description }) => {
                     <span className="md:block">{titleOne}</span>
                     <span className="md:block">{titleTwo}</span>
                 </h1>
-                <p className="text-md md:text-lg opacity-90">{description}</p>
+                <p className="text-base md:text-lg opacity-90">{description}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -28,7 +28,7 @@ const HowWorks = ({ steps, titleOne, titleTwo, description }) => {
                                 <h5 className="leading-tight">{step.title}</h5>
                             </div>
                             {step.description && (
-                                <p className="text-md md:text-lg opacity-90">{step.description}</p>
+                                <p className="text-base md:text-lg opacity-90">{step.description}</p>
                             )}
                         </CardContent>
                     </Card>

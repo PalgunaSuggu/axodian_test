@@ -21,7 +21,7 @@ const OneCompFooter = () => {
           <DynamicLogo variant="footer" imageProps={{ fill: true, className: 'object-contain', style: { width: '100%', height: '100%' } }} withLink={false} />
         </Link>
 
-        <p className="text-gray-500 text-lg leading-relaxed max-w-2xl mb-10 font-light">
+        <p className="text-gray-500 text-base leading-relaxed max-w-2xl mb-10">
           One Compliance streamlines your cross-border trade compliance, making EBRC generation and EDPMS reconciliation effortless.
         </p>
 

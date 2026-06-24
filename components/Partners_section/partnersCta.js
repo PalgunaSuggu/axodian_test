@@ -19,8 +19,8 @@ const partnersCta = () => {
                   <span>Trusted by 100+ Partners</span>
                 </div>
                 
-                <h2 className="ttext-gray-900 mb-4">Serve Exporters?</h2>
-                <p className="text-gray-600 text-lg mb-8 leading-relaxed max-w-lg">Join our exclusive partner network and grow your business with our premium export financing solutions.</p>
+                <h2 className="text-gray-900 mb-4">Serve Exporters?</h2>
+                <p className="text-gray-600 text-lg mb-8 leading-relaxed max-w-lg">Join our exclusive partner network and grow your business with our premium export solutions.</p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <div className="flex items-start">

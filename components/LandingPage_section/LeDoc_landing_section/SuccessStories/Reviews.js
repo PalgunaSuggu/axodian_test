@@ -71,7 +71,7 @@ export function Reviews3D() {
                     <MessageSquareQuote className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                    <h2 className="text-2xl font-bold text-white mb-1">Client Reviews</h2>
+                    <h2 className="text-white mb-1">Client Reviews</h2>
                     <p className="text-gray-400 text-sm">Real feedback from real customers</p>
                 </div>
             </div>

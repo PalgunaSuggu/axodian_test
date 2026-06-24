@@ -5,7 +5,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { ChevronLeft, ChevronRight, User } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
@@ -14,6 +14,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 export function Testimonials({ reviews = [], duration = "", titleOne, titleTwo, subHeading, isHomePage, mediaFeatures, withImgReviews, withoutImgReviews }) {
 
     const swiperRef = useRef(null);
+    const [isPaused, setIsPaused] = useState(false);
 
     useEffect(() => {
         if (swiperRef.current) {
@@ -26,7 +27,7 @@ export function Testimonials({ reviews = [], duration = "", titleOne, titleTwo, 
         <section>
             <div className="bg-white py-16 md:py-24">
                 <div className="text-center mb-12">
-                    {/* <div className="inline-block text-[#0461F0] bg-[#F5F9FF] px-4 py-1 rounded-lg text-md font-semibold mb-4">{tag}</div> */}
+                    {/* <div className="inline-block text-[#0461F0] bg-[#F5F9FF] px-4 py-1 rounded-lg text-base font-semibold mb-4">{tag}</div> */}
                     <h1 className="text-gray-900 leading-tight">
                         <span className="md:block">{titleOne}</span>
                         <span className="md:block">{titleTwo}</span>
@@ -37,7 +38,7 @@ export function Testimonials({ reviews = [], duration = "", titleOne, titleTwo, 
                 {/* Conditionally render this section only on the Img Reviews */}
                 {withImgReviews && (
                     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-                        <Marquee pauseOnHover className="[--duration:30s]">
+                        <Marquee pauseOnHover className={`[--duration:30s] ${isPaused ? "[&>*]:[animation-play-state:paused]" : ""}`}>
                             {reviews.map((review) => (
                                 <Card key={review.id} className="relative h-96 w-80 md:w-[300px] cursor-pointer overflow-hidden rounded-lg shadow-md transition-transform">
                                     <Image src={review.image || "/images/placeimg.webp"} alt={review.name} fill className="object-cover w-full h-full" />
@@ -49,11 +50,11 @@ export function Testimonials({ reviews = [], duration = "", titleOne, titleTwo, 
                                             <p className="text-sm text-gray-300 mb-2">{review.company}</p>
 
                                             <TooltipProvider>
-                                                <Tooltip>
+                                                <Tooltip onOpenChange={(open) => setIsPaused(open)}>
                                                     <TooltipTrigger asChild>
                                                         <p className="text-sm line-clamp-3">{review.body}</p>
                                                     </TooltipTrigger>
-                                                    <TooltipContent className="max-w-sm bg-white text-black p-4 shadow-md rounded-md">
+                                                    <TooltipContent className="max-w-2xl max-h-[180px] overflow-y-auto bg-white text-black p-4 shadow-md rounded-md">
                                                         <p>{review.body}</p>
                                                     </TooltipContent>
                                                 </Tooltip>
@@ -72,7 +73,7 @@ export function Testimonials({ reviews = [], duration = "", titleOne, titleTwo, 
 
                 {withoutImgReviews && (
                     <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-                        <Marquee pauseOnHover className={`[--duration:${duration}]`}>
+                        <Marquee pauseOnHover className={`[--duration:${duration}] ${isPaused ? "[&>*]:[animation-play-state:paused]" : ""}`}>
                             {reviews.map((review) => (
                                 <Card key={review.id} className="relative h-full w-80 md:w-[500px] cursor-pointer overflow-hidden shadow-none rounded-lg  p-6 bg-[#F9FAFB] hover:bg-[#663399]/5 transition-colors border hover:border-solid hover:border-[#663399]">
                                     <div className="flex items-center gap-4 mb-4">
@@ -87,15 +88,15 @@ export function Testimonials({ reviews = [], duration = "", titleOne, titleTwo, 
                                         </Avatar>
                                         <div className="flex flex-col">
                                             <p className="text-lg font-semibold">{review.name}</p>
-                                            <p className="text-md text-muted-foreground">{review.company}</p>
+                                            <p className="text-base text-muted-foreground">{review.company}</p>
                                         </div>
                                     </div>
                                     <TooltipProvider>
-                                        <Tooltip>
+                                        <Tooltip onOpenChange={(open) => setIsPaused(open)}>
                                             <TooltipTrigger asChild>
-                                                <p className="text-md md:text-lg text-gray-700 line-clamp-4">{review.body}</p>
+                                                <p className="text-base md:text-lg text-gray-700 line-clamp-4">{review.body}</p>
                                             </TooltipTrigger>
-                                            <TooltipContent className="max-w-sm bg-white text-black p-4 shadow-md rounded-md">
+                                            <TooltipContent className="max-w-xl max-h-[180px] overflow-y-auto bg-white text-black p-4 shadow-md rounded-md">
                                                 <p>{review.body}</p>
                                             </TooltipContent>
                                         </Tooltip>
@@ -111,7 +112,7 @@ export function Testimonials({ reviews = [], duration = "", titleOne, titleTwo, 
             {isHomePage && (
                 <div className="py-24 bg-cover bg-center bg-black/90 bg-[url('/images/LeDocBenefitsAxodian.webp')]">
                     <div className="text-center mb-12">
-                        {/* <div className="inline-block text-white bg-white/10 px-6 py-1 rounded-lg text-md font-semibold mb-4">Resources</div> */}
+                        {/* <div className="inline-block text-white bg-white/10 px-6 py-1 rounded-lg text-base font-semibold mb-4">Resources</div> */}
                         <h1 className="text-white leading-tight">In The News</h1>
                         <p className="text-lg md:text-2xl max-w-2xl lg:max-w-4xl mb-6 mx-auto text-gray-100 mt-2">Latest updates on our products, capabilities, and industry impact.</p>
                     </div>
@@ -146,7 +147,7 @@ export function Testimonials({ reviews = [], duration = "", titleOne, titleTwo, 
                                                     <TooltipProvider>
                                                         <Tooltip>
                                                             <TooltipTrigger asChild>
-                                                                <h1 className="text-lg font-medium line-clamp-2 cursor-pointer">{feature.title}</h1>
+                                                                <p className="text-lg font-medium line-clamp-2 cursor-pointer">{feature.title}</p>
                                                             </TooltipTrigger>
                                                             <TooltipContent className="max-w-sm bg-blue-50 text-black p-4 shadow-lg rounded-lg">
                                                                 <p>{feature.title}</p>
@@ -167,7 +168,7 @@ export function Testimonials({ reviews = [], duration = "", titleOne, titleTwo, 
                                                 <TooltipProvider>
                                                     <Tooltip>
                                                         <TooltipTrigger asChild>
-                                                            <h1 className="text-lg font-medium line-clamp-2 cursor-default">{feature.title}</h1>
+                                                            <p className="text-lg font-medium line-clamp-2 cursor-default">{feature.title}</p>
                                                         </TooltipTrigger>
                                                         <TooltipContent className="max-w-sm bg-blue-50 text-black p-4 shadow-lg rounded-lg">
                                                             <p>{feature.title}</p>
@@ -198,4 +199,3 @@ export function Testimonials({ reviews = [], duration = "", titleOne, titleTwo, 
         </section>
     );
 }
-

@@ -26,7 +26,7 @@ const JoinUs = () => {
                     <p className="mt-4 text-lg md:text-xl opacity-65">Explore open roles & be part of something transformative.</p>
 
                     <Button onClick={() => window.location.href = 'mailto:hr@leremitt.com?subject=Application for Position at LeRemitt&body=Dear Hiring Manager,%0D%0A%0D%0AI am interested in exploring career opportunities at LeRemitt.%0D%0A%0D%0ABest regards,'} className="mt-6 flex items-center gap-4 bg-white text-[#0049BA] font-semibold p-6 rounded-lg shadow-md hover:bg-gray-100 transition">
-                        <span className="text-md md:text-lg">Join Our Team</span>
+                        <span className="text-base md:text-lg">Join Our Team</span>
                         <MoveRight className="w-5 h-5 md:w-6 md:h-6" />
                     </Button>
                 </div>

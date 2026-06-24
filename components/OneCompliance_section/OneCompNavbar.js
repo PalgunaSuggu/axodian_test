@@ -79,7 +79,7 @@ const OneCompNavbar = ({ redirectTo, buttonText = "Book a Demo", showForm = true
                                         e.preventDefault();
                                         handleScrollTo(id);
                                     }}
-                                    className={`text-md font-normal transition-colors ${activeSection === id ? 'text-primary-color font-extrabold' : 'text-gray-600 hover:text-black'}`}
+                                    className={`text-sm font-medium transition-colors ${activeSection === id ? 'text-primary-color font-semibold' : 'text-gray-600 hover:text-black'}`}
                                 >
                                     {item}
                                 </button>
@@ -134,7 +134,7 @@ const OneCompNavbar = ({ redirectTo, buttonText = "Book a Demo", showForm = true
                                                     e.preventDefault();
                                                     handleScrollTo(id);
                                                 }}
-                                                className={`text-left text-lg font-medium transition-colors ${activeSection === id ? 'text-primary-color font-bold' : 'text-gray-800 hover:text-primary-color'}`}
+                                                className={`text-left text-base font-medium transition-colors ${activeSection === id ? 'text-primary-color font-semibold' : 'text-gray-800 hover:text-primary-color'}`}
                                             >
                                                 {item}
                                             </button>

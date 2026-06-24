@@ -14,13 +14,11 @@ const LeFinDailogForm = ({ children, showProductOptions = true, defaultSelected,
             <DialogTrigger asChild>
                 {children}
             </DialogTrigger>
-            <DialogContent className="max-w-xl" onInteractOutside={(e) => e.preventDefault()}>
+            <DialogContent className="max-w-xl md:max-h-none md:overflow-visible max-h-[70vh] overflow-y-auto" onInteractOutside={(e) => e.preventDefault()}>
                 <DialogHeader>
                     <DialogTitle>{formTitle}</DialogTitle>
                 </DialogHeader>
-                <div>
-                    <LeFinForm buttonText={buttonText} showProductOptions={showProductOptions} onSuccess={handleSuccess} defaultSelected={defaultSelected} />
-                </div>
+                <LeFinForm buttonText={buttonText} showProductOptions={showProductOptions} onSuccess={handleSuccess} defaultSelected={defaultSelected} />
             </DialogContent>
         </Dialog>
     );

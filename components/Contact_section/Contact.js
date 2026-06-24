@@ -51,7 +51,7 @@ export default function Contact() {
       <div className="container mx-auto">
         <div className="text-center my-12">
           <h1 className="leading-tight text-gray-900 mb-4">Get In Touch</h1>
-          <p className="text-md md:text-2xl text-gray-600 max-w-4xl mx-auto">
+          <p className="text-base md:text-2xl text-gray-600 max-w-4xl mx-auto">
             Have a question, idea, or need support? We’re here to help.
             Reach out and our team will get back to you shortly.
           </p>
@@ -179,13 +179,13 @@ function ContactInfo({ icon: Icon, label, value, href }) {
         <Icon className="w-5 h-5" />
       </div>
       <div>
-        <h3 className="font-semibold text-md md:text-xl text-white">{label}</h3>
+        <h3 className="font-semibold text-base md:text-xl text-white">{label}</h3>
         {href ? (
           <CustomLink href={href} className="text-white hover:underline">
             {value}
           </CustomLink>
         ) : (
-          <p className="text-white text-md md:text-lg">{value}</p>
+          <p className="text-white text-base md:text-lg">{value}</p>
         )}
       </div>
     </div>

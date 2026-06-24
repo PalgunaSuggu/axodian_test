@@ -4,7 +4,7 @@ import React from 'react';
 const steps = [
     { number: "1", title: "Get set up", description: "We align on your trade flows, documents, and banking relationships.", },
     { number: "2", title: "Go live", description: "Move your active shipments to Axodian. Keep your current partners.", },
-    { number: "3", title: "Scale with insight", description: "Use dashboards to spot delays, reduce costs, and unlock financing.", },
+    { number: "3", title: "Scale with insight", description: "Use dashboards to spot delays, reduce costs, and improve trade operations.", },
 ];
 
 const benefits = [

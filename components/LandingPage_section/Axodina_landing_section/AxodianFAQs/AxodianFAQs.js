@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     question: "Can we start with one pillar?",
-    answer: "Yes. Many start with documentation and compliance, then add payments and financing as they see value. You can adopt the platform at your own pace.",
+    answer: "Yes. Many start with documentation and compliance, then add payments as they see value. You can adopt the platform at your own pace.",
   },
   {
     question: "What does onboarding look like?",
@@ -35,10 +35,10 @@ const AxodianFAQs = () => {
           <Accordion type="single" collapsible defaultValue="item-0">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border border-solid border-primary-color/40 bg-white/40 rounded-lg shadow-none mb-4">
-                <AccordionTrigger className="text-md md:text-xl text-start font-medium px-4 py-3 hover:no-underline hover:text-primary-color">
+                <AccordionTrigger className="text-base md:text-xl text-start font-medium px-4 py-3 hover:no-underline hover:text-primary-color">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="px-4 pb-3 text-gray-600 text-md md:text-lg">
+                <AccordionContent className="px-4 pb-3 text-gray-600 text-base md:text-lg">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

@@ -48,7 +48,7 @@
 //                                     </div>
 //                                     <div>
 //                                         <h5 className="text-white mb-2">{benefit.title}</h5>
-//                                         <p className="text-gray-300 text-md leading-relaxed">{benefit.description}</p>
+//                                         <p className="text-gray-300 text-base leading-relaxed">{benefit.description}</p>
 //                                     </div>
 //                                 </div>
 //                             </CardContent>
@@ -70,7 +70,7 @@ const benefits = [
     {
         id: 1,
         title: "Efficient Trade Solutions",
-        description: "Covering documentation, payments, financing, and compliance to simplify end-to-end trade operations.",
+        description: "Covering documentation, payments, and compliance to simplify end-to-end trade operations.",
         icon: Briefcase,
     },
     {
@@ -100,7 +100,7 @@ const WhyLeRemitt = () => {
                 
                 {/* LEFT SIDE */}
                 <div className="md:col-span-5 flex justify-center md:justify-start items-center text-center md:text-left">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold md:max-w-3xl">
+                    <h1 className="font-bold md:max-w-3xl">
                         Built for Businesses That Trade Without Boundaries
                     </h1>
                 </div>
@@ -115,11 +115,11 @@ const WhyLeRemitt = () => {
                             <CardContent className="p-0">
                                 <div className="flex items-center gap-3 mb-3">
                                     <benefit.icon className="w-10 h-10 text-[#1E77FF] bg-white p-2 rounded-[5px]" />
-                                    <h3 className="text-xl font-semibold">
+                                    <h3 className="font-semibold">
                                         {benefit.title}
                                     </h3>
                                 </div>
-                                <p className="text-md md:text-lg opacity-65">
+                                <p className="text-base md:text-lg opacity-65">
                                     {benefit.description}
                                 </p>
                             </CardContent>

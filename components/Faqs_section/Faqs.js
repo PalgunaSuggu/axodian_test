@@ -17,7 +17,6 @@ const faqCategories = [
     { key: "onecompliance", label: "Compliance Management", faqs: oneComplianceFaqs },
     { key: "ledoc", label: "Document Management", faqs: leDocFaqs },
     { key: "leremitt", label: "Export Payments", faqs: leremittFaqs },
-    { key: "lefin", label: "Trade Finance", faqs: leFinFaqs },
     
 ];
 
@@ -26,7 +25,6 @@ const categorizedFaqs = [
     { key: "onecompliance", label: "Compliance Management", faqs: oneComplianceFaqs },
     { key: "ledoc", label: "Document Management", faqs: leDocFaqs },
     { key: "leremitt", label: "Export Payments", faqs: leremittFaqs },
-    { key: "lefin", label: "Trade Finance", faqs: leFinFaqs },
 ];
 
 export default function FAQComponent({ showAll = false, defaultTab = "all", showLoginLink = false }) {
@@ -65,7 +63,7 @@ export default function FAQComponent({ showAll = false, defaultTab = "all", show
                 <div className="py-10 text-center">
                     <h1 className="leading-snug text-black mb-4">Frequently Asked Questions</h1>
                     <p className="text-gray-600 text-sm sm:text-lg md:text-xl max-w-2xl mx-auto">
-                        Find answers to your questions about LeRemitt, LeDoc, and LeFin products and services.
+                        Find answers to your questions about LeRemitt and LeDoc products and services.
                     </p>
                     {showLoginLink && (
                         <div className="mt-4">
@@ -90,7 +88,7 @@ export default function FAQComponent({ showAll = false, defaultTab = "all", show
                                     <div>
                                         {categorizedFaqs.map((category, catIndex) => (
                                             <div key={catIndex} className="mb-8">
-                                                <h3 className="text-base md:text-xl font-semibold mb-4 text-blue-600 border-b pb-2">{category.label} Questions</h3>
+                                                <h3 className="mb-4 text-blue-600 border-b pb-2">{category.label} Questions</h3>
                                                 <Accordion type="single" collapsible>
                                                     {category.faqs.map((faq, faqIndex) => (
                                                         <AccordionItem key={faqIndex} value={`${category.key}-${faqIndex}`} className="border border-gray-200 bg-white rounded-lg shadow-sm mb-4">
@@ -99,11 +97,11 @@ export default function FAQComponent({ showAll = false, defaultTab = "all", show
                                                                 {typeof faq.answer === 'string' ? (
                                                                     <div className={faq.answer.split("\n").length > 1 ? "h-36 overflow-y-auto pr-2" : ""}>
                                                                         {faq.answer.split("\n").map((paragraph, i) => (
-                                                                            <p key={i} className="mb-2 text-md md:text-lg">{paragraph}</p>
+                                                                            <p key={i} className="mb-2 text-base md:text-lg">{paragraph}</p>
                                                                         ))}
                                                                     </div>
                                                                 ) : (
-                                                                    <div className="text-md md:text-lg">{faq.answer}</div>
+                                                                    <div className="text-base md:text-lg">{faq.answer}</div>
                                                                 )}
                                                             </AccordionContent>
                                                         </AccordionItem>
@@ -121,7 +119,7 @@ export default function FAQComponent({ showAll = false, defaultTab = "all", show
 
                                             return subcategoryFaqs.length > 0 ? (
                                                 <div key={subIndex} className="mb-8">
-                                                    <h3 className="text-base md:text-xl font-semibold mb-4 text-blue-600 border-b pb-2">{subcategory.label}</h3>
+                                                    <h3 className="mb-4 text-blue-600 border-b pb-2">{subcategory.label}</h3>
                                                     <Accordion type="single" collapsible>
                                                         {subcategoryFaqs.map((faq, faqIndex) => (
                                                             <AccordionItem key={faqIndex} value={`${subcategory.key}-${faqIndex}`} className="border border-gray-200 bg-white rounded-lg shadow-sm mb-4">
@@ -130,11 +128,11 @@ export default function FAQComponent({ showAll = false, defaultTab = "all", show
                                                                     {typeof faq.answer === 'string' ? (
                                                                         <div className={faq.answer.split("\n").length > 1 ? "h-36 overflow-y-auto pr-2" : ""}>
                                                                             {faq.answer.split("\n").map((paragraph, i) => (
-                                                                                <p key={i} className="mb-2 text-md md:text-lg">{paragraph}</p>
+                                                                                <p key={i} className="mb-2 text-base md:text-lg">{paragraph}</p>
                                                                             ))}
                                                                         </div>
                                                                     ) : (
-                                                                        <div className="text-md md:text-lg">{faq.answer}</div>
+                                                                        <div className="text-base md:text-lg">{faq.answer}</div>
                                                                     )}
                                                                 </AccordionContent>
                                                             </AccordionItem>
@@ -154,11 +152,11 @@ export default function FAQComponent({ showAll = false, defaultTab = "all", show
                                                     {typeof faq.answer === 'string' ? (
                                                         <div className={faq.answer.split("\n").length > 1 ? "h-36 overflow-y-auto pr-2" : ""}>
                                                             {faq.answer.split("\n").map((paragraph, i) => (
-                                                                <p key={i} className="mb-2 text-md md:text-lg">{paragraph}</p>
+                                                                <p key={i} className="mb-2 text-base md:text-lg">{paragraph}</p>
                                                             ))}
                                                         </div>
                                                     ) : (
-                                                        <div className="text-md md:text-lg">{faq.answer}</div>
+                                                        <div className="text-base md:text-lg">{faq.answer}</div>
                                                     )}
                                                 </AccordionContent>
                                             </AccordionItem>
@@ -178,10 +176,10 @@ export default function FAQComponent({ showAll = false, defaultTab = "all", show
                                     <AccordionContent className="px-4 pb-3 text-gray-600">
                                         {typeof faq.answer === 'string' ? (
                                             faq.answer.split("\n").map((paragraph, i) => (
-                                                <p key={i} className="mb-2 text-md md:text-lg">{paragraph}</p>
+                                                <p key={i} className="mb-2 text-base md:text-lg">{paragraph}</p>
                                             ))
                                         ) : (
-                                            <div className="text-md md:text-lg">{faq.answer}</div>
+                                            <div className="text-base md:text-lg">{faq.answer}</div>
                                         )}
                                     </AccordionContent>
                                 </AccordionItem>

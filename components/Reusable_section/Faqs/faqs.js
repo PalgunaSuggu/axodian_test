@@ -33,7 +33,7 @@ export default function FAQs({ titleOne, titleTwo, subtitle, faqsData, productKe
                     <Accordion type="single" collapsible defaultValue="0">
                         {faqsData.slice(0, visibleFaqs).map((faq, index) => (
                             <AccordionItem key={index} value={index.toString()} className="border border-gray-200 bg-white rounded-lg shadow-none mb-4">
-                                <AccordionTrigger className="text-md md:text-xl text-start font-semibold px-4 py-3 hover:no-underline" triggerBg={triggerBg} triggerTextColor={triggerTextColor}>{faq.question}</AccordionTrigger>
+                                <AccordionTrigger className="text-base md:text-xl text-start font-semibold px-4 py-3 hover:no-underline" triggerBg={triggerBg} triggerTextColor={triggerTextColor}>{faq.question}</AccordionTrigger>
                                 <AccordionContent className="px-4 pb-3 text-gray-600">
                                     {typeof faq.answer === 'string' ? (
                                         <div className={faq.answer.split('\n').length > 1 ? "h-36 overflow-y-auto pr-2" : ""}>
@@ -44,7 +44,7 @@ export default function FAQs({ titleOne, titleTwo, subtitle, faqsData, productKe
                                                     const [fullMatch, linkText, linkUrl] = linkMatch;
                                                     const parts = paragraph.split(fullMatch);
                                                     return (
-                                                        <p key={i} className="mb-2 text-md md:text-lg">
+                                                        <p key={i} className="mb-2 text-base md:text-lg">
                                                             {parts[0]}
                                                             <Link href={linkUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
                                                                 {linkText}
@@ -53,11 +53,11 @@ export default function FAQs({ titleOne, titleTwo, subtitle, faqsData, productKe
                                                         </p>
                                                     );
                                                 }
-                                                return <p key={i} className="mb-2 text-md md:text-lg">{paragraph}</p>;
+                                                return <p key={i} className="mb-2 text-base md:text-lg">{paragraph}</p>;
                                             })}
                                         </div>
                                     ) : (
-                                        <div className="text-md md:text-lg">{faq.answer}</div>
+                                        <div className="text-base md:text-lg">{faq.answer}</div>
                                     )}
                                 </AccordionContent>
                             </AccordionItem>

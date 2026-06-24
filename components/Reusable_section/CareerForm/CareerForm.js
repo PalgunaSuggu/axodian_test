@@ -46,7 +46,6 @@ const CareerForm = ({ children }) => {
                             <SelectContent>
                                 <SelectItem value="leremitt">LeRemitt</SelectItem>
                                 <SelectItem value="ledoc">LeDoc</SelectItem>
-                                <SelectItem value="lefin">LeFin</SelectItem>
                             </SelectContent>
                         </Select>
                     </div>

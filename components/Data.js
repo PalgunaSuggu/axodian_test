@@ -46,15 +46,17 @@ export const footerLinks = [
     {
         title: "Company", links: [
             { name: "About Us", href: "/about" },
-            { name: "Media", href: "/media" }
+            { name: "Media", href: "/media" },
         ]
     },
     {
         title: "Blogs", links: [
-            { name: "Founder's Desk", href: "/blogs", category: "Founder's Desk" },
+            { name: "All Blog Posts", href: "/blogs", category: "All Blog Posts" },
+            { name: "Compliance & Risk Management", href: "/blogs", category: "Compliance & Risk Management" },
             { name: "EXIM Landscape", href: "/blogs", category: "EXIM Landscape" },
             { name: "Remittance", href: "/blogs", category: "Remittance" },
-            { name: "Trade Documentation", href: "/blogs", category: "Trade Documentation" }
+            { name: "Trade Documentation", href: "/blogs", category: "Trade Documentation" },
+            { name: "Founder's Desk", href: "/blogs", category: "Founder's Desk" }
         ]
     },
     {
